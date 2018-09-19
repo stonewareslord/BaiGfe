@@ -1,5 +1,5 @@
 # BaiGfe
-Remove Mandatory Login of Geforce Experience - [support: v3.14.1.48]
+Remove Mandatory Login of Geforce Experience - [support: v3.14.x / v3.15.x]
 
 # How to Remove Mandatory Login  
 
@@ -15,7 +15,8 @@ Copy/paste to :
 
 &#x200B;
 
-# Manual way : 
+# Manual way :  
+NOTE: some of the code below might change (function letters), just compare with one of the previously uploaded app.js ;)  
 
 use [http://jsbeautifier.org/](http://jsbeautifier.org/) on app.js found in :  
 
