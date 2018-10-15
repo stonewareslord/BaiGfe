@@ -1,5 +1,5 @@
 # BaiGfe
-Remove Mandatory Login of Geforce Experience - [support: v3.14.x / v3.15.x]
+Remove Mandatory Login of Geforce Experience - [support: v3.14.x / v3.15.x up to 3.15.0.186]
 
 # How to Remove Mandatory Login  
 
