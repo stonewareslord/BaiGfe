@@ -1,6 +1,5 @@
 # BaiGfe
-Remove Mandatory Login of Geforce Experience - [support: v3.14.x / v3.15.x up to 3.15.0.186]
-
+Remove Mandatory Login of Geforce Experience - [support: v3.14.x / v3.15.x / v3.16.x]
 # How to Remove Mandatory Login  
 
 make a backup of every files you edit !
@@ -68,7 +67,7 @@ To make the shadowplay & share buttons show on the main GFE screen
 
 &#x200B;
 
-# How to Block Data Collection / Telemetry
+# How to Block Data Collection / Telemetry (block all or keep Games Optimisations)
 
 Step 1 - Open the hosts file in a text editor (notepad++) :
 
@@ -76,16 +75,21 @@ Step 1 - Open the hosts file in a text editor (notepad++) :
 
 (copy-paste the file on your desktop to edit, copy back to "etc" folder if you have permission errors)
 
-Step 2 - Add at the end of the file :
+Step 2 - Add at the end of the file (CHOOSE ONE OR THE OTHER LIST, NOT BOTH) :
+- FULL BLOCKLIST :
 
-    0.0.0.0 telemetry.gfe.nvidia.com
-    0.0.0.0 gfe.nvidia.com
-    0.0.0.0 services.gfe.nvidia.com
-    0.0.0.0 accounts.nvgs.nvidia.com
-    0.0.0.0 events.gfe.nvidia.com
-    0.0.0.0 images.nvidiagrid.net
-    0.0.0.0 rds-assets.nvidia.com
-    0.0.0.0 assets.nvidiagrid.net  
+    `0.0.0.0 telemetry.gfe.nvidia.com`
+    `0.0.0.0 gfe.nvidia.com`
+    `0.0.0.0 services.gfe.nvidia.com`
+    `0.0.0.0 accounts.nvgs.nvidia.com`
+    `0.0.0.0 events.gfe.nvidia.com`
+    `0.0.0.0 images.nvidiagrid.net`
+    `0.0.0.0 rds-assets.nvidia.com`
+    `0.0.0.0 assets.nvidiagrid.net`
+   
+- LITE BLOCKLIST (keep Game Optimizations / Drivers Update working) :  
+`0.0.0.0 telemetry.gfe.nvidia.com`
+`0.0.0.0 accounts.nvgs.nvidia.com`
 
 ("[0.0.0.0](https://0.0.0.0)" is preferred to "[127.0.0.1](https://127.0.0.1)" but both works)  
 
