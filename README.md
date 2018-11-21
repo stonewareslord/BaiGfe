@@ -88,8 +88,8 @@ Step 2 - Add at the end of the file (CHOOSE ONE OR THE OTHER LIST, NOT BOTH) :
     `0.0.0.0 assets.nvidiagrid.net`  
    
 - LITE BLOCKLIST (keep Game Optimizations / Drivers Update working) :  
-`0.0.0.0 telemetry.gfe.nvidia.com`
-`0.0.0.0 accounts.nvgs.nvidia.com`
+`0.0.0.0 telemetry.gfe.nvidia.com`  
+`0.0.0.0 accounts.nvgs.nvidia.com`  
 
 ("[0.0.0.0](https://0.0.0.0)" is preferred to "[127.0.0.1](https://127.0.0.1)" but both works)  
 ( If you previously blocked all nvidia domains, you need to flush your dns cache to restore "Game Optimizations" functionality :  
