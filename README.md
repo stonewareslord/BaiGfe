@@ -78,14 +78,14 @@ Step 1 - Open the hosts file in a text editor (notepad++) :
 Step 2 - Add at the end of the file (CHOOSE ONE OR THE OTHER LIST, NOT BOTH) :
 - FULL BLOCKLIST :
 
-    `0.0.0.0 telemetry.gfe.nvidia.com`
-    `0.0.0.0 gfe.nvidia.com`
-    `0.0.0.0 services.gfe.nvidia.com`
-    `0.0.0.0 accounts.nvgs.nvidia.com`
-    `0.0.0.0 events.gfe.nvidia.com`
-    `0.0.0.0 images.nvidiagrid.net`
-    `0.0.0.0 rds-assets.nvidia.com`
-    `0.0.0.0 assets.nvidiagrid.net`
+    `0.0.0.0 telemetry.gfe.nvidia.com`  
+    `0.0.0.0 gfe.nvidia.com`  
+    `0.0.0.0 services.gfe.nvidia.com`  
+    `0.0.0.0 accounts.nvgs.nvidia.com`  
+    `0.0.0.0 events.gfe.nvidia.com`  
+    `0.0.0.0 images.nvidiagrid.net`  
+    `0.0.0.0 rds-assets.nvidia.com`  
+    `0.0.0.0 assets.nvidiagrid.net`  
    
 - LITE BLOCKLIST (keep Game Optimizations / Drivers Update working) :  
 `0.0.0.0 telemetry.gfe.nvidia.com`
