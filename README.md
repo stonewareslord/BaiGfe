@@ -78,18 +78,29 @@ Step 1 - Open the hosts file in a text editor (notepad++) :
 Step 2 - Add at the end of the file (CHOOSE ONE OR THE OTHER LIST, NOT BOTH) :
 - FULL BLOCKLIST :
 
-    `0.0.0.0 telemetry.gfe.nvidia.com`  
-    `0.0.0.0 gfe.nvidia.com`  
-    `0.0.0.0 services.gfe.nvidia.com`  
-    `0.0.0.0 accounts.nvgs.nvidia.com`  
-    `0.0.0.0 events.gfe.nvidia.com`  
-    `0.0.0.0 images.nvidiagrid.net`  
-    `0.0.0.0 rds-assets.nvidia.com`  
-    `0.0.0.0 assets.nvidiagrid.net`  
+`0.0.0.0 telemetry.gfe.nvidia.com`  
+`0.0.0.0 gfe.nvidia.com`  
+`0.0.0.0 gfwsl.geforce.com`  
+`0.0.0.0 services.gfe.nvidia.com`  
+`0.0.0.0 accounts.nvgs.nvidia.com`  
+`0.0.0.0 events.gfe.nvidia.com`  
+`0.0.0.0 img.nvidiagrid.net`  
+`0.0.0.0 images.nvidiagrid.net`  
+`0.0.0.0 images.nvidia.com`  
+`0.0.0.0 ls.dtrace.nvidia.com`  
+`0.0.0.0 ota.nvidia.com`  
+`0.0.0.0 rds-assets.nvidia.com`  
+`0.0.0.0 assets.nvidiagrid.net`  
+`0.0.0.0 nvidia.tt.omtrdc.net`  
+`0.0.0.0 api.commune.ly`  
    
 - LITE BLOCKLIST (keep Game Optimizations / Drivers Update working) :  
+
+`0.0.0.0 ls.dtrace.nvidia.com`  
 `0.0.0.0 telemetry.gfe.nvidia.com`  
 `0.0.0.0 accounts.nvgs.nvidia.com`  
+`0.0.0.0 nvidia.tt.omtrdc.net`  
+`0.0.0.0 api.commune.ly`  
 
 ("[0.0.0.0](https://0.0.0.0)" is preferred to "[127.0.0.1](https://127.0.0.1)" but both works)  
 ( If you previously blocked all nvidia domains, you need to flush your dns cache to restore "Game Optimizations" functionality :  
