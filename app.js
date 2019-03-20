@@ -9,9 +9,9 @@
  */
 webpackJsonp([4], [function(e, t, n) {
     "use strict";
-    n(313);
+    n(315);
     var r = n(178);
-    n(312), n(272), n(328), r.ngMainModule.run(["appService", function(e) {
+    n(314), n(272), n(330), r.ngMainModule.run(["appService", function(e) {
         e.main()
     }])
 }, , , , , , , , function(e, t, n) {
@@ -152,7 +152,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = o(i),
         s = n(1);
     n(19);
-    var l = n(729),
+    var l = n(731),
         c = r(l),
         u = s.ngMainCommonModule.directive("nvImageFallback", ["$log", "$compile", "$window", "$timeout", function(e, t, n, r) {
             return {
@@ -268,7 +268,7 @@ webpackJsonp([4], [function(e, t, n) {
         },
         PORTAL_WINDOW_WIDTH: "1000",
         PORTAL_WINDOW_HEIGHT: "700",
-        MIN_SUPPORTED_DRIVER: 372.9,
+        MIN_SUPPORTED_DRIVER: 417.01,
         LIMIT_TO_FILTER: {
             ITEMS_AT_ONCE: 5,
             INTERVAL_LENGTH: 100
@@ -358,7 +358,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvSelectMenu = void 0;
     var o = n(1),
-        i = n(741),
+        i = n(743),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvSelectMenu", ["$mdMenu", function(e) {
             return {
@@ -414,7 +414,7 @@ webpackJsonp([4], [function(e, t, n) {
         c = n(52),
         u = n(3),
         d = r(u);
-    n(51), n(160), n(12), n(25), n(373), n(22), n(16), n(75), n(287), n(120);
+    n(51), n(160), n(12), n(25), n(375), n(22), n(16), n(75), n(287), n(120);
     var f = n(952),
         m = o(f),
         p = n(950),
@@ -464,7 +464,7 @@ webpackJsonp([4], [function(e, t, n) {
             }
 
             function Z(e) {
-                e ? (K(), we()) : (ke = void 0, ot = null, Ue = {
+                e ? (K(), we()) : (ke = void 0, ot = null, Fe.overallState = !1, Ue = {
                     userId: "",
                     delegateToken: ""
                 })
@@ -783,7 +783,6 @@ webpackJsonp([4], [function(e, t, n) {
                             return a === z.FAILURE ? (ue({
                                 type: o.redeemFailureEvent,
                                 message: i.error.code,
-                                deltas: i.error.message,
                                 campaignName: i.campaign.uuid
                             }), n.reject(i.error)) : n.when(i)
                         }
@@ -1273,7 +1272,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvNoContentFallback = void 0;
     var o = n(1),
-        i = n(736),
+        i = n(738),
         a = r(i),
         s = o.ngMainCommonModule.component("nvNoContentFallback", {
             bindings: {
@@ -1455,19 +1454,11 @@ webpackJsonp([4], [function(e, t, n) {
     var i = n(3),
         a = o(i),
         s = n(10);
-    n(618), n(114), n(49), n(113), n(135), n(22), n(16), n(597), n(488), n(120);
+    n(620), n(114), n(49), n(113), n(135), n(22), n(16), n(599), n(490), n(120);
     var l = n(185),
         c = r(l),
-        u = s.ngUpdatesModule.service("updatesService", ["$log", "$filter", "TASK_STATUS", "updatesInstallerDialogService", "INSTALLER_PAGE", "eventAggregator", "INSTALLER_EVENTS", "$q", "driversEndpoints", "UPDATE_EVENTS", "UPDATE_SOCKET_EVENTS", "socketService", "UPDATE_REFRESH_STATUS", "INSTALLER_FORM_EVENT", "downloadsEndpoints", "DOWNLOAD_PROGRESS_STATUS", "DOWNLOAD_SOCKET_EVENTS", "installersEndpoints", "INSTALLER_SOCKET_EVENTS", "hardwareService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "gfwslDriverInformationService", "INSTALLER_ERROR_CODE", "COMMON_EVENTS", "nodeService", "SOCKETIO_EVENTS", "PREFETCH_EVENTS", "$rootScope", "$compile", "cefService", "$mdDialog", "gfeSearchService", "DB_NAMES", "dbService", "gfwslEndpoints", "CRD_GFWSL_CAMPAIGNS", "gfeService", function(e, t, n, r, o, i, s, l, u, d, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R, N, L, k, P, G, F, U) {
-            function V() {
-                return Ce.getItem(k.LAST_INSTALLED_DRIVER_INFO).then(function(e) {
-                    return ke = e, e
-                }, function(e) {
-                    Fe.info("failed to get lastInstalledDriverState from DB: ", e), l.reject("failed to get lastInstalledDriverState from DB")
-                })
-            }
-
-            function z(e) {
+        u = s.ngUpdatesModule.service("updatesService", ["$log", "$filter", "TASK_STATUS", "updatesInstallerDialogService", "INSTALLER_PAGE", "eventAggregator", "INSTALLER_EVENTS", "$q", "driversEndpoints", "UPDATE_EVENTS", "UPDATE_SOCKET_EVENTS", "socketService", "UPDATE_REFRESH_STATUS", "INSTALLER_FORM_EVENT", "downloadsEndpoints", "DOWNLOAD_PROGRESS_STATUS", "DOWNLOAD_SOCKET_EVENTS", "installersEndpoints", "INSTALLER_SOCKET_EVENTS", "hardwareService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "gfwslDriverInformationService", "INSTALLER_ERROR_CODE", "COMMON_EVENTS", "nodeService", "SOCKETIO_EVENTS", "PREFETCH_EVENTS", "$rootScope", "$compile", "cefService", "$mdDialog", "gfeSearchService", "gfwslEndpoints", "CRD_GFWSL_CAMPAIGNS", "gfeService", "DRIVERTYPE", function(e, t, n, r, o, i, s, l, u, d, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R, N, L, k, P, G, F) {
+            function U(e) {
                 if (e) switch (e.status) {
                     case n.TASK_PAUSED:
                     case n.TASK_PAUSED_UNABLE_TO_REACH_SERVER:
@@ -1487,16 +1478,16 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function B() {
+            function V() {
                 var e;
-                for (e in xe) xe[e]()
+                for (e in Ae) Ae[e]()
             }
 
-            function $() {
-                Ee.scanCompleted = !0, ue(), B()
+            function z() {
+                he.scanCompleted = !0, se(), V()
             }
 
-            function W(e) {
+            function B(e) {
                 if (e === T.NV_INSTALLER_UAC_CANCELED || e === T.NV_PACKAGE_EXTRACTION_UAC_CANCELED) r.cancel();
                 else {
                     var n = {
@@ -1522,109 +1513,102 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function H() {
-                Fe.info("query installer about last state "), b.start({}, {
+            function $() {
+                Ne.info("query installer about last state "), b.start({}, {
                     driverLocation: "",
                     isCustom: !1,
                     resumeInstall: !1,
                     fromLastState: !0
                 }).then(function() {
-                    Fe.info("got response about about last state ")
+                    Ne.info("got response about about last state ")
                 }).catch(function(e) {
-                    Fe.error("failed to query last installation state error code:", e.data, " status:", e.status, " params:", e.config.data, e)
+                    Ne.error("failed to query last installation state error code:", e.data, " status:", e.status, " params:", e.config.data, e)
                 })
+            }
+
+            function W() {
+                Ne.info("installer and UI are now disconnected")
+            }
+
+            function H() {
+                Ne.info("Connection error during installation.")
             }
 
             function j() {
-                Fe.info("installer and UI are now disconnected")
+                Ne.info("unsubScribeDriverInstallationNotification() called"), i.off(s.INSTALL_FORM, me), i.off(s.INSTALL_CANCEL, j), i.off(s.INSTALL_DONE, q), i.off(x.CONNECT, $), i.off(x.DISCONNECT, W), i.off(x.ERROR, H), I.setReconnectionToDefault()
             }
 
             function Y() {
-                Fe.info("Connection error during installation.")
+                Ne.info("subScribeDriverInstallationNotification() called"), i.on(s.INSTALL_FORM, me), i.on(s.INSTALL_CANCEL, j), i.on(s.INSTALL_DONE, q), i.on(x.CONNECT, $), i.on(x.DISCONNECT, W), i.on(x.ERROR, H), I.setReconnectionToInfinity()
             }
 
             function q() {
-                Fe.info("unsubScribeDriverInstallationNotification() called"), i.off(s.INSTALL_FORM, ve), i.off(s.INSTALL_CANCEL, q), i.off(s.INSTALL_DONE, Z), i.off(x.CONNECT, H), i.off(x.DISCONNECT, j), i.off(x.ERROR, Y), I.setReconnectionToDefault()
+                oe(), j()
             }
 
-            function K() {
-                Fe.info("subScribeDriverInstallationNotification() called"), i.on(s.INSTALL_FORM, ve), i.on(s.INSTALL_CANCEL, q), i.on(s.INSTALL_DONE, Z), i.on(x.CONNECT, H), i.on(x.DISCONNECT, j), i.on(x.ERROR, Y), I.setReconnectionToInfinity()
+            function K(e, t, n) {
+                Y(), r.showInstallationForm(e, t, n), he.invokeInstallation(e, t, n)
             }
 
-            function Z() {
-                se(), q()
-            }
-
-            function Q(e, t, n) {
-                K(), r.showInstallationForm(e, t, n), Ee.invokeInstallation(e, t, n)
-            }
-
-            function X(e) {
-                var n = l.defer();
-                return V().finally(function() {
-                    return e.isCRD = 0, ke && ke.version === e.version ? (e.isCRD = ke.isCRD, Fe.info("found installed driver version in db", ke)) : (Fe.info("not found installed driver version in db"), Ce.setItem(k.LAST_INSTALLED_DRIVER_INFO, null)), e.name = e.isCRD ? t("translate")("l10n.creatorReadyDriver") : t("translate")("l10n.fallbackGeforceDriverName"), n.resolve(e)
-                }), n.promise
-            }
-
-            function J(e) {
-                return e.releaseDateTime = "", e.downloadURL = "", A.getDriverInformation(e.version, e.isCRD).then(function(t) {
-                    return t && t.DriverAttributes && (e.name = t.DriverAttributes.Name, e.releaseDateTime = t.DriverAttributes.ReleaseDateTime, e.downloadURL = t.DriverAttributes.DownloadURL, e.isCRD = t.DriverAttributes.IsCRD || 0), e
+            function Z(e) {
+                return e.releaseDateTime = "", e.downloadURL = "", e.name = e.isCRD === F.CRD ? t("translate")("l10n.fallbackGeforeceCrdDriverName") : t("translate")("l10n.fallbackGeforceDriverName"), A.getDriverInformation(e.version, e.isCRD).then(function(t) {
+                    return t && t.DriverAttributes && (e.name = t.DriverAttributes.Name, e.releaseDateTime = t.DriverAttributes.ReleaseDateTime, e.downloadURL = t.DriverAttributes.DownloadURL), e
                 }).catch(function(t) {
-                    return Fe.error("getDriverInformation failed with error: ", t + " for driver version:" + e.version), e
+                    return Ne.error("getDriverInformation failed with error: ", t + " for driver version:" + e.version), e
                 })
             }
 
-            function ee(e) {
+            function Q(e) {
                 return v.getStatus({
                     version: e.version,
                     url: e.downloadURL
                 }).then(function(t) {
-                    return e.downloadStatus = t.data, Fe.info("download getStatus for version: ", e.version, " ", t), z(t.data), e
+                    return e.downloadStatus = t.data, Ne.info("download getStatus for version: ", e.version, " ", t), U(t.data), e
                 }).catch(function(t) {
-                    return Fe.error("download getStatus failed: ", t.data, " status: ", t.status), e
+                    return Ne.error("download getStatus failed: ", t.data, " status: ", t.status), e
                 })
             }
 
-            function te(e) {
+            function X(e) {
                 try {
                     return JSON.parse(e)
                 } catch (t) {
-                    return Fe.error("Json parsing exception for ", e), null
+                    return Ne.error("Json parsing exception for ", e), null
                 }
             }
 
-            function ne() {
-                if (Oe && Oe.content.gfeLoadUrl) {
-                    var e = Oe.content.gfeLoadUrl;
+            function J() {
+                if (Ie && Ie.content.gfeLoadUrl) {
+                    var e = Ie.content.gfeLoadUrl;
                     e = e.replace(/\\/g, "");
                     var t = e.split("{");
-                    if (2 !== t.length) return Fe.error("Cannot request for article as gfeloadUrl is incorrect ", Oe.content.gfeLoadUrl), l.reject();
+                    if (2 !== t.length) return Ne.error("Cannot request for article as gfeloadUrl is incorrect ", Ie.content.gfeLoadUrl), l.reject();
                     t[1] = "{" + t[1];
-                    var n = te(t[1]);
-                    return n ? Ee.getDriverArticle(t[0], n, Oe.content.driverVersion).then(function(e) {
+                    var n = X(t[1]);
+                    return n ? he.getDriverArticle(t[0], n, Ie.content.driverVersion).then(function(e) {
                         if (_.push(w.UPDATES_GRD_ARTICLE_SUCCESS), e && e.data && e.data.gfcontent) {
-                            Fe.debug("get driver article returns content");
+                            Ne.debug("get driver article returns content");
                             var t = {},
                                 n = e.data.gfcontent;
                             return t.title = n.title, t.subTitle = n.author_date ? n.author_date.by_on_date : null, t.body = n.body, t.style = "article-content", t
                         }
-                        return Fe.debug("get driver article returns null content"), null
+                        return Ne.debug("get driver article returns null content"), null
                     }).catch(function(e) {
                         return _.push(w.UPDATES_GRD_ARTICLE_FAILURE, e && e.status && e.status.toString() || ""), l.reject(e)
-                    }) : (Fe.error("Cannot request for article as gfeloadUrl has incorrect json ", Oe.content.gfeLoadUrl), l.reject())
+                    }) : (Ne.error("Cannot request for article as gfeloadUrl has incorrect json ", Ie.content.gfeLoadUrl), l.reject())
                 }
-                return Fe.error("article url empty for ", Oe.content.gfeLoadUrl), l.reject("no article url")
+                return Ne.error("article url empty for ", Ie.content.gfeLoadUrl), l.reject("no article url")
             }
 
-            function re(e, t) {
+            function ee(e, t) {
                 if (e && e.gfeLoadUrl) {
                     var n = e.gfeLoadUrl;
                     n = n.replace(/\\/g, "");
                     var r = n.split("{");
-                    if (2 !== r.length) return Fe.error("Cannot request for article as gfeloadUrl is incorrect ", e.gfeLoadUrl), l.reject();
+                    if (2 !== r.length) return Ne.error("Cannot request for article as gfeloadUrl is incorrect ", e.gfeLoadUrl), l.reject();
                     r[1] = "{" + r[1];
-                    var o = te(r[1]);
-                    o && Ee.getDriverArticle(r[0], o, t).then(function(e) {
+                    var o = X(r[1]);
+                    o && he.getDriverArticle(r[0], o, t).then(function(e) {
                         if (e.data && e.data.gfcontent) {
                             var t, n = e.data.gfcontent.body,
                                 r = M.$new(),
@@ -1641,20 +1625,20 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function oe(e, t) {
-                Ee.getDriverInformation(e, t).then(function(t) {
+            function te(e, t) {
+                he.getDriverInformation(e, t).then(function(t) {
                     var n, r, o = [];
                     t && t.DriverAttributes && (n = t.DriverAttributes.highlightGfeNg, r = t.DriverAttributes.bannerGfeNg), r && r.forEach(function(e) {
                         o.push(e.image)
                     }), n && n.tiles && n.tiles.forEach(function(t) {
-                        o.push(t.coverImage), re(t, e)
+                        o.push(t.coverImage), ee(t, e)
                     }), o.length && i.trigger(D.PREFETCH_RESOURCES, o)
                 })
             }
 
-            function ie() {
-                return we = S.getSystemInfo().then(function(e) {
-                    if (Fe.info("getSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getSystemInfo() return empty installed driver version");
+            function ne() {
+                return Ee = S.getSystemInfo().then(function(e) {
+                    if (Ne.info("getSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getSystemInfo() return empty installed driver version");
                     var t = {
                         taskId: 0,
                         bytesDone: 0,
@@ -1664,20 +1648,21 @@ webpackJsonp([4], [function(e, t, n) {
                         downloadSpeed: 0,
                         downloadedLocation: ""
                     };
-                    return Ae = {
+                    return Se = {
                         version: e.DriverVersion,
-                        downloadStatus: t
+                        downloadStatus: t,
+                        isCRD: e.DriverType ? JSON.parse(e.DriverType) : F.GRD
                     }
                 }).catch(function(e) {
-                    return Fe.error("error getting installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
-                }).then(X).then(J).then(ee).finally(function() {
-                    we = void 0
-                }), we.then(function(e) {
-                    oe(e.version, e.isCRD)
-                }), we
+                    return Ne.error("error getting installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
+                }).then(Z).then(Q).finally(function() {
+                    Ee = void 0
+                }), Ee.then(function(e) {
+                    te(e.version, e.isCRD)
+                }), Ee
             }
 
-            function ae(e) {
+            function re(e) {
                 var t, n = [];
                 return angular.forEach(e, function(e) {
                     var r = {},
@@ -1691,30 +1676,30 @@ webpackJsonp([4], [function(e, t, n) {
                             downloadedLocation: "",
                             failureCount: 0
                         };
-                    r.name = e.name, r.version = e.version, r.releaseDateTime = e.releaseDateTime, r.isBeta = e.isBeta, r.downloadStatus = o, r.downloadURL = e.downloadURL, r.isCRD = e.driverType, n.push(r), _e = n, t = v.getStatus({
+                    r.name = e.name, r.version = e.version, r.releaseDateTime = e.releaseDateTime, r.isBeta = e.isBeta, r.downloadStatus = o, r.downloadURL = e.downloadURL, r.isCRD = e.driverType, n.push(r), be = n, t = v.getStatus({
                         version: e.version,
                         url: r.downloadURL
                     }).then(function(e) {
-                        return r.downloadStatus = e.data, z(r.downloadStatus), _e
+                        return r.downloadStatus = e.data, U(r.downloadStatus), be
                     }).catch(function(e) {
-                        return Fe.error("download getStatus failed: ", e.data, " status: ", e.status), _e
+                        return Ne.error("download getStatus failed: ", e.data, " status: ", e.status), be
                     })
                 }), t
             }
 
-            function se() {
-                _e = void 0, Te = null, we = null, Ee.driverInstalled = !0, Ae = null, Se = null, ue()
+            function oe() {
+                be = void 0, _e = null, Ee = null, he.driverInstalled = !0, Se = null, ye = null, se()
             }
 
-            function le(e) {
-                Fe.info("sysinfo updated", e.DriverVersion), (Ae && e.DriverVersion !== Ae.version || !Ae && e.DriverVersion) && (we = null, Ae = null, Se = null, _e = void 0, Te = null, he().finally(function() {
-                    Ee.getInstalledDriver(), Ee.getUpdateDetails(), i.trigger(d.INSTALLED_DRIVER_UPDATE)
+            function ie(e) {
+                Ne.info("sysinfo updated", e.DriverVersion), (Se && e.DriverVersion !== Se.version || !Se && e.DriverVersion) && (Ee = null, Se = null, ye = null, be = void 0, _e = null, pe().finally(function() {
+                    he.getInstalledDriver(), he.getUpdateDetails(), i.trigger(d.INSTALLED_DRIVER_UPDATE)
                 }))
             }
 
-            function ce() {
+            function ae() {
                 var e = S.getLaunchTimeSystemInfo().then(function(e) {
-                    if (Fe.info("getLaunchTimeSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getLaunchTimeSystemInfo() return empty installed driver version");
+                    if (Ne.info("getLaunchTimeSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getLaunchTimeSystemInfo() return empty installed driver version");
                     var t = {
                         taskId: 0,
                         bytesDone: 0,
@@ -1724,19 +1709,20 @@ webpackJsonp([4], [function(e, t, n) {
                         downloadSpeed: 0,
                         downloadedLocation: ""
                     };
-                    return Ae = {
+                    return Se = {
                         version: e.DriverVersion,
-                        downloadStatus: t
+                        downloadStatus: t,
+                        isCRD: e.DriverType ? JSON.parse(e.DriverType) : F.GRD
                     }
                 }).catch(function(e) {
-                    return Fe.error("error init installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
-                }).then(X).then(J).then(ee);
+                    return Ne.error("error init installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
+                }).then(Z).then(Q);
                 e.then(function(e) {
-                    oe(e.version, e.isCRD)
+                    te(e.version, e.isCRD)
                 })
             }
 
-            function ue() {
+            function se() {
                 L.checkSearchAvailability().then(function(e) {
                     if (e) {
                         var t = {},
@@ -1748,45 +1734,45 @@ webpackJsonp([4], [function(e, t, n) {
                             c = {};
                         a.forEach(L.getDirectivel10nTags("nvDriverItem"), function(e) {
                             o.push(e)
-                        }), r.push(Ee.getUpdateDetails().then(function(e) {
+                        }), r.push(he.getUpdateDetails().then(function(e) {
                             c[0] = !0, s[0] = e
                         }).catch(function() {
                             c[0] = !1
-                        })), r.push(Ee.getInstalledDriver().then(function(e) {
+                        })), r.push(he.getInstalledDriver().then(function(e) {
                             c[1] = !0, s[1] = e
                         }).catch(function() {
                             c[1] = !1
                         })), l.all(r).then(function(e) {
                             if (c[0] && a.forEach(s[0], function(e) {
                                     if (e && e.version && e.name) {
-                                        Fe.info("Adding docs for driver version " + e.version);
+                                        Ne.info("Adding docs for driver version " + e.version);
                                         var r = e.name,
                                             i = a.clone(o);
                                         i.push(e.version), t[r] = {
                                             description: i
                                         }, n.push(e)
-                                    } else Fe.error("getUpdateDetails returned empty data or version")
+                                    } else Ne.error("getUpdateDetails returned empty data or version")
                                 }), c[1]) {
                                 i.push("l10n.currentlyInstalled");
                                 var r = s[1];
                                 if (r && r.version && r.name) {
-                                    Fe.info("Adding docs for driver version " + r.version);
+                                    Ne.info("Adding docs for driver version " + r.version);
                                     var l = r.name,
                                         u = a.clone(o);
                                     u.push(r.version), t[l] = {
                                         description: u
                                     }, n.push(r)
-                                } else Fe.error("getInstalledDriver returned empty data or version")
+                                } else Ne.error("getInstalledDriver returned empty data or version")
                             }
                             t["l10n.updates"] = {
                                 description: i
-                            }, de(t, n)
+                            }, le(t, n)
                         })
                     }
                 })
             }
 
-            function de(e, t) {
+            function le(e, t) {
                 var n = ["l10n.highlights"];
                 a.forEach(L.getDirectivel10nTags("nvHighlightTile"), function(e) {
                     n.push(e)
@@ -1794,13 +1780,13 @@ webpackJsonp([4], [function(e, t, n) {
                 var r = [],
                     o = [];
                 a.each(t, function(e) {
-                    r.push(Ee.getDriverInformation(e.version, e.isCRD).then(function(t) {
+                    r.push(he.getDriverInformation(e.version, e.isCRD).then(function(t) {
                         o.push({
                             name: e.name,
                             data: t
                         })
                     }).catch(function() {
-                        Fe.error("getDriverInformation failed on ", e.version)
+                        Ne.error("getDriverInformation failed on ", e.version)
                     }))
                 }), l.all(r).then(function(t) {
                     var r = ["nvDriverItem", "nvHighlightTile", "nvUpdatesDriver"];
@@ -1820,117 +1806,116 @@ webpackJsonp([4], [function(e, t, n) {
                 })
             }
 
-            function fe() {
-                Ge = !0
+            function ce() {
+                Re = !0
             }
 
-            function me() {
-                Ge = !1
+            function ue() {
+                Re = !1
+            }
+
+            function de() {
+                return k.hasHardwareInfo() ? l.when(!0) : S.getSystemInfo().then(function(e) {
+                    return Ne.info("update hardware info"), k.updateHardwareInfo(e), !0
+                })
+            }
+
+            function fe() {
+                Re === !0 && de().then(function(e) {
+                    k.getParams().dIDa && k.getParams().go ? (Ne.info("refresh CRD feature capability"), ve()) : Ne.info("no dIDa or GO params found in hardware info")
+                })
+            }
+
+            function me(e) {
+                e.method !== g.SHOW_PROGRESS && Ne.info("UpdatesService - received event from installer", e), he.showNextInstallerForm(e)
             }
 
             function pe() {
-                return G.hasHardwareInfo() ? l.when(!0) : S.getSystemInfo().then(function(e) {
-                    return Fe.info("update hardware info"), G.updateHardwareInfo(e), !0
-                })
-            }
-
-            function ge() {
-                Ge === !0 && pe().then(function(e) {
-                    G.getParams().dIDa && G.getParams().go ? (Fe.info("refresh CRD feature capability"), be()) : Fe.info("no dIDa or GO params found in hardware info")
-                })
-            }
-
-            function ve(e) {
-                e.method !== g.SHOW_PROGRESS && Fe.info("UpdatesService - received event from installer", e), Ee.showNextInstallerForm(e)
-            }
-
-            function he() {
-                return a.isNull(Re) && (Re = u.getDriverTypePreference().then(function(e) {
-                    return e && e.data ? (Fe.info("getDriverType status:", e), Re = null, Le = e.data.driverType, e.data.driverType) : l.reject("getDriverType response is null")
+                return a.isNull(xe) && (xe = u.getDriverTypePreference().then(function(e) {
+                    return e && e.data ? (Ne.info("getDriverType status:", e), xe = null, Me = e.data.driverType, e.data.driverType) : l.reject("getDriverType response is null")
                 }).catch(function(e) {
-                    return Fe.error("failed to getDriverType", e), Re = null, l.reject(e)
-                })), Re
+                    return Ne.error("failed to getDriverType", e), xe = null, l.reject(e)
+                })), xe
             }
 
-            function ye(e) {
+            function ge(e) {
                 return e && e.data && e.data.html && e.data.html.body
             }
 
-            function be() {
-                if (Ie) return Ie.promise;
-                Ie = l.defer();
+            function ve() {
+                if (we) return we.promise;
+                we = l.defer();
                 var e = {};
-                return e.GFPV = G.getParams().GFPV || "0.00", e.isSLI = G.getParams().isSLI || "0", e.cmID = F.CRD, G.profile.targetGfeAchievements({
+                return e.GFPV = k.getParams().GFPV || "0.00", e.isSLI = k.getParams().isSLI || "0", e.cmID = P.CRD, k.profile.targetGfeAchievements({
                     gfwslParams: e
                 }).then(function(e) {
                     var t = "",
                         n = !1;
-                    if (ye(e) && Array.isArray(e.data.html.body.Achievements)) {
+                    if (ge(e) && Array.isArray(e.data.html.body.Achievements)) {
                         var r = a.findWhere(e.data.html.body.Achievements, {
-                            ID: F.CRD
+                            ID: P.CRD
                         });
                         if (r) {
                             var o = JSON.parse(r.overallState);
-                            n = !0, Pe = o, Ie.resolve(o), Fe.info("CRD feature state ", o)
+                            n = !0, Oe = o, we.resolve(o), Ne.info("CRD feature state ", o)
                         } else t = "CRD id not found in Achievements"
                     } else t = "Invalid response for GFWSL targetGfeAchievements";
-                    n || (Fe.error(t), Ie.reject(t), Pe = void 0)
+                    n || (Ne.error(t), we.reject(t), Oe = void 0)
                 }).catch(function(e) {
-                    Pe = void 0, Ie.reject(e)
+                    Oe = void 0, we.reject(e)
                 }).finally(function() {
-                    Ie = void 0
-                }), Ie.promise
+                    we = void 0
+                }), we.promise
             }
-            var Ee = this;
-            Ee.timer = void 0, Ee.scanCompleted = !0, Ee.manualCheckForUpdate = !1;
-            var Se, _e, we, Ae, Te, Ce, Ie, xe = [],
+            var he = this;
+            he.timer = void 0, he.scanCompleted = !0, he.manualCheckForUpdate = !1;
+            var ye, be, Ee, Se, _e, we, Ae = [],
+                Te = null,
+                Ce = null,
+                Ie = {},
+                xe = null,
                 De = null,
-                Me = null,
-                Oe = {},
-                Re = null,
-                Ne = null,
-                Le = void 0,
-                ke = void 0,
-                Pe = void 0,
-                Ge = !0,
-                Fe = e.getInstance("main.updates/updatesService");
-            Ce = P.getGlobalStore(k.GLOBAL_STORE), Ee.startDownload = function(e, t, n) {
-                return Fe.info("start download for version", e, " url ", t, "downloadType", n), v.start({
+                Me = void 0,
+                Oe = void 0,
+                Re = !0,
+                Ne = e.getInstance("main.updates/updatesService");
+            he.startDownload = function(e, t, n) {
+                return Ne.info("start download for version", e, " url ", t, "downloadType", n), v.start({
                     version: e,
                     url: t,
                     downloadType: n
                 })
-            }, Ee.pauseDownload = function(e) {
-                return Fe.info("pause download for taskid", e), v.pause({
+            }, he.pauseDownload = function(e) {
+                return Ne.info("pause download for taskid", e), v.pause({
                     taskId: e
                 })
-            }, Ee.resumeDownload = function(e) {
-                return Fe.info("resume download for taskid", e), v.resume({
+            }, he.resumeDownload = function(e) {
+                return Ne.info("resume download for taskid", e), v.resume({
                     taskId: e
                 }).then(function(e) {
-                    return z(e.data), e
+                    return U(e.data), e
                 })
-            }, Ee.stopDownload = function(e) {
-                return Fe.info("stop download for taskid", e), v.stop({
+            }, he.stopDownload = function(e) {
+                return Ne.info("stop download for taskid", e), v.stop({
                     taskId: e
                 }).then(function(e) {
                     return R.taskbarProgress("complete"), e
                 })
-            }, Ee.setUpdatesListener = function(e) {
-                xe.push(e)
-            }, Ee.removeUpdatesListener = function(e) {
-                var t = xe.indexOf(e);
-                t > -1 && xe.splice(t, 1)
-            }, Ee.canCheckForUpdate = function() {
+            }, he.setUpdatesListener = function(e) {
+                Ae.push(e)
+            }, he.removeUpdatesListener = function(e) {
+                var t = Ae.indexOf(e);
+                t > -1 && Ae.splice(t, 1)
+            }, he.canCheckForUpdate = function() {
                 var e = !0;
-                return Ee.scanCompleted && _e && _e.forEach(function(t) {
+                return he.scanCompleted && be && be.forEach(function(t) {
                     t.downloadStatus.status !== n.TASK_PAUSED && t.downloadStatus.status !== n.TASK_RUNNING && t.downloadStatus.status !== n.TASK_RETRY || (e = !1)
                 }), e
-            }, Ee.checkForUpdates = function(e) {
-                Ee.canCheckForUpdate() ? (Ee.manualCheckForUpdate = e, Fe.info("driver update scan starting.."), u.refresh().then(function() {}).catch(function(e) {
-                    Fe.error("UpdateService - start scan failed", e), i.trigger(d.SCAN_FAILED, {})
-                })) : Fe.info("scan is already in progress..")
-            }, Ee.showNextInstallerForm = function(e) {
+            }, he.checkForUpdates = function(e) {
+                !e || he.canCheckForUpdate() ? (he.manualCheckForUpdate = e, Ne.info("driver update scan starting.."), u.refresh().then(function() {}).catch(function(e) {
+                    Ne.error("UpdateService - start scan failed", e), i.trigger(d.SCAN_FAILED, {})
+                })) : Ne.info("driver download is initiated or scan is already in progress..")
+            }, he.showNextInstallerForm = function(e) {
                 if (e.method === g.SHOW_FORM) switch (e.form) {
                     case o.NVIFORM_INSTALL_INITIAL:
                     case o.NVIFORM_INSTALL_CHECKING:
@@ -1956,7 +1941,7 @@ webpackJsonp([4], [function(e, t, n) {
                         r.showInstallerForm(e);
                         break;
                     case o.NVIFORM_INSTALL_START_FAILED:
-                        W(e.errorCode);
+                        B(e.errorCode);
                         break;
                     case o.NVIFORM_INSTALL_CHECK_WAIT:
                         r.showInstallerForm(e);
@@ -1974,8 +1959,8 @@ webpackJsonp([4], [function(e, t, n) {
                         r.showInstallerForm(e)
                 } else r.showInstallerForm(e);
                 return !0
-            }, Ee.invokeInstallation = function(e, t, n) {
-                Fe.info("start installation", e.version, e.name, t, n);
+            }, he.invokeInstallation = function(e, t, n) {
+                Ne.info("start installation", e.version, e.name, t, n);
                 var r = n ? "" : e.downloadStatus.extractedPath ? e.downloadStatus.extractedPath : e.downloadStatus.downloadedLocation;
                 b.start({}, {
                     driverLocation: r,
@@ -1984,16 +1969,16 @@ webpackJsonp([4], [function(e, t, n) {
                     isPfw: !e.downloadStatus.extractedPath,
                     pfwLocation: e.downloadStatus.downloadedLocation
                 }).then(function() {
-                    Fe.info("successfully start installation ", e.name)
+                    Ne.info("successfully start installation ", e.name)
                 }).catch(function(e) {
-                    Fe.error("failed to start installation error code:", e.data, " status:", e.status, " params:", e.config.data, e)
+                    Ne.error("failed to start installation error code:", e.data, " status:", e.status, " params:", e.config.data, e)
                 })
-            }, Ee.beginInstallation = function(e, t, n) {
-                ee(e).finally(function() {
-                    Q(e, t, n)
+            }, he.beginInstallation = function(e, t, n) {
+                Q(e).finally(function() {
+                    K(e, t, n)
                 })
-            }, Ee.showArticle = function(e, t) {
-                Oe = {
+            }, he.showArticle = function(e, t) {
+                Ie = {
                     content: e,
                     driverVersion: t
                 }, N.show({
@@ -2002,66 +1987,64 @@ webpackJsonp([4], [function(e, t, n) {
                     template: c.default,
                     disableParentScroll: !1,
                     locals: {
-                        getArticleCallback: ne
+                        getArticleCallback: J
                     },
                     bindToController: !0
                 })
-            }, Ee.getUpdates = function() {
-                return Fe.info("getUpdates called"), Se = u.get().then(function(e) {
-                    return Te = e.data, Fe.info("UpdatesService - got update response", Te), Te.updates ? ae(Te.updates) : l.reject("no updates available")
+            }, he.getUpdates = function() {
+                return Ne.info("getUpdates called"), ye = u.get().then(function(e) {
+                    return _e = e.data, Ne.info("UpdatesService - got update response", _e), _e.updates ? re(_e.updates) : l.reject("no updates available")
                 }).catch(function(e) {
-                    return Fe.error("error getting driver updates:data ", e.data, " status:", e.status), l.reject(e.data)
+                    return Ne.error("error getting driver updates:data ", e.data, " status:", e.status), l.reject(e.data)
                 }).finally(function() {
-                    Se = void 0
-                }), Se.then(function(e) {
+                    ye = void 0
+                }), ye.then(function(e) {
                     e && e.forEach(function(e) {
-                        oe(e.version, e.isCRD)
+                        te(e.version, e.isCRD)
                     })
-                }), Se
-            }, Ee.getUpdateDetails = function() {
-                return Se ? Se : _e ? l.when(_e) : Te ? l.reject("no updates available") : (Fe.info("getUpdates called in updatedetails"), Ee.getUpdates())
-            }, Ee.getInstalledDriver = function() {
-                return we ? we : Ae ? l.when(Ae) : (Fe.info("getInstalledDriver called"), ie())
-            }, Ee.initialize = function() {
-                Fe.info("updatesService.intiialize called"), U.onlineState && (Ge = U.onlineState.online), i.on(C.ONLINE, fe), i.on(C.OFFLINE, me), i.on(C.GFWSL_LOCALE_PARAMS_UPDATED, ge), i.on(C.GFWSL_GEOLOCAL_PARAMS_UPDATED, ge), i.on(C.GFWSL_SYS_PARAMS_UPDATED, ge), he().finally(function() {
-                    V().finally(function() {
-                        ce(), Ee.getUpdateDetails(), A.initialize(), i.on(C.SYSTEMINFO_UPDATED, le), m.register(f.UPDATESCAN_UPDATE, d.SCAN_UPDATE), m.register(y.DOWNLOAD_PROGRESS_STATUS, h.PROGRESS), m.register(E.INSTALLER_SHOW_FORM, s.INSTALL_FORM), m.register(E.INSTALLER_PROGRESS_UPDATE, s.INSTALL_FORM), i.on(C.LOCALE_CHANGED, se), r.unsubScribeDriverInstallationNotificationRegister(q)
-                    })
+                }), ye
+            }, he.getUpdateDetails = function() {
+                return ye ? ye : be ? l.when(be) : _e ? l.reject("no updates available") : (Ne.info("getUpdates called in updatedetails"), he.getUpdates())
+            }, he.getInstalledDriver = function() {
+                return Ee ? Ee : Se ? l.when(Se) : (Ne.info("getInstalledDriver called"), ne())
+            }, he.initialize = function() {
+                Ne.info("updatesService.intiialize called"), G.onlineState && (Re = G.onlineState.online), i.on(C.ONLINE, ce), i.on(C.OFFLINE, ue), i.on(C.GFWSL_LOCALE_PARAMS_UPDATED, fe), i.on(C.GFWSL_GEOLOCAL_PARAMS_UPDATED, fe), i.on(C.GFWSL_SYS_PARAMS_UPDATED, fe), pe().finally(function() {
+                    ae(), he.getUpdateDetails(), A.initialize(), i.on(C.SYSTEMINFO_UPDATED, ie), m.register(f.UPDATESCAN_UPDATE, d.SCAN_UPDATE), m.register(y.DOWNLOAD_PROGRESS_STATUS, h.PROGRESS), m.register(E.INSTALLER_SHOW_FORM, s.INSTALL_FORM), m.register(E.INSTALLER_PROGRESS_UPDATE, s.INSTALL_FORM), i.on(C.LOCALE_CHANGED, oe), r.unsubScribeDriverInstallationNotificationRegister(j)
                 })
-            }, i.on(s.INSTALL_DONE, se), i.on(d.SCAN_UPDATE, function(e) {
-                Fe.info("UpdatesService - got socket event  SCAN_UPDATE - ", e), e === p.STARTED ? i.trigger(d.SCAN_STARTED) : e === p.FINISHED ? (i.trigger(d.SCAN_FINISHED), Ee.manualCheckForUpdate = !1) : e === p.FAILED && (i.trigger(d.SCAN_FAILED), Ee.manualCheckForUpdate = !1)
+            }, i.on(s.INSTALL_DONE, oe), i.on(d.SCAN_UPDATE, function(e) {
+                Ne.info("UpdatesService - got socket event  SCAN_UPDATE - ", e), e === p.STARTED ? i.trigger(d.SCAN_STARTED) : e === p.FINISHED ? (i.trigger(d.SCAN_FINISHED), he.manualCheckForUpdate = !1) : e === p.FAILED && (i.trigger(d.SCAN_FAILED), he.manualCheckForUpdate = !1)
             }), i.on(d.SCAN_STARTED, function(e) {
-                Fe.info("UpdatesService - SCAN_STARTED"), De = Date.now(), Ee.scanCompleted = !1
+                Ne.info("UpdatesService - SCAN_STARTED"), Te = Date.now(), he.scanCompleted = !1
             }), i.on(d.SCAN_FINISHED, function(e) {
-                Me = Date.now(), Fe.info("Time taken to scan updates(ms):", Me - De), Fe.info("UpdatesService - SCAN_FINISHED"), _e = void 0, Te = null, Ee.getUpdates(), $()
+                Ce = Date.now(), Ne.info("Time taken to scan updates(ms):", Ce - Te), Ne.info("UpdatesService - SCAN_FINISHED"), be = void 0, _e = null, he.getUpdates(), z()
             }), i.on(d.SCAN_FAILED, function(e) {
-                Fe.error("UpdatesService - SCAN_FAILED"), Ee.manualCheckForUpdate = !1, _e = void 0, Te = null, _.push(w.UPDATES_CHECK_FOR_DRIVER_UPDATES_FAILED), Ee.getUpdates(), $()
+                Ne.error("UpdatesService - SCAN_FAILED"), he.manualCheckForUpdate = !1, be = void 0, _e = null, _.push(w.UPDATES_CHECK_FOR_DRIVER_UPDATES_FAILED), he.getUpdates(), z()
             }), i.on(h.PROGRESS, function(e) {
                 var t = !1;
-                a.isUndefined(_e) || _e.forEach(function(n) {
+                a.isUndefined(be) || be.forEach(function(n) {
                     n.downloadStatus.taskId === e.taskId && (n.downloadStatus = e, t = !0)
-                }), !t && Ae && Ae.downloadStatus && Ae.downloadStatus.taskId === e.taskId && (Ae.downloadStatus = e, t = !0), t && (z(e), e.status === n.TASK_RUNNING ? Fe.info("DOWNLOAD_PROGRESS_STATUS - ", e.status, "%Complete", e.percentComplete, " tmRem", e.timeRemaining, " dwndSpd", e.downloadSpeed, " taskId ", e.taskId, "byteDn", e.bytesDone) : Fe.info("DOWNLOAD_PROGRESS_STATUS - ", e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_DISK_WRITE_FAIL || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS ? (i.trigger(h.FAILED, e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER ? _.push(w.UPDATES_DOWNLOAD_DRIVER_UNABLE_TO_REACH_SERVER) : _.push(w.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)) : e.status === n.TASK_COMPLETED && _.push(w.UPDATES_DOWNLOAD_DRIVER_SUCCESS))
-            }), Ee.sendResponseToInstaller = function(e) {
-                Fe.debug("UpdateService:sendResponseToInstaller - send response to installer ", e), b.changeState({}, e).then(function() {
-                    Fe.info("UpdateService - successfully sent response to installer")
+                }), !t && Se && Se.downloadStatus && Se.downloadStatus.taskId === e.taskId && (Se.downloadStatus = e, t = !0), t && (U(e), e.status === n.TASK_RUNNING ? Ne.info("DOWNLOAD_PROGRESS_STATUS - ", e.status, "%Complete", e.percentComplete, " tmRem", e.timeRemaining, " dwndSpd", e.downloadSpeed, " taskId ", e.taskId, "byteDn", e.bytesDone) : Ne.info("DOWNLOAD_PROGRESS_STATUS - ", e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_DISK_WRITE_FAIL || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS ? (i.trigger(h.FAILED, e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER ? _.push(w.UPDATES_DOWNLOAD_DRIVER_UNABLE_TO_REACH_SERVER) : _.push(w.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)) : e.status === n.TASK_COMPLETED && _.push(w.UPDATES_DOWNLOAD_DRIVER_SUCCESS))
+            }), he.sendResponseToInstaller = function(e) {
+                Ne.debug("UpdateService:sendResponseToInstaller - send response to installer ", e), b.changeState({}, e).then(function() {
+                    Ne.info("UpdateService - successfully sent response to installer")
                 }).catch(function(e) {
-                    Fe.error("UpdateService - installersEndpoints.changeStatus failed", e)
+                    Ne.error("UpdateService - installersEndpoints.changeStatus failed", e)
                 })
-            }, Ee.setDriverTypePreference = function(e) {
-                return a.isNull(Ne) || u.setDriverTypePreference.cancel(Ne), Ne = u.setDriverTypePreference({}, {
+            }, he.setDriverTypePreference = function(e) {
+                return a.isNull(De) || u.setDriverTypePreference.cancel(De), De = u.setDriverTypePreference({}, {
                     driverType: e
                 }).then(function(t) {
-                    return Ne = null, Fe.info("setDriverType status:", t), Le = e, Te = null, _e = void 0, t.status
+                    return De = null, Ne.info("setDriverType status:", t), Me = e, _e = null, be = void 0, t.status
                 }).catch(function(e) {
-                    return Ne = null, Fe.error("failed to setDriverType", e), l.reject(e)
+                    return De = null, Ne.error("failed to setDriverType", e), l.reject(e)
                 })
-            }, Ee.getDriverTypePreference = function() {
-                return Le ? l.when(Le) : Re ? Re : he()
-            }, Ee.isCRDFeatureSupported = function() {
-                return angular.isDefined(Pe) ? l.when(Pe) : be()
-            }, Ee.getDriverInformation = function(e, t) {
+            }, he.getDriverTypePreference = function() {
+                return Me ? l.when(Me) : xe ? xe : pe()
+            }, he.isCRDFeatureSupported = function() {
+                return angular.isDefined(Oe) ? l.when(Oe) : ve()
+            }, he.getDriverInformation = function(e, t) {
                 return A.getDriverInformation(e, t)
-            }, r.setSendResponseToInstallerRegister(Ee.sendResponseToInstaller), r.setInvokeInstallationCallbackRegister(Ee.invokeInstallation), Ee.getInstallationDriverData = A.getInstallationDriverData, Ee.getDriverArticle = A.getArticleInformation
+            }, r.setSendResponseToInstallerRegister(he.sendResponseToInstaller), r.setInvokeInstallationCallbackRegister(he.invokeInstallation), he.getInstallationDriverData = A.getInstallationDriverData, he.getDriverArticle = A.getArticleInformation
         }]);
     t.updatesService = u
 }, , function(e, t, n) {
@@ -2297,7 +2280,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvAccordionPane = t.nvAccordion = void 0;
     var r = n(1);
-    n(315);
+    n(317);
     var o = r.ngMainCommonModule.directive("nvAccordion", ["ACCORDION_MODES", function(e) {
             return {
                 restrict: "E",
@@ -2731,7 +2714,7 @@ webpackJsonp([4], [function(e, t, n) {
                     height: 500,
                     width: 500
                 }).then(function(e) {
-                    r = new Date - r, oe.info("saveUserAvatarUrl success!"), re.refresh(), o.resolve(e.data.data.avatar), U(A.UPLOAD_AVATAR, e, r)
+                    r = new Date - r, oe.info("saveUserAvatarUrl success!", e), re.refresh(), o.resolve(e.data.data.avatar), U(A.UPLOAD_AVATAR, e, r)
                 }).catch(function(e) {
                     r = new Date - r, oe.error("saveUserAvatarUrl failed with error", e), U(A.UPLOAD_AVATAR, e, r), o.reject(e)
                 }), o.promise
@@ -2993,6 +2976,7 @@ webpackJsonp([4], [function(e, t, n) {
                     o = new Date - o, le.giveawaydetails = e.data.data.last_modified_stampMicro;
                     try {
                         if (_.isEmpty(e.data.data.giveaways)) throw {
+                            errorType: k.CURRENT_GIVEAWAY_EXPIRED,
                             message: "Got empty response"
                         };
                         de.currentGiveaway = e.data.data.giveaways;
@@ -3002,7 +2986,9 @@ webpackJsonp([4], [function(e, t, n) {
                         var a = ee(de.currentGiveaway);
                         z(a), ve.resolve(de.currentGiveaway), r.trigger(M.CURRENT_GIVEAWAY_REFRESHED, de.currentGiveaway)
                     } catch (t) {
-                        oe.error("getCurrentGiveaway exception", t.message, e), i = new H(k.CURRENT_GIVEAWAY_FAILED, t.message, k.API_EXCEPTION), ve.reject(i)
+                        oe.error("getCurrentGiveaway exception", t.message, e);
+                        var s = t.errorType || k.API_EXCEPTION;
+                        i = new H(k.CURRENT_GIVEAWAY_FAILED, t.message, s), ve.reject(i)
                     }
                     U(A.GET_CURRENT_GIVE_AWAY, e, o)
                 }).catch(function(e) {
@@ -3175,9 +3161,10 @@ webpackJsonp([4], [function(e, t, n) {
                                     region: u
                                 }
                             }).then(function(e) {
+                                oe.info("cevo session initialized successfull", e);
                                 var n = (new Date).getTime(),
                                     r = e.data.data.stampMicro;
-                                return se = n - r, se = 1e3 * Math.round(se / 1e3), t = new Date - t, oe.info("cevo session initialized successfull", e), ie.token = e.data.data.token.token, ie.expires = 1e3 * e.data.data.token.expires, U(A.CREATE_CEVO_SESSION, e, t), e.data.data.supportValue ? (Ce = (0, i.default)(Ce, e.data.data.supportValue), oe.info("overriding feature toggle on session init:", e.data.data.supportValue)) : (Ce = (0, i.default)(Ce, Ie), oe.info("feature toggles set to ", Ce)), fe.resolve(ie)
+                                return se = n - r, se = 1e3 * Math.round(se / 1e3), t = new Date - t, ie.token = e.data.data.token.token, ie.expires = 1e3 * e.data.data.token.expires, U(A.CREATE_CEVO_SESSION, e, t), e.data.data.supportValue ? (Ce = (0, i.default)(Ce, e.data.data.supportValue), oe.info("overriding feature toggle on session init:", e.data.data.supportValue)) : (Ce = (0, i.default)(Ce, Ie), oe.info("feature toggles set to ", Ce)), fe.resolve(ie)
                             }).catch(function(n) {
                                 return t = new Date - t, oe.error("failed to initialize cevo session", n), U(A.CREATE_CEVO_SESSION, n, t), e = j(n, k.SESSION_INIT_FAILED), fe.reject(e)
                             }).finally(function() {
@@ -3294,9 +3281,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.mediaDialogService = void 0;
     var o = n(1),
-        i = n(731),
+        i = n(733),
         a = r(i);
-    n(353), n(19), n(162), n(379);
+    n(355), n(19), n(162), n(381);
     var s = o.ngMainCommonModule.service("mediaDialogService", ["$mdDialog", "$rootElement", function(e, t) {
         var n = this,
             r = {},
@@ -3337,11 +3324,11 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.nodeService = void 0;
     var r = n(43);
     n(18), n(30), n(16);
-    var o = r.ngMainUtilsModule.service("nodeService", ["$log", "cefService", "dialogService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "eventAggregator", "SOCKETIO_EVENTS", "socketService", "GFECLIENT_CONFIG", "FATAL_ERRORS", function(e, t, n, r, o, i, a, s, l, c) {
-        function u(e, i) {
+    var o = r.ngMainUtilsModule.service("nodeService", ["$log", "cefService", "dialogService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "eventAggregator", "SOCKETIO_EVENTS", "socketService", "GFECLIENT_CONFIG", "FATAL_ERRORS", "COMMON_DYNAMIC_REDIRECT", "localeService", "$window", function(e, t, n, r, o, i, a, s, l, c, u, d, f) {
+        function m(e, i) {
             t.enableCloseButton(!0), r.push(o.GFE_NODE_FAILURE, e, {
                 anonymize: !0
-            }), h.info("display oops message with error:", e);
+            }), E.info("display oops message with error:", e);
             var a = i === c.socketReconnnectFail ? "l10n.errorRestartApplication" : "l10n.errorRestartPC";
             n.show("nv-dialog-message", {
                 title: "l10n.nvidiaGfeTitle",
@@ -3355,40 +3342,44 @@ webpackJsonp([4], [function(e, t, n) {
                     action: function() {
                         t.windowClose()
                     }
+                },
+                onLaunchFaq: function() {
+                    var e = u.BASE_URL + d.getCurrentLocaleWithUnderscore() + "&page=" + u.FAQ_DATA_POLICY;
+                    E.info("FAQs redirects to url:: ", e), f.open(e)
                 }
             })
         }
 
-        function d() {
+        function p() {
             s.setReconnectionAttempts(1 / 0)
         }
 
-        function f() {
-            s.setReconnectionAttempts(y.reconnectionAttempts)
-        }
-
-        function m(e) {
-            h.info("Successful reconnection attempt number: ", e), s.setReconnectionAttempts(y.reconnectionAttempts)
-        }
-
-        function p(e) {
-            h.info("socket event reconnecting attempt number: ", e)
-        }
-
         function g() {
-            h.info("socket event reconnect_failed"), u("socket event reconnect_failed", c.socketReconnnectFail)
+            s.setReconnectionAttempts(S.reconnectionAttempts)
         }
 
-        function v() {
-            h.info("registering event listeners"), i.on(a.RECONNECT, m), i.on(a.RECONNECTING, p), i.on(a.RECONNECT_FAILED, g)
+        function v(e) {
+            E.info("Successful reconnection attempt number: ", e), s.setReconnectionAttempts(S.reconnectionAttempts)
         }
-        var h = e.getInstance("main.utils/nodeService"),
-            y = angular.merge({}, l.nodeService);
+
+        function h(e) {
+            E.info("socket event reconnecting attempt number: ", e)
+        }
+
+        function y() {
+            E.info("socket event reconnect_failed"), m("socket event reconnect_failed", c.socketReconnnectFail)
+        }
+
+        function b() {
+            E.info("registering event listeners"), i.on(a.RECONNECT, v), i.on(a.RECONNECTING, h), i.on(a.RECONNECT_FAILED, y)
+        }
+        var E = e.getInstance("main.utils/nodeService"),
+            S = angular.merge({}, l.nodeService);
         return {
-            initialize: v,
-            showErrorMessage: u,
-            setReconnectionToInfinity: d,
-            setReconnectionToDefault: f
+            initialize: b,
+            showErrorMessage: m,
+            setReconnectionToInfinity: p,
+            setReconnectionToDefault: g
         }
     }]);
     t.nodeService = o
@@ -3404,9 +3395,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvSelectMenuItem = void 0;
     var o = n(1),
-        i = n(740),
+        i = n(742),
         a = r(i);
-    n(372);
+    n(374);
     var s = o.ngMainCommonModule.directive("nvSelectMenuItem", [function() {
         return {
             restrict: "E",
@@ -3445,7 +3436,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(14),
         i = n(797),
         a = r(i);
-    n(469);
+    n(471);
     var s = o.ngGamesModule.directive("nvOptimizedIcon", function() {
         return {
             restrict: "E",
@@ -3482,7 +3473,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(1),
         i = n(798),
         a = r(i);
-    n(470);
+    n(472);
     var s = o.ngMainCommonModule.directive("nvPlayGame", [function() {
         return {
             restrict: "E",
@@ -3530,7 +3521,7 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.redeemRewardController = void 0;
     var o = n(52);
     n(119), n(16), n(19);
-    var i = n(707),
+    var i = n(709),
         a = r(i),
         s = o.ngRewardsModule.controller("RedeemRewardController", ["$log", "$mdDialog", "REWARDS_CONSTANTS", "$sce", "$timeout", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "$document", "rewardsService", "$filter", "REWARDS_ASSET_DIMENSIONS", function(e, t, n, r, o, i, s, l, c, u, d) {
             function f(e) {
@@ -3618,7 +3609,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
     }
     t.__esModule = !0;
-    var o = n(306),
+    var o = n(308),
         i = r(o);
     t.default = function(e, t, n) {
         return t in e ? (0, i.default)(e, t, {
@@ -3680,10 +3671,10 @@ webpackJsonp([4], [function(e, t, n) {
     var i = n(3),
         a = o(i),
         s = n(1);
-    n(349), n(19), n(325);
-    var l = n(716),
+    n(351), n(19), n(327);
+    var l = n(718),
         c = r(l);
-    n(322);
+    n(324);
     var u = s.ngMainCommonModule.directive("nvCarousel", ["eventAggregator", "GAME_EVENTS", function(e, t) {
         function n(n, r, o, i) {
             function s(r) {
@@ -3753,7 +3744,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(192),
         i = r(o),
         a = n(1);
-    n(375);
+    n(377);
     var s = a.ngMainCommonModule.directive("nvCountdownTimer", ["$log", "$filter", "systemClockService", "eventAggregator", "COMMON_EVENTS", "COUNTDOWN_TIMER_STATES", function(e, t, n, r, o, a) {
         return {
             restrict: "E",
@@ -3856,9 +3847,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvDialogEditEmail = void 0;
     var o = n(1),
-        i = n(718),
+        i = n(720),
         a = r(i);
-    n(329), n(277), n(166);
+    n(331), n(277), n(166);
     var s = o.ngMainCommonModule.directive("nvDialogEditEmail", [function() {
         return {
             restrict: "A",
@@ -3884,7 +3875,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvDialogEmailVerification = void 0;
     var o = n(1),
-        i = n(719),
+        i = n(721),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvDialogEmailVerification", [function() {
             return {
@@ -4027,11 +4018,11 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvNewsItem = t.nvNews = void 0;
     var o = n(1),
-        i = n(735),
+        i = n(737),
         a = r(i),
-        s = n(734),
+        s = n(736),
         l = r(s);
-    n(358), n(33);
+    n(360), n(33);
     var c = o.ngMainCommonModule.component("nvNews", {
             transclude: !0,
             bindings: {
@@ -4055,13 +4046,13 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.productTourService = void 0;
     var r = n(1),
-        o = r.ngMainCommonModule.service("productTourService", ["$log", "PRODUCT_TOUR_NAMES", "uiTourService", "dbCacheService", "DB_NAMES", "PRODUCT_TOUR_STATUS", "eventAggregator", "COMMON_EVENTS", "jarvisService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_STATUS", "telemetryService", "TELEMETRY_ACTIONS", "TELEMETRY_AVAILABLE_STATUS", "$document", "$filter", "$timeout", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v) {
-            function h(e) {
-                P[e];
-                return !(!P[e] || P[e].status !== i.PENDING)
+        o = r.ngMainCommonModule.service("productTourService", ["$log", "PRODUCT_TOUR_NAMES", "uiTourService", "dbCacheService", "DB_NAMES", "PRODUCT_TOUR_STATUS", "eventAggregator", "COMMON_EVENTS", "jarvisService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_STATUS", "telemetryService", "TELEMETRY_ACTIONS", "TELEMETRY_AVAILABLE_STATUS", "$document", "$filter", "$timeout", "PRODUCT_TOUR_EVENTS", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v, h) {
+            function y(e) {
+                G[e];
+                return !(!G[e] || G[e].status !== i.PENDING)
             }
 
-            function y() {
+            function b() {
                 var e = angular.element(p[0].getElementById("main-user-profile")),
                     n = angular.element(p[0].getElementById("main-user-profile-container")),
                     r = {
@@ -4078,38 +4069,38 @@ webpackJsonp([4], [function(e, t, n) {
                         title: g("translate")("l10n.redeemCodesAndRewards"),
                         placement: "bottom-right"
                     };
-                b(t.OOBE, F, r, o)
+                E(t.OOBE, U, r, o)
             }
 
-            function b(e, t, r, o) {
+            function E(e, t, r, o) {
                 var i = n.getTourByName(e);
-                o && (o = E(i, o) || o), t && !i.hasStep(r.stepId) ? (i.createStep(r), i.removeStep(o)) : t || (i.removeStep(r), o && !i.hasStep(o.stepId) && i.createStep(o))
+                o && (o = S(i, o) || o), t && !i.hasStep(r.stepId) ? (i.createStep(r), i.removeStep(o)) : t || (i.removeStep(r), o && !i.hasStep(o.stepId) && i.createStep(o))
             }
 
-            function E(e, t) {
+            function S(e, t) {
                 var n = e._getSteps();
                 return n && n.find(function(e) {
                     return e.stepId === t.stepId
                 })
             }
 
-            function S(e) {
-                return h(e) && P[e].previousStepOrder || 0
-            }
-
-            function _(e, t) {
-                var r = n.getTourByName(e),
-                    o = r._getSteps();
-                t >= o.length && (t = o.length - 1), r.startAt(t).then(function(n) {
-                    k.info("tour launched", e, "step", t), w(e, t), T(r), M(e, t)
-                }).catch(function(n) {
-                    k.error("tour failed to launch", e, " stepOrder:", t, " error:", n, " steps count:", o.length)
-                })
+            function _(e) {
+                return y(e) && G[e].previousStepOrder || 0
             }
 
             function w(e, t) {
                 var r = n.getTourByName(e),
-                    o = A(r),
+                    o = r._getSteps();
+                t >= o.length && (t = o.length - 1), r.startAt(t).then(function(n) {
+                    P.info("tour launched", e, "step", t), A(e, t), C(r), O(e, t)
+                }).catch(function(n) {
+                    P.error("tour failed to launch", e, " stepOrder:", t, " error:", n, " steps count:", o.length)
+                })
+            }
+
+            function A(e, t) {
+                var r = n.getTourByName(e),
+                    o = T(r),
                     a = i.PENDING;
                 t === o && (a = i.COMPLETED);
                 var s = {
@@ -4117,48 +4108,48 @@ webpackJsonp([4], [function(e, t, n) {
                     status: a,
                     previousStepOrder: t
                 };
-                P[s.name] = s, P.persist_()
+                G[s.name] = s, G.persist_()
             }
 
-            function A(e) {
+            function T(e) {
                 var t = e._getSteps();
                 return t[t.length - 1].order
             }
 
-            function T(e) {
-                e.on("stepChanged", C), e.on("paused", x), e.on("ended", D), a.on(s.WINDOW_RESIZE, O)
-            }
-
             function C(e) {
-                if (I(f.NEXT), e) {
-                    var t = e.config("name");
-                    w(t, e.order), G.stepStartTime = d.startLoad(c.PRODUCT_TOUR_PROGRESS_EVENT)
-                }
-                G.currentStep += 1
+                e.on("stepChanged", I), e.on("paused", D), e.on("ended", M), a.on(s.WINDOW_RESIZE, R)
             }
 
             function I(e) {
-                var t = {
-                    name: G.name,
-                    step: d.getString(G.currentStep),
-                    action: e
-                };
-                d.endLoad(c.PRODUCT_TOUR_PROGRESS_EVENT, G.stepStartTime, t)
+                if (x(f.NEXT), e) {
+                    var t = e.config("name");
+                    A(t, e.order), F.stepStartTime = d.startLoad(c.PRODUCT_TOUR_PROGRESS_EVENT)
+                }
+                F.currentStep += 1
             }
 
-            function x() {
-                k.info("Tour paused", G.name), L.sendProductTourExitTelemetry(u.PAUSED), a.off(s.WINDOW_RESIZE, O)
+            function x(e) {
+                var t = {
+                    name: F.name,
+                    step: d.getString(F.currentStep),
+                    action: e
+                };
+                d.endLoad(c.PRODUCT_TOUR_PROGRESS_EVENT, F.stepStartTime, t)
             }
 
             function D() {
-                k.info("Tour ended", G.name), I(f.GOT_IT), L.sendProductTourExitTelemetry(u.SUCCESS), a.off(s.WINDOW_RESIZE, O)
+                P.info("Tour paused", F.name), k.sendProductTourExitTelemetry(u.PAUSED), a.off(s.WINDOW_RESIZE, R), a.trigger(h.PAUSED, F.name)
             }
 
-            function M(e, t) {
-                G.isActive = !0, G.name = e, G.startStep = t, G.currentStep = t, G.isResume = 0 === t ? m.NO : m.YES, G.stepStartTime = d.startLoad(c.PRODUCT_TOUR_PROGRESS_EVENT), G.tourStartTime = d.startLoad(c.PRODUCT_TOUR_EXIT_EVENT)
+            function M() {
+                P.info("Tour ended", F.name), x(f.GOT_IT), k.sendProductTourExitTelemetry(u.SUCCESS), a.off(s.WINDOW_RESIZE, R), a.trigger(h.END, F.name)
             }
 
-            function O() {
+            function O(e, t) {
+                F.isActive = !0, F.name = e, F.startStep = t, F.currentStep = t, F.isResume = 0 === t ? m.NO : m.YES, F.stepStartTime = d.startLoad(c.PRODUCT_TOUR_PROGRESS_EVENT), F.tourStartTime = d.startLoad(c.PRODUCT_TOUR_EXIT_EVENT)
+            }
+
+            function R() {
                 var e = p[0].querySelector(".tether-target.tether-enabled"),
                     t = p[0].querySelector(".tether-element.tether-enabled");
                 if (e && t) {
@@ -4174,11 +4165,11 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function R(e) {
-                F = e, y()
+            function N(e) {
+                U = e, b()
             }
 
-            function N(e) {
+            function L(e) {
                 e && v(function() {
                     var n = angular.element(p[0].getElementById("main-share-icon")),
                         r = {
@@ -4188,13 +4179,13 @@ webpackJsonp([4], [function(e, t, n) {
                             title: g("translate")("l10n.accessTheIgo"),
                             placement: "bottom-right"
                         };
-                    n && b(t.OOBE, e, r)
+                    n && E(t.OOBE, e, r)
                 })
             }
-            var L = this,
-                k = e.getInstance("main.common/productTourService"),
-                P = null,
-                G = {
+            var k = this,
+                P = e.getInstance("main.common/productTourService"),
+                G = null,
+                F = {
                     name: "",
                     currentStep: 0,
                     startStep: 0,
@@ -4204,34 +4195,40 @@ webpackJsonp([4], [function(e, t, n) {
                     stepStartTime: 0,
                     isActive: !1
                 },
-                F = !1;
-            L.initialize = function() {
-                P = r.getCachedGlobalItem(o.GLOBAL_STORE, o.PRODUCT_TOUR_STATES), a.on(s.LOGIN_STATUS_CHANGE, L.resumeOobeTour), a.on(s.USER_PROFILE_STATUS_UPDATED, R), a.on(s.SHARE_ICON_VIZ_UPDATED, N)
-            }, L.resumeOobeTour = function() {
+                U = !1;
+            k.initialize = function() {
+                G = r.getCachedGlobalItem(o.GLOBAL_STORE, o.PRODUCT_TOUR_STATES), a.on(s.LOGIN_STATUS_CHANGE, k.resumeOobeTour), a.on(s.USER_PROFILE_STATUS_UPDATED, N), a.on(s.SHARE_ICON_VIZ_UPDATED, L)
+            }, k.resumeOobeTour = function() {
                 var e = l.getLoggedInUser();
-                P.sync_().then(function() {
-                    e && h(t.OOBE) ? L.startOobeTour(!0) : n.endAllTours()
+                G.sync_().then(function() {
+                    e && y(t.OOBE) ? k.startOobeTour(!0) : n.endAllTours()
                 }).catch(function() {
-                    k.error("Fatal: failed to sync product tour db or exception")
+                    P.error("Fatal: failed to sync product tour db or exception")
                 })
-            }, L.showTour = function(e, t, r) {
+            }, k.showTour = function(e, t, r) {
                 var o = 0;
-                t && (o = S(e)), r && n.endAllTours(), _(e, o)
-            }, L.sendProductTourExitTelemetry = function(e) {
-                if (G.isActive) {
+                t && (o = _(e)), r && n.endAllTours(), w(e, o)
+            }, k.sendProductTourExitTelemetry = function(e) {
+                if (F.isActive) {
                     var t = {
-                        name: G.name,
-                        startStep: d.getString(G.startStep),
-                        exitStep: d.getString(G.currentStep),
-                        isResume: G.isResume,
+                        name: F.name,
+                        startStep: d.getString(F.startStep),
+                        exitStep: d.getString(F.currentStep),
+                        isResume: F.isResume,
                         status: e
                     };
-                    d.endLoad(c.PRODUCT_TOUR_EXIT_EVENT, G.tourStartTime, t), G.isActive = !1
+                    d.endLoad(c.PRODUCT_TOUR_EXIT_EVENT, F.tourStartTime, t), F.isActive = !1
                 }
-            }, L.onStepShown = function() {
-                O()
-            }, L.startOobeTour = function(e) {
-                y(), L.showTour(t.OOBE, e, !1)
+            }, k.onStepShown = function() {
+                R()
+            }, k.startOobeTour = function(e) {
+                b(), k.showTour(t.OOBE, e, !1)
+            }, k.startDriverTour = function() {
+                var e = G[t.DRIVER];
+                e && e.status !== i.PENDING || k.showTour(t.DRIVER, !0, !1)
+            }, k.isTourRunning = function(e) {
+                var t = F.isActive;
+                return F.isActive && e && (t = F.name === e), t
             }
         }]);
     t.productTourService = o
@@ -4308,7 +4305,7 @@ webpackJsonp([4], [function(e, t, n) {
         s = n(3),
         l = r(s),
         c = n(1),
-        u = n(700),
+        u = n(702),
         d = o(u),
         f = c.ngMainCommonModule.service("weChatService", ["dbService", "DB_NAMES", "$filter", "WECHAT_EVENTS", "eventAggregator", "NOTIFICATION_EVENTS", "WECHAT_CONSTANTS", "NOTIFICATION_CATEGORY", "COMMON_EVENTS", "$q", "$log", "jarvisService", "$state", "windowSpawnService", "dbCacheService", "parllayService", "toastService", "gfeService", "PARLLAY_CONSTANTS", "GFECLIENT_CONFIG", "telemetryService", "TELEMETRY_PARLLAY_JS_SDK_API_NAME", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_WECHAT_SERVICE_API_STATE", "TELEMETRY_SCREENS", "$timeout", "OOBE_STATE", "OOBE_EVENTS", "ACTIVE_AB_TESTS", "gfeTargetService", "gfeGeolocationService", function(e, t, n, r, o, i, s, c, u, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R, N) {
             function L() {
@@ -4329,8 +4326,7 @@ webpackJsonp([4], [function(e, t, n) {
                 P();
                 var e = fe.promise;
                 e.then(function() {
-                    x.cancel(pe), w.push(T.WECHAT_NFAN_QRCODE_AUTO_DISPLAY),
-                        me = q(s.NFAN)
+                    x.cancel(pe), w.push(T.WECHAT_NFAN_QRCODE_AUTO_DISPLAY), me = q(s.NFAN)
                 })
             }
 
@@ -4654,60 +4650,70 @@ webpackJsonp([4], [function(e, t, n) {
         i = r(o),
         a = n(1);
     n(18);
-    var s = a.ngMainCommonModule.service("windowSpawnService", ["$log", "$window", "$document", "cefService", "$interval", "eventAggregator", "COMMON_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AVAILABLE_STATUS", function(e, t, n, r, o, a, s, l, c, u) {
-        function d(e) {
-            S && !S.closed ? (e && e.preventDefault(), S.focus(), r.windowFocus(S.name)) : f()
+    var s = a.ngMainCommonModule.service("windowSpawnService", ["$log", "$window", "$document", "cefService", "$interval", "eventAggregator", "COMMON_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AVAILABLE_STATUS", "tracingService", function(e, t, n, r, o, a, s, l, c, u, d) {
+        function f(e) {
+            w && !w.closed ? (e && e.preventDefault(), w.focus(), r.windowFocus(w.name)) : m()
         }
 
-        function f() {
-            o.cancel(w), T && (t.removeEventListener("click", d), t.removeEventListener("keydown", d), a.off(s.WINDOW_FOCUS, d), _.remove(), T = !1), t.removeEventListener("message", m, !1), A = null, S && (C.info("Closing child window:", S.name), S.onload = null, S.close(), S = null), a.trigger(s.CHILD_WINDOW_CLOSED)
+        function m() {
+            o.cancel(T), x && (t.removeEventListener("click", f), t.removeEventListener("keydown", f), a.off(s.WINDOW_FOCUS, f), A.remove(), x = !1), t.removeEventListener("message", g, !1), C = null, w && (D.info("Closing child window:", w.name), w.onload = null, w.close(), w = null), a.trigger(s.CHILD_WINDOW_CLOSED), p(!1)
         }
 
-        function m(e) {
-            return e.data.error ? (C.error("failed to load url with error ", e.data.error), void l.push(c.CEF_POPUP_STATE, {
+        function p(e, t) {
+            i.isNull(I) || (d.closePopUpHttpSpan(I, e, t), I = null)
+        }
+
+        function g(e) {
+            return e.data.error ? (p(!0, e.data.error), D.error("failed to load url with error ", e.data.error), void l.push(c.CEF_POPUP_STATE, {
                 url: l.getString(e.data.error.failedUrl),
                 isError: u.YES,
                 errorCode: l.getString(e.data.error.errorCode),
                 errorText: l.getString(e.data.error.errorText)
-            })) : void(i.isNull(A) || A(e))
+            })) : (p(!1), I = null, void(i.isNull(C) || C(e)))
         }
 
-        function p() {
-            w = o(function() {
-                S && !S.closed || f()
+        function v() {
+            T = o(function() {
+                w && !w.closed || m()
             }, 100)
         }
 
-        function g() {
-            _ = angular.element('<div class="common-content-blocker-overlay"></div>'), n.find("body").eq(0).append(_), t.addEventListener("click", d), t.addEventListener("keydown", d), a.on(s.WINDOW_FOCUS, d), T = !0
-        }
-
-        function v(e, t, n, r, o, i) {
-            return A = i, h("app_", e, t, n, r, o, m)
-        }
-
-        function h(e, n, r, o, l, c, u) {
-            return r && 0 !== r.indexOf(e) ? r = e + r : r || (r = e + "childWindow"), S = t.open(n, r, o), i.isNull(S) ? C.error("unable to open child window with url ", n, "params", o, "name", r) : (S.onload = function() {
-                a.trigger(s.CHILD_WINDOW_LOADED)
-            }, S.sharedData = l, C.debug("Child window opened with url: ", n, "name", r), c && g(), t.addEventListener("message", u, !1), p()), S
+        function h() {
+            A = angular.element('<div class="common-content-blocker-overlay"></div>'), n.find("body").eq(0).append(A), t.addEventListener("click", f), t.addEventListener("keydown", f), a.on(s.WINDOW_FOCUS, f), x = !0
         }
 
         function y(e, t, n, r, o, i) {
-            return A = i, h("borderless_app_", e, t, n, r, o, m)
+            return C = i, b("app_", e, t, n, r, o, g)
         }
 
-        function b(e, n) {
-            var r = t.open(e, "_blank", n);
-            return C.debug("New browser window should have opened with url: ", e), r
+        function b(e, n, r, o, l, c, u) {
+            r && 0 !== r.indexOf(e) ? r = e + r : r || (r = e + "childWindow");
+            var f = {
+                url: n,
+                spanId: null
+            };
+            return d.startHttpSpan(f, !0), I = f.spanId, w = t.open(f.url, r, o), i.isNull(w) ? D.error("unable to open child window with url ", n, "params", o, "name", r) : (w.onload = function() {
+                a.trigger(s.CHILD_WINDOW_LOADED)
+            }, w.sharedData = l, D.debug("Child window opened with url: ", n, "name ", r), c && h(), t.addEventListener("message", u, !1), v()), w
         }
-        var E = this,
-            S = null,
-            _ = null,
+
+        function E(e, t, n, r, o, i) {
+            return C = i, b("borderless_app_", e, t, n, r, o, g)
+        }
+
+        function S(e, n) {
+            var r = t.open(e, "_blank", n);
+            return D.debug("New browser window should have opened with url: ", e), r
+        }
+        var _ = this,
             w = null,
             A = null,
-            T = !1,
-            C = e.getInstance("main.common/windowSpawnService");
-        E.openChildWindow = v, E.openDefaultBrowser = b, E.openBorderlessPopup = y, E.closeChildWindow = f
+            T = null,
+            C = null,
+            I = null,
+            x = !1,
+            D = e.getInstance("main.common/windowSpawnService");
+        _.openChildWindow = y, _.openDefaultBrowser = S, _.openBorderlessPopup = E, _.closeChildWindow = m
     }]);
     t.windowSpawnService = s
 }, , function(e, t, n) {
@@ -4755,10 +4761,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGameDetails = void 0;
     var o = n(14);
-    n(327), n(214), n(215), n(472), n(468), n(458), n(281), n(355), n(132);
+    n(329), n(214), n(215), n(474), n(470), n(460), n(281), n(357), n(132);
     var i = n(791),
         a = r(i);
-    n(459);
+    n(461);
     var s = o.ngGamesModule.directive("nvGameDetails", function() {
         return {
             restrict: "E",
@@ -5171,10 +5177,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGameStore = void 0;
     var o = n(27);
-    n(479);
+    n(481);
     var i = n(803),
         a = r(i);
-    n(477);
+    n(479);
     var s = o.ngGfnModule.directive("nvGameStore", function() {
         return {
             restrict: "E",
@@ -5201,7 +5207,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.oobeDialogService = void 0;
     var o = n(9);
-    n(513), n(510), n(180), n(296), n(25), n(12), n(11), n(174), n(22);
+    n(515), n(512), n(180), n(296), n(25), n(12), n(11), n(174), n(22);
     var i = n(3),
         a = r(i),
         s = o.ngOobeModule.factory("oobeDialogService", ["$log", "$state", "gfeService", "jarvisService", "eventAggregator", "dbService", "DB_NAMES", "oobeTelemetryService", "ootbEndpoints", "$mdPanel", "hardwareService", "oobeGamesService", "COMMON_EVENTS", "COMMON_DEFAULT_STATES", "OOBE_STATE", "gfeTargetService", "ACTIVE_AB_TESTS", "OOBE_LOGIN", "$q", function(e, t, n, r, o, i, s, l, c, u, d, f, m, p, g, v, h, y, b) {
@@ -5257,7 +5263,7 @@ webpackJsonp([4], [function(e, t, n) {
                     D.debug("email not verified - verify if email belongs to locked domain");
                     var t = e.user.core.primaryEmail,
                         n = t.substring(t.indexOf("@") + 1);
-                    if (e.domains.list.indexOf(n) > -1) return w.handleLoggedIn(e), !0
+                    if (e.domains.list.indexOf(n) > -1) return S.handleLoggedIn(e), !0
                 }
                 return !1
             }
@@ -5476,7 +5482,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(825),
         a = r(i);
-    n(519), n(350);
+    n(521), n(352);
     var s = o.ngPreferencesModule.directive("nvEditAvatar", [function() {
         return {
             restrict: "A",
@@ -5504,7 +5510,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(52),
         i = n(862),
         a = r(i);
-    n(586), n(40), n(585);
+    n(588), n(40), n(587);
     var s = o.ngRewardsModule.directive("nvRewardsCenter", ["eventAggregator", "REWARDS_EVENTS", "$log", "$timeout", function(e, t, n, r) {
         return {
             restrict: "E",
@@ -5708,6 +5714,10 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t, n) {
     e.exports = n.p + "bckgnd.jpg"
 }, function(e, t) {
+    e.exports = "<div class=\"bg-dark-bluish-gray tourStep nv-ui-tour-popup nv-popover {{ tourStep.config('popupClass') }} {{ tourStep.config('orphan') ? 'nv-ui-tour-popup-orphan' : tourStep.config('placement').split('-')[0] + ' ' + tourStep.config('placement') }}\" ng-style=\"{\r\nvisibility: 'hidden',\r\ndisplay: 'block',\r\nposition: tourStep.config('fixed') || tourStep.config('orphan') ? 'fixed' : 'absolute',\r\nzIndex: tourStep.config('backdropZIndex') + 2\r\n}\" tabindex=0 aria-hidden=\"{{ tour._getCurrentStep() !== tourStep }}\"> <div class=arrow></div> <div class=\"nv-popover-inner tour-step-inner\" layout=column> <p class=\"tour-step-title padding-24 margin-zero font-size-lg\" ng-bind=\"tourStep.config('title')\" ng-if=\"tourStep.config('title')\"></p> <div layout=row layout-align=\"end center\" class=\"constants-position-absolute right-zero top-zero padding-8\"> <md-button class=\"md-icon-button nv-popover-close-button\" ng-click=tour.pause()> <md-icon md-font-set=material-icons class=nv-popover-close-button>close</md-icon> </md-button> </div> <div class=\"nv-popover-content-container tour-step-content\" ng-include=\"tourStep.config('templateUrl') || 'tour-step-template.html'\" flex layout=row></div> </div> </div> "
+}, function(e, t) {
+    e.exports = '<div layout=column layout-align="space-between start" flex> <div class="nv-popover-content tour-step-content margin-top-16" bind-html-compile="tourStep.trustedContent || tourStep.content" ng-if=tourStep.content></div> <div layout=row layout-align="end center" class="nv-popover-navigation tour-step-navigation padding-8"> <md-button ng-if=tourStep.isNext() ng-click=tour.next() class="md-accent foreground margin-zero" translate=l10n.nextTip> </md-button> <md-button ng-if=!tourStep.isNext() ng-click=tour.next() class="md-accent foreground margin-zero" translate=l10n.gotItText> </md-button> </div> </div> '
+}, function(e, t) {
     e.exports = '<form name=nvCouponValidation autocomplete=off novalidate class=coupon-validation-container layout=row layout-align="center start" ng-submit=couponInput.redeemCoupon($event)> <div layout=column> <input class="coupon-code-input color-white-hue-1 padding-zero padding-left-16 font-size-xxs bg-dark-vh-hue-2 font-family-roboto-light" type=text placeholder={{couponInput.nvInputPlaceholder}} name=coupon ng-model=couponInput.couponCode ng-change=couponInput.validateCoupon() spellcheck=false ng-trim=false /> <p ng-show=couponInput.codeInvalid translate={{couponInput.nvErrorMessage}} class="coupon-input-error-message margin-zero color-red-hue-1 line-height-sm1"></p> </div> <md-button class="md-raised md-accent margin-zero margin-left-16" type=submit ng-disabled=couponInput.actionButtonDisabled> <span translate={{couponInput.nvButton.text}} class=color-white-important></span> </md-button> </form> '
 }, function(e, t) {
     e.exports = '<md-dialog layout=column class=croppie-dialog ng-class=editProfileCover.dialogClass> <h1 class="title font-style-normal color-white-hue-1" translate={{editProfileCover.title}}></h1> <p translate={{editProfileCover.subTitle}} class="subtitle color-white-hue-4 font-size-xxs"></p> <div class=padding-24> <div ng-show=editProfileCover.showCroppie() class=cover-image-preview> <div layout=row layout-align="center center" class=constants-position-relative> <nv-croppie async-result=editProfileCover.output output-format=editProfileCover.outputFormat update=editProfileCover.onUpdate boundry=editProfileCover.croppieBoundary viewport=editProfileCover.croppieViewport type=square zoom=true src=editProfileCover.sourceImage hit-apply=editProfileCover.hitApply> </nv-croppie> <nv-overlay class=common-overlay layout-fill ng-show=editProfileCover.showProgressIndicator> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> <nv-overlay class=common-overlay layout-fill ng-show=editProfileCover.showSuccess> <span layout-fill layout-align="center center" layout=column> <md-icon md-font-set=material-icons class="margin-zero md-accent md-32">check_circle</md-icon> </span> </nv-overlay> </div> </div> <div ng-show=editProfileCover.showPreview() class=cover-image-preview> <div layout=column layout-align="center center" class=constants-position-relative> <img ng-src={{editProfileCover.image}} nv-fallback-src={{editProfileCover.defaultImage}} /> <nv-overlay class=common-overlay layout-fill ng-show=editProfileCover.showProgressIndicator> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> <nv-overlay class=common-overlay layout-fill ng-show=editProfileCover.showSuccess> <span layout-fill layout-align="center center" layout=column> <md-icon md-font-set=material-icons class="margin-zero md-accent md-32">check_circle</md-icon> </span> </nv-overlay> </div> </div> <div layout=column ng-show=editProfileCover.showError() flex layout-align="center center" class="bg-dark-eh cover-image-preview"> <md-icon md-font-set=material-icons class="margin-zero color-white-hue-4 md-32">error</md-icon> <p class="color-white-hue-4 font-size-sm1">{{editProfileCover.errorMsg}}</p> </div> <div layout=row layout-align="space-between center" class="margin-bottom-8 margin-top-8"> <p class="color-white-hue-4 margin-zero" translate=l10n.chooseFromLatestCaptures></p> <div flex></div> <nv-image-upload on-image-select=editProfileCover.onFileSelect(newImage)> <span class="md-button margin-zero" translate=l10n.uploadFromPC></span> </nv-image-upload> </div> <md-content class=gallery-tile-container> <md-list> <md-list-item class=gallery-tile> <img ng-src={{editProfileCover.defaultCoverImage}} class="clickable-element no-focus-outline" ng-click=editProfileCover.selectDefaultCover() /> <nv-overlay class="common-overlay no-background" nv-position="bottom right"> <span layout-fill layout-align="center center" class=margin-24 layout=column translate=l10n.default></span> </nv-overlay> </md-list-item> <md-list-item ng-if=editProfileCover.recentlyCapturedVisible() class=gallery-tile ng-repeat="recentFile in editProfileCover.recentImages track by $index"> <img ng-src={{recentFile.data}} class="clickable-element no-focus-outline" ng-click=editProfileCover.selectScreenshot(recentFile) /> </md-list-item> </md-list> </md-content> </div> <div layout=row layout-align="end center"> <md-button ng-click=editProfileCover.cancelUpdate() translate=l10n.cancel></md-button> <md-button type=submit ng-click=editProfileCover.commitUpdate() ng-disabled=editProfileCover.submitDisabled() translate=l10n.apply></md-button> </div> </md-dialog> '
@@ -5727,12 +5737,12 @@ webpackJsonp([4], [function(e, t, n) {
         }()
     }
     var i = {
-        "./gold.svg": 677,
-        "./gray.svg": 678
+        "./gold.svg": 679,
+        "./gray.svg": 680
     };
     r.keys = function() {
         return Object.keys(i)
-    }, r.resolve = o, e.exports = r, r.id = 311
+    }, r.resolve = o, e.exports = r, r.id = 313
 }, function(e, t, n) {
     "use strict";
 
@@ -5744,13 +5754,13 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.appService = void 0;
-    var o = n(307),
+    var o = n(309),
         i = r(o),
         a = n(178);
-    n(18), n(140), n(49), n(16), n(12), n(25), n(119), n(36), n(131), n(346), n(179), n(286), n(283), n(120), n(542);
+    n(18), n(140), n(49), n(16), n(12), n(25), n(119), n(36), n(131), n(348), n(179), n(286), n(283), n(120), n(544);
     var s = n(809),
         l = r(s);
-    n(366);
+    n(368);
     var c = n(902),
         u = r(c),
         d = a.ngMainModule.service("appService", ["$log", "$window", "$translate", "$translatePartialLoader", "$state", "$rootScope", "$interpolate", "eventAggregator", "gfeService", "cefService", "gfwslEndpoints", "gfservicesEndpoints", "oobeDialogService", "nodeService", "gfeUpdatesService", "updatesService", "socketService", "annotoriousService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "jarvisService", "dbService", "dbCacheService", "DB_NAMES", "GFECLIENT_CONFIG", "GFECLIENT_BUILD_INFO", "COMMON_EVENTS", "COMMON_EVENTS_VALUE", "COMMON_DEFAULT_STATES", "ANNOTATION_PROPERTIES", "GAME_EVENTS", "rewardsService", "hardwareService", "COMMON_ERRORS", "preferencesService", "gfeTargetService", "notificationsService", "weChatService", "gfeSearchService", "cevoToggleService", "gfeGeolocationService", "quietModeService", "BACKEND_STATE_SOCKET_EVENTS", "BACKEND_STATE_EVENTS", "preferencesFeatureService", "productTourService", "TELEMETRY_STATUS", "piiSanityService", function(e, t, n, r, o, a, s, c, d, f, m, p, g, v, h, y, b, E, S, w, A, T, C, I, x, D, M, O, R, N, L, k, P, G, F, U, V, z, B, $, W, H, j, Y, q, K, Z, Q) {
@@ -5862,9 +5872,9 @@ webpackJsonp([4], [function(e, t, n) {
             default: e
         }
     }
-    n(314), n(18), n(11), n(12), n(348), n(294), n(596), n(62), n(49), n(50), n(16), n(133), n(36), n(22), n(165), n(333), n(209), n(516), n(200), n(161), n(377), n(365);
+    n(316), n(18), n(11), n(12), n(350), n(294), n(598), n(62), n(49), n(50), n(16), n(133), n(36), n(22), n(165), n(335), n(209), n(518), n(200), n(161), n(379), n(367);
     var o = n(178);
-    n(394), n(388), n(428), n(291), n(474), n(481), n(440), n(602), n(539), n(560), n(537), n(548), n(574), n(570), n(331), n(298), n(332), n(648);
+    n(396), n(390), n(430), n(291), n(476), n(483), n(442), n(604), n(541), n(562), n(539), n(550), n(576), n(572), n(333), n(298), n(334), n(650);
     var i = n(953),
         a = r(i);
     o.ngMainModule.config(["$stateProvider", "$urlRouterProvider", "TELEMETRY_CRIMSON_EVENT_NAMES", "$httpProvider", "$provide", function(e, t, n, r, o) {
@@ -5915,7 +5925,7 @@ webpackJsonp([4], [function(e, t, n) {
                             p.info("Initializing tracing service");
                             var t = new a.default.Tracer(f.tracer),
                                 r = {};
-                            r.deviceId = e.TelemetryDeviceId, r.osName = e.OSName, r.osVersion = e.OSVersion, r.clientVersion = m.gfeclientVersion, d.init(t, r)
+                            r.deviceId = e.TelemetryDeviceId, r.osName = e.OSName, r.osVersion = e.OSVersion, r.clientVersion = m.gfePackageVersion, d.init(t, r)
                         }
                         e.TelemetryDeviceId || i.push(n.DEVICE_ID_IS_UNDEFINED, {
                             errorMessage: g
@@ -6256,7 +6266,7 @@ webpackJsonp([4], [function(e, t, n) {
     }])
 }, function(e, t, n) {
     "use strict";
-    n(268), n(59), n(70), n(71), n(74), n(72), n(73), n(130), n(60), n(197), n(196), n(128), n(946), n(943), n(68), n(310), n(129), n(945), n(942), n(948), n(944), n(947), n(954), n(66), n(65), n(923), n(926), n(925), n(124), n(928), n(929), n(924), n(927), n(930), n(67), n(155), n(308), n(934), n(935), n(110), n(936), n(937), n(938), n(265), n(939), n(940)
+    n(268), n(59), n(70), n(71), n(74), n(72), n(73), n(130), n(60), n(197), n(196), n(128), n(946), n(943), n(68), n(312), n(129), n(945), n(942), n(948), n(944), n(947), n(954), n(66), n(65), n(923), n(926), n(925), n(124), n(928), n(929), n(924), n(927), n(930), n(67), n(155), n(310), n(934), n(935), n(110), n(936), n(937), n(938), n(265), n(939), n(940)
 }, function(e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
@@ -6312,10 +6322,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.callToActionController = void 0;
     var r = n(1);
-    n(320);
+    n(322);
     var o = r.ngMainCommonModule.controller("CallToActionController", ["callToActionService", function(e) {
         function t() {
-            n.nvCtaData.startStampAdjusted && n.updateCtaState();
+            n.nvCtaData.startStampAdjusted && n.updateCtaState()
         }
         var n = this;
         n.isDisabled = !1, n.ctaCountdownState = null, n.nvCtaData = n.nvCtaData || {}, n.nvBeforeClick = n.nvBeforeClick || angular.noop, n.nvAfterClick = n.nvAfterClick || angular.noop, n.onClick = function() {
@@ -6413,8 +6423,8 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvCallToAction = void 0;
     var o = n(1);
-    n(319);
-    var i = n(713),
+    n(321);
+    var i = n(715),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvCallToAction", [function() {
             return {
@@ -6578,7 +6588,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvCarouselIndicator = void 0;
     var o = n(1),
-        i = n(714),
+        i = n(716),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvCarouselIndicator", function() {
             return {
@@ -6649,10 +6659,10 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.nvCarouselIndicators = void 0;
     var i = n(3),
         a = (o(i), n(1));
-    n(323);
-    var s = n(715),
+    n(325);
+    var s = n(717),
         l = r(s);
-    n(324);
+    n(326);
     var c = a.ngMainCommonModule.directive("nvCarouselIndicators", [function() {
         function e(e, t) {
             e.$on("$destroy", function() {
@@ -6688,8 +6698,8 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(192),
         i = r(o),
         a = n(1);
-    n(359);
-    var s = n(717),
+    n(361);
+    var s = n(719),
         l = r(s),
         c = a.ngMainCommonModule.directive("nvCustomDate", function() {
             return {
@@ -6947,7 +6957,7 @@ webpackJsonp([4], [function(e, t, n) {
         c = r(l),
         u = n(229),
         d = r(u),
-        f = n(676),
+        f = n(678),
         m = r(f),
         p = angular.module("main.common.config", ["main.common"]);
     p.constant("DATABASE_DEFAULTS", {
@@ -7213,7 +7223,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvDialogHtml = void 0;
     var o = n(1),
-        i = n(720),
+        i = n(722),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvDialogHtml", [function() {
             return {
@@ -7240,7 +7250,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvDialogMessage = void 0;
     var o = n(1),
-        i = n(721),
+        i = n(723),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvDialogMessage", [function() {
             return {
@@ -7267,7 +7277,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvDialogText = void 0;
     var o = n(1),
-        i = n(722),
+        i = n(724),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvDialogText", [function() {
             return {
@@ -7296,7 +7306,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(13),
         i = r(o),
         a = n(1);
-    n(334), n(28);
+    n(336), n(28);
     var s = n(949),
         l = r(s),
         c = a.ngMainCommonModule.provider("exceptionService", function() {
@@ -7409,9 +7419,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvFeedbackFloat = void 0;
     var o = n(1),
-        i = n(723),
+        i = n(725),
         a = r(i);
-    n(337);
+    n(339);
     var s = o.ngMainCommonModule.component("nvFeedbackFloat", {
         template: a.default,
         controller: "FeedbackFloatController",
@@ -7505,7 +7515,7 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.httpLoggingService = void 0;
-    var o = n(307),
+    var o = n(309),
         i = r(o),
         a = n(236),
         s = r(a),
@@ -7529,8 +7539,7 @@ webpackJsonp([4], [function(e, t, n) {
                 return o.GFECLIENT_CONFIG = n, o.$q = r, o.logger = e.getInstance("main.common/httpLoggingService"), o.sanitize = function(e) {
                     var t = this;
                     try {
-                        _.isUndefined(e.config) || (e.config.headers.X_LOCAL_SECURITY_COOKIE = "",
-                            _.isUndefined(e.config.data) || _.isUndefined(e.config.data.userInfo) || (e.config.data.userInfo = ""))
+                        _.isUndefined(e.config) || (e.config.headers.X_LOCAL_SECURITY_COOKIE = "", _.isUndefined(e.config.data) || _.isUndefined(e.config.data.userInfo) || (e.config.data.userInfo = ""))
                     } catch (e) {
                         t.logger.error("Could not sanitize Security Cookie", e)
                     }
@@ -7594,7 +7603,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = o(i),
         s = n(1);
     n(40);
-    var l = n(728),
+    var l = n(730),
         c = r(l),
         u = s.ngMainCommonModule.directive("nvImageAnnotation", ["annotoriousService", "eventAggregator", "GAME_EVENTS", "$timeout", "$interval", "SCROLL_STEPS", "COMMON_EVENTS", "$document", function(e, t, n, r, o, i, s, l) {
             function u(e, t, n, r) {
@@ -7707,7 +7716,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvImageUpload = void 0;
     var o = n(1),
-        i = n(730),
+        i = n(732),
         a = r(i),
         s = o.ngMainCommonModule.directive("nvImageUpload", [function() {
             return {
@@ -7993,9 +8002,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvMediaTile = void 0;
     var o = n(1),
-        i = n(732),
+        i = n(734),
         a = r(i);
-    n(354), n(19), n(40);
+    n(356), n(19), n(40);
     var s = o.ngMainCommonModule.component("nvMediaTile", {
         bindings: {
             nvMediaThumbnail: "@",
@@ -8044,8 +8053,8 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.navigationalDialogService = void 0;
     var o = n(1);
-    n(356), n(162);
-    var i = n(733),
+    n(358), n(162);
+    var i = n(735),
         a = r(i),
         s = o.ngMainCommonModule.service("navigationalDialogService", ["$mdDialog", function(e) {
             function t(t, n) {
@@ -8205,9 +8214,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvSlider = void 0;
     var o = n(1),
-        i = n(737),
+        i = n(739),
         a = r(i);
-    n(361);
+    n(363);
     var s = o.ngMainCommonModule.directive("nvSlider", [function() {
         function e(e, t, n) {
             function r() {
@@ -8322,9 +8331,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvTileCarousel = void 0;
     var o = n(1),
-        i = n(738),
+        i = n(740),
         a = r(i);
-    n(363);
+    n(365);
     var s = o.ngMainCommonModule.directive("nvTileCarousel", ["$timeout", function(e) {
         function t(t, n, r, o) {
             function i() {
@@ -8550,9 +8559,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvRangeSlider = void 0;
     var o = n(1),
-        i = n(739),
+        i = n(741),
         a = r(i);
-    n(368);
+    n(370);
     var s = o.ngMainCommonModule.directive("nvRangeSlider", [function() {
         return {
             restrict: "E",
@@ -8787,7 +8796,8 @@ webpackJsonp([4], [function(e, t, n) {
                 e.length > o && (e = e.slice(0, o));
                 var t = e.split("");
                 if (t.length === o) {
-                    for (var i, a = new ArrayBuffer(r), s = new DataView(a, 0), l = 0; l < r; l++) i = n.convertStringToHexWithWordShift(t.slice(2 * l, 2 * l + 2), 2), s.setUint8(r - l - 1, i);
+                    for (var i, a = new ArrayBuffer(r), s = new DataView(a, 0), l = 0; l < r; l++) i = n.convertStringToHexWithWordShift(t.slice(2 * l, 2 * l + 2), 2),
+                        s.setUint8(r - l - 1, i);
                     var c = new Uint8Array(a, 0);
                     return n.nonce = Array.prototype.slice.call(c), n.nonce
                 }
@@ -8869,68 +8879,71 @@ webpackJsonp([4], [function(e, t, n) {
         i = r(o),
         a = n(13),
         s = r(a),
-        l = n(305),
+        l = n(307),
         c = r(l),
         u = n(1),
         d = n(956),
         f = r(d),
         m = u.ngMainCommonModule.provider("tracingService", function() {
             return {
-                $get: ["$log", "$q", "nvAngularUuidService", "TRACING_CONSTANTS", "TRACING_TAG_NAMES", function(e, t, n, r, o) {
-                    var a = {},
-                        l = {},
-                        u = {},
+                $get: ["$log", "$q", "nvAngularUuidService", "TRACING_CONSTANTS", "TRACING_TAG_NAMES", "$window", function(e, t, n, r, o, a) {
+                    function l(e) {
+                        return a.btoa(a.unescape(a.encodeURIComponent(e)))
+                    }
+                    var u = {},
                         d = {},
-                        m = this,
-                        p = void 0;
+                        m = {},
+                        p = {},
+                        g = this,
+                        v = void 0;
                     e.getInstance("nvTracing/tracingService");
-                    m.initialized = !1;
-                    var g = function(e, t) {
-                            e && f.default.initGlobalTracer(e), p = t || {}, p.sessionId = n.generateUUID(), m.initialized = !0
+                    g.initialized = !1;
+                    var h = function(e, t) {
+                            e && f.default.initGlobalTracer(e), v = t || {}, v.sessionId = n.generateUUID(), g.initialized = !0
                         },
-                        v = function(e, t) {
+                        y = function(e, t) {
                             var r = void 0,
                                 o = void 0,
                                 i = void 0;
-                            if (m.initialized && e) {
-                                i = n.generateUUID(), t && (o = a[t]), r = o ? f.default.globalTracer().startSpan(e, {
+                            if (g.initialized && e) {
+                                i = n.generateUUID(), t && (o = u[t]), r = o ? f.default.globalTracer().startSpan(e, {
                                     childOf: o
-                                }) : f.default.globalTracer().startSpan(e), a[i] = r;
-                                for (var s in p) b(i, s, p[s])
+                                }) : f.default.globalTracer().startSpan(e), u[i] = r;
+                                for (var a in v) S(i, a, v[a])
                             }
                             return i
                         },
-                        h = function(e, t, n) {
-                            if (m.initialized && e) {
-                                var r = a[e];
-                                r && (r.setTag("error", n), t && (r.setTag("http.status_code", t.status), t.config && (r.setTag("http.url", t.config.url), r.setTag("http.method", t.config.method))), r.finish(), delete a[e])
+                        b = function(e, t, n) {
+                            if (g.initialized && e) {
+                                var r = u[e];
+                                r && (r.setTag("error", n), t && (r.setTag("http.status_code", t.status), t.config && (r.setTag("http.url", t.config.url), r.setTag("http.method", t.config.method))), r.finish(), delete u[e])
                             }
                         },
-                        y = function(e) {
-                            return void 0 !== a[e]
+                        E = function(e) {
+                            return void 0 !== u[e]
                         },
-                        b = function(e, t, n) {
-                            if (m.initialized && e) {
-                                var r = a[e];
+                        S = function(e, t, n) {
+                            if (g.initialized && e) {
+                                var r = u[e];
                                 r && r.setTag(t, n)
                             }
                         },
-                        E = function(e, n, r, o) {
-                            if (m.initialized && n) {
-                                var i = v(n, r);
+                        w = function(e, n, r, o) {
+                            if (g.initialized && n) {
+                                var i = y(n, r);
                                 return e(i).then(function(e) {
-                                    var t = S(e, o);
-                                    return x(i, t), h(i, !0), e
+                                    var t = A(e, o);
+                                    return O(i, t), b(i, !0), e
                                 }).catch(function(e) {
-                                    var n = S(e, o);
-                                    return x(i, n), h(i, !1), t.reject(e)
+                                    var n = A(e, o);
+                                    return O(i, n), b(i, !1), t.reject(e)
                                 })
                             }
                             return e()
                         },
-                        S = function(e, t) {
+                        A = function(e, t) {
                             var n = {};
-                            if (m.initialized && e && t) {
+                            if (g.initialized && e && t) {
                                 var r = e,
                                     o = !0,
                                     i = !1,
@@ -8941,21 +8954,21 @@ webpackJsonp([4], [function(e, t, n) {
                                         if ("." === d) _.isObject(e) && (r = (0, s.default)(e)), n.data = r;
                                         else {
                                             var f = d.split("."),
-                                                p = !0,
-                                                g = !1,
+                                                m = !0,
+                                                p = !1,
                                                 v = void 0;
                                             try {
-                                                for (var h, y = (0, c.default)(f); !(p = (h = y.next()).done); p = !0) {
+                                                for (var h, y = (0, c.default)(f); !(m = (h = y.next()).done); m = !0) {
                                                     var b = h.value;
                                                     if (r = r[b], !r) break
                                                 }
                                             } catch (e) {
-                                                g = !0, v = e
+                                                p = !0, v = e
                                             } finally {
                                                 try {
-                                                    !p && y.return && y.return()
+                                                    !m && y.return && y.return()
                                                 } finally {
-                                                    if (g) throw v
+                                                    if (p) throw v
                                                 }
                                             }
                                             r && (_.isObject(r) && (r = (0, s.default)(r)), n[d] = r)
@@ -8973,129 +8986,142 @@ webpackJsonp([4], [function(e, t, n) {
                             }
                             return n
                         },
-                        w = function(e, t) {
-                            if (m.initialized && e) {
-                                var n = a[e];
+                        T = function(e, t) {
+                            if (g.initialized && e) {
+                                var n = u[e];
                                 if (n) {
                                     var r = {};
                                     f.default.globalTracer().inject(n.context(), f.default.FORMAT_HTTP_HEADERS, r);
                                     var o = (0, i.default)(r),
-                                        s = !0,
-                                        l = !1,
-                                        u = void 0;
+                                        a = !0,
+                                        s = !1,
+                                        l = void 0;
                                     try {
-                                        for (var d, p = (0, c.default)(o); !(s = (d = p.next()).done); s = !0) {
-                                            var g = d.value;
-                                            t[g] = r[g]
+                                        for (var d, m = (0, c.default)(o); !(a = (d = m.next()).done); a = !0) {
+                                            var p = d.value;
+                                            t[p] = r[p]
                                         }
                                     } catch (e) {
-                                        l = !0, u = e
+                                        s = !0, l = e
                                     } finally {
                                         try {
-                                            !s && p.return && p.return()
+                                            !a && m.return && m.return()
                                         } finally {
-                                            if (l) throw u
+                                            if (s) throw l
                                         }
                                     }
                                 }
                             }
                         },
-                        A = function(e, t, n) {
-                            m.initialized && e && (l[e] || (t ? l[e] = t : l[e] = function() {}), n && _.isArray(n) && !u[e] && (u[e] = n))
+                        C = function(e, t, n) {
+                            g.initialized && e && (d[e] || (t ? d[e] = t : d[e] = function() {}), n && _.isArray(n) && !m[e] && (m[e] = n))
                         },
-                        T = function(e) {
-                            if (m.initialized && e && e.url) {
-                                var t = void 0,
-                                    i = void 0,
+                        I = function(e, t) {
+                            if (g.initialized && e && e.url) {
+                                var i = void 0,
                                     a = void 0,
-                                    s = void 0,
-                                    u = void 0;
-                                if (e.url.startsWith("http") && (s = new URL(e.url), u = s.searchParams), s) {
-                                    var f = e.data,
-                                        p = void 0;
-                                    f && (i = f[r.PARENT_SPAN_IDENTIFIER], f[r.COMPONENT_NAME] && (a = f[r.COMPONENT_NAME], t = v(a, i), delete f[r.COMPONENT_NAME]), delete f[r.PARENT_SPAN_IDENTIFIER]), !t && u && (i || (i = u.get(r.PARENT_SPAN_IDENTIFIER)), u.get(r.COMPONENT_NAME) && !a && (a = u.get(r.COMPONENT_NAME), t = v(a, i), u.delete(r.COMPONENT_NAME)), u.delete(r.PARENT_SPAN_IDENTIFIER), (i || a) && (e.url = s.origin + s.pathname + "?" + u.toString()));
-                                    var g = l[s.origin] || l[s.host];
-                                    if (s.origin && (g || i)) {
-                                        if (!t) {
-                                            var h = D(s.origin, s.pathname.split("/"));
-                                            t = v(h, i)
+                                    u = void 0,
+                                    f = void 0,
+                                    m = void 0;
+                                if (e.url.startsWith("http") && (f = new URL(e.url), m = f.searchParams), f) {
+                                    var v = e.data,
+                                        h = void 0;
+                                    v && (a = v[r.PARENT_SPAN_IDENTIFIER], v[r.COMPONENT_NAME] && (u = v[r.COMPONENT_NAME], i = y(u, a), delete v[r.COMPONENT_NAME]), delete v[r.PARENT_SPAN_IDENTIFIER]), !i && m && (a || (a = m.get(r.PARENT_SPAN_IDENTIFIER)), m.get(r.COMPONENT_NAME) && !u && (u = m.get(r.COMPONENT_NAME), i = y(u, a), m.delete(r.COMPONENT_NAME)), m.delete(r.PARENT_SPAN_IDENTIFIER), (a || u) && (e.url = f.origin + f.pathname + "?" + m.toString()));
+                                    var b = d[f.origin] || d[f.host];
+                                    if (f.origin && (b || a)) {
+                                        if (!i) {
+                                            var E = R(f.origin, f.pathname.split("/"));
+                                            i = y(E, a)
                                         }
-                                        g && I(t, g)
+                                        b && M(i, b)
                                     }
-                                    if (t && u) {
-                                        var y = u.entries(),
-                                            E = "",
-                                            S = !0,
-                                            _ = !1,
-                                            A = void 0;
+                                    if (i && m) {
+                                        var w = m.entries(),
+                                            A = "",
+                                            C = !0,
+                                            I = !1,
+                                            x = void 0;
                                         try {
-                                            for (var T, C = (0, c.default)(y); !(S = (T = C.next()).done); S = !0) {
-                                                var x = T.value;
-                                                E = "params." + x[0], b(t, E, x[1])
+                                            for (var D, O = (0, c.default)(w); !(C = (D = O.next()).done); C = !0) {
+                                                var N = D.value;
+                                                A = "params." + N[0], S(i, A, N[1])
                                             }
                                         } catch (e) {
-                                            _ = !0, A = e
+                                            I = !0, x = e
                                         } finally {
                                             try {
-                                                !S && C.return && C.return()
+                                                !C && O.return && O.return()
                                             } finally {
-                                                if (_) throw A
+                                                if (I) throw x
                                             }
                                         }
-                                        e.url = s.origin + s.pathname, u.toString().length > 0 && (e.url += "?" + u.toString())
+                                        e.url = f.origin + f.pathname, m.toString().length > 0 && (e.url += "?" + m.toString())
                                     }
-                                    t && (b(t, o.ORIGIN, s.origin), b(t, o.PATH, s.pathname)), t && e.headers && (e.headers[r.X_REQUEST_ID] ? p = e.headers[r.X_REQUEST_ID] : (p = n.generateUUID(), e.headers[r.X_REQUEST_ID] = p), d[p] = t, w(t, e.headers))
+                                    if (i && (S(i, o.ORIGIN, f.origin), S(i, o.PATH, f.pathname)), t) {
+                                        var L = [];
+                                        if (i) {
+                                            T(i, L), f = new URL(e.url), m = f.searchParams;
+                                            var k = (0, s.default)(_.extend({}, L));
+                                            e.url = f.origin + f.pathname + "?tracer=" + l(k), m.toString().length > 0 && (e.url = e.url + ";" + m.toString()), e.spanId = i
+                                        }
+                                    } else i && e.headers && (e.headers[r.X_REQUEST_ID] ? h = e.headers[r.X_REQUEST_ID] : (h = n.generateUUID(), e.headers[r.X_REQUEST_ID] = h), p[h] = i, T(i, e.headers))
                                 }
                             }
                         },
-                        C = function(e, t) {
+                        x = function(e, t, n) {
+                            if (g.initialized && e) {
+                                var r = u[e];
+                                r && (r.setTag("error", t), n && (r.setTag("http.error_code", n.errorCode), r.setTag("http.error_text", n.errorText), r.setTag("http.url", n.failedUrl)), r.finish(), delete u[e])
+                            }
+                        },
+                        D = function(e, t) {
                             var n = void 0;
-                            if (m.initialized && e && e.config && e.config.headers && (n = e.config.headers[r.X_REQUEST_ID])) {
-                                var o = d[n];
+                            if (g.initialized && e && e.config && e.config.headers && (n = e.config.headers[r.X_REQUEST_ID])) {
+                                var o = p[n];
                                 if (o && e.config && e.config.url) {
                                     var i = new URL(e.config.url),
                                         a = i.origin,
-                                        s = u[a];
+                                        s = m[a];
                                     if (s) {
                                         var l = e.headers();
                                         if (l) {
-                                            var f = !0,
-                                                p = !1,
-                                                g = void 0;
+                                            var u = !0,
+                                                d = !1,
+                                                f = void 0;
                                             try {
-                                                for (var v, y = (0, c.default)(s); !(f = (v = y.next()).done); f = !0) {
-                                                    var E = v.value,
-                                                        S = l[E];
-                                                    b(o, E, S)
+                                                for (var v, h = (0, c.default)(s); !(u = (v = h.next()).done); u = !0) {
+                                                    var y = v.value,
+                                                        E = l[y];
+                                                    S(o, y, E)
                                                 }
                                             } catch (e) {
-                                                p = !0, g = e
+                                                d = !0, f = e
                                             } finally {
                                                 try {
-                                                    !f && y.return && y.return()
+                                                    !u && h.return && h.return()
                                                 } finally {
-                                                    if (p) throw g
+                                                    if (d) throw f
                                                 }
                                             }
                                         }
                                     }
-                                    h(o, e, t), delete d[n]
+                                    b(o, e, t), delete p[n]
                                 }
                             }
                         },
-                        I = function(e, n) {
-                            m.initialized && n && t.when(n()).then(function(t) {
-                                x(e, t)
+                        M = function(e, n) {
+                            g.initialized && n && t.when(n()).then(function(t) {
+                                O(e, t)
                             })
                         },
-                        x = function(e, t) {
-                            if (m.initialized && t)
+                        O = function(e, t) {
+                            if (g.initialized && t)
                                 for (var n in t) {
                                     var r = t[n];
-                                    b(e, n, r)
+                                    S(e, n, r)
                                 }
                         },
-                        D = function(e, t) {
+                        R = function(e, t) {
                             var n = void 0;
                             if (0 === t.length) n = e;
                             else {
@@ -9105,17 +9131,18 @@ webpackJsonp([4], [function(e, t, n) {
                             return n
                         };
                     return {
-                        init: g,
-                        startSpan: v,
-                        closeSpan: h,
-                        trackPromise: E,
-                        startHttpSpan: T,
-                        closeHttpSpan: C,
-                        setTag: b,
-                        setTags: x,
-                        injectSpan: w,
-                        registerUrlForTracing: A,
-                        isSpanAvailable: y
+                        init: h,
+                        startSpan: y,
+                        closeSpan: b,
+                        trackPromise: w,
+                        startHttpSpan: I,
+                        closeHttpSpan: D,
+                        closePopUpHttpSpan: x,
+                        setTag: S,
+                        setTags: O,
+                        injectSpan: T,
+                        registerUrlForTracing: C,
+                        isSpanAvailable: E
                     }
                 }]
             }
@@ -9271,9 +9298,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvVideo = void 0;
     var o = n(1),
-        i = n(743),
+        i = n(745),
         a = r(i);
-    n(378), n(19);
+    n(380), n(19);
     var s = o.ngMainCommonModule.directive("nvVideo", function() {
         return {
             restrict: "E",
@@ -9406,7 +9433,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvVirtualGridListItem = t.nvVirtualGridListRepeat = t.nvVirtualGridList = void 0;
     var r = n(1);
-    n(380);
+    n(382);
     var o = r.ngMainCommonModule.directive("nvVirtualGridList", function() {
             return {
                 restrict: "E",
@@ -9536,10 +9563,10 @@ webpackJsonp([4], [function(e, t, n) {
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
-    }), t.nvHome = void 0, n(460), n(453);
-    var o = n(747),
+    }), t.nvHome = void 0, n(462), n(455);
+    var o = n(749),
         i = r(o);
-    n(387);
+    n(389);
     var a = angular.module("main").directive("nvHome", function() {
         return {
             restrict: "E",
@@ -9569,9 +9596,9 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.mainController = void 0, n(76);
-    var o = n(752),
+    var o = n(303),
         i = r(o),
-        a = n(753),
+        a = n(304),
         s = r(a),
         l = n(955),
         c = r(l),
@@ -9652,7 +9679,7 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.nvMainTabButton = void 0;
-    var o = n(748),
+    var o = n(750),
         i = r(o),
         a = angular.module("main").directive("nvMainTabButton", ["$state", function(e) {
             return {
@@ -9692,7 +9719,7 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.nvMainTabIcon = void 0;
-    var o = n(749),
+    var o = n(751),
         i = r(o);
     n(28);
     var a = angular.module("main").directive("nvMainTabIcon", ["$state", "$log", function(e, t) {
@@ -9764,101 +9791,101 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(232);
     r(o);
     n(221), n(119), n(179), n(53), n(200), n(284), n(120);
-    angular.module("main").controller("MainToolbarController", ["$scope", "jarvisService", "gfeService", "CHECK_FOR_UPDATE", "eventAggregator", "COMMON_EVENTS", "dbCacheService", "DB_NAMES", "$log", "hardwareService", "preferencesService", "toastService", "$filter", "socketService", "SHARE_SOCKET_EVENTS", "$document", "$timeout", "REWARDS_EVENTS", "$state", "COMMON_HTTP_ERROR_CODES", "PREFERENCES_EVENTS", "DEFAULT_AVATAR", "notificationsService", "rewardsService", "gfeSearchService", "cevoToggleService", "cevoService", "preferencesFeatureService", "FEATURES_NAME", "USER_PROFILE_TAB_NAMES", "productTourService", "gfeTargetService", "ACTIVE_AB_TESTS", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R) {
-        function N() {
+    angular.module("main").controller("MainToolbarController", ["$scope", "jarvisService", "gfeService", "CHECK_FOR_UPDATE", "eventAggregator", "COMMON_EVENTS", "dbCacheService", "DB_NAMES", "$log", "hardwareService", "preferencesService", "toastService", "$filter", "socketService", "SHARE_SOCKET_EVENTS", "$document", "$timeout", "REWARDS_EVENTS", "$state", "COMMON_HTTP_ERROR_CODES", "PREFERENCES_EVENTS", "DEFAULT_AVATAR", "notificationsService", "rewardsService", "gfeSearchService", "cevoToggleService", "cevoService", "preferencesFeatureService", "FEATURES_NAME", "USER_PROFILE_TAB_NAMES", "productTourService", "gfeTargetService", "ACTIVE_AB_TESTS", "$q", "COMMON_DEFAULT_STATES", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R, N, L) {
+        function k() {
             var e = t.getLoggedInUser();
-            e ? (Q.displayName = e.core.displayName, Q.profileXP = "─ ─", Q.profileTokens = "─ ─", T.getAvatarStore().then(function(t) {
-                Q.avatar = a.getCachedUserItem(e.userId, t.storeName, t.key)
-            })) : (Q.displayName = null, Q.avatar = {
+            e ? (J.displayName = e.core.displayName, J.profileXP = "─ ─", J.profileTokens = "─ ─", T.getAvatarStore().then(function(t) {
+                J.avatar = a.getCachedUserItem(e.userId, t.storeName, t.key)
+            })) : (J.displayName = null, J.avatar = {
                 url: S.URL
             }), v(function() {
                 var e = angular.element(g[0].querySelector(".md-toolbar-tools")),
                     t = angular.element(e[0].querySelector(".display-name"));
-                Q.showTooltip = t[0].scrollWidth > t[0].offsetWidth
-            })
-        }
-
-        function L() {
-            u.isShareFeatureSupportedOnSystem().then(function(e) {
-                Q.isShareSupported = e, Q.isShareSupported && (Q.shareLoaded = u.shareAddonLoaded), te.info("isShareFeatureSupportedOnSystem response: ", Q.isShareSupported), o.trigger(i.SHARE_ICON_VIZ_UPDATED, !!Q.isShareSupported), k()
-            }).catch(function(e) {
-                te.error("isShareFeatureSupported failed.")
-            })
-        }
-
-        function k() {
-            I.isDriverUpdateRequiredForSupport(x.SHARE).then(function(e) {
-                ee = e, o.trigger(i.SHARE_ICON_VIZ_UPDATED, !!ee)
+                J.showTooltip = t[0].scrollWidth > t[0].offsetWidth
             })
         }
 
         function P() {
-            u.getShareRunningStatus().then(function(e) {
-                Q.isShareRunning = e
+            u.isShareFeatureSupportedOnSystem().then(function(e) {
+                J.isShareSupported = e, J.isShareSupported && (J.shareLoaded = u.shareAddonLoaded), re.info("isShareFeatureSupportedOnSystem response: ", J.isShareSupported), o.trigger(i.SHARE_ICON_VIZ_UPDATED, !!J.isShareSupported), G()
             }).catch(function(e) {
-                Q.isShareRunning = !1, Q.isShareButtonDisabled = !1, te.error("getShareRunningStatus failed.")
+                re.error("isShareFeatureSupported failed.")
             })
         }
 
-        function G(e) {
-            te.info("onSysInfoUpdated ", e.DriverVersion), Q.driverless = e && (!e.DriverVersion || "" === e.DriverVersion), L()
+        function G() {
+            I.isDriverUpdateRequiredForSupport(x.SHARE).then(function(e) {
+                ne = e, o.trigger(i.SHARE_ICON_VIZ_UPDATED, !!ne)
+            })
         }
 
         function F() {
+            u.getShareRunningStatus().then(function(e) {
+                J.isShareRunning = e
+            }).catch(function(e) {
+                J.isShareRunning = !1, J.isShareButtonDisabled = !1, re.error("getShareRunningStatus failed.")
+            })
+        }
+
+        function U(e) {
+            re.info("onSysInfoUpdated ", e.DriverVersion), J.driverless = e && (!e.DriverVersion || "" === e.DriverVersion), P()
+        }
+
+        function V() {
             d.showError({
                 textContent: f("translate")("l10n.openShareFailure")
             })
         }
 
-        function U(e) {
-            Q.isShareButtonDisabled = e, P()
-        }
-
-        function V(e) {
-            X = e, te.info("Setting rewards feature enabled to: ", X)
-        }
-
-        function z() {
-            _.getNotificationsEnabled().then(function(e) {
-                Q.notificationsEnabled = e
-            })
+        function z(e) {
+            J.isShareButtonDisabled = e, F()
         }
 
         function B(e) {
-            Q.shareLoaded = JSON.parse(e.shareAddonLoaded), te.info("Share node addon loaded event status: ", Q.shareLoaded)
+            ee = e, re.info("Setting rewards feature enabled to: ", ee)
         }
 
         function $() {
-            A.checkSearchAvailability().then(function(e) {
-                Q.searchEnabled = e
+            _.getNotificationsEnabled().then(function(e) {
+                J.notificationsEnabled = e
             })
         }
 
         function W(e) {
-            Q.userProfileEnabled = e, Q.userProfileEnabled && t.getLoggedInUser() ? (Q.dropdownCollapseTimeout = ne, C.getExtendedProfile().then(function(e) {
-                Q.profileXP = e.xp, Q.profileTokens = e.rewardTokens, Q.levelIcon = C.getLevelDetails(e.xplevel.level).icon
-            })) : Q.dropdownCollapseTimeout = 0
+            J.shareLoaded = JSON.parse(e.shareAddonLoaded), re.info("Share node addon loaded event status: ", J.shareLoaded)
         }
 
         function H() {
-            o.on(E.NODE_ADDONS_FETCHED, B), o.on(i.LOGIN_STATUS_CHANGE, N), o.on(i.SYSTEMINFO_UPDATED, G), o.on(i.SHARE_STATUS_CHANGE_IN_PROGRESS, U), o.on(i.OSC_READY, Y), o.on(h.FEATURE_STATUS_UPDATED, V), o.on(i.LOCALE_CHANGED, $), o.on(i.USER_PROFILE_STATUS_UPDATED, W), o.on(i.UNSUPPORTED_FEATURES_UPDATED, k), m.register(p.OSCREADY_UPDATE, i.OSC_READY), Q.logout = n.logout, Q.checkforUpdate = {
-                updateState: r
-            }, Q.devFeatures = a.getCachedGlobalItem(s.DEV_STORE, s.DEV_FEATURES), N(), L(), P(), z(), $()
-        }
-
-        function j() {
-            Q.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, Q.isShareButtonClicked), u.showOnscreenOverlay(!0).then(function(e) {
-                te.info("showOnscreenOverlay status: ", e), d.cancel(), Q.isShareButtonDisabled = !1
-            }).catch(function(e) {
-                te.error("showOnscreenOverlay failed."), F(), Q.isShareButtonDisabled = !1
+            A.checkSearchAvailability().then(function(e) {
+                J.searchEnabled = e
             })
         }
 
-        function Y(e) {
-            Q.isShareButtonDisabled = !1, Q.isShareRunning = !0, Q.isShareButtonClicked && (te.info("socket event OSCREADY_UPDATE", e), e.ready ? j() : (te.info("OSC is not ready."), F()))
+        function j(e) {
+            J.userProfileEnabled = e, J.userProfileEnabled && t.getLoggedInUser() ? (J.dropdownCollapseTimeout = oe, C.getExtendedProfile().then(function(e) {
+                J.profileXP = e.xp, J.profileTokens = e.rewardTokens, J.levelIcon = C.getLevelDetails(e.xplevel.level).icon
+            })) : J.dropdownCollapseTimeout = 0
         }
 
-        function q(e) {
+        function Y() {
+            o.on(E.NODE_ADDONS_FETCHED, W), o.on(i.LOGIN_STATUS_CHANGE, k), o.on(i.SYSTEMINFO_UPDATED, U), o.on(i.SHARE_STATUS_CHANGE_IN_PROGRESS, z), o.on(i.OSC_READY, K), o.on(h.FEATURE_STATUS_UPDATED, B), o.on(i.LOCALE_CHANGED, H), o.on(i.USER_PROFILE_STATUS_UPDATED, j), o.on(i.UNSUPPORTED_FEATURES_UPDATED, G), m.register(p.OSCREADY_UPDATE, i.OSC_READY), J.logout = n.logout, J.checkforUpdate = {
+                updateState: r
+            }, J.devFeatures = a.getCachedGlobalItem(s.DEV_STORE, s.DEV_FEATURES), k(), P(), F(), $(), H()
+        }
+
+        function q() {
+            J.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, J.isShareButtonClicked), u.showOnscreenOverlay(!0).then(function(e) {
+                re.info("showOnscreenOverlay status: ", e), d.cancel(), J.isShareButtonDisabled = !1
+            }).catch(function(e) {
+                re.error("showOnscreenOverlay failed."), V(), J.isShareButtonDisabled = !1
+            })
+        }
+
+        function K(e) {
+            J.isShareButtonDisabled = !1, J.isShareRunning = !0, J.isShareButtonClicked && (re.info("socket event OSCREADY_UPDATE", e), e.ready ? q() : (re.info("OSC is not ready."), V()))
+        }
+
+        function Z(e) {
             d.showError({
                 textContent: f("translate")(e),
                 button: {
@@ -9868,69 +9895,70 @@ webpackJsonp([4], [function(e, t, n) {
             })
         }
 
-        function K() {
-            Q.userProfileEnabled ? Q.displayUserProfile(D.REWARDS_TAB) : y.go("main.auth.rewards")
+        function Q() {
+            J.userProfileEnabled ? J.displayUserProfile(D.REWARDS_TAB) : y.go(L.REWARDS)
         }
 
-        function Z() {
-            o.off(E.NODE_ADDONS_FETCHED, B), o.off(i.LOGIN_STATUS_CHANGE, N), o.off(i.SYSTEMINFO_UPDATED, G), o.off(i.OSC_READY, Y), o.off(i.SHARE_STATUS_CHANGE_IN_PROGRESS, U), o.off(h.FEATURE_STATUS_UPDATED, V), o.off(i.LOCALE_CHANGED, $), o.off(i.USER_PROFILE_STATUS_UPDATED, W)
+        function X() {
+            o.off(E.NODE_ADDONS_FETCHED, W), o.off(i.LOGIN_STATUS_CHANGE, k), o.off(i.SYSTEMINFO_UPDATED, U), o.off(i.OSC_READY, K), o.off(i.SHARE_STATUS_CHANGE_IN_PROGRESS, z), o.off(h.FEATURE_STATUS_UPDATED, B), o.off(i.LOCALE_CHANGED, H), o.off(i.USER_PROFILE_STATUS_UPDATED, j)
         }
-        var Q = this,
-            X = !1,
-            J = null,
-            ee = !1;
-        Q.driverless = !1, Q.isShareSupported = !0, Q.isShareButtonClicked = !0, Q.isShareButtonDisabled = !1, Q.isShareRunning = !1, Q.showTooltip = !1, Q.notificationsEnabled = !1, Q.shareLoaded = !1, Q.defaultAvatarUrl = S.URL, Q.userProfileEnabled = !1, Q.dropdownCollapseTimeout = 0;
-        var te = l.getInstance("main/MainToolbarController"),
-            ne = 500;
+        var J = this,
+            ee = !1,
+            te = null,
+            ne = !1;
+        J.driverless = !1, J.isShareSupported = !0, J.isShareButtonClicked = !0, J.isShareButtonDisabled = !1, J.isShareRunning = !1, J.showTooltip = !1, J.notificationsEnabled = !1, J.shareLoaded = !1, J.defaultAvatarUrl = S.URL, J.userProfileEnabled = !1, J.dropdownCollapseTimeout = 0;
+        var re = l.getInstance("main/MainToolbarController"),
+            oe = 500;
         c.getLaunchTimeSystemInfo().then(function(e) {
-            Q.driverless = e && (!e.DriverVersion || "" === e.DriverVersion), te.info("driverless:", Q.driverless)
+            J.driverless = e && (!e.DriverVersion || "" === e.DriverVersion), re.info("driverless:", J.driverless)
         }).catch(function(e) {
-            te.error("failed to get systemInfo")
-        }), Q.canShowShareIcon = function() {
-            return Q.isShareSupported || ee
-        }, Q.displayUserProfile = C.gotoUserProfile, Q.enableAndLaunchShare = function() {
-            ee ? I.showDriverUpdateToast() : (Q.isShareButtonClicked = !0, Q.isShareButtonDisabled = !0, o.trigger(i.SHARE_OPEN_IN_PROGRESS, Q.isShareButtonClicked), u.getShareRunningStatus().then(function(e) {
-                te.info("getShareRunningStatus returned: ", e), e ? (d.show({
+            re.error("failed to get systemInfo")
+        }), J.canShowShareIcon = function() {
+            return J.isShareSupported || ne
+        }, J.displayUserProfile = C.gotoUserProfile, J.enableAndLaunchShare = function() {
+            ne ? I.showDriverUpdateToast() : (J.isShareButtonClicked = !0, J.isShareButtonDisabled = !0, o.trigger(i.SHARE_OPEN_IN_PROGRESS, J.isShareButtonClicked), u.getShareRunningStatus().then(function(e) {
+                re.info("getShareRunningStatus returned: ", e), e ? (d.show({
                     textContent: f("translate")("l10n.launchingShareToast"),
                     showProgressIndicator: !0,
                     hideDelay: 2e3
-                }), j()) : u.toggleShareState(!0).then(function(e) {
-                    te.info("Enabling Share, toggleShareState status: ", e), d.show({
+                }), q()) : u.toggleShareState(!0).then(function(e) {
+                    re.info("Enabling Share, toggleShareState status: ", e), d.show({
                         textContent: f("translate")("l10n.launchingShareToast"),
                         showProgressIndicator: !0,
                         hideDelay: 2e3
                     }), o.trigger(i.SHARE_STATUS_CHANGED)
                 }).catch(function(e) {
-                    te.error("toggleShareState failed."), o.trigger(i.SHARE_STATUS_CHANGED), F(), Q.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, Q.isShareButtonClicked), Q.isShareButtonDisabled = !1
+                    re.error("toggleShareState failed."), o.trigger(i.SHARE_STATUS_CHANGED), V(), J.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, J.isShareButtonClicked), J.isShareButtonDisabled = !1
                 })
             }).catch(function(e) {
-                te.error("getShareRunningStatus failed."), Q.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, Q.isShareButtonClicked), Q.isShareButtonDisabled = !1, Q.shareLoaded || e.status !== b.NOT_FOUND || I.handleShareNotReady(), Q.isShareRunning = !1
+                re.error("getShareRunningStatus failed."), J.isShareButtonClicked = !1, o.trigger(i.SHARE_OPEN_IN_PROGRESS, J.isShareButtonClicked), J.isShareButtonDisabled = !1, J.shareLoaded || e.status !== b.NOT_FOUND || I.handleShareNotReady(), J.isShareRunning = !1
             }))
-        }, Q.onClickRedeem = function(e) {
-            if (!J) {
-                J = d.showProgress({
+        }, J.onClickRedeem = function(e) {
+            if (!te && y.current.name !== L.REWARDS) {
+                var t = N.defer();
+                te = t.promise, d.showProgress({
                     textContent: f("translate")("l10n.loading")
-                }).finally(function() {
-                    J = null
                 });
-                var t = !1;
+                var r = !0;
                 O.getVariant({
                     activityId: R.REWARDS_UX
                 }).then(function(e) {
-                    t = e.enabled
+                    r = e.enabled
                 }).finally(function() {
-                    t ? !n.onlineState || n.onlineState && !n.onlineState.online ? d.showOffline() : w.getRewardsSupported() ? X ? K() : w.getRewardsEnabled().then(function(e) {
-                        X = e, K()
+                    r ? !n.onlineState || n.onlineState && !n.onlineState.online ? (d.showOffline(), t.reject(), te = null) : w.getRewardsSupported() ? ee ? (d.cancel(), Q(), t.resolve(), te = null) : w.getRewardsEnabled().then(function(e) {
+                        ee = e, d.cancel(), Q(), t.resolve()
                     }).catch(function() {
-                        q("l10n.redeemOffline")
-                    }) : q("l10n.updateToRedeem") : (d.cancel(), w.openRedeemUrl())
+                        Z("l10n.redeemOffline"), t.reject()
+                    }).finally(function() {
+                        te = null
+                    }) : (Z("l10n.updateToRedeem"), t.reject(), te = null) : (d.cancel(), w.openRedeemUrl(), t.resolve(), te = null)
                 })
             }
-        }, Q.onTourStepShown = function() {
+        }, J.onTourStepShown = function() {
             M.onStepShown()
         }, e.$on("$stateChangeSuccess", function(e, t, n, r, o) {
-            "main.auth.userProfile" === t.name ? Q.userProfileActive = !0 : Q.userProfileActive = !1
-        }), H(), e.$on("$destroy", Z)
+            "main.auth.userProfile" === t.name ? J.userProfileActive = !0 : J.userProfileActive = !1
+        }), Y(), e.$on("$destroy", X)
     }])
 }, function(e, t, n) {
     "use strict";
@@ -9942,10 +9970,10 @@ webpackJsonp([4], [function(e, t, n) {
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
-    }), t.nvMainToolbar = void 0, n(391), n(390), n(588), n(491), n(621), n(351);
-    var o = n(750),
+    }), t.nvMainToolbar = void 0, n(393), n(392), n(590), n(493), n(623), n(353);
+    var o = n(752),
         i = r(o);
-    n(392);
+    n(394);
     var a = angular.module("main").component("nvMainToolbar", {
         template: i.default,
         controller: "MainToolbarController",
@@ -9964,10 +9992,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvMain = t.ngMainModule = void 0;
     var o = n(178);
-    n(211), n(393), n(338);
-    var i = n(751),
+    n(211), n(395), n(340);
+    var i = n(753),
         a = r(i);
-    n(389);
+    n(391);
     var s = o.ngMainModule.component("nvMain", {
         bindings: {},
         template: a.default,
@@ -9990,7 +10018,7 @@ webpackJsonp([4], [function(e, t, n) {
             l = 5,
             c = t.getInstance("main.friends/FriendAboutController");
         o.loadRatingImage = function(e) {
-            return n(311)("./" + e + ".svg")
+            return n(313)("./" + e + ".svg")
         }, a.then(function(e) {
             var t = e[0] || {
                 general: {
@@ -10021,7 +10049,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(15),
         i = n(763),
         a = r(i);
-    n(417);
+    n(419);
     var s = o.ngFriendsModule.directive("nvFriendAbout", function() {
         return {
             restrict: "E",
@@ -10068,7 +10096,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(15),
         i = n(764),
         a = r(i);
-    n(419);
+    n(421);
     var s = o.ngFriendsModule.directive("nvFriendAchievements", function() {
         return {
             restrict: "E",
@@ -10100,7 +10128,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(15),
         i = n(765),
         a = r(i);
-    n(421);
+    n(423);
     var s = o.ngFriendsModule.directive("nvFriendActivityFeed", function() {
         return {
             restrict: "E",
@@ -10162,7 +10190,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19);
     var i = n(766),
         a = r(i);
-    n(423);
+    n(425);
     var s = o.ngFriendsModule.directive("nvFriendBroadcast", function() {
         return {
             restrict: "E",
@@ -10194,7 +10222,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(15),
         i = n(767),
         a = r(i);
-    n(425);
+    n(427);
     var s = o.ngFriendsModule.directive("nvFriendCompareGames", function() {
         return {
             restrict: "E",
@@ -10234,10 +10262,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvFriendDetails = void 0;
     var o = n(15);
-    n(424), n(430), n(426), n(420), n(422), n(418), n(434), n(432);
+    n(426), n(432), n(428), n(422), n(424), n(420), n(436), n(434);
     var i = n(768),
         a = r(i);
-    n(427);
+    n(429);
     var s = o.ngFriendsModule.directive("nvFriendDetails", function() {
         return {
             restrict: "E",
@@ -10330,7 +10358,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(198);
     var i = n(769),
         a = r(i);
-    n(429);
+    n(431);
     var s = o.ngFriendsModule.directive("nvFriendGameSummary", function() {
         return {
             restrict: "E",
@@ -10371,7 +10399,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = r(i),
         s = n(770),
         l = r(s);
-    n(431);
+    n(433);
     var c = o.ngFriendsModule.directive("nvFriendGroupList", [function() {
         return {
             restrict: "E",
@@ -10479,12 +10507,12 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvFriendList = void 0;
     var o = n(15);
-    n(112), n(210), n(381), n(33);
+    n(112), n(210), n(383), n(33);
     var i = n(773),
         a = r(i),
         s = n(772),
         l = r(s);
-    n(433);
+    n(435);
     var c = o.ngFriendsModule.directive("nvFriendList", [function() {
         return {
             restrict: "E",
@@ -10511,7 +10539,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGalleryLibrary = void 0;
     var o = n(26);
-    n(444);
+    n(446);
     var i = n(776),
         a = r(i),
         s = o.ngGalleryModule.directive("nvGalleryLibrary", function() {
@@ -10533,7 +10561,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGalleryMain = void 0;
     var o = n(26);
-    n(442), n(447);
+    n(444), n(449);
     var i = n(777),
         a = r(i),
         s = o.ngGalleryModule.directive("nvGalleryMain", function() {
@@ -10588,10 +10616,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGalleryMoments = void 0;
     var o = n(26);
-    n(112), n(439), n(445), n(452);
+    n(112), n(441), n(447), n(454);
     var i = n(778),
         a = r(i);
-    n(441);
+    n(443);
     var s = o.ngGalleryModule.directive("nvGalleryMoments", function() {
         return {
             restrict: "E",
@@ -10655,10 +10683,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGalleryPanel = void 0;
     var o = n(26);
-    n(451);
+    n(453);
     var i = n(779),
         a = r(i);
-    n(443);
+    n(445);
     var s = o.ngGalleryModule.directive("nvGalleryPanel", ["$timeout", "eventAggregator", "COMMON_EVENTS", function(e, t, n) {
         return {
             restrict: "E",
@@ -10775,10 +10803,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGalleryShowcase = void 0;
     var o = n(26);
-    n(112), n(449);
+    n(112), n(451);
     var i = n(781),
         a = r(i);
-    n(446);
+    n(448);
     var s = o.ngGalleryModule.directive("nvGalleryShowcase", function() {
         return {
             restrict: "E",
@@ -10820,7 +10848,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19), n(33);
     var i = n(782),
         a = r(i);
-    n(448);
+    n(450);
     var s = o.ngGalleryModule.directive("nvGalleryShowcaseTile", function() {
         return {
             restrict: "E",
@@ -10885,7 +10913,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19), n(33);
     var i = n(783),
         a = r(i);
-    n(450);
+    n(452);
     var s = o.ngGalleryModule.directive("nvGalleryTile", function() {
         return {
             restrict: "E",
@@ -10993,7 +11021,7 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.customFpsController = void 0;
     var o = n(3),
         i = (r(o), n(14));
-    n(16), n(362);
+    n(16), n(364);
     var a = i.ngGamesModule.controller("CustomFpsController", ["$scope", "$log", "$document", "$window", "$mdDialog", "$filter", "SETTING_TYPE", "eventAggregator", "toastService", "COMMON_GAME_EVENTS", "COMMON_EVENTS", function(e, t, n, r, o, i, a, s, l, c, u) {
         function d() {
             S.isCurrentSettingTypeAC() ? (S.maxFpsIndex = 120, S.minFpsIndex = 30, S.nvSystemGame.getQuietModeFRLState().then(function(e) {
@@ -11296,8 +11324,7 @@ webpackJsonp([4], [function(e, t, n) {
                 string: e.value
             }) : e.value
         }, G.resolutionOrDisplayModeChanged = function() {
-            G.currentSliderIndex === G.optimalSliderIndex && (G.restoreOptimalSliderPosition = !0),
-                A()
+            G.currentSliderIndex === G.optimalSliderIndex && (G.restoreOptimalSliderPosition = !0), A()
         }, G.currentSliderChanged = function() {
             G.nvCustomSettingsCallback && G.customSettings ? G.OpsTweakPosition && G.OpsTweakPosition.tweak.displayMode === G.selectedDisplayMode.name && G.OpsTweakPosition.tweak.resolution === G.selectedResolution.value && G.OpsTweakPosition.settingsIndex === G.currentSliderIndex ? (G.nvCustomSettingsCallback(a.APPLIED_SETTING_SELECTED), G.applyButtonDisabled = !0) : (G.nvCustomSettingsCallback(a.CUSTOM_SETTINGS_UPDATED, {
                 settings: G.customSettings.settings[G.currentSliderIndex],
@@ -11381,7 +11408,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(36);
     var i = n(794),
         a = r(i);
-    n(464);
+    n(466);
     var s = o.ngGamesModule.controller("GameDetailPreviewController", ["$scope", "$log", "$mdDialog", "dbCacheService", "DB_NAMES", function(e, t, n, r, o) {
         var i = this;
         i.userGame = i.nvUserGame, i.isGameOpsSupported = i.nvOpsSupported, i.userGame && (i.gameTags = i.userGame.tags);
@@ -11427,7 +11454,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(213), n(214), n(215), n(40);
     var i = n(790),
         a = r(i);
-    n(457);
+    n(459);
     var s = o.ngGamesModule.component("nvGameDetailPreview", {
         bindings: {
             nvUserGame: "=",
@@ -11491,7 +11518,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGameList = void 0;
     var o = n(14);
-    n(112), n(19), n(466), n(132);
+    n(112), n(19), n(468), n(132);
     var i = n(792),
         a = r(i);
     n(292), n(11), n(12);
@@ -11567,10 +11594,10 @@ webpackJsonp([4], [function(e, t, n) {
     n(16), n(21);
     var l = n(788),
         c = r(l);
-    n(455);
+    n(457);
     var u = n(787),
         d = r(u);
-    n(454);
+    n(456);
     var f = s.ngGamesModule.controller("GameSettingsController", ["$scope", "$log", "$filter", "SETTING_TYPE", "$mdDialog", "CUSTOM_OPS_CALLBACK_ACTION", "eventAggregator", "GAME_EVENTS", "$timeout", "OPS_TAB_STATE", "$document", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "toastService", "quietModeService", "framerateLimiterService", function(e, t, n, r, o, i, s, l, u, f, m, p, g, v, h, y) {
         function b(e, t) {
             if ("-" !== e) {
@@ -11976,10 +12003,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGameSettings = void 0;
     var o = n(14);
-    n(462), n(456), n(19);
+    n(464), n(458), n(19);
     var i = n(793),
         a = r(i);
-    n(461);
+    n(463);
     var s = o.ngGamesModule.directive("nvGameSettings", ["$document", "eventAggregator", "COMMON_EVENTS", function(e, t, n) {
         return {
             require: ["^nvOptimization", "nvGameSettings"],
@@ -12084,7 +12111,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19), n(214), n(213), n(33), n(164);
     var i = n(795),
         a = r(i);
-    n(465);
+    n(467);
     var s = o.ngGamesModule.directive("nvGameTile", ["$timeout", function(e) {
         return {
             restrict: "E",
@@ -12186,10 +12213,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvOptimization = void 0;
     var o = n(14);
-    n(463);
+    n(465);
     var i = n(796),
         a = r(i);
-    n(467);
+    n(469);
     var s = o.ngGamesModule.directive("nvOptimization", function() {
         return {
             restrict: "E",
@@ -12380,7 +12407,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(132), n(271);
     var i = n(799),
         a = r(i);
-    n(471);
+    n(473);
     var s = o.ngGamesModule.directive("nvVops", function() {
         return {
             restrict: "E",
@@ -12428,10 +12455,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGfn = void 0;
     var o = n(27);
-    n(476), n(293), n(485);
+    n(478), n(293), n(487);
     var i = n(800),
         a = r(i);
-    n(473);
+    n(475);
     var s = o.ngGfnModule.directive("nvGfn", function() {
         return {
             restrict: "E",
@@ -12468,10 +12495,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGfnFeature = void 0;
     var o = n(27);
-    n(281), n(487);
+    n(281), n(489);
     var i = n(801),
         a = r(i);
-    n(475);
+    n(477);
     var s = o.ngGfnModule.directive("nvGfnFeature", function() {
         return {
             restrict: "E",
@@ -12533,7 +12560,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(27),
         i = n(802),
         a = r(i);
-    n(478);
+    n(480);
     var s = o.ngGfnModule.directive("nvGameStoreItem", function() {
         return {
             restrict: "E",
@@ -12597,7 +12624,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(293);
     var i = n(804),
         a = r(i);
-    n(480);
+    n(482);
     var s = o.ngGfnModule.directive("nvGenreGames", function() {
         return {
             restrict: "E",
@@ -12633,7 +12660,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(27),
         i = n(805),
         a = r(i);
-    n(482);
+    n(484);
     var s = o.ngGfnModule.directive("nvGenreItem", function() {
         return {
             restrict: "E",
@@ -12701,10 +12728,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvGfnGenres = void 0;
     var o = n(27);
-    n(483);
+    n(485);
     var i = n(806),
         a = r(i);
-    n(484);
+    n(486);
     var s = o.ngGfnModule.directive("nvGfnGenres", function() {
         return {
             restrict: "E",
@@ -12748,7 +12775,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = r(i),
         s = n(807),
         l = r(s);
-    n(486);
+    n(488);
     var c = o.ngGfnModule.directive("nvLatestGames", function() {
             return {
                 restrict: "E",
@@ -12901,23 +12928,24 @@ webpackJsonp([4], [function(e, t, n) {
                 var t = new Date,
                     n = e.notifications,
                     r = !1,
-                    o = [];
-                n.forEach(function(e) {
+                    o = [],
+                    i = !1;
+                C.info("notifications data received", n), n.forEach(function(e) {
                     if (!a.findWhere(_.notificationList, {
                             callbackData: e.callbackData
                         })) {
                         if (A[e.callbackData]) {
                             if (A[e.callbackData].removed) return;
-                            e.availableTime = A[e.callbackData].notificationTs
+                            A[e.callbackData].notificationTs || (A[e.callbackData].notificationTs = t, i = !0), e.availableTime = A[e.callbackData].notificationTs
                         } else r = !0, A[e.callbackData] = {
                             notificationTs: t,
                             removed: !1
                         }, e.availableTime = t, o.push(e.type);
                         e.readableTime = f("convertUTCToTimeAgo")(e.availableTime), _.notificationList.push(e)
                     }
-                }), _.notificationList = a.sortBy(_.notificationList, function(e) {
+                }), C.info("notification list data", _.notificationList), _.notificationList = a.sortBy(_.notificationList, function(e) {
                     return e.availableTime.getTime()
-                }).reverse(), r && (_.notificationList[0].firstNotificationHighResolution && (A.lastBigNotificationShown = _.notificationList[0].availableTime), A.showIndicator = !0, A.persist_(), a.each(a.uniq(o), function(e) {
+                }).reverse(), i && !r && A.persist_(), r && (_.notificationList[0].firstNotificationHighResolution && (A.lastBigNotificationShown = _.notificationList[0].availableTime), A.showIndicator = !0, A.persist_(), a.each(a.uniq(o), function(e) {
                     c.push(u.NOTIFICATION_IN_APP_NEW_ITEMS_AVAILABLE, {
                         category: e,
                         description: ""
@@ -12938,7 +12966,7 @@ webpackJsonp([4], [function(e, t, n) {
             }
 
             function E() {
-                w = r.getLoggedInUser(), w ? (C.info("fetching notification view state at user logged in"), A = o.getCachedUserItem(w.userId, i.JARVIS_GFE_STORE, i.NOTIFICATIONS_VIEW_STATE), A ? A.wait_().then(function() {
+                w = r.getLoggedInUser(), w ? (C.info("fetching notification view state at user logged in"), A = o.getCachedUserItem(w.userId, i.JARVIS_GFE_STORE, i.NOTIFICATIONS_VIEW_STATE), C.info("displaying notification view state at user logged in ", A), A ? A.wait_().then(function() {
                     e.trigger(t.VIEWSTATE_INITIALIZED)
                 }) : C.error("Unable to fetch notifications view state in user logged in")) : (C.info("setting notification view state null at user logged out"), w = null, A = null, _.notificationList = [], _.showIndicator = !1)
             }
@@ -13002,7 +13030,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(270), n(40);
     var i = n(810),
         a = r(i);
-    n(490), n(360);
+    n(492), n(362);
     var s = o.ngNotificationsModule.component("nvNotifications", {
         template: a.default,
         controller: "NotificationsController",
@@ -13109,7 +13137,7 @@ webpackJsonp([4], [function(e, t, n) {
                 i = window.screenY + window.innerHeight / 2 - r / 2,
                 a = window.screenX + window.innerWidth / 2 - o / 2,
                 s = "toolbar=0,location=0,menubar=0,width=" + o + ",height=" + r + ",top=" + i + ",left=" + a;
-            w = !1, u.on(d.CHILD_WINDOW_CLOSED, g), A = new Date, E.info("OAuth Load Started"), f.openChildWindow(e, "app_oauth_window_with_back_button", s, {}, !0, b.messageEventListener), u.on(d.CHILD_WINDOW_LOADED, p), E.info("New oauth child window should have opened with url: ", e)
+            w = !1, u.on(d.CHILD_WINDOW_CLOSED, g), A = new Date, E.info("OAuth Load Started"), f.openChildWindow(e, "app_oauth_window_with_back_button", s, {}, !0, b.messageEventListener), u.on(d.CHILD_WINDOW_LOADED, p), E.info("New oauth child window should have opened with url: ", e), E.info("Pop-Up window loaded in time(ms):", new Date - A)
         }, b.hideOauthDialog = function() {
             w = !0, f.closeChildWindow()
         }, b.onClickNVIDIA = function() {
@@ -13133,7 +13161,7 @@ webpackJsonp([4], [function(e, t, n) {
         }, b.messageEventListener = function(e) {
             if (b.loginWithJarvisOAuth) {
                 var t = e.data.code;
-                return b.hideOauthDialog(), t && h(t)
+                return E.info("Message received in time(ms) :", new Date - e.data.time), b.hideOauthDialog(), t && h(t)
             }
             var n = angular.fromJson(e.data.data),
                 r = S[_];
@@ -13179,7 +13207,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(811),
         a = r(i);
-    n(492);
+    n(494);
     var s = o.ngOobeModule.component("nvOobeAuthChoose", {
         bindings: {
             message: "@"
@@ -13259,7 +13287,8 @@ webpackJsonp([4], [function(e, t, n) {
             }, S.showForgotPassword = function() {
                 y("forgotPassword")
             }, S.showEmailVerification = function(e, t) {
-                _.debug("showEmailVerification", t), S.sessionObject = e, S.verificationType = t, y("verification")
+                _.debug("showEmailVerification", t), S.sessionObject = e, S.verificationType = t,
+                    y("verification")
             }, S.showEditEmail = function(e) {
                 _.debug("showEditEmail"), S.sessionObject = e, y("editEmail")
             }, S.showQrCodeForScan = function(e, t) {
@@ -13302,7 +13331,7 @@ webpackJsonp([4], [function(e, t, n) {
                         primaryEmailVerified: true
                     }
                 }
-            });					
+            });
         }]);
     t.oobeAuthController = s
 }, function(e, t, n) {
@@ -13331,8 +13360,7 @@ webpackJsonp([4], [function(e, t, n) {
             i.emailForm.password.$setValidity("invalidPassword", !0)
         }, i.onDone = function() {
             n.startActionAsync("SUBMIT"), i.emailForm.$invalid ? (a.debug("tried to submit invalid form"), n.endActionAsync("SUBMIT", "INVALID_FORM"), i.emailForm.password.$setTouched(), i.emailForm.email.$setTouched(), i.emailForm.reEnterEmail.$setTouched()) : (i.message = null, i.waiting = !0, i.nvSessionObject.user.core.primaryEmail === i.email ? (a.debug("Email did not change. Resend verification"), i.oobeAuthCtrl.attemptResendVerification(i.email).then(function(e) {
-                n.endActionAsync("SUBMIT", "SUCCESS"),
-                    i.oobeAuthCtrl.showEmailVerification(i.nvSessionObject, "resent")
+                n.endActionAsync("SUBMIT", "SUCCESS"), i.oobeAuthCtrl.showEmailVerification(i.nvSessionObject, "resent")
             }).catch(function(e) {
                 n.endActionAsync("SUBMIT", "HTTP_ERROR", e.status), i.oobeAuthCtrl.showEmailVerification(i.nvSessionObject, "error")
             })) : (a.debug("Email has changed. Attempt to change email address"), o(i.nvSessionObject, i.email, i.password).catch(function(e) {
@@ -13357,7 +13385,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(812),
         a = r(i);
-    n(495);
+    n(497);
     var s = o.ngOobeModule.directive("nvOobeAuthEditEmail", [function() {
         return {
             restrict: "E",
@@ -13419,7 +13447,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(813),
         a = r(i);
-    n(497);
+    n(499);
     var s = o.ngOobeModule.directive("nvOobeAuthForgotPassword", [function() {
         return {
             restrict: "E",
@@ -13505,7 +13533,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(814),
         a = r(i);
-    n(278), n(279), n(499);
+    n(278), n(279), n(501);
     var s = o.ngOobeModule.directive("nvOobeAuthNvLogin", [function() {
         return {
             restrict: "E",
@@ -13530,7 +13558,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.oobeAuthNvRegisterController = void 0;
     var r = n(9);
-    n(12), n(16), n(347), n(30), n(25), n(11);
+    n(12), n(16), n(349), n(30), n(25), n(11);
     var o = r.ngOobeModule.controller("OobeAuthNvRegisterController", ["$log", "$translate", "$scope", "$q", "jarvisService", "dbCacheService", "DB_NAMES", "oobeTelemetryService", "telemetryService", "gfwslService", "dialogService", "gfeService", "oobeOptionsService", "gfeTargetService", "OOBE_LOGIN", "localeService", "ACTIVE_AB_TESTS", "OOBE_VALIDATION_ELEMENTS", "OOBE_VALIDATION_ERRORS", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v, h, y) {
         function b() {
             x.locale = g.getCurrentLocale().code, "zh-CHS" === x.locale ? x.locale = "zh-CN" : "zh-CHT" === x.locale && (x.locale = "zh-TW"), D.debug("Locale obtained:", x.locale), x.regView = "register", x.nvType === p.SOCIAL ? (s.updateScreen("SCREEN_OOBE_REGISTRATION_SOCIAL"), x.title = "l10n.almostDone") : (s.updateScreen("SCREEN_OOBE_REGISTRATION_NVIDIA"), x.title = "l10n.createAccount"), x.onlineState = d.onlineState, angular.merge(x.regModel, x.nvPrefilled), x.nvType === p.SOCIAL && x.regModel.email && x.regModel.email.length > 0 && (x.emailDisabled = !0), x.waiting = !0, f.isNewsLetterChecked().then(function(e) {
@@ -13702,7 +13730,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(815),
         a = r(i);
-    n(501), n(276), n(278), n(285), n(326), n(166), n(330), n(279);
+    n(503), n(276), n(278), n(285), n(328), n(166), n(332), n(279);
     var s = o.ngOobeModule.directive("nvOobeAuthNvRegister", [function() {
         return {
             restrict: "E",
@@ -13749,7 +13777,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(816),
         a = r(i);
-    n(503);
+    n(505);
     var s = o.ngOobeModule.directive("nvOobeAuthQrCode", [function() {
         return {
             restrict: "E",
@@ -13800,7 +13828,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(817),
         a = r(i);
-    n(505);
+    n(507);
     var s = o.ngOobeModule.component("nvOobeAuthSync", {
         template: a.default,
         controller: "OobeAuthSyncController",
@@ -13862,7 +13890,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(818),
         a = r(i);
-    n(507);
+    n(509);
     var s = o.ngOobeModule.component("nvOobeAuthVerification", {
         bindings: {
             nvSessionObject: "<",
@@ -13890,7 +13918,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(819),
         a = r(i);
-    n(494), n(493), n(500), n(502), n(506), n(498), n(508), n(496), n(504);
+    n(496), n(495), n(502), n(504), n(508), n(500), n(510), n(498), n(506);
     var s = o.ngOobeModule.component("nvOobeAuth", {
         bindings: {
             nvActiveAuthView: "@",
@@ -13996,7 +14024,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(822),
         a = r(i);
-    n(512), n(518), n(509), n(515);
+    n(514), n(520), n(511), n(517);
     var s = o.ngOobeModule.component("nvOobe", {
         bindings: {
             nvActiveView: "@",
@@ -14037,7 +14065,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(823),
         a = r(i);
-    n(514);
+    n(516);
     var s = o.ngOobeModule.component("nvOobeNoDriver", {
         template: a.default,
         controller: "OobeNoDriverController",
@@ -14124,7 +14152,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(9),
         i = n(824),
         a = r(i);
-    n(517), n(511);
+    n(519), n(513);
     var s = o.ngOobeModule.component("nvOobeUlWelcome", {
         template: a.default,
         controller: "OobeUlWelcomeController",
@@ -14200,7 +14228,7 @@ webpackJsonp([4], [function(e, t, n) {
         }, g.showCroppie = function() {
             return b && !y && g.userProfileEnabled
         }, g.showPreview = function() {
-            return !b && !y
+            return !b && !y;
         }, g.showError = function() {
             return y
         }, g.onFileSelect = function(e) {
@@ -14243,7 +14271,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.editEmailService = void 0;
     var r = n(4);
-    n(30), n(12), n(520), n(274), n(275);
+    n(30), n(12), n(522), n(274), n(275);
     var o = r.ngPreferencesModule.service("editEmailService", ["$log", "dialogService", "jarvisService", "$q", function(e, t, n, r) {
         var o = this,
             i = e.getInstance("main.preferences/preferencesService"),
@@ -14378,7 +14406,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(276), n(277), n(166);
     var i = n(827),
         a = r(i);
-    n(522);
+    n(524);
     var s = o.ngPreferencesModule.directive("nvEditPassword", [function() {
         return {
             restrict: "A",
@@ -14466,7 +14494,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(33);
     var i = n(828),
         a = r(i);
-    n(524);
+    n(526);
     var s = o.ngPreferencesModule.component("nvFeatureDescription", {
         bindings: {
             nvFeatureName: "@",
@@ -14524,7 +14552,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(33), n(19);
     var i = n(829),
         a = r(i);
-    n(526);
+    n(528);
     var s = o.ngPreferencesModule.component("nvFeatureHeader", {
         bindings: {
             nvFeatureTile: "@",
@@ -14574,7 +14602,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(830),
         a = r(i);
-    n(528);
+    n(530);
     var s = o.ngPreferencesModule.directive("nvLicenseAgreement", [function() {
         return {
             restrict: "A",
@@ -14620,7 +14648,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.preferencesAccountsController = void 0;
     var r = n(4);
-    n(12), n(30), n(521), n(11), n(163), n(275), n(523), n(274), n(297), n(286), n(53);
+    n(12), n(30), n(523), n(11), n(163), n(275), n(525), n(274), n(297), n(286), n(53);
     var o = r.ngPreferencesModule.controller("PreferencesAccountsController", ["$log", "jarvisService", "dialogService", "editEmailService", "dbCacheService", "DB_NAMES", "$window", "localeService", "cevoToggleService", "COMMON_DYNAMIC_REDIRECT", "DEFAULT_AVATAR", "weChatService", "WECHAT_CONSTANTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_SCREENS", "gfeTargetService", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v) {
         function h() {
             A.debug("refreshing session store status"), t.getSessionStoreStatus().then(function(e) {
@@ -14826,7 +14854,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(285);
     var i = n(837),
         a = r(i);
-    n(531), n(530), n(535), n(536), n(533), n(532), n(534);
+    n(533), n(532), n(537), n(538), n(535), n(534), n(536);
     var s = o.ngPreferencesModule.component("nvPreferencesAccounts", {
         template: a.default,
         controller: "PreferencesAccountsController",
@@ -14921,7 +14949,7 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.nvPreferences = void 0;
     var o = (n(4), n(838)),
         i = r(o);
-    n(538);
+    n(540);
     var a = angular.module("main.preferences").component("nvPreferences", {
         template: i.default,
         controller: "PreferencesController",
@@ -15001,10 +15029,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvPreferencesFeatureReadiness = void 0;
     var o = n(4);
-    n(198), n(527), n(525);
+    n(198), n(529), n(527);
     var i = n(839),
         a = r(i);
-    n(540);
+    n(542);
     var s = o.ngPreferencesModule.component("nvPreferencesFeatureReadiness", {
         template: a.default,
         controller: "PreferencesFeatureReadinessController",
@@ -15234,7 +15262,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19);
     var i = n(841),
         a = r(i);
-    n(545);
+    n(547);
     var s = o.ngPreferencesModule.component("nvPreferencesGamesBatteryBoost", {
         template: a.default,
         controller: "PreferencesGamesBatteryBoostController",
@@ -15283,10 +15311,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvPreferencesGames = void 0;
     var o = n(4);
-    n(557), n(551), n(553), n(546), n(555);
+    n(559), n(553), n(555), n(548), n(557);
     var i = n(842),
         a = r(i);
-    n(547);
+    n(549);
     var s = o.ngPreferencesModule.component("nvPreferencesGames", {
         template: a.default,
         controller: "PreferencesGamesController",
@@ -15438,7 +15466,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(844),
         a = r(i);
-    n(549), n(550);
+    n(551), n(552);
     var s = o.ngPreferencesModule.component("nvPreferenceGamesLocation", {
         template: a.default,
         controller: "PreferencesGamesLocationController",
@@ -15482,7 +15510,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(845),
         a = r(i);
-    n(552);
+    n(554);
     var s = o.ngPreferencesModule.component("nvPreferenceGamesOps", {
         template: a.default,
         controller: "PreferencesGamesOpsController",
@@ -15504,7 +15532,7 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.preferencesGamesQuietModeController = void 0;
     var o = n(3),
         i = (r(o), n(4));
-    n(367), n(21), n(50);
+    n(369), n(21), n(50);
     var a = i.ngPreferencesModule.controller("PreferencesGamesQuietModeController", ["$log", "quietModeService", "toastService", "$filter", "eventAggregator", "gamesService", "GAME_EVENTS", "$scope", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_SCREENS", function(e, t, n, r, o, i, a, s, l, c, u) {
         function d() {
             m.isGameOpsSupported = i.getGameOpsSupported(), h.info("opsfeaturestatus on init ", m.isGameOpsSupported)
@@ -15584,7 +15612,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19);
     var i = n(846),
         a = r(i);
-    n(554);
+    n(556);
     var s = o.ngPreferencesModule.component("nvPreferencesGamesQuietMode", {
         template: a.default,
         controller: "PreferencesGamesQuietModeController",
@@ -15701,7 +15729,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(847),
         a = r(i);
-    n(556);
+    n(558);
     var s = o.ngPreferencesModule.component("nvPreferenceGamesScan", {
         template: a.default,
         controller: "PreferencesGamesScanController",
@@ -15720,26 +15748,26 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.preferencesGeneralAboutController = void 0;
     n(4);
-    n(30), n(25), n(28), n(21), n(529), n(199);
+    n(30), n(25), n(28), n(21), n(531), n(199);
     var o = n(185),
-        i = (r(o), angular.module("main.preferences").controller("PreferencesGeneralAboutController", ["$log", "gfeService", "preferencesService", "toastService", "$filter", "GFE_DOWNLOAD_PROGRESS_STATUS", "GFE_UPDATE_EVENTS", "TASK_STATUS", "eventAggregator", "$scope", "cefService", function(e, t, n, r, o, i, a, s, l, c, u) {
-            function d() {
+        i = (r(o), angular.module("main.preferences").controller("PreferencesGeneralAboutController", ["$log", "gfeService", "preferencesService", "toastService", "$filter", "GFE_DOWNLOAD_PROGRESS_STATUS", "GFE_UPDATE_EVENTS", "TASK_STATUS", "eventAggregator", "$scope", "cefService", "POST_PROCESSING_STATES", function(e, t, n, r, o, i, a, s, l, c, u, d) {
+            function f() {
                 r.showError({
                     textContent: o("translate")("l10n.checkInternetConnectivity")
                 })
             }
 
-            function f() {
+            function m() {
                 var e = o("translate")("l10n.ExpFeatureUpdatesDisabled"),
                     t = "error_outline";
-                1 == I.clientBetaUpdateEnabled && (e = o("translate")("l10n.ExpFeatureUpdatesEnabled"), t = "check"), p(e, t)
+                1 == T.clientBetaUpdateEnabled && (e = o("translate")("l10n.ExpFeatureUpdatesEnabled"), t = "check"), g(e, t)
             }
 
-            function m() {
-                I.clientBetaUpdateCheckboxEnabled = !(I.clientBetaUpdateEnabled === !0 && I.gfeBetaUpdate && I.gfeBetaUpdate.downloadStatus && !I.showDownloadButton(I.gfeBetaUpdate.downloadStatus.status))
+            function p() {
+                T.clientBetaUpdateCheckboxEnabled = !(T.clientBetaUpdateEnabled === !0 && T.gfeBetaUpdate && T.gfeBetaUpdate.downloadStatus && !T.showDownloadButton(T.gfeBetaUpdate.downloadStatus.status))
             }
 
-            function p(e, t) {
+            function g(e, t) {
                 r.isOpen() ? r.cancel().then(function() {
                     r.show({
                         textContent: e,
@@ -15751,142 +15779,122 @@ webpackJsonp([4], [function(e, t, n) {
                 })
             }
 
-            function g(e) {
-                p(e, "error_outline")
+            function v(e) {
+                g(e, "error_outline")
             }
 
-            function v() {
-                x.info(D, "started"), R = O.STARTED
-            }
-
-            function h(e) {
-                x.info(D, "done", e), I.gfeBetaUpdate && I.gfeBetaUpdate.downloadStatus && I.gfeBetaUpdate.downloadStatus.taskId === e && (R = O.FINISHED)
+            function h() {
+                return n.betaPostProcessingStatus === d.FINISHED
             }
 
             function y() {
-                x.info(D, "failed"), R = O.FAILED
+                return n.betaPostProcessingStatus === d.FAILED
             }
 
             function b() {
-                return R === O.FINISHED
+                return n.betaPostProcessingStatus === d.STARTED
             }
 
-            function E() {
-                return R === O.FAILED
-            }
-
-            function S() {
-                return R === O.STARTED
-            }
-
-            function w(e) {
-                if (I.clientBetaUpdateCheckboxEnabled = !0, e.status === s.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === s.TASK_CHECK_SUM_ERROR || e.status === s.TASK_SIGNATURE_VERIFICATION_FAILS) g(M("l10n.downloadFailed"));
-                else if (e.status === s.TASK_FAILED_UNABLE_TO_REACH_SERVER) g(M("l10n.unableToConnectToNvidia"));
+            function E(e) {
+                if (T.clientBetaUpdateCheckboxEnabled = !0, e.status === s.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === s.TASK_CHECK_SUM_ERROR || e.status === s.TASK_SIGNATURE_VERIFICATION_FAILS) v(I("l10n.downloadFailed"));
+                else if (e.status === s.TASK_FAILED_UNABLE_TO_REACH_SERVER) v(I("l10n.unableToConnectToNvidia"));
                 else if (e.status === s.TASK_DISK_WRITE_FAIL) {
                     var t = o("convertBytesToKBMBGB")(e.totalBytes);
                     if (e.downloadedLocation.length > 0) {
                         var n = e.downloadedLocation.split(":")[0];
                         n = n.toUpperCase();
-                        var r = M("l10n.downloadDiskSpace", {
+                        var r = I("l10n.downloadDiskSpace", {
                             value: t,
                             drive: n
                         });
-                        g(r)
+                        v(r)
                     }
                 }
             }
 
+            function S() {
+                T.GFECheckForUpdateInProgress = !0, T.clientBetaUpdateCheckboxEnabled = !1
+            }
+
+            function w() {
+                T.clientBetaUpdateCheckboxEnabled = !0, T.GFECheckForUpdateInProgress = !1, v(I("l10n.unableToConnectToNvidia"))
+            }
+
             function A() {
-                I.GFECheckForUpdateInProgress = !0, I.clientBetaUpdateCheckboxEnabled = !1
-            }
-
-            function T() {
-                I.clientBetaUpdateCheckboxEnabled = !0, I.GFECheckForUpdateInProgress = !1, g(M("l10n.unableToConnectToNvidia"))
-            }
-
-            function C() {
-                if (I.clientBetaUpdateCheckboxEnabled = !(I.gfeBetaUpdate && I.gfeBetaUpdate.downloadURL && !_.isEmpty(I.gfeBetaUpdate.downloadURL)), x.info("checkforupdate finished", I.gfeBetaUpdate), I.clientBetaUpdateCheckboxEnabled) {
+                if (T.clientBetaUpdateCheckboxEnabled = !(T.gfeBetaUpdate && T.gfeBetaUpdate.downloadURL && !_.isEmpty(T.gfeBetaUpdate.downloadURL)), C.info("checkforupdate finished", T.gfeBetaUpdate), T.clientBetaUpdateCheckboxEnabled) {
                     var e = o("translate")("l10n.noUpdatesAreAvailable"),
                         t = "check";
-                    p(e, t)
+                    g(e, t)
                 }
-                I.GFECheckForUpdateInProgress = !1
+                T.GFECheckForUpdateInProgress = !1
             }
-            var I = this,
-                x = e.getInstance("main.preferences/PreferencesFeatureReadinessController"),
-                D = "GFE Beta update post processing";
-            I.gfeBetaUpdate = {}, I.version = t.version, I.GFECheckForUpdateInProgress = !1, I.clientBetaUpdateEnabled = !1;
-            var M = o("translate"),
-                O = {
-                    NOT_STARTED: "NOT_STARTED",
-                    STARTED: "STARTED",
-                    FAILED: "FAILED",
-                    FINISHED: "FINISHED"
-                },
-                R = O.NOT_STARTED;
-            I.clientBetaUpdateCheckboxEnabled = !0, I.beta = "", n.isGFEBetaBuild().then(function(e) {
-                I.beta = e === !0 ? o("translate")("l10n.beta") : "", I.beta = I.beta.toUpperCase()
-            }), I.setClientBetaUpdateEnabled = function() {
-                x.info("set experimental feature flag:", I.clientBetaUpdateEnabled), f(), n.setClientBetaUpdateEnabled(I.clientBetaUpdateEnabled).then(function() {
-                    I.clientBetaUpdateCheckboxEnabled = !I.clientBetaUpdateEnabled
+            var T = this,
+                C = e.getInstance("main.preferences/PreferencesFeatureReadinessController");
+            T.gfeBetaUpdate = {}, T.version = t.version, T.GFECheckForUpdateInProgress = !1, T.clientBetaUpdateEnabled = !1;
+            var I = o("translate");
+            T.clientBetaUpdateCheckboxEnabled = !0, T.beta = "", n.isGFEBetaBuild().then(function(e) {
+                T.beta = e === !0 ? o("translate")("l10n.beta") : "", T.beta = T.beta.toUpperCase()
+            }), T.setClientBetaUpdateEnabled = function() {
+                C.info("set experimental feature flag:", T.clientBetaUpdateEnabled), m(), n.setClientBetaUpdateEnabled(T.clientBetaUpdateEnabled).then(function() {
+                    T.clientBetaUpdateCheckboxEnabled = !T.clientBetaUpdateEnabled
                 }).catch(function(e) {
-                    x.error("setClientBetaUpdateEnabled failed: " + e), d(), I.clientBetaUpdateCheckboxEnabled = !0
+                    C.error("setClientBetaUpdateEnabled failed: " + e), f(), T.clientBetaUpdateCheckboxEnabled = !0
                 })
             }, n.getClientBetaUpdateEnabled().then(function(e) {
-                I.clientBetaUpdateEnabled = "1" === e.data, m()
+                T.clientBetaUpdateEnabled = "1" === e.data, p()
             }).catch(function(e) {
-                x.error("getClientBetaUpdateEnabled failed: " + e), d()
-            }), I.onShowReleaseHighlight = function(e) {
+                C.error("getClientBetaUpdateEnabled failed: " + e), f()
+            }), T.onShowReleaseHighlight = function(e) {
                 n.onShowReleaseHighlight(!1)
-            }, I.onShowLicense = function(e) {
+            }, T.onShowLicense = function(e) {
                 n.showEula()
-            }, I.onLaunchFaq = function() {
+            }, T.onLaunchFaq = function() {
                 n.showFaq()
-            }, I.onLaunchPrivacyPolicy = function() {
+            }, T.onLaunchPrivacyPolicy = function() {
                 n.showPrivacyPolicy()
             }, n.getGFEBetaUpdate().then(function(e) {
-                I.gfeBetaUpdate = e, m()
+                T.gfeBetaUpdate = e, p()
             }).catch(function(e) {
-                x.error("getGFEBetaUpdate failed: " + e)
-            }), I.isDownloadStarted = function(e) {
+                C.error("getGFEBetaUpdate failed: " + e)
+            }), T.isDownloadStarted = function(e) {
                 return e === s.TASK_RUNNING || e === s.TASK_RETRY
-            }, I.isDownloadPaused = function(e) {
+            }, T.isDownloadPaused = function(e) {
                 return e === s.TASK_PAUSED || e === s.TASK_PAUSED_UNABLE_TO_REACH_SERVER
-            }, I.isDownloadCompleted = function(e) {
+            }, T.isDownloadCompleted = function(e) {
                 return e === s.TASK_COMPLETED
-            }, I.showRestartGfeMessage = function(e) {
-                return I.isDownloadCompleted(e) && (b() || E())
-            }, I.showDownloadButton = function(e) {
-                var t = I.clientBetaUpdateEnabled === !0 && I.GFECheckForUpdateInProgress === !1 && (e === s.TASK_PAUSED || e === s.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e === s.TASK_CHECK_SUM_ERROR || e === s.TASK_FAILED_UNABLE_TO_REACH_SERVER || e === s.TASK_SIGNATURE_VERIFICATION_FAILS || e === s.TASK_DISK_WRITE_FAIL);
+            }, T.showRestartGfeMessage = function(e) {
+                return T.isDownloadCompleted(e) && (h() || y())
+            }, T.showDownloadButton = function(e) {
+                var t = T.clientBetaUpdateEnabled === !0 && T.GFECheckForUpdateInProgress === !1 && (e === s.TASK_PAUSED || e === s.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e === s.TASK_CHECK_SUM_ERROR || e === s.TASK_FAILED_UNABLE_TO_REACH_SERVER || e === s.TASK_SIGNATURE_VERIFICATION_FAILS || e === s.TASK_DISK_WRITE_FAIL);
                 return t
-            }, I.showPreparingForInstall = function(e, t) {
-                var n = I.clientBetaUpdateEnabled === !0 && e === s.TASK_RUNNING && 100 === t || I.isDownloadCompleted(e) && S();
+            }, T.showPreparingForInstall = function(e, t) {
+                var n = T.clientBetaUpdateEnabled === !0 && e === s.TASK_RUNNING && 100 === t || T.isDownloadCompleted(e) && b();
                 return n
-            }, I.startDownload = function(e) {
+            }, T.startDownload = function(e) {
                 n.startDownload(e.version, e.downloadURL).then(function(t) {
-                    x.info("download started", t.data), e.downloadStatus = t.data, I.clientBetaUpdateCheckboxEnabled = !1
+                    C.info("download started", t.data), e.downloadStatus = t.data, T.clientBetaUpdateCheckboxEnabled = !1
                 }).catch(function(e) {
-                    x.error("GFE download failed to start", e), g(M("l10n.driverDownloadFailed"))
+                    C.error("GFE download failed to start", e), v(I("l10n.driverDownloadFailed"))
                 })
-            }, I.pauseDownload = function(e) {
+            }, T.pauseDownload = function(e) {
                 n.pauseDownload(e.downloadStatus.taskId).then(function(t) {
-                    e.downloadStatus = t.data, x.info("GFE download paused", e.downloadStatus)
+                    e.downloadStatus = t.data, C.info("GFE download paused", e.downloadStatus)
                 }).catch(function(e) {
-                    x.error("GFE download failed to pause with error", e)
+                    C.error("GFE download failed to pause with error", e)
                 })
-            }, I.resumeDownload = function(e) {
+            }, T.resumeDownload = function(e) {
                 n.resumeDownload(e.downloadStatus.taskId).then(function(t) {
-                    e.downloadStatus = t.data, x.info("GFE download resume", e.downloadStatus)
+                    e.downloadStatus = t.data, C.info("GFE download resume", e.downloadStatus)
                 }).catch(function(e) {
-                    x.error("GFE download failed to resume with error", e)
+                    C.error("GFE download failed to resume with error", e)
                 })
-            }, I.stopDownload = function(e) {
+            }, T.stopDownload = function(e) {
                 n.stopDownload(e.downloadStatus.taskId).then(function(t) {
-                    e.downloadStatus = t.data, x.info("GFE download stoped", e.downloadStatus)
+                    e.downloadStatus = t.data, C.info("GFE download stoped", e.downloadStatus)
                 }).catch(function(e) {
-                    x.error("GFE download failed to stop with error", e)
+                    C.error("GFE download failed to stop with error", e)
                 })
-            }, I.getProgressString = function(e) {
+            }, T.getProgressString = function(e) {
                 var t = "";
                 if (e && e.downloadStatus) {
                     var n = o("convertBytesToKBMBGB")(e.downloadStatus.totalBytes),
@@ -15894,16 +15902,16 @@ webpackJsonp([4], [function(e, t, n) {
                     t = r + "/" + n
                 }
                 return t
-            }, I.restartNow = function() {
+            }, T.restartNow = function() {
                 u.restartApp()
-            }, I.getDownloadStatusMessage = function(e) {
+            }, T.getDownloadStatusMessage = function(e) {
                 var t = "";
-                return e === s.TASK_RUNNING ? t = M("l10n.downloading") : I.isDownloadPaused(e) ? t = M("l10n.paused") : e === s.TASK_RETRY && (t = M("l10n.retrying")), t
-            }, I.showCheckingForUpdate = function() {
-                var e = I.GFECheckForUpdateInProgress === !0 || !_.isEmpty(I.gfeBetaUpdate) && !_.isEmpty(I.gfeBetaUpdate.downloadURL) && I.gfeBetaUpdate.downloadStatus && I.gfeBetaUpdate.downloadStatus.status === s.TASK_NOT_STARTED;
+                return e === s.TASK_RUNNING ? t = I("l10n.downloading") : T.isDownloadPaused(e) ? t = I("l10n.paused") : e === s.TASK_RETRY && (t = I("l10n.retrying")), t
+            }, T.showCheckingForUpdate = function() {
+                var e = T.GFECheckForUpdateInProgress === !0 || !_.isEmpty(T.gfeBetaUpdate) && !_.isEmpty(T.gfeBetaUpdate.downloadURL) && T.gfeBetaUpdate.downloadStatus && T.gfeBetaUpdate.downloadStatus.status === s.TASK_NOT_STARTED;
                 return e
-            }, l.on(i.FAILED, w), l.on(a.SCAN_STARTED, A), l.on(a.SCAN_FAILED, T), l.on(a.SCAN_FINISHED, C), l.on(a.BETA_POST_PROCESSING_STARTED, v), l.on(a.BETA_POST_PROCESSING_DONE, h), l.on(a.BETA_POST_PROCESSING_FAILED, y), c.$on("$destroy", function() {
-                l.off(a.SCAN_STARTED, A), l.off(a.SCAN_FAILED, T), l.off(a.SCAN_FINISHED, C), l.off(i.FAILED, w), l.off(a.BETA_POST_PROCESSING_STARTED, v), l.off(a.BETA_POST_PROCESSING_DONE, h), l.off(a.BETA_POST_PROCESSING_FAILED, y)
+            }, l.on(i.FAILED, E), l.on(a.SCAN_STARTED, S), l.on(a.SCAN_FAILED, w), l.on(a.SCAN_FINISHED, A), c.$on("$destroy", function() {
+                l.off(a.SCAN_STARTED, S), l.off(a.SCAN_FAILED, w), l.off(a.SCAN_FINISHED, A), l.off(i.FAILED, E)
             })
         }]));
     t.preferencesGeneralAboutController = i
@@ -15922,7 +15930,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(33);
     var i = n(848),
         a = r(i);
-    n(558);
+    n(560);
     var s = o.ngPreferencesModule.component("nvPreferenceGeneralAbout", {
         template: a.default,
         controller: "PreferencesGeneralAboutController",
@@ -15941,7 +15949,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvPreferencesGeneral = void 0;
     var o = n(4);
-    n(559), n(564), n(568), n(566), n(562), n(581), n(541);
+    n(561), n(566), n(570), n(568), n(564), n(583), n(543);
     var i = n(849),
         a = r(i),
         s = o.ngPreferencesModule.component("nvPreferencesGeneral", {
@@ -15999,7 +16007,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(850),
         a = r(i);
-    n(561);
+    n(563);
     var s = o.ngPreferencesModule.component("nvPreferenceGeneralDownloads", {
         template: a.default,
         controller: "PreferencesGeneralDownloadsController",
@@ -16050,7 +16058,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(851),
         a = r(i);
-    n(563);
+    n(565);
     var s = o.ngPreferencesModule.component("nvPreferenceGeneralLanguage", {
         template: a.default,
         controller: "PreferencesGeneralLanguageController",
@@ -16144,7 +16152,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(852),
         a = r(i);
-    n(565);
+    n(567);
     var s = o.ngPreferencesModule.component("nvPreferenceGeneralNotifications", {
         template: a.default,
         controller: "PreferencesGeneralNotificationsController",
@@ -16157,7 +16165,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.preferencesGeneralShareController = void 0;
     var r = n(4);
-    n(28), n(352), n(21);
+    n(28), n(354), n(21);
     var o = r.ngPreferencesModule.controller("PreferencesGeneralShareController", ["$scope", "preferencesService", "$log", "toastService", "$filter", "eventAggregator", "COMMON_EVENTS", "socketService", "SHARE_SOCKET_EVENTS", "keyboardService", "SHARE_CONSTANTS", "COMMON_HTTP_ERROR_CODES", "PREFERENCES_EVENTS", "INSTALLER_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "$timeout", "preferencesFeatureService", function(e, t, n, r, o, i, a, s, l, c, u, d, f, m, p, g, v, h) {
         function y() {
             t.getHotkeyShortcut(u.SHARE_HOTKEY_ID).then(function(e) {
@@ -16285,7 +16293,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19);
     var i = n(853),
         a = r(i);
-    n(567);
+    n(569);
     var s = o.ngPreferencesModule.component("nvPreferenceGeneralShare", {
         template: a.default,
         controller: "PreferencesGeneralShareController",
@@ -16304,9 +16312,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.preferencesLedController = void 0;
     var o = n(4),
-        i = n(699),
+        i = n(701),
         a = r(i);
-    n(369);
+    n(371);
     var s = o.ngPreferencesModule.controller("PreferencesLedController", ["$log", "preferencesService", "cefService", "LED_EFFECT", "ANIMATION", "DEVICE_TYPE", "VARIATION", "$filter", "LED_SELECTION", "ZONE_LOCATION", "LED_DEFAULTS", "$document", "$timeout", function(e, t, n, r, o, i, s, l, c, u, d, f, m) {
         function p() {
             I.showBrightnessSliderPanel = !0, I.sliderBrightness = I.selectedGpu.zone[I.selectedZoneIndex].variationParameter, I.selectedLedEffect === r.LED_ILLUMINATION_GPU_PROPERTY_LIMIT_REACHED ? (I.brightnessSliderMin = 0, I.selectedVariation === s.LED_ILLUMINATIONVARIATION_GPU_UTILIZATION ? (I.labelBrightnessSlider = M("l10n.gpuUtilization") + " (" + M("l10n.percentageSign") + ")", I.brightnessSliderMax = d.MAX_GPU_UTILIZATION) : I.selectedVariation === s.LED_ILLUMINATIONVARIATION_GPU_TEMP ? (I.labelBrightnessSlider = M("l10n.gpuTemparature") + " (" + M("l10n.centigrateSign") + ")", I.brightnessSliderMax = d.MAX_GPU_TEMP) : I.selectedVariation === s.LED_ILLUMINATIONVARIATION_GPU_CLOCK ? (I.labelBrightnessSlider = M("l10n.gpuClock") + " (" + M("l10n.hertzSign") + ")", I.brightnessSliderMax = d.MAX_GPU_CLOCK) : I.selectedVariation === s.LED_ILLUMINATIONVARIATION_GPU_FANSPEED ? (I.labelBrightnessSlider = M("l10n.gpuFanSpeed") + " (" + M("l10n.rpmSign") + ")", I.brightnessSliderMax = d.MAX_GPU_FANSPEED) : (I.labelBrightnessSlider = M("l10n.gpuVoltage") + " (" + M("l10n.volateSign") + ")", I.brightnessSliderMax = d.MAX_GPU_VOLTAGE)) : (I.selectedAnimationType === o.VARIABLE_BRIGHTNESS ? I.labelBrightnessSlider = M("l10n.maxBrightness") : I.labelBrightnessSlider = M(I.showSliderBrightness === !0 ? "l10n.brightness" : "l10n.brightnessRange"), I.brightnessSliderMin = d.MIN_BRIGHTNESS, I.brightnessSliderMax = d.MAX_BRIGHTNESS, I.selectedVariation === s.LED_ILLUMINATIONVARIATION_FIXED && I.selectedAnimationType === o.NONE && (I.brightnessSliderMin = 0))
@@ -16648,7 +16656,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(854),
         a = r(i);
-    n(569);
+    n(571);
     var s = o.ngPreferencesModule.directive("nvPreferencesLed", [function() {
         return {
             restrict: "E",
@@ -16695,7 +16703,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(855),
         a = r(i);
-    n(571);
+    n(573);
     var s = o.ngPreferencesModule.component("nvPreferencesShieldDevices", {
         template: a.default,
         controller: "PreferencesShieldDevicesController",
@@ -16735,10 +16743,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvPreferencesShield = void 0;
     var o = n(4);
-    n(577), n(572);
+    n(579), n(574);
     var i = n(856),
         a = r(i);
-    n(573);
+    n(575);
     var s = o.ngPreferencesModule.component("nvPreferencesShield", {
         template: a.default,
         controller: "preferencesShieldController",
@@ -16819,7 +16827,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(28), n(166), n(33), n(19);
     var i = n(857),
         a = r(i);
-    n(575), n(18), n(21);
+    n(577), n(18), n(21);
     var s = o.ngPreferencesModule.controller("PreferencesShieldGamestreamController", ["preferencesService", "$log", "$window", "cefService", "toastService", "$filter", "$mdDialog", "$document", "$timeout", "localeService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_SCREENS", "COMMON_DYNAMIC_REDIRECT", "dialogService", "COMMON_HTTP_ERROR_CODES", "$scope", function(e, t, n, r, o, i, s, l, c, u, d, f, m, p, g, v, h) {
         function y() {
             I.gameStreamLoaded = e.gameStreamAddonLoaded, I.gameStreamLoaded || (I.isStreamingEnabled = !1)
@@ -16982,10 +16990,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvPreferencesShieldGamestream = void 0;
     var o = n(4);
-    n(579);
+    n(581);
     var i = n(858),
         a = r(i);
-    n(576);
+    n(578);
     var s = o.ngPreferencesModule.component("nvPreferencesShieldGamestream", {
         template: a.default,
         controller: "PreferencesShieldGamestreamController",
@@ -17023,7 +17031,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19), n(33);
     var i = n(859),
         a = r(i);
-    n(578);
+    n(580);
     var s = o.ngPreferencesModule.component("nvPreferencesShieldTile", {
         bindings: {
             nvApp: "="
@@ -17166,7 +17174,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(4),
         i = n(860),
         a = r(i);
-    n(580);
+    n(582);
     var s = o.ngPreferencesModule.component("nvPreferencesSystemInfo", {
         template: a.default,
         controller: "PreferencesSystemInfoController",
@@ -17238,9 +17246,9 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvCouponInput = void 0;
     var o = n(52),
-        i = n(303),
+        i = n(305),
         a = r(i);
-    n(582);
+    n(584);
     var s = o.ngRewardsModule.directive("nvCouponInput", ["eventAggregator", "REWARDS_EVENTS", "$log", "$timeout", "COMMON_KEYBOARD_KEYCODES", function(e, t, n, r, o) {
         return {
             restrict: "E",
@@ -17383,7 +17391,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(52),
         i = n(861),
         a = r(i);
-    n(584), n(40);
+    n(586), n(40);
     var s = o.ngRewardsModule.component("nvRewardCard", {
         bindings: {
             nvReward: "="
@@ -17409,16 +17417,16 @@ webpackJsonp([4], [function(e, t, n) {
     var i = n(232),
         a = r(i);
     n(221);
-    var s = n(303);
+    var s = n(305);
     r(s);
-    n(583), n(19), n(21), n(25), n(287), n(12), n(36), n(53);
+    n(585), n(19), n(21), n(25), n(287), n(12), n(36), n(53);
     var l = o.ngRewardsModule.controller("RewardsCenterController", ["rewardsService", "$filter", "$log", "REWARDS_CONSTANTS", "$mdDialog", "eventAggregator", "REWARDS_EVENTS", "COMMON_EVENTS", "toastService", "gfeService", "$scope", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "windowSpawnService", "$window", "jarvisService", "dbCacheService", "DB_NAMES", "$state", "$q", "COMMON_DEFAULT_STATES", "$interval", "$timeout", "NOTIFICATION_EVENTS", "cevoToggleService", "gfeGeolocationService", "COMMON_COUNTRY_CODES", "USER_PROFILE_EVENTS", "GFECLIENT_CONFIG", "REWARDS_ENTITLEMENT_TYPES", "PORTAL_EVENT_CATEGORIES", "PORTAL_EVENT_TYPES", function(e, t, n, r, o, i, s, l, c, u, d, f, m, p, g, v, h, y, b, E, S, w, A, T, C, I, x, D, M, O, R, N) {
         function L() {
-            ue.filteredUnRedeemedList = [], ue.filteredRedeemedOrExpiredList = [], ue.unRedeemedList = [], ue.redeemedOrExpiredList = [], ue.lockedPerksList = []
+            fe.filteredUnRedeemedList = [], fe.filteredRedeemedOrExpiredList = [], fe.unRedeemedList = [], fe.redeemedOrExpiredList = [], fe.lockedPerksList = []
         }
 
         function k(e) {
-            e && c.cancel(), ue.requestInProgress = e
+            e && c.cancel(), fe.requestInProgress = e
         }
 
         function P(e, t, n, r, o) {
@@ -17426,12 +17434,12 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function G() {
-            ie(Ie)
+            ie(De)
         }
 
         function F() {
-            return _.find(ue.unRedeemedList, function(e) {
-                return e.entitlementId === Ee
+            return _.find(fe.unRedeemedList, function(e) {
+                return e.entitlementId === _e
             })
         }
 
@@ -17445,17 +17453,17 @@ webpackJsonp([4], [function(e, t, n) {
 
         function V() {
             f.push(m.REWARDS_REDEMPTION_PORTAL_CLOSE, {
-                couponCode: ue.couponCode || ""
-            }), ue.couponCode = "", i.trigger(s.COUPON_INPUT.CLEAR_CODE), we ? we = !1 : _e ? (_e = !1, j().then(function(e) {
+                couponCode: fe.couponCode || ""
+            }), fe.couponCode = "", i.trigger(s.COUPON_INPUT.CLEAR_CODE), Te ? Te = !1 : Ae ? (Ae = !1, j().then(function(e) {
                 P(U)
-            })) : Se ? Se = !1 : P(U), i.off(l.CHILD_WINDOW_CLOSED, V)
+            })) : we ? we = !1 : P(U), i.off(l.CHILD_WINDOW_CLOSED, V)
         }
 
         function z() {
-            Ae || Te || !e.getRewardsTabSelected() || (Te = c.showProgress({
+            Ce || Ie || !e.getRewardsTabSelected() || (Ie = c.showProgress({
                 textContent: t("translate")("l10n.updatingContent")
             }).finally(function() {
-                Te = null
+                Ie = null
             }))
         }
 
@@ -17474,34 +17482,34 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function W() {
-            pe && (pe.unRedeemedList = ue.unRedeemedList, pe.redeemedOrExpiredList = ue.redeemedOrExpiredList, pe.lockedPerksList = ue.lockedPerksList, pe.persist_())
+            ve && (ve.unRedeemedList = fe.unRedeemedList, ve.redeemedOrExpiredList = fe.redeemedOrExpiredList, ve.lockedPerksList = fe.lockedPerksList, ve.persist_())
         }
 
         function H() {
             var n = E.defer(),
                 o = !1;
-            return Ae = !1, xe.info("getting Rewards"), e.getRedemptionHistory().then(function(e) {
-                o = !0, L(), _.size(e.available) > 0 && (ue.unRedeemedList = e.available, ue.unRedeemedList.map(function(e) {
+            return Ce = !1, Me.info("getting Rewards"), e.getRedemptionHistory().then(function(e) {
+                o = !0, L(), _.size(e.available) > 0 && (fe.unRedeemedList = e.available, fe.unRedeemedList.map(function(e) {
                     return e.redemptionStatus = e.state || r.REDEMPTION_STATES.UNREDEEMED, e.uID = $(e), e
-                }), ue.unRedeemedList = t("orderBy")(ue.unRedeemedList, "campaign.rules.end_date", !0), ue.unRedeemedList = t("orderBy")(ue.unRedeemedList, "entitlementDate", !0), o = !1), _.size(e.locked) > 0 && (ue.lockedPerksList = e.locked, ue.lockedPerksList.map(function(e) {
+                }), fe.unRedeemedList = t("orderBy")(fe.unRedeemedList, "campaign.rules.end_date", !0), fe.unRedeemedList = t("orderBy")(fe.unRedeemedList, "entitlementDate", !0), o = !1), _.size(e.locked) > 0 && (fe.lockedPerksList = e.locked, fe.lockedPerksList.map(function(e) {
                     return e.redemptionStatus = r.REDEMPTION_STATES.LOCKED, e.uID = $(e), e
-                }), ue.lockedPerksList = t("orderBy")(ue.lockedPerksList, "campaign.rules.perkLevel", !1), o = !1), (_.size(e.redeemed) > 0 || _.size(e.expired) > 0) && (e.redeemed.map(function(e) {
+                }), fe.lockedPerksList = t("orderBy")(fe.lockedPerksList, "campaign.rules.perkLevel", !1), o = !1), (_.size(e.redeemed) > 0 || _.size(e.expired) > 0) && (e.redeemed.map(function(e) {
                     return e.redemptionStatus = r.REDEMPTION_STATES.REDEEMED, e.uID = $(e), e
                 }), e.redeemed = t("orderBy")(e.redeemed, "redemptionDate", !0), e.expired.map(function(e) {
                     return e.redemptionStatus = r.REDEMPTION_STATES.EXPIRED, e.uID = $(e), e
-                }), e.expired = t("orderBy")(e.expired, "campaign.rules.end_date", !0), ue.redeemedOrExpiredList = e.redeemed.concat(e.expired), o = !1), W(), ue.couponBannerExpanded = o, n.resolve(e), c.cancel()
+                }), e.expired = t("orderBy")(e.expired, "campaign.rules.end_date", !0), fe.redeemedOrExpiredList = e.redeemed.concat(e.expired), o = !1), W(), fe.couponBannerExpanded = o, n.resolve(e), c.cancel()
             }).catch(function(e) {
-                xe.error("Failed to get user rewards"), n.reject(e)
+                Me.error("Failed to get user rewards"), n.reject(e)
             }).finally(function() {
-                Ae = !0, oe()
+                Ce = !0, oe()
             }), A(z), n.promise
         }
 
         function j() {
-            return me ? (xe.error("Building rewards already in progress"), me) : me = H().catch(function() {
-                xe.error("Build rewards failed"), B("l10n.couldNotRetrieveRedemptionHistory")
+            return ge ? (Me.error("Building rewards already in progress"), ge) : ge = H().catch(function() {
+                Me.error("Build rewards failed"), B("l10n.couldNotRetrieveRedemptionHistory")
             }).finally(function() {
-                me = null
+                ge = null
             })
         }
 
@@ -17518,12 +17526,12 @@ webpackJsonp([4], [function(e, t, n) {
             return t && n.then(function() {
                 i.trigger(s.COUPON_INPUT.FOCUS)
             }).finally(function() {
-                k(!1), ue.couponCode = "", i.trigger(s.COUPON_INPUT.CLEAR_CODE)
+                k(!1), fe.couponCode = "", i.trigger(s.COUPON_INPUT.CLEAR_CODE)
             }), n
         }
 
         function q(e) {
-            if (xe.debug("VRS postMessage received", e), e.origin && e.origin === M.vrs.server && e.data) switch (e.data.type) {
+            if (Me.debug("VRS postMessage received", e), e.origin && e.origin === M.vrs.server && e.data) switch (e.data.type) {
                 case N.INITIALIZE:
                     K(e.data);
                     break;
@@ -17537,16 +17545,16 @@ webpackJsonp([4], [function(e, t, n) {
                     X(e.data);
                     break;
                 default:
-                    xe.info("Unexpected post message received", e)
-            } else xe.info("Unexpected post message received", e)
+                    Me.info("Unexpected post message received", e)
+            } else Me.info("Unexpected post message received", e)
         }
 
         function K(t) {
             e.getDelegateToken(r.UNIFIED_REDEMPTION_ID).then(function(t) {
-                Ce.postMessage({
+                xe.postMessage({
                     user: t,
                     sysInfo: e.getRedeemRequestData().sysInfo,
-                    reward: Ie
+                    reward: De
                 }, "*")
             })
         }
@@ -17583,7 +17591,7 @@ webpackJsonp([4], [function(e, t, n) {
                 case R.REDEEM:
                     f.push(m.REWARDS_PORTAL_ENTITLEMENT_RESULT_PRODUCT_SUCCESS, t);
                     var n = F();
-                    n && !_e && (ue.unRedeemedList = _.without(ue.unRedeemedList, n), n.redemptionStatus = n.status = n.state = r.REDEMPTION_STATES.REDEEMED, n.redemptionDate = new Date, ue.redeemedOrExpiredList.unshift(n), Se = !0, W(), oe());
+                    n && !Ae && (fe.unRedeemedList = _.without(fe.unRedeemedList, n), n.redemptionStatus = n.status = n.state = r.REDEMPTION_STATES.REDEEMED, n.redemptionDate = new Date, fe.redeemedOrExpiredList.unshift(n), we = !0, W(), oe());
                     break;
                 case R.ACCOUNT:
                     f.push(m.REWARDS_PORTAL_ACCOUNT_LINK_SUCCESS, t)
@@ -17620,11 +17628,11 @@ webpackJsonp([4], [function(e, t, n) {
                     urlToLoad: e
                 },
                 c = "external-page-loader-app.html#/rewards-portal";
-            Ce = p.openChildWindow(c, "app_rewards", s, l, !0, q), xe.info("New browser window should have opened with url: ", e)
+            xe = p.openChildWindow(c, "app_rewards", s, l, !0, q), Me.info("New browser window should have opened with url: ", e)
         }
 
         function ee(e) {
-            ue.unRedeemedList.map(function(t) {
+            fe.unRedeemedList.map(function(t) {
                 return t.entitlementId === e.entitlementId ? e : t
             }), i.trigger(T.REMOVE_NOTIFICATION, [{
                 callbackData: e.campaign.uuid
@@ -17632,16 +17640,16 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function te(n, o) {
-            k(!0), i.trigger(s.COUPON_INPUT.BLUR), ae(), fe.couponCode = n;
+            k(!0), i.trigger(s.COUPON_INPUT.BLUR), le(), pe.couponCode = n;
             var a = !1;
             return a = o === O.COUPON, e.redeemEntitlement(n, o).then(function(e) {
-                if (Ie = e, de = e.campaign.uuid, Ee = e.entitlementId, fe.campaignName = de, Se = !1, a) {
+                if (De = e, me = e.campaign.uuid, _e = e.entitlementId, pe.campaignName = me, we = !1, a) {
                     var n = t("translate")("l10n.codeVerified");
                     J(e.entitlementUrl, n)
-                } else o === O.AVAILABLE_REWARD && ee(Ie), J(e.entitlementUrl, "");
-                i.on(l.CHILD_WINDOW_CLOSED, V), k(!1), _e = !0
+                } else o === O.AVAILABLE_REWARD && ee(De), J(e.entitlementUrl, "");
+                i.on(l.CHILD_WINDOW_CLOSED, V), k(!1), Ae = !0
             }).catch(function(e) {
-                xe.error("Redemption for " + n + " failed with error: " + e.message), k(!1), e.message && e.message === r.VALIDATION_ERRORS.COUPONS.NOT_FOUND ? i.trigger(s.COUPON_INPUT.INVALIDATE_CODE) : Y({
+                Me.error("Redemption for " + n + " failed with error: " + e.message), k(!1), e.message && e.message === r.VALIDATION_ERRORS.COUPONS.NOT_FOUND ? i.trigger(s.COUPON_INPUT.INVALIDATE_CODE) : Y({
                     nvRedemptionError: e
                 }, !0)
             })
@@ -17654,19 +17662,19 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function re() {
-            ue.unRedeemedListLimitTo < ue.filteredUnRedeemedList.length && !he ? he = w(function() {
-                ue.unRedeemedListLimitTo += r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, ue.unRedeemedListLimitTo >= ue.filteredUnRedeemedList.length && (ue.unRedeemedListLimitTo = ue.filteredUnRedeemedList.length, w.cancel(he), he = null)
-            }, r.LIMIT_TO_FILTER.INTERVAL_LENGTH) : ue.unRedeemedListLimitTo > ue.filteredUnRedeemedList.length && (ue.unRedeemedListLimitTo = ue.filteredUnRedeemedList.length), ue.redeemedOrExpiredListLimitTo < ue.filteredRedeemedOrExpiredList.length && !ye ? ye = w(function() {
-                ue.redeemedOrExpiredListLimitTo += r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, ue.redeemedOrExpiredListLimitTo >= ue.filteredRedeemedOrExpiredList.length && (ue.redeemedOrExpiredListLimitTo = ue.filteredRedeemedOrExpiredList.length, w.cancel(ye), ye = null)
-            }, r.LIMIT_TO_FILTER.INTERVAL_LENGTH) : ue.redeemedOrExpiredListLimitTo > ue.filteredRedeemedOrExpiredList.length && (ue.redeemedOrExpiredListLimitTo = ue.filteredRedeemedOrExpiredList.length)
+            fe.unRedeemedListLimitTo < fe.filteredUnRedeemedList.length && !be ? be = w(function() {
+                fe.unRedeemedListLimitTo += r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, fe.unRedeemedListLimitTo >= fe.filteredUnRedeemedList.length && (fe.unRedeemedListLimitTo = fe.filteredUnRedeemedList.length, w.cancel(be), be = null)
+            }, r.LIMIT_TO_FILTER.INTERVAL_LENGTH) : fe.unRedeemedListLimitTo > fe.filteredUnRedeemedList.length && (fe.unRedeemedListLimitTo = fe.filteredUnRedeemedList.length), fe.redeemedOrExpiredListLimitTo < fe.filteredRedeemedOrExpiredList.length && !Ee ? Ee = w(function() {
+                fe.redeemedOrExpiredListLimitTo += r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, fe.redeemedOrExpiredListLimitTo >= fe.filteredRedeemedOrExpiredList.length && (fe.redeemedOrExpiredListLimitTo = fe.filteredRedeemedOrExpiredList.length, w.cancel(Ee), Ee = null)
+            }, r.LIMIT_TO_FILTER.INTERVAL_LENGTH) : fe.redeemedOrExpiredListLimitTo > fe.filteredRedeemedOrExpiredList.length && (fe.redeemedOrExpiredListLimitTo = fe.filteredRedeemedOrExpiredList.length)
         }
 
         function oe() {
-            ue.filteredUnRedeemedList = ue.unRedeemedList, ue.filteredRedeemedOrExpiredList = ue.redeemedOrExpiredList, pe ? pe.rewardsFilters ? pe.rewardsFilters.available ? ue.isFilterButtonDisabled("available") ? (xe.info("No unredeemed items available, reverting filter to all state"), ue.setFilter("all")) : ue.filteredUnRedeemedList = ne(ue.filteredUnRedeemedList, r.REDEMPTION_STATES.AVAILABLE) : pe.rewardsFilters.expired ? ue.isFilterButtonDisabled("expired") ? (xe.info("No expired items available, reverting filter to all state"), ue.setFilter("all")) : ue.filteredRedeemedOrExpiredList = ne(ue.filteredRedeemedOrExpiredList, r.REDEMPTION_STATES.EXPIRED) : pe.rewardsFilters.redeemed ? ue.isFilterButtonDisabled("redeemed") ? (xe.info("No redeemed items available, reverting filter to all state"), ue.setFilter("all")) : ue.filteredRedeemedOrExpiredList = ne(ue.filteredRedeemedOrExpiredList, r.REDEMPTION_STATES.REDEEMED) : xe.info("Rewards filters set to show all, no specifics applied") : (xe.info("Setting default filter to show all Rewards"), ue.setFilter("all")) : xe.error("Rewards view state not available to persist filters"), re()
+            fe.filteredUnRedeemedList = fe.unRedeemedList, fe.filteredRedeemedOrExpiredList = fe.redeemedOrExpiredList, ve ? ve.rewardsFilters ? ve.rewardsFilters.available ? fe.isFilterButtonDisabled("available") ? (Me.info("No unredeemed items available, reverting filter to all state"), fe.setFilter("all")) : fe.filteredUnRedeemedList = ne(fe.filteredUnRedeemedList, r.REDEMPTION_STATES.AVAILABLE) : ve.rewardsFilters.expired ? fe.isFilterButtonDisabled("expired") ? (Me.info("No expired items available, reverting filter to all state"), fe.setFilter("all")) : fe.filteredRedeemedOrExpiredList = ne(fe.filteredRedeemedOrExpiredList, r.REDEMPTION_STATES.EXPIRED) : ve.rewardsFilters.redeemed ? fe.isFilterButtonDisabled("redeemed") ? (Me.info("No redeemed items available, reverting filter to all state"), fe.setFilter("all")) : fe.filteredRedeemedOrExpiredList = ne(fe.filteredRedeemedOrExpiredList, r.REDEMPTION_STATES.REDEEMED) : Me.info("Rewards filters set to show all, no specifics applied") : (Me.info("Setting default filter to show all Rewards"), fe.setFilter("all")) : Me.error("Rewards view state not available to persist filters"), re()
         }
 
         function ie(e) {
-            Ie = e, e.redemptionStatus === r.REDEMPTION_STATES.LOCKED ? Y({
+            De = e, e.redemptionStatus === r.REDEMPTION_STATES.LOCKED ? Y({
                 perkDetails: e
             }, !1) : e.status === r.REDEMPTION_STATES.AVAILABLE ? e.campaign.type === r.REWARD_PACKAGE_TYPES.SWEEPSTAKE ? I.getGeolocation().then(function(t) {
                 t.countryCode === x.CANADA ? Y({
@@ -17674,112 +17682,120 @@ webpackJsonp([4], [function(e, t, n) {
                 }).then(function() {
                     P(te, e.campaign.uuid, O.AVAILABLE_REWARD)
                 }, !1) : P(te, e.campaign.uuid, O.AVAILABLE_REWARD)
-            }) : e.state && e.state === r.REDEMPTION_STATES.CLAIMABLE ? (ae(), de = e.campaign.uuid, J(e.entitlementUrl, ""), Ee = e.entitlementId, i.on(l.CHILD_WINDOW_CLOSED, V)) : P(te, e.campaign.uuid, O.AVAILABLE_REWARD) : (e.redemptionStatus === r.REDEMPTION_STATES.REDEEMED && (we = !0), ae(), de = e.campaign.uuid, J(e.entitlementUrl, ""))
+            }) : e.state && e.state === r.REDEMPTION_STATES.CLAIMABLE ? P(ae, e) : P(te, e.campaign.uuid, O.AVAILABLE_REWARD) : P(se, e)
         }
 
-        function ae() {
-            fe = e.getRedeemRequestData()
+        function ae(e) {
+            le(), me = e.campaign.uuid, J(e.entitlementUrl, ""), _e = e.entitlementId, i.on(l.CHILD_WINDOW_CLOSED, V)
         }
 
         function se(e) {
+            e.redemptionStatus === r.REDEMPTION_STATES.REDEEMED && (Te = !0), le(), me = e.campaign.uuid, J(e.entitlementUrl, "")
+        }
+
+        function le() {
+            pe = e.getRedeemRequestData()
+        }
+
+        function ce(e) {
             j().then(function() {
                 P(te, e)
             })
         }
 
-        function le(e) {
-            ue.userProfileEnabled = e
+        function ue(e) {
+            fe.userProfileEnabled = e
         }
 
-        function ce() {
-            L(), ge = h.getCachedUserItem(ve.userId, y.VIEW_STORE, y.VIEW_STATE), pe = h.getCachedUserItem(ve.userId, y.JARVIS_GFE_STORE, y.REWARDS_VIEW_STATE), pe && (pe.dbUpdatedForVrs ? (ue.redeemedOrExpiredList = pe.redeemedOrExpiredList || [], ue.unRedeemedList = pe.unRedeemedList || [], ue.lockedPerksList = pe.lockedPerksList || []) : (ue.redeemedOrExpiredList = [], ue.unRedeemedList = [], ue.lockedPerksList = [], pe.dbUpdatedForVrs = !0), oe(), 0 === ue.unRedeemedList.length && 0 === ue.redeemedOrExpiredList.length && (ue.couponBannerExpanded = !0)), i.on(s.REWARD_REDEEM_CLICKED, ie), i.on(s.REWARDS_UPDATED, j), i.on(s.REWARD_NOTIFICATION_CLICKED, se), i.on(l.USER_PROFILE_STATUS_UPDATED, le), i.on(D.PROFILE_TAB_CHANGED, z), d.$on("$destroy", function() {
-                i.off(l.CHILD_WINDOW_CLOSED, V), i.off(s.REWARD_REDEEM_CLICKED, ie), i.off(s.REWARDS_UPDATED, j), i.off(s.REWARD_NOTIFICATION_CLICKED, se), i.off(l.USER_PROFILE_STATUS_UPDATED, le), i.off(D.PROFILE_TAB_CHANGED, z), he && (w.cancel(he), he = null), ye && (w.cancel(ye), ye = null)
-            }), ue.translatedInputPlaceholder = t("translate")("l10n.enterCouponCode"), ue.nvCouponInputButton = {
+        function de() {
+            L(), he = h.getCachedUserItem(ye.userId, y.VIEW_STORE, y.VIEW_STATE), ve = h.getCachedUserItem(ye.userId, y.JARVIS_GFE_STORE, y.REWARDS_VIEW_STATE), ve && (ve.dbUpdatedForVrs ? (fe.redeemedOrExpiredList = ve.redeemedOrExpiredList || [], fe.unRedeemedList = ve.unRedeemedList || [], fe.lockedPerksList = ve.lockedPerksList || []) : (fe.redeemedOrExpiredList = [], fe.unRedeemedList = [], fe.lockedPerksList = [], ve.dbUpdatedForVrs = !0), oe(), 0 === fe.unRedeemedList.length && 0 === fe.redeemedOrExpiredList.length && (fe.couponBannerExpanded = !0)), i.on(s.REWARD_REDEEM_CLICKED, ie), i.on(s.REWARDS_UPDATED, j), i.on(s.REWARD_NOTIFICATION_CLICKED, ce), i.on(l.USER_PROFILE_STATUS_UPDATED, ue), i.on(D.PROFILE_TAB_CHANGED, z), d.$on("$destroy", function() {
+                i.off(l.CHILD_WINDOW_CLOSED, V), i.off(s.REWARD_REDEEM_CLICKED, ie), i.off(s.REWARDS_UPDATED, j), i.off(s.REWARD_NOTIFICATION_CLICKED, ce), i.off(l.USER_PROFILE_STATUS_UPDATED, ue), i.off(D.PROFILE_TAB_CHANGED, z), be && (w.cancel(be), be = null), Ee && (w.cancel(Ee), Ee = null)
+            }), fe.translatedInputPlaceholder = t("translate")("l10n.enterCouponCode"), fe.nvCouponInputButton = {
                 text: "l10n.redeem",
-                action: ue.redeemCoupon
-            }, ue.userProfileEnabled = !1, C.getUserProfileEnabled().then(le), ae(), be && be.rewardPackageId ? se(be.rewardPackageId) : P(j)
+                action: fe.redeemCoupon
+            }, fe.userProfileEnabled = !1, C.getUserProfileEnabled().then(ue), le(), Se && Se.rewardPackageId ? ce(Se.rewardPackageId) : P(j)
         }
-        var ue = this,
-            de = null,
-            fe = null,
+        var fe = this,
             me = null,
             pe = null,
             ge = null,
-            ve = v.getLoggedInUser(),
+            ve = null,
             he = null,
-            ye = null,
-            be = b.params,
+            ye = v.getLoggedInUser(),
+            be = null,
             Ee = null,
-            Se = !1,
-            _e = !1,
+            Se = b.params,
+            _e = null,
             we = !1,
             Ae = !1,
-            Te = null,
-            Ce = null,
-            Ie = {},
-            xe = n.getInstance("main.rewards/RewardsCenterController");
-        ue.requestInProgress = !1, ue.redeemButtonDisabled = !0, ue.couponBannerExpanded = !1, ue.perksSectionExpanded = !0, ue.redeemedOrExpiredListLimitTo = ue.unRedeemedListLimitTo = r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, ue.couponsLearnMoreMessages = ["l10n.checkCouponRetailer", "l10n.gfeGiveaway"], ue.rewardsTrackBy = function(e) {
+            Te = !1,
+            Ce = !1,
+            Ie = null,
+            xe = null,
+            De = {},
+            Me = n.getInstance("main.rewards/RewardsCenterController");
+        fe.requestInProgress = !1, fe.redeemButtonDisabled = !0, fe.couponBannerExpanded = !1, fe.perksSectionExpanded = !0, fe.redeemedOrExpiredListLimitTo = fe.unRedeemedListLimitTo = r.LIMIT_TO_FILTER.ITEMS_AT_ONCE, fe.couponsLearnMoreMessages = ["l10n.checkCouponRetailer", "l10n.gfeGiveaway"], fe.rewardsTrackBy = function(e) {
             return e.uID || $(e)
-        }, ue.redeemedOrExpiredItemsExist = function() {
-            return ue.redeemedOrExpiredList.length > 0
-        }, ue.unRedeemedItemsExist = function() {
-            return ue.unRedeemedList.length > 0
-        }, ue.showPerksSection = function() {
-            return ue.userProfileEnabled && ue.lockedPerksList.length > 0
-        }, ue.showAvailableCards = function() {
-            return ue.matchFilter("all") || ue.matchFilter("available")
-        }, ue.showNoRedeemedItemsMessage = function() {
-            return !ue.redeemedOrExpiredItemsExist() && ue.matchFilter("all")
-        }, ue.backToPreviousState = function() {
-            ge && ge.lastRouterFromState ? b.go(ge.lastRouterFromState, ge.lastRouterFromStateParams, {
+        }, fe.redeemedOrExpiredItemsExist = function() {
+            return fe.redeemedOrExpiredList.length > 0
+        }, fe.unRedeemedItemsExist = function() {
+            return fe.unRedeemedList.length > 0
+        }, fe.showPerksSection = function() {
+            return fe.userProfileEnabled && fe.lockedPerksList.length > 0
+        }, fe.showAvailableCards = function() {
+            return fe.matchFilter("all") || fe.matchFilter("available")
+        }, fe.showNoRedeemedItemsMessage = function() {
+            return !fe.redeemedOrExpiredItemsExist() && fe.matchFilter("all")
+        }, fe.backToPreviousState = function() {
+            he && he.lastRouterFromState ? b.go(he.lastRouterFromState, he.lastRouterFromStateParams, {
                 location: "replace"
-            }) : (xe.error("Unable to go back to previous state, local view state unavailable"), b.go(S.HOME_STATE, {}, {
+            }) : (Me.error("Unable to go back to previous state, local view state unavailable"), b.go(S.HOME_STATE, {}, {
                 location: "replace"
             }))
-        }, ue.redeemCoupon = function(e) {
-            ue.couponCode = e, f.push(m.REWARDS_REDEEM_CODE, {
-                couponCode: ue.couponCode || ""
+        }, fe.redeemCoupon = function(e) {
+            fe.couponCode = e, f.push(m.REWARDS_REDEEM_CODE, {
+                couponCode: fe.couponCode || ""
             }), P(te, e, O.COUPON)
-        }, ue.isFilterButtonDisabled = function(e) {
+        }, fe.isFilterButtonDisabled = function(e) {
             switch (e) {
                 case "all":
-                    return 0 === ue.getRewardsCount("all");
+                    return 0 === fe.getRewardsCount("all");
                 case "available":
-                    return 0 === ue.getRewardsCount("available");
+                    return 0 === fe.getRewardsCount("available");
                 case "redeemed":
-                    return 0 === ue.getRewardsCount("redeemed");
+                    return 0 === fe.getRewardsCount("redeemed");
                 case "expired":
-                    return 0 === ue.getRewardsCount("expired");
+                    return 0 === fe.getRewardsCount("expired");
                 default:
                     return !1
             }
-        }, ue.setFilter = function(e) {
-            pe ? (pe.rewardsFilters = {
+        }, fe.setFilter = function(e) {
+            ve ? (ve.rewardsFilters = {
                 all: !1,
                 available: !1,
                 redeemed: !1,
                 expired: !1
-            }, pe.rewardsFilters[e] = !0, pe.persist_(), "available" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_AVAILABLE) : "redeemed" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_REDEEMED) : "expired" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_EXPIRED) : f.push(m.REWARDS_TOOLBAR_FILTER_ALL), oe(), i.trigger(s.RESET_SCROLL_POSITION)) : xe.error("Unable to set filter, rewards view state unavailable")
-        }, ue.matchFilter = function(e) {
-            return pe && pe.rewardsFilters && pe.rewardsFilters[e] || !1
-        }, ue.getRewardsCount = function(e) {
+            }, ve.rewardsFilters[e] = !0, ve.persist_(), "available" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_AVAILABLE) : "redeemed" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_REDEEMED) : "expired" === e ? f.push(m.REWARDS_TOOLBAR_FILTER_EXPIRED) : f.push(m.REWARDS_TOOLBAR_FILTER_ALL), oe(), i.trigger(s.RESET_SCROLL_POSITION)) : Me.error("Unable to set filter, rewards view state unavailable")
+        }, fe.matchFilter = function(e) {
+            return ve && ve.rewardsFilters && ve.rewardsFilters[e] || !1
+        }, fe.getRewardsCount = function(e) {
             switch (e) {
                 case "all":
-                    return _.size(ue.redeemedOrExpiredList) + _.size(ue.unRedeemedList);
+                    return _.size(fe.redeemedOrExpiredList) + _.size(fe.unRedeemedList);
                 case "available":
-                    return _.size(ne(ue.unRedeemedList, r.REDEMPTION_STATES.AVAILABLE));
+                    return _.size(ne(fe.unRedeemedList, r.REDEMPTION_STATES.AVAILABLE));
                 case "redeemed":
-                    return _.size(ne(ue.redeemedOrExpiredList, r.REDEMPTION_STATES.REDEEMED));
+                    return _.size(ne(fe.redeemedOrExpiredList, r.REDEMPTION_STATES.REDEEMED));
                 case "expired":
-                    return _.size(ne(ue.redeemedOrExpiredList, r.REDEMPTION_STATES.EXPIRED));
+                    return _.size(ne(fe.redeemedOrExpiredList, r.REDEMPTION_STATES.EXPIRED));
                 default:
                     return 0
             }
-        }, ue.toggleCouponBannerExpansionState = function() {
-            ue.couponBannerExpanded = !ue.couponBannerExpanded, ue.couponBannerExpanded && f.push(m.REWARDS_REDEEM_COUPON_BANNER_EXPANDED)
-        }, ue.togglePerksSectionExpansionState = function() {
-            ue.perksSectionExpanded = !ue.perksSectionExpanded
-        }, ce()
+        }, fe.toggleCouponBannerExpansionState = function() {
+            fe.couponBannerExpanded = !fe.couponBannerExpanded, fe.couponBannerExpanded && f.push(m.REWARDS_REDEEM_COUPON_BANNER_EXPANDED)
+        }, fe.togglePerksSectionExpansionState = function() {
+            fe.perksSectionExpanded = !fe.perksSectionExpanded
+        }, de()
     }]);
     t.rewardsCenterController = l
 }, function(e, t, n) {
@@ -17980,7 +17996,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(181),
         i = n(863),
         a = r(i);
-    n(587), n(40), n(679);
+    n(589), n(40), n(681);
     var s = o.ngSearchModule.directive("nvSearch", ["hotkeys", function(e) {
         return {
             restrict: "E",
@@ -18308,7 +18324,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(19), n(139), n(33), n(40);
     var i = n(867),
         a = r(i);
-    n(598);
+    n(600);
     var s = o.ngUpdatesModule.directive("nvHighlightTile", function() {
         return {
             restrict: "E",
@@ -18358,7 +18374,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(140);
     var u = c.ngUpdatesModule.controller("UpdateDetailsController", ["$scope", "updatesService", "$log", "$sce", function(e, t, n, r) {
         function o() {
-            t.getDriverInformation(i.driverVersion, i.isCRD ? 1 : 0).then(function(e) {
+            t.getDriverInformation(i.driverVersion, i.isCRD).then(function(e) {
                 e && e.DriverAttributes ? (i.driverInformation = e.DriverAttributes, e.DriverAttributes.ReleaseNotes && (i.driverInformation.releaseNotes = r.trustAsHtml(e.DriverAttributes.ReleaseNotes))) : s.error("No content avaliable for GRD version: ", i.driverVersion)
             }).catch(function(e) {
                 s.error("getDriverInformation failed with error: ", e), i.driverInformation = null
@@ -18396,10 +18412,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUpdateDetails = void 0;
     var o = n(10);
-    n(132), n(608), n(606);
+    n(132), n(610), n(608);
     var i = n(868),
         a = r(i);
-    n(600);
+    n(602);
     var s = o.ngUpdatesModule.directive("nvUpdateDetails", function() {
         return {
             restrict: "E",
@@ -18434,7 +18450,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUpdates = void 0;
     var o = n(10);
-    n(604);
+    n(606);
     var i = n(869),
         a = r(i),
         s = o.ngUpdatesModule.directive("nvUpdates", function() {
@@ -18457,6 +18473,12 @@ webpackJsonp([4], [function(e, t, n) {
     "use strict";
 
     function r(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
+    }
+
+    function o(e) {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e)
@@ -18466,295 +18488,340 @@ webpackJsonp([4], [function(e, t, n) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.updatesDriverController = void 0;
-    var o = n(3),
-        i = r(o),
-        a = n(10);
-    n(140), n(318), n(16), n(11), n(21), n(25);
-    var s = a.ngUpdatesModule.controller("UpdatesDriverController", ["$scope", "$log", "TASK_STATUS", "$filter", "$timeout", "updatesService", "$state", "CHECK_FOR_UPDATE", "COMMON_EVENTS", "eventAggregator", "UPDATE_EVENTS", "DOWNLOAD_PROGRESS_STATUS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "DRIVER_TYPE", "dbService", "DB_NAMES", "INSTALLER_EVENTS", "toastService", "gfeService", "dbCacheService", "jarvisService", "SOCKETIO_EVENTS", "DOWNLOAD_TYPE", "DRIVERTYPE", function(e, t, n, r, o, a, s, l, c, u, d, f, m, p, g, v, h, y, b, E, S, _, w, A, T) {
-        function C(e, t) {
-            var n = {
-                state: t,
-                version: e
-            };
-            Y.setItem(h.DRIVER_DOWNLOAD_STATE, n)
-        }
-
-        function I() {
-            if (!i.isNull(te) && !i.isUndefined(te) && !i.isUndefined(te.version)) {
-                var e = r("filter")(j.driverUpdateList, {
-                    version: te.version
-                });
-                e && e.length > 0 ? (Q.info("resume installation for recommended driver", te.version), a.beginInstallation(e[0], te.isCustomInstall, !0)) : (Q.info("resume installation for installed driver", te.version), a.beginInstallation(te, te.isCustomInstall, !0))
+    var i = n(3),
+        a = o(i),
+        s = n(10);
+    n(140), n(320), n(16), n(11), n(21), n(25);
+    var l = n(303),
+        c = r(l),
+        u = n(304),
+        d = r(u),
+        f = s.ngUpdatesModule.controller("UpdatesDriverController", ["$scope", "$log", "TASK_STATUS", "$filter", "$timeout", "updatesService", "$state", "CHECK_FOR_UPDATE", "COMMON_EVENTS", "eventAggregator", "UPDATE_EVENTS", "DOWNLOAD_PROGRESS_STATUS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "DRIVER_TYPE", "dbService", "DB_NAMES", "INSTALLER_EVENTS", "toastService", "gfeService", "dbCacheService", "jarvisService", "SOCKETIO_EVENTS", "DOWNLOAD_TYPE", "DRIVERTYPE", "$templateCache", "productTourService", "PRODUCT_TOUR_NAMES", "PRODUCT_TOUR_EVENTS", "uiTourService", function(e, t, n, r, o, i, s, l, u, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R) {
+            function N(e, t) {
+                var n = {
+                    state: t,
+                    version: e
+                };
+                oe.setItem(b.DRIVER_DOWNLOAD_STATE, n)
             }
-            te = null
-        }
 
-        function x() {
-            if (Q.info("check for auto download Driver"), D()) {
-                var e = j.driverUpdateList;
-                if (j.driverUpdateList.length > 1 && (e = r("filter")(j.driverUpdateList, {
-                        isBeta: !1
-                    })), e && e[0] && (j.isStatusPending(e[0].downloadStatus.status) || j.isStatusPaused(e[0].downloadStatus.status)) && e[0].downloadStatus.failureCount < 3) {
-                    Q.info("autodownloadDriver for driver updates", e);
-                    var t;
-                    Y.getItem(h.DRIVER_DOWNLOAD_STATE).then(function(e) {
-                        t = e
-                    }, function(e) {
-                        Q.error("failed to read driverDownloadState key in database: ", e)
-                    }).finally(function() {
-                        var n = !0;
-                        !t || t.version !== e[0].version || "paused" !== t.state && "stop" !== t.state || (n = !1), n && j.startDownload(e[0])
+            function L() {
+                if (!a.isNull(fe) && !a.isUndefined(fe) && !a.isUndefined(fe.version)) {
+                    var e = r("filter")(re.driverUpdateList, {
+                        version: fe.version
+                    });
+                    e && e.length > 0 ? (le.info("resume installation for recommended driver", fe.version), i.beginInstallation(e[0], fe.isCustomInstall, !0)) : (le.info("resume installation for installed driver", fe.version), i.beginInstallation(fe, fe.isCustomInstall, !0))
+                }
+                fe = null
+            }
+
+            function k() {
+                if (le.info("check for auto download Driver"), P()) {
+                    var e = re.driverUpdateList;
+                    if (re.driverUpdateList.length > 1 && (e = r("filter")(re.driverUpdateList, {
+                            isBeta: !1
+                        })), e && e[0] && (re.isStatusPending(e[0].downloadStatus.status) || re.isStatusPaused(e[0].downloadStatus.status)) && e[0].downloadStatus.failureCount < 3) {
+                        le.info("autodownloadDriver for driver updates", e);
+                        var t;
+                        oe.getItem(b.DRIVER_DOWNLOAD_STATE).then(function(e) {
+                            t = e
+                        }, function(e) {
+                            le.error("failed to read driverDownloadState key in database: ", e)
+                        }).finally(function() {
+                            var n = !0;
+                            !t || t.version !== e[0].version || "paused" !== t.state && "stop" !== t.state || (n = !1), n && re.startDownload(e[0])
+                        })
+                    }
+                }
+            }
+
+            function P() {
+                return re.driverUpdateList && (!ne && a.isNull(fe) && !pe || me)
+            }
+
+            function G() {
+                if (ne) {
+                    if (ve === ge.FAILED || re.driverUpdateList && re.driverUpdateList.length > 0) re.installedDriverHeaderText = se("l10n.currentlyInstalled");
+                    else {
+                        var e = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
+                        re.installedDriverHeaderText = se(e)
+                    }
+                    re.installedDriverHeaderText = re.installedDriverHeaderText.toUpperCase()
+                } else re.installedDriverHeaderText = ""
+            }
+
+            function F(e) {
+                i.getUpdateDetails().then(function(e) {
+                    if (he && (!re.driverUpdateList || e && e[0] && re.driverUpdateList[0] && (re.driverUpdateList[0].isCRD !== e[0].isCRD || re.driverUpdateList[0].version !== e[0].version))) {
+                        var t = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.newGRDDriverAvailable" : "l10n.newCRDDriverAvailable";
+                        S.show({
+                            textContent: r("translate")(t),
+                            icon: "file_download"
+                        })
+                    } else S.isOpen() && S.cancel();
+                    le.debug("driver updates list is: ", e, re.driverUpdateList), re.driverUpdateList = e, k()
+                }).catch(function(e) {
+                    if (re.installedDriver && he) {
+                        var t = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
+                        S.show({
+                            textContent: r("translate")(t),
+                            icon: "check"
+                        })
+                    } else S.isOpen() && S.cancel();
+                    re.driverUpdateList = null, le.error("getUpdates failed with error: ", e)
+                }).finally(function() {
+                    le.info("refreshAvailableUpdates finally IN"), L(), re.installedDriver = ne, e && (le.info("call cb", e), e()), re.anydriverInfoOrUpdatesFound = !(!re.driverUpdateList && !re.installedDriver), G(), ae = !0, he = !1, le.info("refreshAvailableUpdates finally OUT")
+                })
+            }
+
+            function U(e) {
+                S.show({
+                    textContent: e,
+                    icon: "error_outline"
+                })
+            }
+
+            function V(e) {
+                if (e) switch (e.status) {
+                    case n.TASK_FAILED_UNABLE_TO_REACH_SERVER:
+                    case n.TASK_CHECK_SUM_ERROR:
+                    case n.TASK_DISK_WRITE_FAIL:
+                    case n.TASK_SIGNATURE_VERIFICATION_FAILS:
+                    case n.TASK_COMPLETED:
+                    case n.TASK_DOWNLOAD_ERROR:
+                        f.off(T.CONNECT, z), f.off(p.PROGRESS, V)
+                }
+            }
+
+            function z() {
+                le.info("downloader update last state on reconnect"), re.refreshUI()
+            }
+
+            function B() {
+                re.updateState === l && i.canCheckForUpdate() && a.isNull(fe) ? i.checkForUpdates() : i.scanCompleted && a.isNull(fe) ? (le.info("scan completed, refreshing state"), F()) : i.manualCheckForUpdate && !i.scanCompleted && a.isNull(fe) && (S.showProgress({
+                    textContent: r("translate")("l10n.checkingforUpdates")
+                }), he = !0)
+            }
+
+            function $() {
+                o.cancel(ye), ye = o(function() {
+                    D.startDriverTour(), o.cancel(ye)
+                })
+            }
+
+            function W(e) {
+                e !== M.DRIVER && (H(), $())
+            }
+
+            function H() {
+                f.off(O.PAUSED, W), f.off(O.END, W)
+            }
+
+            function j() {
+                f.on(O.PAUSED, W), f.on(O.END, W)
+            }
+
+            function Y() {
+                re.installedDriver = null, ne = null, i.getInstalledDriver().then(function(e) {
+                    ne = e, ne.isExpanded = !1, ne.reInstalledDriver = ne.downloadStatus && re.isDownloadStarted(ne.downloadStatus.status) || ne.reInstalledDriver || !1, le.info("getInstalledDriver get called", e)
+                }).catch(function(e) {
+                    le.error("getInstalledDriver failed with error: ", e)
+                }).finally(function() {
+                    re.refreshUI(), o.cancel(de), de = o(function() {
+                        B()
+                    })
+                })
+            }
+
+            function q() {
+                i.isCRDFeatureSupported().then(function(e) {
+                    e && (re.CRDSupported = e, D.isTourRunning() ? j() : $())
+                }).catch(function(e) {
+                    re.CRDSupported = !1
+                })
+            }
+
+            function K() {
+                te(), Y(), i.setUpdatesListener(re.refreshUI), q()
+            }
+
+            function Z() {
+                ve = ge.SCANNING
+            }
+
+            function Q() {
+                he = !1, U(se("l10n.unableToConnectToNvidia")), ve = ge.FAILED
+            }
+
+            function X() {
+                ve = ge.FINISHED
+            }
+
+            function J(e) {
+                var t = re.installedDriver && re.installedDriver.downloadStatus.taskId == e.taskId;
+                if (t && (re.installedDriver.reInstalledDriver = !1), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER) U(se("l10n.downloadPausedUnableToReachNvidia")), t && (re.installedDriver.reInstalledDriver = !0);
+                else if (e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS) U(se("l10n.driverDownloadFailed"));
+                else if (e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER) U(se("l10n.unableToConnectToNvidia"));
+                else if (e.status === n.TASK_DISK_WRITE_FAIL) {
+                    var o = r("convertBytesToKBMBGB")(e.totalBytes);
+                    if (e.downloadedLocation.length > 0) {
+                        var i = e.downloadedLocation.split(":")[0];
+                        i = i.toUpperCase();
+                        var a = se("l10n.downloadDiskSpace", {
+                            value: o,
+                            drive: i
+                        });
+                        U(a)
+                    }
+                }
+            }
+
+            function ee() {
+                le.info("got online event"), Y()
+            }
+
+            function te() {
+                i.getDriverTypePreference().then(function(e) {
+                    le.info("getDriverTypePreference is", e), re.currentlySelectedDriver = e
+                }).catch(function(e) {
+                    le.error("getDriverTypePreference failed with error: ", e), re.currentlySelectedDriver = re.driverType.GRD
+                })
+            }
+            var ne, re = this,
+                oe = y.getGlobalStore(b.GLOBAL_STORE),
+                ie = Date.now(),
+                ae = !1;
+            re.driverUpdateList = null, re.installedDriver = null, re.taskStatus = n;
+            var se = r("translate"),
+                le = t.getInstance("main.updates/updatesdrivercontroller");
+            re.driverTypeConstant = h;
+            var ce, ue, de, fe = null,
+                me = !1,
+                pe = !1;
+            le.info("controller created"), re.installedDriverHeaderText = "";
+            var ge = {
+                NOT_STARTED: "NOT_STARTED",
+                FAILED: "FAILED",
+                FINISHED: "FINISHED",
+                SCANNING: "SCANNING"
+            };
+            re.driverType = I, x.put("tour-step-popup.html", c.default), x.put("tour-step-template.html", d.default);
+            var ve = ge.NOT_STARTED;
+            re.user = A.getLoggedInUser(), re.viewState = w.getCachedUserItem(re.user.userId, b.VIEW_STORE, b.VIEW_STATE), re.anydriverInfoOrUpdatesFound = !0;
+            var he = !1;
+            re.CRDSupported = !1;
+            var ye;
+            re.currentlySelectedDriver = re.driverType.GRD, re.getProgressString = function(e) {
+                var t = "";
+                if (e && e.downloadStatus) {
+                    var n = r("convertBytesToKBMBGB")(e.downloadStatus.totalBytes),
+                        o = r("convertBytesToKBMBGB")(e.downloadStatus.bytesDone);
+                    t = o + "/" + n
+                }
+                return t
+            }, re.startDownload = function(e) {
+                if (_.onlineState && _.onlineState.online === !1) S.showOffline();
+                else {
+                    var t = e.isCRD === re.driverType.CRD ? C.CRD_DRIVER_DOWNLOAD : C.GRD_DRIVER_DOWNLOAD;
+                    i.startDownload(e.version, e.downloadURL, t).then(function(t) {
+                        le.info("download started", t.data), f.on(T.CONNECT, z), f.on(p.PROGRESS, V), N(e.version, "start"), e.downloadStatus = t.data
+                    }).catch(function(t) {
+                        le.error("download failed to start", t), U(se("l10n.driverDownloadFailed")), re.installedDriver && re.installedDriver.version === e.version && (re.installedDriver.reInstalledDriver = !1), g.push(v.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)
                     })
                 }
-            }
-        }
-
-        function D() {
-            return j.driverUpdateList && (!H && i.isNull(te) && !re || ne)
-        }
-
-        function M() {
-            H ? (ie === oe.FAILED || j.driverUpdateList && j.driverUpdateList.length > 0 ? j.installedDriverHeaderText = Z("l10n.currentlyInstalled") : j.installedDriverHeaderText = Z("l10n.latestGeforceUpdate"), j.installedDriverHeaderText = j.installedDriverHeaderText.toUpperCase()) : j.installedDriverHeaderText = ""
-        }
-
-        function O(e) {
-            a.getUpdateDetails().then(function(e) {
-                ae && (!j.driverUpdateList || e && e[0] && j.driverUpdateList[0] && j.driverUpdateList[0].version !== e[0].version) ? b.show({
-                    textContent: r("translate")("l10n.newDriverAvailable"),
-                    icon: "file_download"
-                }) : b.isOpen() && b.cancel(), Q.debug("driver updates list is: ", e, j.driverUpdateList), j.driverUpdateList = e, x()
-            }).catch(function(e) {
-                j.installedDriver && ae ? b.show({
-                    textContent: r("translate")("l10n.latestGeforceUpdate"),
-                    icon: "check"
-                }) : b.isOpen() && b.cancel(), j.driverUpdateList = null, Q.error("getUpdates failed with error: ", e)
-            }).finally(function() {
-                Q.info("refreshAvailableUpdates finally IN"), I(), j.installedDriver = H, e && (Q.info("call cb", e), e()), j.anydriverInfoOrUpdatesFound = !(!j.driverUpdateList && !j.installedDriver), M(), K = !0, ae = !1, Q.info("refreshAvailableUpdates finally OUT")
-            })
-        }
-
-        function R(e) {
-            b.show({
-                textContent: e,
-                icon: "error_outline"
-            })
-        }
-
-        function N(e) {
-            if (e) switch (e.status) {
-                case n.TASK_FAILED_UNABLE_TO_REACH_SERVER:
-                case n.TASK_CHECK_SUM_ERROR:
-                case n.TASK_DISK_WRITE_FAIL:
-                case n.TASK_SIGNATURE_VERIFICATION_FAILS:
-                case n.TASK_COMPLETED:
-                case n.TASK_DOWNLOAD_ERROR:
-                    u.off(w.CONNECT, L), u.off(f.PROGRESS, N)
-            }
-        }
-
-        function L() {
-            Q.info("downloader update last state on reconnect"), j.refreshUI()
-        }
-
-        function k() {
-            j.updateState === l && a.canCheckForUpdate() && i.isNull(te) ? a.checkForUpdates() : a.scanCompleted && i.isNull(te) ? (Q.info("scan completed, refreshing state"), O()) : a.manualCheckForUpdate && !a.scanCompleted && i.isNull(te) && (b.showProgress({
-                textContent: r("translate")("l10n.checkingforUpdates")
-            }), ae = !0)
-        }
-
-        function P() {
-            j.installedDriver = null, H = null, a.getInstalledDriver().then(function(e) {
-                H = e, H.isExpanded = !1, H.reInstalledDriver = H.downloadStatus && j.isDownloadStarted(H.downloadStatus.status) || H.reInstalledDriver || !1, Q.info("getInstalledDriver get called", e)
-            }).catch(function(e) {
-                Q.error("getInstalledDriver failed with error: ", e)
-            }).finally(function() {
-                j.refreshUI(), o.cancel(ee), ee = o(function() {
-                    k()
+            }, re.pauseDownload = function(e) {
+                i.pauseDownload(e.downloadStatus.taskId).then(function(t) {
+                    N(e.version, "paused"), e.downloadStatus = t.data, le.info("download paused", e.downloadStatus)
+                }).catch(function(e) {
+                    le.error("download failed to pause with error", e)
                 })
-            })
-        }
-
-        function G() {
-            a.isCRDFeatureSupported().then(function(e) {
-                e && (j.CRDSupported = e)
-            }).catch(function(e) {
-                j.CRDSupported = !1
-            })
-        }
-
-        function F() {
-            W(), P(), a.setUpdatesListener(j.refreshUI), G()
-        }
-
-        function U() {
-            ie = oe.SCANNING
-        }
-
-        function V() {
-            ae = !1, R(Z("l10n.unableToConnectToNvidia")), ie = oe.FAILED
-        }
-
-        function z() {
-            ie = oe.FINISHED
-        }
-
-        function B(e) {
-            var t = j.installedDriver && j.installedDriver.downloadStatus.taskId == e.taskId;
-            if (t && (j.installedDriver.reInstalledDriver = !1), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER) R(Z("l10n.downloadPausedUnableToReachNvidia")), t && (j.installedDriver.reInstalledDriver = !0);
-            else if (e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS) R(Z("l10n.driverDownloadFailed"));
-            else if (e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER) R(Z("l10n.unableToConnectToNvidia"));
-            else if (e.status === n.TASK_DISK_WRITE_FAIL) {
-                var o = r("convertBytesToKBMBGB")(e.totalBytes);
-                if (e.downloadedLocation.length > 0) {
-                    var i = e.downloadedLocation.split(":")[0];
-                    i = i.toUpperCase();
-                    var a = Z("l10n.downloadDiskSpace", {
-                        value: o,
-                        drive: i
-                    });
-                    R(a)
+            }, re.resumeDownload = function(e) {
+                i.resumeDownload(e.downloadStatus.taskId).then(function(t) {
+                    e.downloadStatus = t.data, N(e.version, "resume"), le.info("download resume", e.downloadStatus)
+                }).catch(function(e) {
+                    le.error("download failed to resume with error", e)
+                })
+            }, re.stopDownload = function(e, t) {
+                t && (re.installedDriver.reInstalledDriver = !1), i.stopDownload(e.downloadStatus.taskId).then(function(t) {
+                    f.off(T.CONNECT, z), f.off(p.PROGRESS, V), e.downloadStatus = t.data, N(e.version, "stop"), le.info("download stoped", e.downloadStatus)
+                }).catch(function(e) {
+                    le.error("download failed to stop with error", e)
+                })
+            }, re.startInstall = function(e, t) {
+                i.beginInstallation(e, t, !1)
+            }, re.isDownloadStarted = function(e) {
+                return e === n.TASK_PAUSED || e === n.TASK_RUNNING || e === n.TASK_RETRY || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
+            }, re.isExtractionStarted = function(e) {
+                return e === n.TASK_EXTRACTING
+            }, re.isStatusPaused = function(e) {
+                return e === n.TASK_PAUSED || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
+            }, re.isStatusCompleted = function(e) {
+                return e === n.TASK_COMPLETED
+            }, re.isStatusPending = function(e) {
+                return e === n.TASK_NOT_STARTED || e === n.TASK_CHECK_SUM_ERROR || e === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e === n.TASK_SIGNATURE_VERIFICATION_FAILS || e === n.TASK_DISK_WRITE_FAIL
+            }, re.updateDriverExpandedState = function() {
+                var e = re.viewState.driverExpandState || {};
+                le.debug("driverExpandState IN", e), ne && (angular.isDefined(e[re.installedDriver.version]) ? ne.isExpanded = e[re.installedDriver.version] : re.driverUpdateList || (re.installedDriver.isExpanded = ne.isExpanded = !0), e[re.installedDriver.version] = ne.isExpanded), re.driverUpdateList && 1 === re.driverUpdateList.length && (re.driverUpdateList[0].isExpanded = e[re.driverUpdateList[0].version] !== !1, e[re.driverUpdateList[0].version] = re.driverUpdateList[0].isExpanded), re.viewState.driverExpandState = e, re.viewState.persist_(), le.debug("driverExpandState OUT", e)
+            }, re.isScanCompleted = function() {
+                return i.scanCompleted
+            }, re.onExpand = function(e) {
+                o.cancel(ce), ce = o(function() {
+                    e.isExpanded = !0, re.viewState.driverExpandState && (re.viewState.driverExpandState[e.version] = !0, re.viewState.persist_())
+                })
+            }, re.onCollapse = function(e) {
+                o.cancel(ue), ue = o(function() {
+                    e.isExpanded = !1, re.viewState.driverExpandState && (re.viewState.driverExpandState[e.version] = !1, re.viewState.persist_())
+                })
+            }, re.refreshUI = function() {
+                F(re.updateDriverExpandedState)
+            }, re.updateState = s.params.updateState, fe = s.params.resumeDriverInstallation, me = s.params.startDriverDownload, fe && oe.setItem(b.DRIVER_INSTALL_STATE, null), re.isCheckForUpdateDisabled = function() {
+                return !i.canCheckForUpdate() || ve === ge.SCANNING
+            }, re.isInstallDisabled = function() {
+                return he
+            }, re.onCheckForUpdate = function() {
+                _.onlineState && _.onlineState.online === !1 ? S.showOffline() : i.canCheckForUpdate() && (S.showProgress({
+                    textContent: r("translate")("l10n.checkingforUpdates")
+                }), i.checkForUpdates(!0), he = !0)
+            }, K(), re.getDownloadStatusMessage = function(e) {
+                var t = "";
+                return e === n.TASK_EXTRACTING ? t = r("translate")("l10n.preparingPackage") : e === n.TASK_RUNNING ? t = se("l10n.downloading") : re.isStatusPaused(e) ? t = se("l10n.paused") : e === n.TASK_RETRY && (t = se("l10n.retrying")), t
+            }, re.getAvlDriverTelemetryEventName = function(t) {
+                return t ? e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_BETA_DRIVER : e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_DRIVER
+            }, re.getAvlDriverType = function(e) {
+                return e ? h.AVAILABLE_BETA : h.AVAILABLE
+            }, re.canToggleDownload = function(e, t) {
+                var n = [],
+                    r = re.isStatusPending(e);
+                if (r) {
+                    if (ne && ne.downloadStatus && ne.version !== t && re.isDownloadStarted(ne.downloadStatus.status)) return !1;
+                    re.driverUpdateList && (n = a.filter(re.driverUpdateList, function(e) {
+                        return !(e.version === t || !re.isDownloadStarted(e.downloadStatus.status))
+                    }))
                 }
-            }
-        }
-
-        function $() {
-            Q.info("got online event"), P()
-        }
-
-        function W() {
-            a.getDriverTypePreference().then(function(e) {
-                Q.info("getDriverTypePreference is", e), j.currentlySelectedDriver = e
-            }).catch(function(e) {
-                Q.error("getDriverTypePreference failed with error: ", e), j.currentlySelectedDriver = j.driverType.GRD
-            })
-        }
-        var H, j = this,
-            Y = v.getGlobalStore(h.GLOBAL_STORE),
-            q = Date.now(),
-            K = !1;
-        j.driverUpdateList = null, j.installedDriver = null, j.taskStatus = n;
-        var Z = r("translate"),
-            Q = t.getInstance("main.updates/updatesdrivercontroller");
-        j.driverTypeConstant = g;
-        var X, J, ee, te = null,
-            ne = !1,
-            re = !1;
-        Q.info("controller created"), j.installedDriverHeaderText = "";
-        var oe = {
-            NOT_STARTED: "NOT_STARTED",
-            FAILED: "FAILED",
-            FINISHED: "FINISHED",
-            SCANNING: "SCANNING"
-        };
-        j.driverType = T;
-        var ie = oe.NOT_STARTED;
-        j.user = _.getLoggedInUser(), j.viewState = S.getCachedUserItem(j.user.userId, h.VIEW_STORE, h.VIEW_STATE), j.anydriverInfoOrUpdatesFound = !0;
-        var ae = !1;
-        j.CRDSupported = !1, j.getProgressString = function(e) {
-            var t = "";
-            if (e && e.downloadStatus) {
-                var n = r("convertBytesToKBMBGB")(e.downloadStatus.totalBytes),
-                    o = r("convertBytesToKBMBGB")(e.downloadStatus.bytesDone);
-                t = o + "/" + n
-            }
-            return t
-        }, j.startDownload = function(e) {
-            if (E.onlineState && E.onlineState.online === !1) b.showOffline();
-            else {
-                var t = e.isCRD === !0 ? A.CRD_DRIVER_DOWNLOAD : A.GRD_DRIVER_DOWNLOAD;
-                a.startDownload(e.version, e.downloadURL, t).then(function(t) {
-                    Q.info("download started", t.data), u.on(w.CONNECT, L), u.on(f.PROGRESS, N), C(e.version, "start"), e.downloadStatus = t.data
-                }).catch(function(t) {
-                    Q.error("download failed to start", t), R(Z("l10n.driverDownloadFailed")), j.installedDriver && j.installedDriver.version === e.version && (j.installedDriver.reInstalledDriver = !1), m.push(p.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)
-                })
-            }
-        }, j.pauseDownload = function(e) {
-            a.pauseDownload(e.downloadStatus.taskId).then(function(t) {
-                C(e.version, "paused"), e.downloadStatus = t.data, Q.info("download paused", e.downloadStatus)
-            }).catch(function(e) {
-                Q.error("download failed to pause with error", e)
-            })
-        }, j.resumeDownload = function(e) {
-            a.resumeDownload(e.downloadStatus.taskId).then(function(t) {
-                e.downloadStatus = t.data, C(e.version, "resume"), Q.info("download resume", e.downloadStatus)
-            }).catch(function(e) {
-                Q.error("download failed to resume with error", e)
-            })
-        }, j.stopDownload = function(e, t) {
-            t && (j.installedDriver.reInstalledDriver = !1), a.stopDownload(e.downloadStatus.taskId).then(function(t) {
-                u.off(w.CONNECT, L), u.off(f.PROGRESS, N), e.downloadStatus = t.data, C(e.version, "stop"), Q.info("download stoped", e.downloadStatus)
-            }).catch(function(e) {
-                Q.error("download failed to stop with error", e)
-            })
-        }, j.startInstall = function(e, t) {
-            a.beginInstallation(e, t, !1)
-        }, j.isDownloadStarted = function(e) {
-            return e === n.TASK_PAUSED || e === n.TASK_RUNNING || e === n.TASK_RETRY || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
-        }, j.isExtractionStarted = function(e) {
-            return e === n.TASK_EXTRACTING
-        }, j.isStatusPaused = function(e) {
-            return e === n.TASK_PAUSED || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
-        }, j.isStatusCompleted = function(e) {
-            return e === n.TASK_COMPLETED
-        }, j.isStatusPending = function(e) {
-            return e === n.TASK_NOT_STARTED || e === n.TASK_CHECK_SUM_ERROR || e === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e === n.TASK_SIGNATURE_VERIFICATION_FAILS || e === n.TASK_DISK_WRITE_FAIL
-        }, j.updateDriverExpandedState = function() {
-            var e = j.viewState.driverExpandState || {};
-            Q.debug("driverExpandState IN", e), H && (angular.isDefined(e[j.installedDriver.version]) ? H.isExpanded = e[j.installedDriver.version] : j.driverUpdateList || (j.installedDriver.isExpanded = H.isExpanded = !0), e[j.installedDriver.version] = H.isExpanded), j.driverUpdateList && 1 === j.driverUpdateList.length && (j.driverUpdateList[0].isExpanded = e[j.driverUpdateList[0].version] !== !1, e[j.driverUpdateList[0].version] = j.driverUpdateList[0].isExpanded), j.viewState.driverExpandState = e, j.viewState.persist_(), Q.debug("driverExpandState OUT", e)
-        }, j.isScanCompleted = function() {
-            return a.scanCompleted
-        }, j.onExpand = function(e) {
-            o.cancel(X), X = o(function() {
-                e.isExpanded = !0, j.viewState.driverExpandState && (j.viewState.driverExpandState[e.version] = !0, j.viewState.persist_())
-            })
-        }, j.onCollapse = function(e) {
-            o.cancel(J), J = o(function() {
-                e.isExpanded = !1, j.viewState.driverExpandState && (j.viewState.driverExpandState[e.version] = !1, j.viewState.persist_())
-            })
-        }, j.refreshUI = function() {
-            O(j.updateDriverExpandedState)
-        }, j.updateState = s.params.updateState, te = s.params.resumeDriverInstallation, ne = s.params.startDriverDownload, te && Y.setItem(h.DRIVER_INSTALL_STATE, null), j.isCheckForUpdateDisabled = function() {
-            return !a.canCheckForUpdate() || ie === oe.SCANNING
-        }, j.isInstallDisabled = function() {
-            return ae
-        }, j.onCheckForUpdate = function() {
-            E.onlineState && E.onlineState.online === !1 ? b.showOffline() : a.canCheckForUpdate() && (b.showProgress({
-                textContent: r("translate")("l10n.checkingforUpdates")
-            }), a.checkForUpdates(!0), ae = !0)
-        }, F(), j.getDownloadStatusMessage = function(e) {
-            var t = "";
-            return e === n.TASK_EXTRACTING ? t = r("translate")("l10n.preparingPackage") : e === n.TASK_RUNNING ? t = Z("l10n.downloading") : j.isStatusPaused(e) ? t = Z("l10n.paused") : e === n.TASK_RETRY && (t = Z("l10n.retrying")), t
-        }, j.getAvlDriverTelemetryEventName = function(t) {
-            return t ? e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_BETA_DRIVER : e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_DRIVER
-        }, j.getAvlDriverType = function(e) {
-            return e ? g.AVAILABLE_BETA : g.AVAILABLE
-        }, j.canToggleDownload = function(e, t) {
-            var n = [],
-                r = j.isStatusPending(e);
-            if (r) {
-                if (H && H.downloadStatus && H.version !== t && j.isDownloadStarted(H.downloadStatus.status)) return !1;
-                j.driverUpdateList && (n = i.filter(j.driverUpdateList, function(e) {
-                    return !(e.version === t || !j.isDownloadStarted(e.downloadStatus.status))
+                return 0 === n.length && r && !he
+            }, re.reInstalledDriverMenuItemDisabled = function() {
+                return ne && ne.downloadStatus && re.isStatusPending(ne.downloadStatus.status) && !re.canToggleDownload(ne.downloadStatus.status, ne.version)
+            }, re.performReinstalledDriver = function() {
+                re.installedDriver && (re.installedDriver.reInstalledDriver = !0, re.isStatusPending(ne.downloadStatus.status) && re.startDownload(ne))
+            }, re.showReInstallButtons = function() {
+                return re.installedDriver.reInstalledDriver
+            }, re.showLoadingIndicator = function() {
+                return ae === !1 && Date.now() - ie > 500
+            }, re.onRecommendedDriverTypeChanged = function(e) {
+                re.currentlySelectedDriver != e && (re.currentlySelectedDriver = e, pe = !0, le.info("onRecommendedDriverTypeChanged ", re.currentlySelectedDriver), i.setDriverTypePreference(e).then(function() {
+                    re.onCheckForUpdate()
                 }))
-            }
-            return 0 === n.length && r && !ae
-        }, j.reInstalledDriverMenuItemDisabled = function() {
-            return H && H.downloadStatus && j.isStatusPending(H.downloadStatus.status) && !j.canToggleDownload(H.downloadStatus.status, H.version)
-        }, j.performReinstalledDriver = function() {
-            j.installedDriver && (j.installedDriver.reInstalledDriver = !0, j.isStatusPending(H.downloadStatus.status) && j.startDownload(H))
-        }, j.showReInstallButtons = function() {
-            return j.installedDriver.reInstalledDriver
-        }, j.showLoadingIndicator = function() {
-            return K === !1 && Date.now() - q > 500
-        }, j.onRecommendedDriverTypeChanged = function(e) {
-            j.currentlySelectedDriver != e && (j.currentlySelectedDriver = e, re = !0, Q.info("onRecommendedDriverTypeChanged ", j.currentlySelectedDriver), a.setDriverTypePreference(e).then(function() {
-                j.onCheckForUpdate()
-            }))
-        }, u.on(y.INSTALL_DONE, P), u.on(f.FAILED, B), u.on(d.SCAN_STARTED, U), u.on(d.SCAN_FAILED, V), u.on(c.ONLINE, $), u.on(d.SCAN_FINISHED, z), u.on(d.INSTALLED_DRIVER_UPDATE, P), e.$on("$destroy", function() {
-            u.off(y.INSTALL_DONE, P), u.off(d.SCAN_STARTED, U), u.off(d.SCAN_FAILED, V), u.off(d.SCAN_FINISHED, z), u.off(f.FAILED, B), u.off(c.ONLINE, $), u.off(d.INSTALLED_DRIVER_UPDATE, P), o.cancel(J), o.cancel(X), o.cancel(ee), J = null, X = null, a.removeUpdatesListener(j.refreshUI)
-        })
-    }]);
-    t.updatesDriverController = s
+            }, re.onTourStepShown = function() {
+                D.onStepShown()
+            }, f.on(E.INSTALL_DONE, Y), f.on(p.FAILED, J), f.on(m.SCAN_STARTED, Z), f.on(m.SCAN_FAILED, Q), f.on(u.ONLINE, ee), f.on(m.SCAN_FINISHED, X), f.on(m.INSTALLED_DRIVER_UPDATE, Y), e.$on("$destroy", function() {
+                if (D.isTourRunning(M.DRIVER)) {
+                    var e = R.getTourByName(M.DRIVER);
+                    e.end()
+                }
+                H(), f.off(E.INSTALL_DONE, Y), f.off(m.SCAN_STARTED, Z), f.off(m.SCAN_FAILED, Q), f.off(m.SCAN_FINISHED, X), f.off(p.FAILED, J), f.off(u.ONLINE, ee), f.off(m.INSTALLED_DRIVER_UPDATE, Y), o.cancel(ue), o.cancel(ce), o.cancel(de), ue = null, ce = null, i.removeUpdatesListener(re.refreshUI)
+            })
+        }]);
+    t.updatesDriverController = f
 }, function(e, t, n) {
     "use strict";
 
@@ -18767,10 +18834,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUpdatesDriver = void 0;
     var o = n(10);
-    n(300), n(299), n(198), n(139), n(601), n(112), n(210);
+    n(300), n(299), n(198), n(139), n(603), n(112), n(210);
     var i = n(871),
         a = r(i);
-    n(603);
+    n(605);
     var s = o.ngUpdatesModule.directive("nvUpdatesDriver", [function() {
         return {
             restrict: "E",
@@ -18819,10 +18886,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUpdatesDriverHighlights = void 0;
     var o = n(10);
-    n(599);
+    n(601);
     var i = n(872),
         a = r(i);
-    n(605);
+    n(607);
     var s = o.ngUpdatesModule.directive("nvUpdatesDriverHighlights", function() {
         return {
             restrict: "E",
@@ -18921,7 +18988,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(271);
     var i = n(873),
         a = r(i);
-    n(607);
+    n(609);
     var s = o.ngUpdatesModule.directive("nvUpdatesHighlightsBanner", function() {
         return {
             restrict: "E",
@@ -18980,7 +19047,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(10),
         i = n(874),
         a = r(i);
-    n(609);
+    n(611);
     var s = o.ngUpdatesModule.component("nvUpdatesInstallationCustom", {
         template: a.default,
         controller: "UpdatesInstallationCustomController",
@@ -19034,7 +19101,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(10),
         i = n(875),
         a = r(i);
-    n(611);
+    n(613);
     var s = o.ngUpdatesModule.component("nvUpdatesInstallationProgress", {
         template: a.default,
         controller: "UpdateInstallationProgressController",
@@ -19070,7 +19137,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(10),
         i = n(876),
         a = r(i);
-    n(613);
+    n(615);
     var s = o.ngUpdatesModule.directive("nvUpdatesInstallationReboot", function() {
         return {
             restrict: "E",
@@ -19166,24 +19233,13 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(3),
         i = r(o),
         a = n(10);
-    n(11), n(615), n(616), n(610), n(614), n(612), n(619);
+    n(11), n(617), n(618), n(612), n(616), n(614), n(621);
     var s = a.ngUpdatesModule.service("updatesInstallerDialogService", ["$mdDialog", "$rootElement", "INSTALLER_PAGE", "eventAggregator", "INSTALLER_EVENTS", "$log", "INSTALLER_ACTION", "INSTALLER_FORM_EVENT", "RESPONSE_TO_INSTALLER", "dbService", "DB_NAMES", "DRIVER_INSTALLATION_FAILED_CONSTRAINT", "$filter", function(e, t, n, r, o, a, s, l, c, u, d, f, m) {
-        function p() {
-            var e = {
-                driverName: S.name,
-                version: S.version,
-                isCRD: S.isCRD
-            };
-            return _.setItem(d.LAST_INSTALLED_DRIVER_INFO, e).then(function() {
-                T.debug("persist driver installation info in database", e)
-            })
+        function p(e) {
+            return y.preset().html('<nv-updates-installation-progress class="updates-updates-intstallation-progress"></nv-updates-installation-progress>').details(E.name).isExpressInstall(e)
         }
 
         function g(e) {
-            return b.preset().html('<nv-updates-installation-progress class="updates-updates-intstallation-progress"></nv-updates-installation-progress>').details(S.name).isExpressInstall(e)
-        }
-
-        function v(e) {
             var t;
             switch (e) {
                 case s.ACTION_CANCEL:
@@ -19203,7 +19259,7 @@ webpackJsonp([4], [function(e, t, n) {
             return t
         }
 
-        function h(e) {
+        function v(e) {
             var t = "";
             if (e && e.constraintFailText && e.constraintFailText[0] && (t = e.constraintFailText[0], e.failedConstraintId && e.failedConstraintId[0])) {
                 var n = i.findWhere(f, {
@@ -19225,228 +19281,227 @@ webpackJsonp([4], [function(e, t, n) {
             return t
         }
 
-        function y(e, t, n, i) {
-            return b.preset().title(S.name).html('<nv-updates-installer-dialog-installation-error class="updates-installer-dialog-installation-error"></nv-updates-installer-dialog-installation-error>').details(t).bullets(Array.isArray(i) ? i : []).showBullets(Array.isArray(i) && i.length > 0).button1({
+        function h(e, t, n, i) {
+            return y.preset().title(E.name).html('<nv-updates-installer-dialog-installation-error class="updates-installer-dialog-installation-error"></nv-updates-installer-dialog-installation-error>').details(t).bullets(Array.isArray(i) ? i : []).showBullets(Array.isArray(i) && i.length > 0).button1({
                 text: e,
                 action: function() {
-                    b.cancel(), b.sendResponseToInstaller(b.installerStatus, s.ACTION_CANCEL), r.trigger(o.INSTALL_CANCEL)
+                    y.cancel(), y.sendResponseToInstaller(y.installerStatus, s.ACTION_CANCEL), r.trigger(o.INSTALL_CANCEL)
                 }
             }).icon("warning").subtitle("l10n.installationCanNotContinue").showLink(n)
         }
-        var b = this,
-            E = {};
-        b.packages = [];
-        var S, _, w = !1,
-            A = !1,
-            T = a.getInstance("main.updates/updatesInstallerDialogService");
-        _ = u.getGlobalStore(d.GLOBAL_STORE);
-        var C = function() {
-            function e(e) {
-                t[e] = function(r) {
-                    return null != r ? (n[e] = r, t) : n[e]
+        var y = this,
+            b = {};
+        y.packages = [];
+        var E, S = !1,
+            _ = !1,
+            w = a.getInstance("main.updates/updatesInstallerDialogService"),
+            A = function() {
+                function e(e) {
+                    t[e] = function(r) {
+                        return null != r ? (n[e] = r, t) : n[e]
+                    }
                 }
-            }
-            var t = this,
-                n = {};
-            e("showLink"), e("html"), e("title"), e("icon"), e("subtitle"), e("details"), e("button1"), e("button2"), e("installablePackagesData"), e("isExpressInstall"), e("showBullets"), e("bullets")
-        };
-        b.show = function(n) {
+                var t = this,
+                    n = {};
+                e("showLink"), e("html"), e("title"), e("icon"), e("subtitle"), e("details"), e("button1"), e("button2"), e("installablePackagesData"), e("isExpressInstall"), e("showBullets"), e("bullets")
+            };
+        y.show = function(n) {
             e.show({
                 template: '<md-dialog><nv-updates-installer-dialog class="updates-updates-installer-dialog"layout="column"></nv-updates-installer-dialog></md-dialog>',
                 parent: t.find("nv-window"),
                 escapeToClose: !1
-            }), b.setDialogModel(n), r.trigger(o.INSTALL_STARTED)
-        }, b.cancel = function(t) {
-            T.info("updates installer dialogue cancelled"), e.cancel(), w = !1, A = !1, b.unsubScribeDriverInstallationNotification()
-        }, b.setDialogModel = function(e) {
-            E = e, b.refreshDialogData()
-        }, b.getDialogModel = function() {
-            return E
-        }, b.preset = function() {
-            return new C
-        }, b.rebootSystem = function() {
+            }), y.setDialogModel(n), r.trigger(o.INSTALL_STARTED)
+        }, y.cancel = function(t) {
+            w.info("updates installer dialogue cancelled"), e.cancel(), S = !1, _ = !1, y.unsubScribeDriverInstallationNotification()
+        }, y.setDialogModel = function(e) {
+            b = e, y.refreshDialogData()
+        }, y.getDialogModel = function() {
+            return b
+        }, y.preset = function() {
+            return new A
+        }, y.rebootSystem = function() {
             var e = {
-                isCustomInstall: w,
-                version: S.version,
-                name: S.name
+                isCustomInstall: S,
+                version: E.version,
+                name: E.name
             };
             u.getGlobalStore(d.GLOBAL_STORE).setItem(d.DRIVER_INSTALL_STATE, e).then(function() {
-                T.debug("persist driver installation entry in database", e), b.sendResponseToInstaller(b.installerStatus, s.ACTION_RESTART_NOW)
+                w.debug("persist driver installation entry in database", e), y.sendResponseToInstaller(y.installerStatus, s.ACTION_RESTART_NOW)
             })
-        }, b.showInstallationForm = function(e, t, n) {
-            w = t, A = n, S = e, b.show(g(!0))
+        }, y.showInstallationForm = function(e, t, n) {
+            S = t, _ = n, E = e, y.show(p(!0))
         };
-        var I = null;
-        b.sendResponseToInstaller = function(e, t) {
+        var T = null;
+        y.sendResponseToInstaller = function(e, t) {
             var n = {};
-            n = i.extend(n, e), n.nextAction = v(t), T.debug("send response to installer", n), "function" == typeof I && I(n)
-        }, b.showInstallerForm = function(e) {
-            if (b.installerStatus = e, e.method === l.SHOW_FORM) {
+            n = i.extend(n, e), n.nextAction = g(t), w.debug("send response to installer", n), "function" == typeof T && T(n)
+        }, y.showInstallerForm = function(e) {
+            if (y.installerStatus = e, e.method === l.SHOW_FORM) {
                 var t;
                 switch (e.form) {
                     case n.NVIFORM_PRE_INSTALL_CHECK:
-                        b.sendResponseToInstaller(e, s.ACTION_NEXT);
+                        y.sendResponseToInstaller(e, s.ACTION_NEXT);
                         break;
                     case n.NVIFORM_INSTALL_INITIAL:
                     case n.NVIFORM_INSTALL_CHECKING:
                     case n.NVIFORM_EULA:
                     case n.NVIFORM_INSTALL_CHECK_WARNINGS:
                     case n.NVIFORM_PRE_REBOOT_INSTALL:
-                        var r = b.getDialogModel();
-                        r && r.html && r.html().indexOf("nv-updates-installation-progress") != -1 || (T.debug("show progress dialog"), b.setDialogModel(g(!0))), b.updateRefreshInstalling(!0), b.sendResponseToInstaller(e, s.ACTION_INSTALL);
+                        var r = y.getDialogModel();
+                        r && r.html && r.html().indexOf("nv-updates-installation-progress") != -1 || (w.debug("show progress dialog"), y.setDialogModel(p(!0))), y.updateRefreshInstalling(!0), y.sendResponseToInstaller(e, s.ACTION_INSTALL);
                         break;
                     case n.NVIFORM_INSTALL_REMOVE_PROGRESS:
-                        b.updateRefreshInstalling(!1);
+                        y.updateRefreshInstalling(!1);
                         break;
                     case n.NVIFORM_INSTALL_PROGRESS:
-                        b.setProgressTitle(""), b.updateRefreshInstalling(!1), b.updateIsInstalling(!0);
+                        y.setProgressTitle(""), y.updateRefreshInstalling(!1), y.updateIsInstalling(!0);
                         break;
                     case n.NVIFORM_INSTALL_FINISHED_NO_SUMMARY:
-                        p(), b.showInstallationComplete();
+                        y.showInstallationComplete();
                         break;
                     case n.NVIFORM_INSTALL_FINISHED:
-                        p(), b.showInstallationCompleteWithSummary(e.packages);
+                        y.showInstallationCompleteWithSummary(e.packages);
                         break;
                     case n.NVIFORM_INSTALL_CHECK_WAIT:
-                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), b.showInstallationCanNotStartWithCancelBtn(h(e), t), b.sendResponseToInstaller(e, s.ACTION_NEXT);
+                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), y.showInstallationCanNotStartWithCancelBtn(v(e), t), y.sendResponseToInstaller(e, s.ACTION_NEXT);
                         break;
                     case n.NVIPROP_CUSTOM_INSTALL:
-                        b.showCustomInstallSelect(e.packages, e.cleanInstall);
+                        y.showCustomInstallSelect(e.packages, e.cleanInstall);
                         break;
                     case n.NVIFORM_INSTALL_REMOVE_REBOOT:
-                        b.showInstallationContinueRebootRequired();
+                        y.showInstallationContinueRebootRequired();
                         break;
                     case n.NVIFORM_INSTALL_FAILED:
-                        b.showInstallationFail(e.packages);
+                        y.showInstallationFail(e.packages);
                         break;
                     case n.NVIFORM_INSTALL_REBOOT:
-                        p(), b.showInstallationRebootWithSummary(e.packages);
+                        y.showInstallationRebootWithSummary(e.packages);
                         break;
                     case n.NVIFORM_INSTALL_CHECK_FAILED:
-                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), b.showInstallationCanNotStartWithCloseBtn(h(e), t);
+                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), y.showInstallationCanNotStartWithCloseBtn(v(e), t);
                         break;
                     case n.NVIFORM_PRE_INSTALL_CHECK_RETRY:
-                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), b.showInstallationCanNotContinueWithTryAgainBtn(h(e), !1, t);
+                        t = !(!e.failedConstraintId || "AllowInstallCheck" !== e.failedConstraintId[0]), y.showInstallationCanNotContinueWithTryAgainBtn(v(e), !1, t);
                         break;
                     case n.NVIFORM_INSTALL_START_FAILED:
-                        b.showInstallationCanNotContinueWithTryAgainBtn(e.constraintFailText[0], !0, !1, e.bullets);
+                        y.showInstallationCanNotContinueWithTryAgainBtn(e.constraintFailText[0], !0, !1, e.bullets);
                         break;
                     default:
-                        T.debug("un-handled installer forms", e)
+                        w.debug("un-handled installer forms", e)
                 }
-            } else b.setProgressTitle(e.progressTitle), b.updateInstallProgress(e.currentProgress, e.totalProgress);
+            } else y.setProgressTitle(e.progressTitle), y.updateInstallProgress(e.currentProgress, e.totalProgress);
             return !0
         };
-        var x = null,
+        var C = null,
+            I = null,
+            x = null,
             D = null,
             M = null,
             O = null,
             R = null,
-            N = null,
-            L = null,
-            k = null;
-        b.updateRefreshInstallingRegister = function(e) {
-            x = e
-        }, b.unsubScribeDriverInstallationNotificationRegister = function(e) {
-            k = e
-        }, b.updateProgressTitleRegister = function(e) {
-            D = e
-        }, b.updateProgressSetTotalRegister = function(e) {
-            M = e
-        }, b.updateIsInstallingRegister = function(e) {
-            O = e
-        }, b.refreshDialogDataRegister = function(e) {
-            R = e
-        }, b.setSendResponseToInstallerRegister = function(e) {
-            I = e
-        }, b.setInvokeInstallationCallbackRegister = function(e) {
+            N = null;
+        y.updateRefreshInstallingRegister = function(e) {
+            C = e
+        }, y.unsubScribeDriverInstallationNotificationRegister = function(e) {
             N = e
-        }, b.getUserSelectedCustomDetailsRegister = function(e) {
-            L = e
-        }, b.updateRefreshInstalling = function(e) {
-            "function" == typeof x && x(e)
-        }, b.unsubScribeDriverInstallationNotification = function() {
-            "function" == typeof k && k()
-        }, b.setProgressTitle = function(e) {
+        }, y.updateProgressTitleRegister = function(e) {
+            I = e
+        }, y.updateProgressSetTotalRegister = function(e) {
+            x = e
+        }, y.updateIsInstallingRegister = function(e) {
+            D = e
+        }, y.refreshDialogDataRegister = function(e) {
+            M = e
+        }, y.setSendResponseToInstallerRegister = function(e) {
+            T = e
+        }, y.setInvokeInstallationCallbackRegister = function(e) {
+            O = e
+        }, y.getUserSelectedCustomDetailsRegister = function(e) {
+            R = e
+        }, y.updateRefreshInstalling = function(e) {
+            "function" == typeof C && C(e)
+        }, y.unsubScribeDriverInstallationNotification = function() {
+            "function" == typeof N && N()
+        }, y.setProgressTitle = function(e) {
+            "function" == typeof I && I(e)
+        }, y.updateInstallProgress = function(e, t) {
+            "function" == typeof x && x(e, t)
+        }, y.updateIsInstalling = function(e) {
             "function" == typeof D && D(e)
-        }, b.updateInstallProgress = function(e, t) {
-            "function" == typeof M && M(e, t)
-        }, b.updateIsInstalling = function(e) {
-            "function" == typeof O && O(e)
-        }, b.refreshDialogData = function() {
-            "function" == typeof R && R()
-        }, b.updateUserSelectedCustomDetails = function() {
-            if ("function" == typeof L) {
-                var e = L();
-                i.isNull(e) || 2 !== e.length || (b.installerStatus.packages = e[1], b.installerStatus.cleanInstall = e[0])
+        }, y.refreshDialogData = function() {
+            "function" == typeof M && M()
+        }, y.updateUserSelectedCustomDetails = function() {
+            if ("function" == typeof R) {
+                var e = R();
+                i.isNull(e) || 2 !== e.length || (y.installerStatus.packages = e[1], y.installerStatus.cleanInstall = e[0])
             }
-        }, b.showInstallationComplete = function() {
-            b.setDialogModel(b.preset().title(S.name).html('<nv-updates-installer-dialog-installation-complete class="updates-installer-dialog-installation-complete"></nv-updates-installer-dialog-installation-complete>').details("l10n.installationComplete").button1({
+        }, y.showInstallationComplete = function() {
+            y.setDialogModel(y.preset().title(E.name).html('<nv-updates-installer-dialog-installation-complete class="updates-installer-dialog-installation-complete"></nv-updates-installer-dialog-installation-complete>').details("l10n.installationComplete").button1({
                 text: "l10n.close",
                 action: function() {
-                    b.cancel(), r.trigger(o.INSTALL_DONE), b.sendResponseToInstaller(b.installerStatus, s.ACTION_CLOSE)
+                    y.cancel(), r.trigger(o.INSTALL_DONE), y.sendResponseToInstaller(y.installerStatus, s.ACTION_CLOSE)
                 }
             }))
-        }, b.showInstallationCanNotContinueWithTryAgainBtn = function(e, t, n, r) {
-            b.setDialogModel(y("l10n.close", e, n, r).button2({
+        }, y.showInstallationCanNotContinueWithTryAgainBtn = function(e, t, n, r) {
+            y.setDialogModel(h("l10n.close", e, n, r).button2({
                 text: "l10n.tryAgain",
                 action: function() {
-                    b.setDialogModel(g(!0)), t ? "function" == typeof N ? N(S, w, A) : T.error("setInvokeInstallationCallback is not a function") : b.sendResponseToInstaller(b.installerStatus, s.ACTION_TRYAGAIN)
+                    y.setDialogModel(p(!0)), t ? "function" == typeof O ? O(E, S, _) : w.error("setInvokeInstallationCallback is not a function") : y.sendResponseToInstaller(y.installerStatus, s.ACTION_TRYAGAIN)
                 }
             }))
-        }, b.showCustomInstallSelect = function(e, t) {
+        }, y.showCustomInstallSelect = function(e, t) {
             var n = [];
-            n.push(!0), n.push(e), n.push(t), b.setDialogModel(b.preset().title(S.name).html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationOption").button1({
+            n.push(!0), n.push(e), n.push(t), y.setDialogModel(y.preset().title(E.name).html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationOption").button1({
                 text: "l10n.install",
                 action: function() {
-                    b.setDialogModel(g(!1)), b.updateUserSelectedCustomDetails(), b.sendResponseToInstaller(b.installerStatus, s.ACTION_INSTALL)
+                    y.setDialogModel(p(!1)), y.updateUserSelectedCustomDetails(), y.sendResponseToInstaller(y.installerStatus, s.ACTION_INSTALL)
                 }
             }).button2({
                 text: "l10n.cancel",
                 action: function() {
-                    b.cancel(), b.sendResponseToInstaller(b.installerStatus, s.ACTION_CANCEL), r.trigger(o.INSTALL_CANCEL)
+                    y.cancel(), y.sendResponseToInstaller(y.installerStatus, s.ACTION_CANCEL), r.trigger(o.INSTALL_CANCEL)
                 }
             }).installablePackagesData(n))
-        }, b.showInstallationCompleteWithSummary = function(e) {
+        }, y.showInstallationCompleteWithSummary = function(e) {
             var t = [];
-            t.push(!1), t.push(e), t.push(!0), b.setDialogModel(b.preset().title(S.name).html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationHasFinished").button1({
+            t.push(!1), t.push(e), t.push(!0), y.setDialogModel(y.preset().title(E.name).html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationHasFinished").button1({
                 text: "l10n.close",
                 action: function() {
-                    b.cancel(), r.trigger(o.INSTALL_DONE), b.sendResponseToInstaller(b.installerStatus, s.ACTION_CLOSE)
+                    y.cancel(), r.trigger(o.INSTALL_DONE), y.sendResponseToInstaller(y.installerStatus, s.ACTION_CLOSE)
                 }
             }).installablePackagesData(t).icon("check"))
-        }, b.showInstallationFail = function(e) {
+        }, y.showInstallationFail = function(e) {
             var t = [];
-            t.push(!1), t.push(e), t.push(!1), b.setDialogModel(b.preset().title(S.name).icon("error").html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationFail").button1({
+            t.push(!1), t.push(e), t.push(!1), y.setDialogModel(y.preset().title(E.name).icon("error").html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationFail").button1({
                 text: "l10n.close",
                 action: function() {
-                    b.cancel(), b.sendResponseToInstaller(b.installerStatus, s.ACTION_CLOSE), r.trigger(o.INSTALL_CANCEL)
+                    y.cancel(), y.sendResponseToInstaller(y.installerStatus, s.ACTION_CLOSE), r.trigger(o.INSTALL_CANCEL)
                 }
             }).installablePackagesData(t))
-        }, b.showInstallationRebootWithSummary = function(e) {
+        }, y.showInstallationRebootWithSummary = function(e) {
             var t = [];
-            t.push(!1), t.push(e), t.push(!0), b.setDialogModel(b.preset().title(S.name).icon("warning").html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationCompleteRestart").button1({
+            t.push(!1), t.push(e), t.push(!0), y.setDialogModel(y.preset().title(E.name).icon("warning").html('<nv-updates-installation-custom class="updates-installation-custom-container"> </nv-updates-installation-custom>').subtitle("l10n.installationCompleteRestart").button1({
                 text: "l10n.restartNow",
                 action: function() {
-                    b.cancel(), b.sendResponseToInstaller(b.installerStatus, s.ACTION_RESTART_NOW)
+                    y.cancel(), y.sendResponseToInstaller(y.installerStatus, s.ACTION_RESTART_NOW)
                 }
             }).button2({
                 text: "l10n.restartLater",
                 action: function() {
-                    b.sendResponseToInstaller(b.installerStatus, s.ACTION_CANCEL), b.cancel(), r.trigger(o.INSTALL_CANCEL)
+                    y.sendResponseToInstaller(y.installerStatus, s.ACTION_CANCEL), y.cancel(), r.trigger(o.INSTALL_CANCEL)
                 }
             }).installablePackagesData(t))
-        }, b.showInstallationContinueRebootRequired = function() {
-            b.setDialogModel(b.preset().title(S.name).html('<nv-updates-installation-reboot class="updates-updates-installation-reboot"></nv-updates-installation-reboot>').button1({
+        }, y.showInstallationContinueRebootRequired = function() {
+            y.setDialogModel(y.preset().title(E.name).html('<nv-updates-installation-reboot class="updates-updates-installation-reboot"></nv-updates-installation-reboot>').button1({
                 text: "l10n.restartNow",
                 action: function() {
-                    b.cancel(), b.rebootSystem()
+                    y.cancel(), y.rebootSystem()
                 }
             }))
-        }, b.showInstallationCanNotStartWithCloseBtn = function(e, t) {
-            b.setDialogModel(y("l10n.close", e, t))
-        }, b.showInstallationCanNotStartWithCancelBtn = function(e, t) {
-            b.setDialogModel(y("l10n.cancel", e, t))
+        }, y.showInstallationCanNotStartWithCloseBtn = function(e, t) {
+            y.setDialogModel(h("l10n.close", e, t))
+        }, y.showInstallationCanNotStartWithCancelBtn = function(e, t) {
+            y.setDialogModel(h("l10n.cancel", e, t))
         }
     }]);
     t.updatesInstallerDialogService = s
@@ -19465,7 +19520,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(162);
     var i = n(879),
         a = r(i);
-    n(617);
+    n(619);
     var s = o.ngUpdatesModule.directive("nvUpdatesInstallerDialog", function() {
         return {
             restrict: "E",
@@ -19540,7 +19595,7 @@ webpackJsonp([4], [function(e, t, n) {
     n(270), n(300), n(299);
     var i = n(881),
         a = r(i);
-    n(620);
+    n(622);
     var s = o.ngUpdatesModule.directive("nvUpdatesNotification", function() {
         return {
             restrict: "E",
@@ -19573,7 +19628,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(46),
         i = r(o),
         a = n(8);
-    n(371);
+    n(373);
     var s = a.ngUserProfileModule.controller("EditBadgesController", ["$scope", "$log", "$mdDialog", "gfeService", "telemetryService", "eventAggregator", "PROFILE_EVENTS", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_AFFINITY_ELEMENT", "TELEMETRY_CRIMSON_EVENT_NAMES", function(e, t, n, r, o, a, s, l, c, u) {
         function d(e) {
             g.groupedAchievements.title.id === e.id && (g.groupedAchievements.title.isFeatured = null, e.isFeatured = null, g.groupedAchievements.title = {
@@ -19721,13 +19776,17 @@ webpackJsonp([4], [function(e, t, n) {
         a = n(8),
         s = n(890),
         l = r(s);
-    n(634);
-    var c = a.ngUserProfileModule.controller("FeaturedRewardController", ["$scope", "$log", "$filter", "$mdDialog", "$state", "cevoService", "gfeService", "toastService", "eventAggregator", "telemetryService", "USER_PROFILE_EVENTS", "SWEEPSTAKE_EVENTS", "USER_PROFILE_DIALOG_NAMES", "PROFILE_EVENTS", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AFFINITY_ELEMENT", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_STATUS", "TELEMETRY_SCREENS", function(e, t, n, r, o, a, s, c, u, d, f, m, p, g, v, h, y, b, E) {
-        function S(e) {
-            e && e.name === p.SWEEPSTAKES_DIALOG && (M.openSweepstakesDialog(), e.name = null, e.id = null)
+    n(636);
+    var c = a.ngUserProfileModule.controller("FeaturedRewardController", ["$scope", "$log", "$filter", "$mdDialog", "$state", "cevoService", "gfeService", "toastService", "eventAggregator", "telemetryService", "USER_PROFILE_EVENTS", "SWEEPSTAKE_EVENTS", "USER_PROFILE_DIALOG_NAMES", "PROFILE_EVENTS", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AFFINITY_ELEMENT", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_STATUS", "TELEMETRY_SCREENS", "USER_PROFILE_ERRORS", function(e, t, n, r, o, a, s, c, u, d, f, m, p, g, v, h, y, b, E, S) {
+        function w(e) {
+            e && e.errorType == S.CURRENT_GIVEAWAY_EXPIRED && (G = !0)
         }
 
-        function w(e) {
+        function A(e) {
+            e && e.name === p.SWEEPSTAKES_DIALOG && (R.openSweepstakesDialog(), e.name = null, e.id = null)
+        }
+
+        function T(e) {
             d.push(v.USER_AFFINITY_EMPTY_STATE, {
                 action: y.LOAD_VIEW,
                 useCase: h.SWEEPSTAKE,
@@ -19737,56 +19796,61 @@ webpackJsonp([4], [function(e, t, n) {
             })
         }
 
-        function A(e) {
-            M.tokensEntered = e.tokensEntered, M.tokensAvailable = e.availableTokens, O = e.timestamp
-        }
-
-        function T(e) {
-            M.tokensAvailable = e.rewardTokens
-        }
-
         function C(e) {
-            _.isEmpty(e) || (M.giveaway = L, M.giveawayEntryDetails = e, M.tokensAvailable = +e.tokenBalance, M.giveawayEntryDetails.tokens && (O = +M.giveawayEntryDetails.enteredStampMicro, M.tokensEntered = M.giveawayEntryDetails.tokens), S(o.params.showDialog))
+            R.tokensEntered = e.tokensEntered, R.tokensAvailable = e.availableTokens, N = e.timestamp
         }
 
         function I(e) {
-            L = e[0];
+            R.tokensAvailable = e.rewardTokens
+        }
+
+        function x(e) {
+            _.isEmpty(e) || (R.giveaway = P, R.giveawayEntryDetails = e, R.tokensAvailable = +e.tokenBalance, R.giveawayEntryDetails.tokens && (N = +R.giveawayEntryDetails.enteredStampMicro, R.tokensEntered = R.giveawayEntryDetails.tokens), A(o.params.showDialog))
+        }
+
+        function D(e) {
+            P = e[0];
             try {
-                M.previewArtwork = L.assets.preview.file.url
+                R.previewArtwork = P.assets.preview.file.url
             } catch (e) {
-                M.previewArtwork = "#", R.error("exception while getting image", e.message, L)
+                R.previewArtwork = "#", L.error("exception while getting image", e.message, P)
             }
-            return a.getGiveawayEntryDetails(L.id).then(C).catch(function(e) {
-                R.error("getGiveawayEntryDetails failed", e), w(e)
+            return a.getGiveawayEntryDetails(P.id).then(x).catch(function(e) {
+                L.error("getGiveawayEntryDetails failed", e), T(e)
             })
         }
 
-        function x() {
-            a.getCurrentGiveaway().then(I).catch(function(e) {
-                R.error("getCurrentGiveaway failed", e), w(e)
+        function M() {
+            a.getCurrentGiveaway().then(D).catch(function(e) {
+                L.error("getCurrentGiveaway failed", e), T(e), w(e)
             }).finally(function() {
-                N = !1
-            }), u.on(f.OPEN_DIALOG, S), u.on(f.EXTENDED_PROFILE_REFRESH, T), u.on(m.TOKENS_ENTERED_CHANGED, A), u.on(g.CURRENT_GIVEAWAY_REFRESHED, I), u.on(g.GIVEAWAY_ENTRY_DETAILS_REFRESHED, C)
+                k = !1
+            }), u.on(f.OPEN_DIALOG, A), u.on(f.EXTENDED_PROFILE_REFRESH, I), u.on(m.TOKENS_ENTERED_CHANGED, C), u.on(g.CURRENT_GIVEAWAY_REFRESHED, D), u.on(g.GIVEAWAY_ENTRY_DETAILS_REFRESHED, x)
         }
 
-        function D() {
-            u.off(f.OPEN_DIALOG, S), u.off(f.EXTENDED_PROFILE_REFRESH, T), u.off(m.TOKENS_ENTERED_CHANGED, A), u.off(g.CURRENT_GIVEAWAY_REFRESHED, I), u.off(g.GIVEAWAY_ENTRY_DETAILS_REFRESHED, C)
+        function O() {
+            u.off(f.OPEN_DIALOG, A), u.off(f.EXTENDED_PROFILE_REFRESH, I), u.off(m.TOKENS_ENTERED_CHANGED, C), u.off(g.CURRENT_GIVEAWAY_REFRESHED, D), u.off(g.GIVEAWAY_ENTRY_DETAILS_REFRESHED, x)
         }
-        var M = this,
-            O = null,
-            R = t.getInstance("main.userProfile/FeaturedRewardController"),
-            N = !0,
-            L = null;
-        M.tokensAvailable = null, M.tokensEntered = 0, M.giveaway = null, M.giveawayEntryDetails = null, M.refreshGiveaway = function(e) {
-            R.info("Countdown ended with state-" + e + ". Refreshing..."), a.getCurrentGiveaway(!0).catch(function() {
-                M.giveaway = null, M.giveawayEntryDetails = null
+        var R = this,
+            N = null,
+            L = t.getInstance("main.userProfile/FeaturedRewardController"),
+            k = !0,
+            P = null,
+            G = !1;
+        R.tokensAvailable = null, R.tokensEntered = 0, R.giveaway = null, R.giveawayEntryDetails = null, R.STATE = {
+            NORMAL: "normal",
+            ERROR: "error",
+            EXPIRED: "expired"
+        }, R.refreshGiveaway = function(e) {
+            L.info("Countdown ended with state-" + e + ". Refreshing..."), a.getCurrentGiveaway(!0).catch(function(e) {
+                R.giveaway = null, R.giveawayEntryDetails = null, w(e)
             })
-        }, M.openSweepstakesDialog = function() {
+        }, R.openSweepstakesDialog = function() {
             var e;
             return s.onlineState.online ? (d.push(v.USER_AFFINITY_READ_MORE, {
                 action: y.READ_INFO,
                 useCase: h.SWEEPSTAKE,
-                description: M.giveaway && M.giveaway.title ? M.giveaway.title : ""
+                description: R.giveaway && R.giveaway.title ? R.giveaway.title : ""
             }), void r.show((e = {
                 template: l.default,
                 controller: "SweepstakesDialogController",
@@ -19794,23 +19858,23 @@ webpackJsonp([4], [function(e, t, n) {
                 bindToController: !0,
                 disableParentScroll: !0
             }, (0, i.default)(e, "bindToController", !0), (0, i.default)(e, "locals", {
-                giveaway: M.giveaway,
+                giveaway: R.giveaway,
                 tokens: {
-                    available: M.tokensAvailable || 0,
-                    entered: M.tokensEntered || 0
+                    available: R.tokensAvailable || 0,
+                    entered: R.tokensEntered || 0
                 }
-            }), e))) : (R.error("Offline. Ignoring sweepstake open request"), void c.showOffline())
-        }, M.updatedMoment = function() {
-            return n("convertUTCToTimeAgo")(O)
-        }, M.tokensNotEntered = function() {
-            return !N && 0 === M.tokensEntered
-        }, M.tokensAlreadyEntered = function() {
-            return !N && M.tokensEntered > 0
-        }, M.tokensEnteredStr = function() {
-            return 1 === M.tokensEntered ? "l10n.tokenEntered" : "l10n.tokensEntered"
-        }, M.emptyState = function() {
-            return !(N || M.giveaway && M.giveawayEntryDetails)
-        }, e.$on("$destroy", D), x()
+            }), e))) : (L.error("Offline. Ignoring sweepstake open request"), void c.showOffline())
+        }, R.updatedMoment = function() {
+            return n("convertUTCToTimeAgo")(N)
+        }, R.tokensNotEntered = function() {
+            return !k && 0 === R.tokensEntered
+        }, R.tokensAlreadyEntered = function() {
+            return !k && R.tokensEntered > 0
+        }, R.tokensEnteredStr = function() {
+            return 1 === R.tokensEntered ? "l10n.tokenEntered" : "l10n.tokensEntered"
+        }, R.getCurrentState = function() {
+            return R.giveaway && R.giveawayEntryDetails ? R.STATE.NORMAL : G ? R.STATE.EXPIRED : R.STATE.ERROR
+        }, e.$on("$destroy", O), M()
     }]);
     t.featuredRewardController = c
 }, function(e, t, n) {
@@ -19825,7 +19889,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvFeaturedReward = void 0;
     var o = n(8);
-    n(624);
+    n(626);
     var i = n(884),
         a = r(i);
     n(273), n(40);
@@ -19871,7 +19935,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(885),
         a = r(i);
-    n(626);
+    n(628);
     var s = o.ngUserProfileModule.component("nvLevelDetails", {
         bindings: {
             nvLevel: "=",
@@ -19897,7 +19961,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(237),
         i = r(o),
         a = n(8);
-    n(627);
+    n(629);
     var s = a.ngUserProfileModule.controller("LevelsDialogController", ["$log", "$mdDialog", "LEVELS", function(e, t, n) {
         var r, o = this,
             a = (e.getInstance("main.userProfile/LevelsDialogController"), r = {}, (0, i.default)(r, n.SILVER, ["l10n.tokensPerWeekOne"]), (0, i.default)(r, n.GOLD, ["l10n.tokensPerWeekThree"]), (0, i.default)(r, n.TITANIUM, ["l10n.tokensPerWeekEight"]), r);
@@ -19978,7 +20042,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(888),
         a = r(i);
-    n(630);
+    n(632);
     var s = o.ngUserProfileModule.component("nvMissionProgress", {
         bindings: {
             nvMission: "="
@@ -20000,7 +20064,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.missionTileController = void 0;
     var o = n(8);
-    n(629);
+    n(631);
     var i = n(887),
         a = r(i),
         s = o.ngUserProfileModule.controller("MissionTileController", ["$scope", "$state", "$mdDialog", "telemetryService", "eventAggregator", "MISSION_TYPE", "USER_PROFILE_EVENTS", "USER_PROFILE_DIALOG_NAMES", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AFFINITY_ELEMENT", function(e, t, n, r, o, i, s, l, c, u, d) {
@@ -20049,7 +20113,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(889),
         a = r(i);
-    n(632), n(631), n(321);
+    n(634), n(633), n(323);
     var s = o.ngUserProfileModule.component("nvMissionTile", {
         bindings: {
             nvMission: "="
@@ -20208,7 +20272,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = n(8),
         s = n(882),
         l = r(s);
-    n(622);
+    n(624);
     var c = a.ngUserProfileModule.controller("UserAchievementsController", ["$scope", "$state", "$log", "$mdDialog", "$q", "$filter", "cevoService", "eventAggregator", "telemetryService", "toastService", "PROFILE_EVENTS", "USER_PROFILE_DIALOG_NAMES", "USER_PROFILE_EVENTS", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_AFFINITY_ELEMENT", "TELEMETRY_CRIMSON_EVENT_NAMES", function(e, t, n, r, o, a, s, c, u, d, f, m, p, g, v, h) {
         function y(e) {
             e && e.name === m.BADGES_DIALOG && (C.viewAll(), e.name = null, e.id = null)
@@ -20321,7 +20385,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(891),
         a = r(i);
-    n(635);
+    n(637);
     var s = o.ngUserProfileModule.component("nvUserAchievements", {
         controller: "UserAchievementsController",
         controllerAs: "userAchievements",
@@ -20454,7 +20518,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(892),
         a = r(i);
-    n(637), n(642);
+    n(639), n(644);
     var s = o.ngUserProfileModule.component("nvUserActivityLog", {
         controller: "UserActivityLogController",
         controllerAs: "userActivityLog",
@@ -20512,7 +20576,7 @@ webpackJsonp([4], [function(e, t, n) {
         a = (o(i), n(8)),
         s = n(893),
         l = r(s);
-    n(639);
+    n(641);
     var c = a.ngUserProfileModule.component("nvUserGalleryDetails", {
         template: l.default,
         controller: "UserGalleryDetailsController",
@@ -20599,8 +20663,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function w() {
-            r.off(p.PROFILE_TAB_CHANGED, E), r.off(c.WINDOW_FOCUS, b),
-                o.active(!1)
+            r.off(p.PROFILE_TAB_CHANGED, E), r.off(c.WINDOW_FOCUS, b), o.active(!1)
         }
         var A = this,
             T = e.getInstance("main.userProfile/userGalleryController"),
@@ -20629,10 +20692,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserGallery = void 0;
     var o = n(8);
-    n(641);
+    n(643);
     var i = n(894),
         a = r(i);
-    n(644), n(364);
+    n(646), n(366);
     var s = o.ngUserProfileModule.component("nvUserGallery", {
         controller: "UserGalleryController",
         controllerAs: "userGallery",
@@ -20645,7 +20708,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.userGalleryTileController = void 0;
     var r = n(8);
-    n(640), n(357);
+    n(642), n(359);
     var o = r.ngUserProfileModule.controller("UserGalleryTileController", ["$log", "navigationalDialogService", "GALLERY_AUDIOTYPES", "preferencesService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "GALLERY_TYPES", function(e, t, n, r, o, i, a) {
         var s = this;
         e.getInstance("main.userProfile/userGalleryTileController");
@@ -20675,7 +20738,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserGalleryTile = void 0;
     var o = n(8);
-    n(643);
+    n(645);
     var i = n(895),
         a = r(i),
         s = o.ngUserProfileModule.component("nvUserGalleryTile", {
@@ -20766,7 +20829,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(8),
         i = n(896),
         a = r(i);
-    n(645), n(633);
+    n(647), n(635);
     var s = o.ngUserProfileModule.component("nvUserMissions", {
         controller: "UserMissionsController",
         controllerAs: "userMissionsCtrl",
@@ -20785,11 +20848,11 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.userProfileController = void 0;
     var o = n(8);
-    n(119), n(298), n(30), n(297), n(623);
+    n(119), n(298), n(30), n(297), n(625);
     var i = n(883),
         a = r(i);
     n(301);
-    var s = n(304),
+    var s = n(306),
         l = r(s),
         c = o.ngUserProfileModule.controller("UserProfileController", ["$scope", "$document", "$log", "$mdDialog", "$mdPanel", "$state", "$timeout", "dbCacheService", "dialogService", "eventAggregator", "cevoService", "jarvisService", "rewardsService", "COMMON_EVENTS", "DB_NAMES", "USER_PROFILE_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "TELEMETRY_AFFINITY_ELEMENT", "TELEMETRY_AFFINITY_ACTION", "USER_PROFILE_TAB_NAMES", "REWARDS_EVENTS", "IMAGE_UPDATE_STATE", "toastService", "$filter", function(e, t, n, r, o, i, s, c, u, d, f, m, p, g, v, h, y, b, E, S, w, A, T, C, I) {
             function x(e) {
@@ -20986,10 +21049,10 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserProfile = void 0;
     var o = n(8);
-    n(647);
+    n(649);
     var i = n(897),
         a = r(i);
-    n(652), n(650), n(625), n(654), n(638), n(646), n(636), n(656);
+    n(654), n(652), n(627), n(656), n(640), n(648), n(638), n(658);
     var s = o.ngUserProfileModule.component("nvUserProfile", {
         controller: "UserProfileController",
         controllerAs: "userProfile",
@@ -21010,7 +21073,7 @@ webpackJsonp([4], [function(e, t, n) {
     var o = n(46),
         i = r(o),
         a = n(8);
-    n(628);
+    n(630);
     var s = n(886),
         l = r(s);
     n(139);
@@ -21119,7 +21182,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserProfileStatus = void 0;
     var o = n(8);
-    n(649);
+    n(651);
     var i = n(898),
         a = r(i),
         s = o.ngUserProfileModule.component("nvUserProfileStatus", {
@@ -21167,7 +21230,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserProfileSummary = void 0;
     var o = n(8);
-    n(651);
+    n(653);
     var i = n(899),
         a = r(i),
         s = o.ngUserProfileModule.component("nvUserProfileSummary", {
@@ -21188,8 +21251,8 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.userRigController = void 0;
     var o = n(8);
-    n(22), n(370), n(301);
-    var i = n(304),
+    n(22), n(372), n(301);
+    var i = n(306),
         a = r(i),
         s = o.ngUserProfileModule.controller("UserRigController", ["$scope", "$log", "$mdDialog", "hardwareService", "rigService", "dbCacheService", "jarvisService", "eventAggregator", "COMMON_EVENTS", "DB_NAMES", function(e, t, n, r, o, i, s, l, c, u) {
             function d(e) {
@@ -21268,7 +21331,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvUserRig = void 0;
     var o = n(8);
-    n(653);
+    n(655);
     var i = n(900),
         a = r(i);
     n(139);
@@ -21305,7 +21368,7 @@ webpackJsonp([4], [function(e, t, n) {
         value: !0
     }), t.nvWinners = void 0;
     var o = n(8);
-    n(655);
+    n(657);
     var i = n(901),
         a = r(i),
         s = o.ngUserProfileModule.component("nvWinners", {
@@ -21326,22 +21389,22 @@ webpackJsonp([4], [function(e, t, n) {
     t = e.exports = n(6)(), t.push([e.id, ".nv-croppie-slider{max-width:300px}.nv-croppie-slider .md-thumb:after{border-width:0}md-slider:not([md-discrete]):not([disabled]).md-active .md-slider-wrapper .md-thumb.nv-croppie-thumb{transform:scale(.8)}", ""])
 }, function(e, t, n) {
     t = e.exports = n(6)(), t.push([e.id, "", ""])
-}, 662, function(e, t, n) {
-    t = e.exports = n(6)(), t.push([e.id, ".nv-ui-tour-popup:focus{outline:0;display:block}.nv-ui-tour-popup-orphan{position:fixed;top:50%;left:50%;margin:0;transform:translateX(-50%) translateY(-50%)}.nv-ui-tour-popup.nv-popover.bottom-left>.arrow,.nv-ui-tour-popup.nv-popover.top-left>.arrow{left:25px}.nv-ui-tour-popup.nv-popover.bottom-right>.arrow,.nv-ui-tour-popup.nv-popover.top-right>.arrow{left:auto;right:25px}.nv-ui-tour-popup.nv-popover.left-top>.arrow,.nv-ui-tour-popup.nv-popover.right-top>.arrow{top:25px}.nv-ui-tour-popup.nv-popover.left-bottom>.arrow,.nv-ui-tour-popup.nv-popover.right-bottom>.arrow{top:auto;bottom:25px}.nv-popover{position:absolute;top:0;left:0;z-index:20!important;display:none;width:400px;max-width:400px;padding:1px;font-size:14px;font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;background-color:#363636;-webkit-background-clip:padding-box;background-clip:padding-box;box-shadow:0 5px 10px rgba(0,0,0,.2)}.nv-popover-inner{min-width:400px;min-height:100px}.nv-popover.top{margin-top:-10px}.nv-popover.right{margin-left:10px}.nv-popover.bottom{margin-top:10px}.nv-popover.left{margin-left:-10px}.nv-popover-close-button{height:16px!important;width:16px!important;line-height:16px!important;font-size:16px!important;min-height:16px!important;min-width:16px!important}.nv-popover-content{padding:8px 16px}.nv-popover>.arrow,.nv-popover>.arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid}.nv-popover>.arrow{border-width:11px}.nv-popover>.arrow:after{content:'';border-width:10px}.nv-popover.bottom>.arrow:after,.nv-popover.left>.arrow:after,.nv-popover.right>.arrow:after,.nv-popover.top>.arrow:after{content:' '}.nv-popover.top>.arrow{bottom:-11px;left:50%;margin-left:-11px;border-top-color:#46505a;border-bottom-width:0}.nv-popover.top>.arrow:after{bottom:1px;margin-left:-10px;border-top-color:#46505a;border-bottom-width:0}.nv-popover.right>.arrow{top:50%;left:-11px;margin-top:-11px;border-right-color:#46505a;border-left-width:0}.nv-popover.right>.arrow:after{bottom:-10px;left:1px;border-right-color:#46505a;border-left-width:0}.nv-popover.bottom>.arrow{top:-11px;left:50%;margin-left:-11px;border-top-width:0;border-bottom-color:#46505a}.nv-popover.bottom>.arrow:after{top:1px;margin-left:-10px;border-top-width:0;border-bottom-color:#46505a}.nv-popover.left>.arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#46505a}.nv-popover.left>.arrow:after{right:1px;bottom:-10px;border-right-width:0;border-left-color:#46505a}.nv-popover-navigation{width:100%;height:52px}.nv-popover-step-indicator-container{padding:0 2px}.nv-popover-step-indicator{width:12px;height:4px}.ui-tour-backdrop{background-color:rgba(0,0,0,.5)}", ""])
+}, 664, function(e, t, n) {
+    t = e.exports = n(6)(), t.push([e.id, ".nv-ui-tour-popup:focus{outline:0;display:block}.nv-ui-tour-popup-orphan{position:fixed;top:50%;left:50%;margin:0;transform:translateX(-50%) translateY(-50%)}.nv-ui-tour-popup.nv-popover.bottom-left>.arrow,.nv-ui-tour-popup.nv-popover.top-left>.arrow{left:25px}.nv-ui-tour-popup.nv-popover.bottom-right>.arrow,.nv-ui-tour-popup.nv-popover.top-right>.arrow{left:auto;right:25px}.nv-ui-tour-popup.nv-popover.left-top>.arrow,.nv-ui-tour-popup.nv-popover.right-top>.arrow{top:25px}.nv-ui-tour-popup.nv-popover.left-bottom>.arrow,.nv-ui-tour-popup.nv-popover.right-bottom>.arrow{top:auto;bottom:25px}.nv-popover{position:absolute;top:0;left:0;z-index:20!important;display:none;width:400px;max-width:400px;padding:1px;font-size:14px;font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;background-color:#363636;-webkit-background-clip:padding-box;background-clip:padding-box;box-shadow:0 5px 10px rgba(0,0,0,.2)}.nv-popover-inner{min-width:400px;min-height:100px}.nv-popover.top{margin-top:-10px}.nv-popover.right{margin-left:10px}.nv-popover.bottom{margin-top:10px}.nv-popover.left{margin-left:-10px}.nv-popover-close-button{height:16px!important;width:16px!important;line-height:16px!important;font-size:16px!important;min-height:16px!important;min-width:16px!important}.nv-popover-content{padding:8px 16px}.nv-popover>.arrow,.nv-popover>.arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid}.nv-popover>.arrow{border-width:11px}.nv-popover>.arrow:after{content:'';border-width:10px}.nv-popover.bottom>.arrow:after,.nv-popover.left>.arrow:after,.nv-popover.right>.arrow:after,.nv-popover.top>.arrow:after{content:' '}.nv-popover.top>.arrow{bottom:-11px;left:50%;margin-left:-11px;border-top-color:#46505a;border-bottom-width:0}.nv-popover.top>.arrow:after{bottom:1px;margin-left:-10px;border-top-color:#46505a;border-bottom-width:0}.nv-popover.right>.arrow{top:50%;left:-11px;margin-top:-11px;border-right-color:#46505a;border-left-width:0}.nv-popover.right>.arrow:after{bottom:-10px;left:1px;border-right-color:#46505a;border-left-width:0}.nv-popover.bottom>.arrow{top:-11px;left:50%;margin-left:-11px;border-top-width:0;border-bottom-color:#46505a}.nv-popover.bottom>.arrow:after{top:1px;margin-left:-10px;border-top-width:0;border-bottom-color:#46505a}.nv-popover.left>.arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#46505a}.nv-popover.left>.arrow:after{right:1px;bottom:-10px;border-right-width:0;border-left-color:#46505a}.nv-popover-navigation{width:100%;height:52px}.nv-popover-step-indicator-container{padding:0 2px}.nv-popover-step-indicator{width:12px;height:4px}.ui-tour-backdrop{background-color:rgba(0,0,0,.5)}", ""]);
 }, , , , , function(e, t, n) {
     t = e.exports = n(6)(), t.push([e.id, ".small-notification-height{height:100px}.small-notification-image-width{width:178px}.small-notification-details{max-width:230px}.big-notification-header,.small-notification-header{pointer-events:auto}.large-notification-height{height:361px}.large-notification-image-height{height:253px}.notification-badge-container{width:24px;height:24px;left:-2px;top:6px}.md-button.md-icon-button.notification-menu-button{width:36px;margin-right:8px;margin-left:-8px}.notifications-menu-width{width:456px}.notifications-menu-height{height:500px}.notifications-menu-left-outline-width{width:1px}.notification-color-bar-width{width:4px}.notifications-md-menu-content{max-width:456px!important;max-height:500px!important;box-shadow:3px 3px 16px 0 rgba(0,0,0,.8)}.notifications-md-menu-content .notification-direction{top:-13px}.notifications-md-menu-content .notifications-md-list md-divider{border-top-width:2px;border-top-color:#0e0e0e}.notifications-md-menu-content .notifications-md-list .notification-item:hover{background-color:rgba(255,255,255,.1)!important}.notifications-ellipsis{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;line-height:20px;max-height:40px;-webkit-line-clamp:2;-moz-box-orient:vertical;-ms-box-orient:vertical;-webkit-box-orient:vertical}", ""])
 }, function(e, t, n) {
-    t = e.exports = n(6)(), t.push([e.id, "div.nv-custom-date-ctrl{padding-top:24px;padding-bottom:24px}div.nv-custom-date-ctrl h1{margin:0;padding-left:2px;font-size:12px;color:rgba(255,255,255,.45)!important}div.nv-custom-date-ctrl nv-date-field{padding-right:20px}div.nv-custom-date-ctrl nv-date-field input{border-bottom-color:#363636}div.nv-custom-date-ctrl input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;-moz-appearance:none;margin:0}div.nv-custom-date-ctrl nv-date-field md-select{width:auto;min-width:100px}div.nv-custom-date-ctrl .is-year-field{width:50px}div.nv-custom-date-ctrl .is-day-field{width:40px}div.nv-custom-date-ctrl nv-date-field label{text-transform:capitalize;color:rgba(255,255,255,.3)!important}div.nv-custom-date-ctrl nv-date-field md-select-value{text-transform:capitalize}div.nv-custom-date-ctrl nv-date-field .md-select-value{color:rgba(255,255,255,.45)}div.nv-custom-date-ctrl nv-date-field md-select.ng-valid .md-select-value,div.nv-custom-date-ctrl nv-date-field md-select.ng-valid.ng-pristine .md-select-value{color:#fff}div.nv-custom-date-ctrl nv-date-field md-select:not([disabled]):focus .md-select-value{border-bottom-color:#76b900!important}div.nv-custom-date-ctrl nv-date-field md-input-container.md-input-invalid .md-input:focus{border-bottom-color:#76b900}div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid.ng-touched .md-select-value{border-color:#b5291c!important}div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid .md-select-value,div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid.ng-pristine .md-select-value{color:rgba(255,255,255,.3)!important}div.nv-custom-date-ctrl .error-message{color:#b5291c}md-option{color:#ccc!important}div.nv-custom-date-ctrl nv-date-field md-input-container{padding:0}", ""]);
+    t = e.exports = n(6)(), t.push([e.id, "div.nv-custom-date-ctrl{padding-top:24px;padding-bottom:24px}div.nv-custom-date-ctrl h1{margin:0;padding-left:2px;font-size:12px;color:rgba(255,255,255,.45)!important}div.nv-custom-date-ctrl nv-date-field{padding-right:20px}div.nv-custom-date-ctrl nv-date-field input{border-bottom-color:#363636}div.nv-custom-date-ctrl input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;-moz-appearance:none;margin:0}div.nv-custom-date-ctrl nv-date-field md-select{width:auto;min-width:100px}div.nv-custom-date-ctrl .is-year-field{width:50px}div.nv-custom-date-ctrl .is-day-field{width:40px}div.nv-custom-date-ctrl nv-date-field label{text-transform:capitalize;color:rgba(255,255,255,.3)!important}div.nv-custom-date-ctrl nv-date-field md-select-value{text-transform:capitalize}div.nv-custom-date-ctrl nv-date-field .md-select-value{color:rgba(255,255,255,.45)}div.nv-custom-date-ctrl nv-date-field md-select.ng-valid .md-select-value,div.nv-custom-date-ctrl nv-date-field md-select.ng-valid.ng-pristine .md-select-value{color:#fff}div.nv-custom-date-ctrl nv-date-field md-select:not([disabled]):focus .md-select-value{border-bottom-color:#76b900!important}div.nv-custom-date-ctrl nv-date-field md-input-container.md-input-invalid .md-input:focus{border-bottom-color:#76b900}div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid.ng-touched .md-select-value{border-color:#b5291c!important}div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid .md-select-value,div.nv-custom-date-ctrl nv-date-field md-select.ng-invalid.ng-pristine .md-select-value{color:rgba(255,255,255,.3)!important}div.nv-custom-date-ctrl .error-message{color:#b5291c}md-option{color:#ccc!important}div.nv-custom-date-ctrl nv-date-field md-input-container{padding:0}", ""])
 }, function(e, t, n) {
-    t = e.exports = n(6)(), t.push([e.id, ".oobe-dialog,.oobe-oauth-login-pane{-webkit-backface-visibility:hidden;-webkit-user-drag:none}.oobe-dialog{width:790px;height:498px;-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}.oobe-dialog .title{padding-top:24px;position:relative}.oobe-dialog .title h1{margin:0 24px;font-family:Roboto-Light;font-size:24px;font-weight:300;-webkit-font-smoothing:antialiased;color:#fff;color:rgba(255,255,255,.9)}.oobe-dialog .subtitle{margin:8px 0 0 24px;font-size:10px;font-weight:400}.oobe-dialog form{position:relative}.oobe-dialog waiting-overlay{position:absolute;min-width:100%;min-height:100%;background-color:rgba(14,14,14,.7);z-index:5}.oobe-oauth-blocker-overlay{position:fixed;width:100%;height:100%;top:0;left:0;z-index:1000}.oobe-link-icon{position:relative}.oobe-link-icon .md-button{height:auto}.oobe-link-icon .md-button>img{position:absolute;right:12px;width:20px;height:auto;top:42px}.oobe-link-icon md-card{background-color:transparent;box-shadow:none;margin:5px auto auto;width:54px}.oobe-link-icon md-card:hover{box-shadow:none}.oobe-link-icon p{text-align:center;font-size:10px;margin:0}.oobe-dialog-scan .text-bottom-margin{margin-bottom:0}.oobe-dialog-scan .scan-top-margin{margin-top:8px}.oobe-loading-data{padding-top:60px}.oobe-loading-data>md-progress-circular{margin-top:38px}.oobe-login-pointer{cursor:pointer}.oobe-dialog-logo-margin{margin-top:150px;margin-left:190px;margin-bottom:40px;padding-left:0}.oobe-welcome-dialog{font-family:Roboto-Light!important;-webkit-font-smoothing:antialiased}.oobe-welcome-dialog-header{height:64px}.oobe-welcome-dialog-header p{color:rgba(255,255,255,.45);margin:3px 24px 0}.oobe-welcome-dialog .md-actions{margin-bottom:2px}.oobe-welcome-card-holder{width:263px;height:329px;position:relative}.oobe-welcome-card-holder img{height:100%;width:100%}.oobe-welcome-card-holder .oobe-welcome-overlay{position:absolute;height:80px;background-image:url(" + n(689) + ");width:100%;bottom:0}.oobe-welcome-overlay .overlay-grouper{width:60%;margin-left:20%;height:100%;line-height:80px;text-align:center}.oobe-welcome-overlay .overlay-text{font-size:12px;color:rgba(255,255,255,.9);display:inline-block;vertical-align:middle;line-height:normal}.oobe-login-left-side{width:320px;height:497px;background-image:url(" + n(686) + ");bottom:0}.oobe-blocked-message,.oobe-side-text{width:100%;height:165px;color:rgba(255,255,255,.75);font-family:Roboto!important;-webkit-font-smoothing:antialiased}.oobe-side-text{font-size:16px}.oobe-side-text p{padding-left:140px;padding-right:50px}.oobe-blocked-message{font-size:18px;text-align:center}.oobe-blocked-message p{padding-left:60px;padding-right:60px}.oobe-blocked-link{color:rgba(255,255,255,.75);font-family:Roboto!important;-webkit-font-smoothing:antialiased}.oobe-dialog-left-pane{width:320px;height:497px;overflow:hidden}.oobe-dialog-left-pane img{width:100%;height:100%}.oobe-dialog-right-pane .title h1{margin-top:0}.oobe-dialog-right-pane .title .title-logo{position:absolute;top:18px;left:24px;width:48px;height:48px;font-size:48px;line-height:48px}.oobe-dialog-right-pane .title .title-logo+h1{padding-left:64px}.oobe-dialog-right-pane .title button{width:auto;padding:0;margin:0}.oobe-dialog-right-pane .title .title-close{margin:12px 24px 0 0}.oobe-dialog-right-pane .title .button-close{width:auto;height:24px;font-size:24px}.oobe-dialog-right-pane .secondary-title{font-size:12px;margin:44px 0 16px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .secondary-title+.secondary-title{font-size:12px;margin:0 0 16px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .title.large{min-height:96px}.oobe-dialog-right-pane .title.blank{min-height:60px}.oobe-dialog-right-pane .content{margin:24px 0 0;padding:0 24px}.oobe-dialog-right-pane .login-content{margin:0;padding:0 24px}.oobe-dialog-right-pane .message-banner{margin-top:24px;height:50px;line-height:50px;background-color:#303030;padding-left:24px;padding-right:24px;box-shadow:inset 0 8px 8px -10px #000,inset 0 -8px 8px -10px #000}.oobe-dialog-right-pane .message-banner span{display:inline-block;vertical-align:middle;line-height:normal;font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .md-actions{position:relative;padding:20px 8px 8px}.oobe-dialog-right-pane .md-actions button{margin:0}.oobe-dialog-right-pane .md-actions .button-helper{position:absolute;top:0;left:24px;font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .input-helper{font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45);padding-left:2px;padding-top:4px}.oobe-dialog-right-pane .login-button{padding:4px 4px 2px;margin-bottom:4px;position:relative}.oobe-dialog-right-pane .login-button img{width:318px;height:62px}.oobe-dialog-right-pane .login-button[disabled]{cursor:default;-webkit-filter:grayscale(100%) opacity(30%)}.oobe-dialog-right-pane .login-text{left:60px;position:absolute;font-size:18px;top:50%;width:250px;-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);transform:translateY(-50%)}.oobe-dialog-right-pane .login-button:not([disabled]):hover{background-color:rgba(55,90,162,.5)}.oobe-dialog-right-pane .login-button:not([disabled]):focus{background-color:rgba(55,90,162,.5);outline:0}.oobe-dialog-progress-bar{height:8px;position:absolute;width:100%;z-index:101;color:#363636!important;background:#363636!important}.oobe-dialog-progress-bar .md-accent.foreground{color:#76b900!important}.oobe-dialog-progress-bar .md-accent.background{background-color:#76b900!important}.oobe-dialog-done-pane-content{margin-top:152px}.oobe-dialog-done-first-text-margin{margin-top:24px;margin-bottom:16px}.oobe-dialog-done-second-text-margin{margin-top:0;margin-bottom:5px}.oobe-dialog-done-third-text-margin{margin-top:0;margin-bottom:0}.oobe-dialog-done-nogames-icon{opacity:.45}.oobe-dialog-done-scan-text-margin{margin-top:10px;margin-bottom:16px}.oobe-dialog-right-pane md-input-container.md-icon-right .md-errors-spacer+md-icon{margin-top:18px!important;color:#a9a9a9;color:rgba(255,255,255,.75)}.oobe-dialog-right-pane md-input-container+md-input-container.md-icon-right .md-errors-spacer+md-icon{margin-top:32px!important;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane md-icon.icon-eye{line-height:20px;min-height:20px;min-width:20px}.oobe-dialog-right-pane md-checkbox.md-checked .md-icon:after{left:6.67px;top:2.22px}.oobe-dialog-right-pane md-input-container.md-input-invalid label{color:gray;color:rgba(255,255,255,.3)}.oobe-dialog-right-pane md-input-container+md-input-container{padding-top:18px}.oobe-dialog-right-pane nv-custom-date{padding-bottom:14px}.forgot-password{position:absolute;left:10px;padding-left:8px!important;padding-right:8px!important;margin-top:0!important}.oobe-dialog a.in-app-link{color:#76b900;text-decoration:none}.oobe-panel{box-shadow:0 7px 8px -4px rgba(0,0,0,.2),0 13px 19px 2px rgba(0,0,0,.14),0 5px 24px 4px rgba(0,0,0,.12)}.shadow-top{box-shadow:0 -10px 30px -5px rgba(0,0,0,.75)}.oobe-share-text-list{margin-top:0!important;padding-left:0!important}.oobe-done-qr-code{width:200px;height:320px;position:absolute;right:0;top:0;left:0;bottom:0;margin:auto}.oobe-done-qr-code-description{font-size:10px;margin-bottom:10px}.oobe-done-qr-code-scan{padding:10px;margin:0 0 12px}.oobe-oauth-login-pane{width:424px;height:608px}.oobe-oauth-login-image{background-image:url(" + n(683) + ")}.oobe-oauth-login-text{font-size:16px;height:144px;width:100%;display:flex;padding-left:144px;padding-right:48px;align-items:center;margin-top:10px;color:rgba(255,255,255,.75)}.oobe-oauth-login-top-filler{height:94px}.oobe-oauth-login-scrim{position:absolute;top:104px;height:452px;width:424px;background-color:rgba(0,0,0,.6)}.oobe-oauth-message-banner{margin:0 24px;background-color:#2e2e2e;padding:24px}", ""])
+    t = e.exports = n(6)(), t.push([e.id, ".oobe-dialog,.oobe-oauth-login-pane{-webkit-backface-visibility:hidden;-webkit-user-drag:none}.oobe-dialog{width:790px;height:498px;-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}.oobe-dialog .title{padding-top:24px;position:relative}.oobe-dialog .title h1{margin:0 24px;font-family:Roboto-Light;font-size:24px;font-weight:300;-webkit-font-smoothing:antialiased;color:#fff;color:rgba(255,255,255,.9)}.oobe-dialog .subtitle{margin:8px 0 0 24px;font-size:10px;font-weight:400}.oobe-dialog form{position:relative}.oobe-dialog waiting-overlay{position:absolute;min-width:100%;min-height:100%;background-color:rgba(14,14,14,.7);z-index:5}.oobe-oauth-blocker-overlay{position:fixed;width:100%;height:100%;top:0;left:0;z-index:1000}.oobe-link-icon{position:relative}.oobe-link-icon .md-button{height:auto}.oobe-link-icon .md-button>img{position:absolute;right:12px;width:20px;height:auto;top:42px}.oobe-link-icon md-card{background-color:transparent;box-shadow:none;margin:5px auto auto;width:54px}.oobe-link-icon md-card:hover{box-shadow:none}.oobe-link-icon p{text-align:center;font-size:10px;margin:0}.oobe-dialog-scan .text-bottom-margin{margin-bottom:0}.oobe-dialog-scan .scan-top-margin{margin-top:8px}.oobe-loading-data{padding-top:60px}.oobe-loading-data>md-progress-circular{margin-top:38px}.oobe-login-pointer{cursor:pointer}.oobe-dialog-logo-margin{margin-top:150px;margin-left:190px;margin-bottom:40px;padding-left:0}.oobe-welcome-dialog{font-family:Roboto-Light!important;-webkit-font-smoothing:antialiased}.oobe-welcome-dialog-header{height:64px}.oobe-welcome-dialog-header p{color:rgba(255,255,255,.45);margin:3px 24px 0}.oobe-welcome-dialog .md-actions{margin-bottom:2px}.oobe-welcome-card-holder{width:263px;height:329px;position:relative}.oobe-welcome-card-holder img{height:100%;width:100%}.oobe-welcome-card-holder .oobe-welcome-overlay{position:absolute;height:80px;background-image:url(" + n(691) + ");width:100%;bottom:0}.oobe-welcome-overlay .overlay-grouper{width:60%;margin-left:20%;height:100%;line-height:80px;text-align:center}.oobe-welcome-overlay .overlay-text{font-size:12px;color:rgba(255,255,255,.9);display:inline-block;vertical-align:middle;line-height:normal}.oobe-login-left-side{width:320px;height:497px;background-image:url(" + n(688) + ");bottom:0}.oobe-blocked-message,.oobe-side-text{width:100%;height:165px;color:rgba(255,255,255,.75);font-family:Roboto!important;-webkit-font-smoothing:antialiased}.oobe-side-text{font-size:16px}.oobe-side-text p{padding-left:140px;padding-right:50px}.oobe-blocked-message{font-size:18px;text-align:center}.oobe-blocked-message p{padding-left:60px;padding-right:60px}.oobe-blocked-link{color:rgba(255,255,255,.75);font-family:Roboto!important;-webkit-font-smoothing:antialiased}.oobe-dialog-left-pane{width:320px;height:497px;overflow:hidden}.oobe-dialog-left-pane img{width:100%;height:100%}.oobe-dialog-right-pane .title h1{margin-top:0}.oobe-dialog-right-pane .title .title-logo{position:absolute;top:18px;left:24px;width:48px;height:48px;font-size:48px;line-height:48px}.oobe-dialog-right-pane .title .title-logo+h1{padding-left:64px}.oobe-dialog-right-pane .title button{width:auto;padding:0;margin:0}.oobe-dialog-right-pane .title .title-close{margin:12px 24px 0 0}.oobe-dialog-right-pane .title .button-close{width:auto;height:24px;font-size:24px}.oobe-dialog-right-pane .secondary-title{font-size:12px;margin:44px 0 16px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .secondary-title+.secondary-title{font-size:12px;margin:0 0 16px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .title.large{min-height:96px}.oobe-dialog-right-pane .title.blank{min-height:60px}.oobe-dialog-right-pane .content{margin:24px 0 0;padding:0 24px}.oobe-dialog-right-pane .login-content{margin:0;padding:0 24px}.oobe-dialog-right-pane .message-banner{margin-top:24px;height:50px;line-height:50px;background-color:#303030;padding-left:24px;padding-right:24px;box-shadow:inset 0 8px 8px -10px #000,inset 0 -8px 8px -10px #000}.oobe-dialog-right-pane .message-banner span{display:inline-block;vertical-align:middle;line-height:normal;font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .md-actions{position:relative;padding:20px 8px 8px}.oobe-dialog-right-pane .md-actions button{margin:0}.oobe-dialog-right-pane .md-actions .button-helper{position:absolute;top:0;left:24px;font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane .input-helper{font-size:11px;color:#a9a9a9;color:rgba(255,255,255,.45);padding-left:2px;padding-top:4px}.oobe-dialog-right-pane .login-button{padding:4px 4px 2px;margin-bottom:4px;position:relative}.oobe-dialog-right-pane .login-button img{width:318px;height:62px}.oobe-dialog-right-pane .login-button[disabled]{cursor:default;-webkit-filter:grayscale(100%) opacity(30%)}.oobe-dialog-right-pane .login-text{left:60px;position:absolute;font-size:18px;top:50%;width:250px;-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);transform:translateY(-50%)}.oobe-dialog-right-pane .login-button:not([disabled]):hover{background-color:rgba(55,90,162,.5)}.oobe-dialog-right-pane .login-button:not([disabled]):focus{background-color:rgba(55,90,162,.5);outline:0}.oobe-dialog-progress-bar{height:8px;position:absolute;width:100%;z-index:101;color:#363636!important;background:#363636!important}.oobe-dialog-progress-bar .md-accent.foreground{color:#76b900!important}.oobe-dialog-progress-bar .md-accent.background{background-color:#76b900!important}.oobe-dialog-done-pane-content{margin-top:152px}.oobe-dialog-done-first-text-margin{margin-top:24px;margin-bottom:16px}.oobe-dialog-done-second-text-margin{margin-top:0;margin-bottom:5px}.oobe-dialog-done-third-text-margin{margin-top:0;margin-bottom:0}.oobe-dialog-done-nogames-icon{opacity:.45}.oobe-dialog-done-scan-text-margin{margin-top:10px;margin-bottom:16px}.oobe-dialog-right-pane md-input-container.md-icon-right .md-errors-spacer+md-icon{margin-top:18px!important;color:#a9a9a9;color:rgba(255,255,255,.75)}.oobe-dialog-right-pane md-input-container+md-input-container.md-icon-right .md-errors-spacer+md-icon{margin-top:32px!important;color:#a9a9a9;color:rgba(255,255,255,.45)}.oobe-dialog-right-pane md-icon.icon-eye{line-height:20px;min-height:20px;min-width:20px}.oobe-dialog-right-pane md-checkbox.md-checked .md-icon:after{left:6.67px;top:2.22px}.oobe-dialog-right-pane md-input-container.md-input-invalid label{color:gray;color:rgba(255,255,255,.3)}.oobe-dialog-right-pane md-input-container+md-input-container{padding-top:18px}.oobe-dialog-right-pane nv-custom-date{padding-bottom:14px}.forgot-password{position:absolute;left:10px;padding-left:8px!important;padding-right:8px!important;margin-top:0!important}.oobe-dialog a.in-app-link{color:#76b900;text-decoration:none}.oobe-panel{box-shadow:0 7px 8px -4px rgba(0,0,0,.2),0 13px 19px 2px rgba(0,0,0,.14),0 5px 24px 4px rgba(0,0,0,.12)}.shadow-top{box-shadow:0 -10px 30px -5px rgba(0,0,0,.75)}.oobe-share-text-list{margin-top:0!important;padding-left:0!important}.oobe-done-qr-code{width:200px;height:320px;position:absolute;right:0;top:0;left:0;bottom:0;margin:auto}.oobe-done-qr-code-description{font-size:10px;margin-bottom:10px}.oobe-done-qr-code-scan{padding:10px;margin:0 0 12px}.oobe-oauth-login-pane{width:424px;height:608px}.oobe-oauth-login-image{background-image:url(" + n(685) + ")}.oobe-oauth-login-text{font-size:16px;height:144px;width:100%;display:flex;padding-left:144px;padding-right:48px;align-items:center;margin-top:10px;color:rgba(255,255,255,.75)}.oobe-oauth-login-top-filler{height:94px}.oobe-oauth-login-scrim{position:absolute;top:104px;height:452px;width:424px;background-color:rgba(0,0,0,.6)}.oobe-oauth-message-banner{margin:0 24px;background-color:#2e2e2e;padding:24px}", ""])
 }, function(e, t, n) {
     t = e.exports = n(6)(), t.push([e.id, ".preferences-sidebar-container button,.preferences-sidebar-container md-list-item .md-no-style.md-button{min-height:48px}#overlay,.preferences-shield-edit-dialog .image-container,.preferences-shield-edit-dialog .image-container md-icon,md-switch .md-container{cursor:pointer}.preferences-sidebar-container{width:186px}.preferences-sidebar-container .md-button-selected{background-color:#191919}.preferences-sidebar-container md-list-item .md-list-item-inner{padding-left:20px}.preferences-items-container{padding:24px 12px 0}.preferences-preference-section{padding:10px 16px 16px;margin:0 12px 24px}.preferences-share-overlay{width:calc(100% - 24px);left:12px;height:calc(100% - 24px)}.preferences-preference-section .margin-zero,.preferences-preference-section h3{margin:0}.preferences-preference-section h3.feature-title{margin:0 0 0 32px;font-weight:400}.preferences-preference-section h4{margin:0;font-weight:400;text-transform:uppercase}.preferences-preference-section h5{margin-top:11px;margin-bottom:0;font-weight:400}.preferences-preference-section .md-list-item-text p{margin:4px 0 0 32px;font-weight:400}.preferences-preference-section .scan-location-content .md-list-item-text p{margin:0}.preferences-preference-section .md-3-line p{margin-top:8px;margin-bottom:8px;margin-left:8px;font-weight:400}.preferences-preference-section .md-3-line md-icon,.preferences-preference-section .md-3-line svg{margin:8px 0 8px 48px;line-height:16px;height:16px;width:16px}.preferences-preference-section .preferences-feature-header-section{margin:24px 0 24px 32px}.preferences-preference-section .preferences-feature-description-section{padding:0 0 24px;margin:0}.preferences-preference-section .preferences-feature-description-section .preferences-feature-requirement{padding-left:64px;padding-right:16px;margin-bottom:16px}.preferences-preference-section .preferences-feature-description-section .preferences-feature-requirement .md-16{min-height:16px;min-width:16px;height:16px;width:16px;line-height:16px;font-size:16px!important}.preferences-preference-section .preferences-feature-description-section .preferences-feature-requirement .requirement-recommendation-icon-container{min-width:16px;min-height:16px}.preferences-preference-section .preferences-feature-description-section .preferences-feature-requirement .requirement-recommendation-icon-container .recommendation-circle{width:10px;height:10px;background-color:rgba(255,255,255,.45);border-radius:50%}.preferences-preference-section .preferences-feature-description-section .preferences-feature-requirement .feature-driver-update-button{min-width:120px}.preferences-preference-section .requirement-link-container{padding:8px 0 0;margin:0}.preferences-preference-section .top-margin-checkboxes{margin-bottom:16px}.preferences-preference-section .margin-mid-checkbox{margin-bottom:16px;margin-top:0}.preferences-preference-section md-switch{float:right;margin-top:-8px;margin-right:-8px;padding:0}.preferences-preference-section md-switch .md-thumb{height:16px;width:16px}.preferences-preference-section md-switch .md-bar{height:12px;width:27px;left:2px;top:4px}.preferences-preference-section md-checkbox{line-height:normal;margin:0;padding:4pt 0}.preferences-preference-section md-icon.feature-notready-overlay{margin-top:16px;margin-left:16px}.preferences-preference-section .feature-readiness-content{margin-left:-16px;margin-right:-16px}.preferences-preference-section .preferences-section-content .feature-readiness-content a{margin-left:32px}.preferences-preference-section .language-section p{line-height:36px}.preferences-preference-section .language-section md-input-container{margin-bottom:8px}.preferences-preference-section .language-section .md-select-value{flex-grow:0}.preferences-preference-section .language-section .language-section-button{display:inline-block;text-align:right}.preferences-preference-section .about-section img{width:170px;height:40px}.preferences-preference-section .about-section .gfe-version-container p{margin-left:0;margin-bottom:0}.preferences-preference-section .about-section .gfe-version-container{margin:20px 0 0}.preferences-preference-section .download-progress p{margin-left:0}.preferences-preference-section .about-section .margin-between-links{margin-top:8px}.preferences-preference-section .about-section .links-top-margin{margin-top:16px}.preferences-preference-section .about-section md-divider{border-top-color:#111}.preferences-preference-section .about-section md-divider.color-black-hue-2{border-top-color:#3a3a3a}.preferences-preference-section .about-section .title-content-top-margin{margin-top:2px}.preferences-preference-section .preferences-section-header,.preferences-preference-section .preferences-section-header-button,.preferences-preference-section .preferences-section-header-description,.preferences-preference-section .preferences-section-header-description-switch,.preferences-preference-section .preferences-section-header-switch{margin:0 0 12px}.preferences-preference-section .preferences-section-content{padding:8px 0 12px}.preferences-preference-section .preferences-about-section-content{padding:12px 0}.preferences-preference-section .preferences-section-header-description p,.preferences-preference-section .preferences-section-header-description-switch p{margin-top:8px;line-height:10px}.preferences-preference-section .preferences-section-header-description md-switch,.preferences-preference-section .preferences-section-header-description-switch md-switch,.preferences-preference-section .preferences-section-header-switch md-switch{margin-bottom:0}.preferences-accounts-edit-avatar .avatar-image{min-height:110px}.preferences-accounts-edit-avatar .avatar-image-error{height:150px}.preferences-accounts-edit-avatar .avatar-image-error p{width:60%;text-align:center}.preferences-accounts-edit-avatar .avatar-list-item{float:left}.preferences-system-info{padding-bottom:4px}.preferences-preference-section .preferences-system-info .margin-between-links{margin-bottom:12px}.preferences-preference-section .preferences-system-info .span-align-vertical{display:inline-block;vertical-align:middle;margin-left:5px}.preferences-preference-section .preferences-system-info .subitem-margin{margin-top:5px;margin-left:26px}.preferences-preference-section .feature-readiness-container .state-info-content-height,.preferences-preference-section .preferences-system-info .state-info-content-height{height:300px}.preferences-preference-section .language-section md-icon,.preferences-preference-section .preferences-system-info md-icon{min-height:18px;min-width:18px;height:18px;width:18px;line-height:18px;font-size:18px}.range-slider-left md-slider,.range-slider-right md-slider{min-width:0}.preferences-preference-section .preferences-section-content .games-scan-container{height:112px;margin-top:24px;margin-bottom:32px}.preferences-preference-section .preferences-section-content .games-scan-container h4:first-child{padding-top:10px}.preferences-preference-section .preferences-section-content .games-scan-container h4:nth-child(2){padding:16px 0}.preferences-preference-section .preferences-section-content .games-scan-divider{display:inline-block;width:1px;height:100%}.preferences-preference-section .preferences-section-content .scan-location-section{max-height:98px;height:98px}.preferences-preference-section .scan-location-content md-list{padding:0;height:98px}.preferences-preference-section .scan-location-content md-list-item{min-height:24px;height:24px}.preferences-preference-section .scan-location-content .scan-location-md-list-item-button .md-button{height:24px;min-height:11px;line-height:24px;text-align:left}.preferences-preference-section .scan-location-content md-list-item .md-list-item-inner{margin-right:0;min-height:24px;height:24px;padding:0}.preferences-preference-section .scan-location-content md-list-item p{padding-left:8px;padding-right:8px}.preferences-preference-section .preferences-section-content .accounts-section-button,.preferences-preference-section .preferences-section-content .language-section-button,.preferences-preference-section .preferences-section-content .scan-location-content-margin,.preferences-preference-section .preferences-section-content .shield-section-button{margin-left:-16px;margin-right:-16px;margin-top:16px;height:36px}.preferences-preference-section .share-section-button{height:36px;margin-bottom:-28px;margin-left:-16px;margin-right:-16px}.preferences-preference-section .preferences-section-content .accounts-section-button md-button,.preferences-preference-section .preferences-section-content .language-section-button .md-button,.preferences-preference-section .preferences-section-content .scan-location-content-margin .md-button,.preferences-preference-section .preferences-section-content .shield-section-button .md-button,.preferences-preference-section .share-section-button .md-button{margin:8px}.preferences-preference-section .scan-location-section button.md-no-style{background:0 0}.preferences-preference-section .scan-location-content .scan-location-md-list-item-button .md-button:hover{background-color:rgba(91,91,91,.5);box-shadow:0 4px 5px -2px rgba(0,0,0,.75)}.preferences-preference-section .preferences-md-icon .md-container{height:16px;width:16px}.preferences-preference-section .download-progress .md-container{height:3px;width:100%}.preferences-preference-section .download-details-status-container p{margin-top:6px;margin-bottom:0;margin-left:0}.preferences-preference-section .preferences-md-icon md-checkbox div{line-height:1.64}.preferences-preference-section .preferences-md-icon md-checkbox{min-height:16px;line-height:1.64;padding:0}.preferences-preference-section .preferences-md-icon .md-icon,.preferences-preference-section .preferences-md-icon md-icon,.preferences-preference-section .preferences-section-header-button md-icon{height:16px;width:16px;line-height:16px;font-size:16px}.preferences-preference-section .preferences-section-header-button .md-icon-button{min-height:16px;height:16px;width:16px;line-height:0;font-size:16px;margin-top:-4px;margin-right:-2px}.preferences-preference-section .preferences-md-icon .md-label{margin-left:22px}.preferences-preference-section .preferences-md-icon .external-link-icon{font-size:10px}.preferences-accounts-section .accounts-section-personal-info .md-errors-spacer{min-height:0}.preferences-accounts-section .accounts-section-avatar img{width:80px;height:80px;margin:0 24px 24px}.preferences-accounts-section .accounts-section-avatar img+p{padding-bottom:16px}.preferences-accounts-section .accounts-section-personalInfo p{margin-bottom:8px}.preferences-accounts-section .accounts-section-personalInfo .header{min-height:36px}.preferences-accounts-section .accounts-section-personalInfo input:disabled{background-image:none}.preferences-accounts-section .accounts-section-personalInfo .details-spacing,.preferences-accounts-section .accounts-section-personalInfo md-input-container{margin-bottom:16px}.preferences-accounts-section .accounts-section-personalInfo md-input-container .md-input{margin-bottom:0;margin-top:0;padding:0 0 8px;max-height:22px;line-height:12px}.preferences-accounts-section .accounts-section-security p{margin-bottom:8px}.preferences-accounts-section .accounts-section-security md-checkbox{margin-top:8px}.preferences-accounts-section .preferences-accounts-devices button{margin:0}.preferences-accounts-section .accounts-section-newsletter md-progress-circular{margin:0 auto}.preferences-shield-tile{margin:0 8px 8px 0}.preferences-shield-tile md-card-content:focus,.preferences-shield-tile:focus{outline:-webkit-focus-ring-color auto 5px;outline-color:transparent!important}.preferences-shield-tile .item-container .shield-tile-content-outline:focus,.preferences-shield-tile.shield-tile-content-outline md-card,.preferences-shield-tile.shield-tile-content-outline:focus md-card{outline:-webkit-focus-ring-color auto 5px;outline-color:#76b900!important}.preferences-shield-tile md-card:focus md-card-content,.preferences-shield-tile md-card:hover md-card-content{background-color:#414141!important}.preferences-shield-tile.shield-tile-content-outline md-card-content{background-color:#2d2d2d!important}.preferences-preference-section .shield-section h4{margin-bottom:8px}.preferences-preference-section .shield-section md-content{padding:1px 0 0 1px}.preferences-preference-section .shield-section .appcollector-content-height{height:357px}.preferences-preference-section .shield-section .empty-app-list{height:348px;border-style:solid;border-width:1px;border-color:#3c3c3c;margin-bottom:8px;width:100%}.preferences-preference-section .button-text-padding .md-button:not(.md-icon-button){padding-left:16px;padding-right:16px}.preferences-shield-tile .item-container{width:94px;height:170px;display:block}.preferences-shield-tile .item-container img{width:94px;height:134px;display:block}.preferences-shield-tile .item-container .shield-tile-img-border{border:1px solid transparent}.preferences-shield-tile .item-container md-card-content{width:94px;height:36px;display:block;padding:0}.preferences-shield-tile .item-container p{font-size:10px;padding:5px}.preferences-preference-section .preferences-games-battery-boost .battery-boost-content-title,.preferences-preference-section .preferences-games-quiet-mode .quiet-mode-content-title{height:16px;line-height:16px}.preferences-shield-edit-dialog{width:425px;height:270px}.preferences-shield-edit-dialog img{width:94px;min-height:134px;display:block}.preferences-shield-edit-dialog .container{margin:24px}.preferences-shield-edit-dialog md-input-container{margin:0}.preferences-shield-edit-dialog .boxart{margin-left:16px}.preferences-shield-edit-dialog .custom-label-heading{font-size:10px;font-weight:400;text-shadow:none;bottom:inherit;color:rgba(255,255,255,.7);padding-left:3px}.preferences-shield-edit-dialog .custom-label-content{font-size:12px;font-weight:400;text-shadow:none;bottom:inherit;color:#fff;padding-left:3px;margin-top:8px;margin-bottom:8px}.preferences-shield-edit-dialog md-icon:focus{outline:0;border:none}.preferences-shield-edit-dialog .image-container>img{display:block;width:94px;height:134px}.preferences-shield-edit-dialog .image-container:hover{box-shadow:0 3px 15px 1px rgba(0,0,0,.75);color:rgba(0,0,0,.75);opacity:.75}.preferences-shield-edit-dialog .image-container:hover md-icon{color:#fff!important}.preferences-shield-edit-dialog .image-container md-icon[selected],.preferences-shield-edit-dialog .image-container:active,.preferences-shield-edit-dialog .image-container:focus{outline-color:transparent!important}.preferences-preference-section .share-section p{line-height:1.64;margin-top:8px;margin-bottom:-3.5px}.preferences-preference-section .share-section md-icon{margin:0}.preferences-preference-section .share-section .share-hotkey-info{padding-top:24px;padding-bottom:24px}.preferences-preference-section .share-section .share-hotkey-info p{margin-top:3px!important;margin-bottom:0!important;margin-left:6px;font-size:10px}.preferences-share-alert-icon{margin-left:5px!important;line-height:10px!important}.preferences-col-1,.preferences-col-2{float:left;width:90%}@media only screen and (min-width:900px){.preferences-col-1,.preferences-col-2{width:50%}.preferences-sidebar-container{width:236px}}.preference-gfeCheckForUpdate-container,.preferences-preference-section .download-details-container,.preferences-preference-section .download-progress{width:100%}.preferences-preference-section .preference-gfe-check-for-update-container .md-container{width:100%;height:3px}.preferences-preference-section .preference-gfe-check-for-update-container md-progress-linear{margin-left:0}.preferences-preference-section .about-section md-checkbox{margin-bottom:12px}.shield-troubleshooting-link{margin-top:12px}.preferences-functional-data-consent-dialog{min-height:445px;width:528px}.preferences-functional-data-consent-dialog .dialog-service-dialog-contents-footer{min-height:50px!important}.preferences-licence-agreement{min-height:445px;width:528px}.preferences-led .picker{float:left;border:0}.preferences-led .controls{float:right;margin:10px}.preferences-led .controls>div{padding:5px}.preferences-led .controls label{margin-right:10px}.preferences-led .preview,.preferences-led .secondPreview{cursor:pointer;height:30px;width:50px}preferences-led .cancel-apply-container{height:52px}preferences-led .cancel-apply-container button{margin-top:8px;margin-bottom:8px}.preferences-led .preferences-preference-section .preferences-led-switch md-switch{margin-top:7px;margin-bottom:0;margin-left:8px}.preferences-led .preferences-preference-section .led-input-container-position{width:150px;height:50px;margin-top:0;margin-bottom:50px}.preferences-led .preferences-preference-section .section-divider{display:inline-block;width:1px;height:auto;margin:10px}#overlay{display:block;z-index:0;position:absolute;width:100%;height:100%;background-color:transparent;opacity:.5;filter:alpha(opacity=0)}.range-slider-container{position:relative;width:100%;height:48px}.range-slider-left{position:absolute;top:0;width:100%}.range-slider-left md-slider .md-thumb-container{z-index:10}.range-slider-left md-slider .md-track{background-color:#76b900}.range-slider-left md-slider .md-track.md-track-fill,.range-slider-right md-slider .md-track-container .md-track{background-color:#9e9e9e}.range-slider-right{position:absolute;top:0;right:0}.range-slider-right md-slider .md-thumb-container{transition:-webkit-transform 0s linear;transition:transform 0s linear}.range-slider-right md-slider .md-track-container .md-track.md-track-fill{background-color:#76b900;transition:none}md-slider .md-slider-wrapper{width:100%}", ""])
 }, function(e, t, n) {
     t = e.exports = n(6)(), t.push([e.id, ".rewards-dialog.rewards-external-page-container,.rewards-dialog.rewards-redeem-reward{background-image:none;min-height:497px;max-height:497px;min-width:789px;max-width:789px;position:relative;border-radius:0}.rewards-redeem-reward .rewards-dialog-image-container,.rewards-redeem-reward img{width:320px;height:497px}.rewards-redeem-reward .coupon-redemption-header{height:78px}.rewards-redeem-reward .coupon-redemption-header .md-subheader{margin:36px 24px 24px;font-size:18px;font-weight:300}.rewards-redeem-reward .coupon-redemption-header .md-subheader-inner{padding:0}.rewards-external-page-container .iframe-top-toolbar .close-button,.rewards-redeem-reward .coupon-redemption-header .close-button{position:absolute;left:auto;right:8px;top:8px;min-height:24px;max-height:24px}.rewards-redeem-reward .coupon-redemption-block-error-container{height:367px}.rewards-redeem-reward .coupon-redemption-block-error-container .block-error-base-icon{height:32px;line-height:32px;font-size:32px;width:32px}.rewards-redeem-reward .coupon-redemption-block-error-container nv-overlay{height:16px;width:16px;top:155px;left:235px;opacity:1}.rewards-redeem-reward .coupon-redemption-block-error-container .block-error-overlay-icon{height:16px;line-height:16px;width:16px;font-size:16px;opacity:1}.rewards-redeem-reward .coupon-redemption-block-error-container .block-error-message{margin-top:18px}.rewards-redeem-reward .coupon-redemption-block-error-container a{margin-top:12px}.rewards-redeem-reward .coupon-redemption-error-actions{height:52px}.rewards-external-page-container .iframe-top-toolbar{height:48px}.rewards-external-page-container .iframe-scrollbar-spacer{height:24px}.coupon-validation-container{height:56px;margin-top:30px;margin-bottom:10px}.coupon-validation-container .coupon-code-input,.coupon-validation-container .coupon-code-input:focus{height:36px;width:400px;outline:0;border:none}.coupon-validation-container .coupon-code-input::-webkit-input-placeholder{color:rgba(255,255,255,.3)}.coupon-validation-container .coupon-input-error-message{margin-top:8px;width:400px}.rewards-reward-card{width:376px;height:230px}.reward-card:focus,.rewards-feature-card:focus,.rewards-redeem-reward .redeem-details-container .math-answer-input,.rewards-redeem-reward .redeem-details-container .math-answer-input:focus,.rewards-reward-card:focus{outline:0;border:none}.rewards-reward-card .reward-card{width:360px;height:214px;margin:0 16px 16px 0}.rewards-reward-card .reward-card .reward-card-image-container,.rewards-reward-card .reward-card .reward-card-image-container img{width:100%;height:154px}.rewards-feature-card .reward-card .reward-card-image-container,.rewards-feature-card .reward-card .reward-card-image-container img{width:100%;height:240px}.rewards-reward-card .reward-card .reward-card-image-container .reward-card-overlay .reward-status-icon{font-size:16px;line-height:16px;height:16px;width:16px}.rewards-feature-card .reward-card .reward-card-details-container .reward-date,.rewards-feature-card .reward-card .reward-card-details-container .rewards-details-left-message,.rewards-reward-card .reward-card .reward-card-details-container .reward-date,.rewards-reward-card .reward-card .reward-card-details-container .rewards-details-left-message{margin-top:6px}.rewards-reward-card .reward-card .reward-card-details-container .rewards-details-left-message+.reward-date{margin-left:30px}.rewards-reward-card .reward-card.md-accent.background-on-hover:hover .reward-card-details-container .reward-date,.rewards-reward-card .reward-card.md-accent.background-on-hover:hover .reward-card-title{color:#fff!important}.rewards-feature-card .reward-card .reward-card-details-container .rewards-details-left-message+.reward-date{margin-left:70px}.rewards-reward-card .reward-card .rewards-feature-card{width:532px;height:332px}.rewards-feature-card .reward-card{width:500px;height:300px;margin:16px 0 16px 16px;background-color:#464646}.rewards-feature-card .reward-card md-card-content,.rewards-reward-card .reward-card md-card-content{height:60px}.rewards-reward-card .reward-card .new-item-icon-wrapper{position:absolute;z-index:1;width:0;height:0;border-style:solid;border-width:36px 36px 0 0;border-color:rgba(0,0,0,.85) transparent transparent;text-align:center;line-height:30px}.rewards-reward-card .reward-card .new-item-icon-wrapper md-icon{transform:translate(-1px,-41px)}.rewards-center-items-container .rewards-center-section-title{font-weight:400;margin:24px 24px 8px 0}.rewards-center-items-container .rewards-center-top-toolbar{height:56px}.rewards-center-items-container .rewards-center-top-toolbar .back-button{min-height:24px;margin:16px 12px 16px 36px!important}.rewards-center-items-container .rewards-center-top-toolbar .rewards-center-title{margin:22px 0}.rewards-center-items-container .rewards-center-top-toolbar nv-select-menu{margin-right:36px}.rewards-center-items-container .rewards-center-top-toolbar nv-select-menu .common-green-dot{bottom:9px;right:2px}.rewards-center-items-container .featured-reward-container .reward-tag-image{width:112px;height:187px}.rewards-center-items-container .featured-reward-container .featured-reward-details-container .featured-reward-details-description{margin-top:32px}.rewards-center-items-container .rewards-center-top-banner{min-height:150px;max-height:150px}.rewards-center-items-container .rewards-center-top-banner .reward-tag-image-sm{width:56px;height:94px}.rewards-center-items-container .rewards-center-top-banner .reward-banner-details-container .reward-banner-details-description{width:70%}.rewards-center-items-container .rewards-center-coupon-code-banner{height:132px;max-height:132px;transition:height .3s,max-height .3s}.rewards-center-items-container .section-separator-horizontal,.rewards-center-items-container .section-separator-horizontal-center{height:1px}.rewards-center-items-container .section-separator-vertical{width:1px;height:100%}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-header,.rewards-center-items-container .section-separator-horizontal{width:100%}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-header,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button{height:35px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button:hover{background-color:#303030!important;opacity:1}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button:active md-icon,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button:active p{color:rgba(255,255,255,.45)!important}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content{height:0;margin:0 auto;transition:height .3s}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .reward-cards-container{height:100%;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .3s}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-bullet{width:4px;height:7px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-text-container{right:50%;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .3s}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content img{top:132px;height:224px;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .3s}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state .learn-more-expandable-content .learn-more-text-container,.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state .learn-more-expandable-content img{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state .learn-more-expandable-content .reward-cards-container{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transition:clip-path .3s}.rewards-center-items-container .rewards-center-coupon-code-banner md-icon.toggle-icon{height:16px;width:16px;min-height:16px;min-width:16px}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state md-icon.toggle-icon{-moz-transform:rotateX(180deg);-o-transform:rotateX(180deg);-ms-transform:rotateX(180deg);-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}.rewards-center-items-container .rewards-center-coupon-code-banner h2,.rewards-center-items-container .rewards-center-coupon-code-banner h2:hover{height:56px;line-height:36px;cursor:default;margin-top:48px;margin-bottom:28px}.rewards-center-items-container .reward-cards-container{margin:0 auto}.rewards-redeem-reward .redeem-details-container{height:366px}.rewards-redeem-reward .redeem-details-container .math-answer-input{height:36px;width:200px}.rewards-redeem-reward .redeem-details-container .math-incorrect-answer-placeholder{height:20px}@media (min-width:1200px){.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content img,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button,.rewards-center-items-container.user-profile-disabled .reward-cards-container{width:1128px}.rewards-center-items-container .section-separator-horizontal-center{width:1130px}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state{height:356px;max-height:356px}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state .learn-more-expandable-content{height:224px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-text-container{top:180px;margin-right:-500px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-text-container .learn-more-message{width:450px}}@media (min-width:1528px){.rewards-center-items-container .reward-cards-container{width:1128px}}@media (max-width:1199px){.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content img,.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-header-button,.rewards-center-items-container.user-profile-disabled .reward-cards-container{width:752px}.rewards-center-items-container .section-separator-horizontal-center{width:754px}.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state{height:282px;max-height:282px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content img,.rewards-center-items-container .rewards-center-coupon-code-banner.expanded-state .learn-more-expandable-content{height:150px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-text-container{top:164px;margin-right:-350px}.rewards-center-items-container .rewards-center-coupon-code-banner .learn-more-expandable-content .learn-more-text-container .learn-more-message{width:300px}}@media (max-width:1523px){.rewards-center-items-container .reward-cards-container{width:752px}}.rewards-center-items-container .filtered-list-separator{height:44px}", ""]);
 }, function(e, t, n) {
-    t = e.exports = n(6)(), t.push([e.id, ".updates-updates-driver nv-accordion-pane-content,.updates-updates-driver nv-accordion-pane-header-wrapper{min-width:768px}.driver-type-selection-container{width:296px}.driver-type-selection-container md-radio-button:focus{outline:0;border:0}.driver-type-selection-container md-radio-button .md-label{margin-left:39px}.driver-type-selection-container md-radio-button .md-off,.driver-type-selection-container md-radio-button .md-on{width:24px;height:24px}.driver-type-selection-container md-radio-button .md-container{top:27%;width:24px;height:24px}.driver-type-selection-container md-menu-item{height:100%}.driver-type-selection-container .driver-type-title{opacity:.9!important;color:#fff;line-height:24px}.driver-type-selection-container .driver-type-heading2{opacity:.45!important;color:#fff}.driver-type-selection-container .driver-type-heading1{opacity:.75!important;color:#fff;line-height:20px}.updates-updates-driver-item{margin:0}.updates-updates-driver md-icon{margin-right:16px}.updates-updates-driver-item md-icon{font-size:32px;line-height:32px;height:32px}.updates-updates-driver .md-button{margin:0}.updates-updates-driver-item h3{margin-bottom:6px;margin-top:0;line-height:normal;text-transform:none;text-align:left;font-weight:400}.updates-updates-driver-item p{margin:0;line-height:normal;color:#9f9f9f;text-transform:none;text-align:left}.updates-updates-driver nv-accordion-pane{margin-bottom:1px}.updates-updates-driver nv-accordion-pane-header{height:80px}.updates-reinstall-driver{min-width:184px}.updates-reinstall-driver .updates-reinstall-driver-icon{margin:auto 16px auto 0!important;width:16px!important;height:16px;line-height:16px;min-height:16px;min-width:16px}.updates-updates-notification-md-menu-content .progress-container p{margin:0;line-height:normal;font-size:10px;color:#9f9f9f}.updates-updates-notification-md-menu-content .progress-container{margin-left:10px;margin-bottom:15px;margin-right:10px;line-height:normal}.updates-updates-notification-md-menu-content .notification-header{margin:10px 0 3px 15px;font-size:9px}.updates-updates-notification-md-menu-content .md-button{margin:0;padding:0;width:100%;height:inherit}.updates-updates-notification-md-menu-content md-list-item.md-2-line button.md-button{padding:0;margin:0}.updates-updates-notification-md-menu-content{padding:0;margin-top:-8px;margin-bottom:-8px;max-height:none}.updates-updates-details .highlight-container{height:406px}.updates-updates-notification-md-menu-content .checkforupdate-container{min-height:49px}.updates-updates-notification-md-menu-content .checkforupdate-container p{text-align:center}.updates-updates-details .highlight-container md-list-item{background-color:rgba(51,51,51,.5);margin-bottom:1px;padding:0;height:80px}.updates-updates-details{margin:24px 16px 10px}.updates-updates-container h4{margin-top:24px;margin-bottom:8px;font-weight:400}.updates-updates-details md-list-item img{margin-right:10px}.updates-updates-container md-list-item.md-2-line .md-list-item-text h3{line-height:normal;margin:0}.updates-updates-details md-list-item.md-2-line .md-list-item-text{padding:0}.updates-updates-container .updates-updates-driver-container{width:100%;max-width:100%}.updates-updates-container .updates-updates-driver-container .checkforupdate-button{margin-top:14px;margin-bottom:-36px}.updates-updates-details .highlight-container md-list-item img{width:60px;height:60px}.updates-updates-details .highlight-container md-list{padding:0;margin:0}.updates-updates-details .highlight-container md-list-item{margin:10px}.updates-updates-container md-list md-list-item.md-2-line .md-list-item-text p,.updates-updates-container p,md-list md-list-item.md-3-line .md-list-item-text p{color:#9f9f9f}.download-progress md-progress-linear{margin-top:6px}.download-install-controls{margin-right:32px}.updates-updates-driver .download-install-controls .expressInstall{margin-right:10px}.updates-updates-installer-dialog{width:790px;height:442px;background-image:url(" + n(709) + ")}.updates-updates-installer-dialog md-dialog-content{padding:0;overflow:hidden}.updates-updates-intstallation-progress iframe{width:790px;height:376px;border:0}.updates-updates-intstallation-progress .updates-installlation-progress-fallbackImage{width:790px}.updates-updates-intstallation-progress .progress-status-container{margin:10px 15px 5px}.updates-updates-intstallation-progress p{margin:4px 0 0;line-height:10px}.updates-updates-intstallation-progress h4{margin:0 0 4px}.updates-updates-installer-dialog h4{line-height:17px;font-weight:400;margin-top:0}.updates-updates-installer-dialog .updates-updates-installer-dialog-title{margin-bottom:8px}.updates-installer-dialog-installation-complete md-icon{width:48px;height:48px;line-height:normal;font-size:48px;font-weight:700}.updates-installer-dialog-installation-complete div{margin-top:100px}.updates-installer-dialog-installation-error div{margin-left:20px;margin-right:20px}.updates-installer-dialog-installation-error a{margin-top:14px;margin-left:5px;text-decoration:none;height:12px}.updates-installation-custom-container .package-group-table{margin-left:4px;margin-right:4px;height:234px}.updates-installation-custom-container .package-group-header{height:28px;padding-left:20px;margin:0}.updates-installation-custom-container .md-divider{border-top-width:1px;border-bottom-width:1px;border-top-color:#000;border-bottom-color:#1e1e1e}.updates-installation-custom-container md-checkbox,.updates-installation-custom-container p{line-height:normal;margin:0}.updates-installation-custom-container md-divider+div{margin-left:24px;margin-top:16px}.updates-installation-custom-container .warning-clean-install{margin-left:30px}.updates-updates-installer-dialog .updates-installer-dialog-header{margin:24px}.updates-updates-installer-dialog md-icon{margin:0 4px 0 0}.updates-installer-dialog-header:first-child md-icon+p{margin-top:5px}.updates-installer-dialog-header:first-child p{margin:0}.updates-updates-installation-reboot h4,.updates-updates-installation-reboot p{margin:6px 0 0}.updates-updates-installation-reboot div{margin-top:100px}.updates-game-list{padding-left:20px}.updates-game-list .updates-tile-repeater{min-height:232px;max-height:232px}.updates-highlight-tile{width:360px;height:250px;margin:0 16px 16px 0}@media only screen and (min-width:1196px){.updates-highlight-tile:nth-child(3n+0){margin-right:0}}@media only screen and (max-width:1195px){.updates-highlight-tile:nth-child(2n+0){margin-right:0}}.updates-highlight-tile .image-container>img{width:360px;height:154px;display:block}.updates-highlight-tile .image-container .optimal-settings-icon-overlay{width:24px;height:24px;background-color:transparent;top:16px;left:312px}.updates-highlight-tile md-card,.updates-highlight-tile md-card-content{margin:0}.updates-highlight-tile md-card-content>p:last-child{margin-top:4px;margin-bottom:0}.updates-highlight-tile p{line-height:normal;margin:0}.updates-highlight-tile md-card-content .opsTitle{margin-top:3px}.updates-highlight-tile .common-container-gradient{margin:0 16px}.updates-highlight-tile:hover .color-black-hue-1{background-color:#76b900!important}.updates-highlight-tile:hover .color-white-hue-3,.updates-highlight-tile:hover .color-white-hue-4{color:#fff!important}.updates-highlight-tile:hover .common-container-gradient{opacity:0}.updates-updates-details-overlay{margin:0;height:56px;opacity:.45;top:auto;bottom:-10px;position:absolute;width:100%}.updates-updates-details-overlay p{margin:16px}.updates-highlight-tile md-card-content{height:72px;padding-top:12px;padding-bottom:12px}.updates-updates-driver{max-width:1196px;margin:auto;padding-left:26px;padding-right:26px}.updates-updates-details-releaseAbstract{margin-bottom:24px;color:rgba(255,255,255,.75);line-height:1.67}.updates-highlight-tile .highlight-tile-overlay .md-button.md-icon-button{width:50px;height:50px}.updates-highlight-tile .highlight-tile-overlay .md-button.md-icon-button md-icon{width:auto;height:auto;font-size:50px;line-height:50px;margin:0}", ""])
+    t = e.exports = n(6)(), t.push([e.id, ".updates-updates-driver nv-accordion-pane-content,.updates-updates-driver nv-accordion-pane-header-wrapper{min-width:768px}.driver-type-selection-container{width:296px}.driver-type-selection-container md-radio-button:focus{outline:0;border:0}.driver-type-selection-container md-radio-button .md-label{margin-left:39px}.driver-type-selection-container md-radio-button .md-off,.driver-type-selection-container md-radio-button .md-on{width:24px;height:24px}.driver-type-selection-container md-radio-button .md-container{top:27%;width:24px;height:24px}.driver-type-selection-container md-menu-item{height:100%}.driver-type-selection-container .driver-type-title{opacity:.9!important;color:#fff;line-height:24px}.driver-type-selection-container .driver-type-heading2{opacity:.45!important;color:#fff}.driver-type-selection-container .driver-type-heading1{opacity:.75!important;color:#fff;line-height:20px}.updates-updates-driver-item{margin:0}.updates-updates-driver md-icon{margin-right:16px}.updates-updates-driver-item md-icon{font-size:32px;line-height:32px;height:32px}.updates-updates-driver .md-button{margin:0}.updates-updates-driver-item h3{margin-bottom:6px;margin-top:0;line-height:normal;text-transform:none;text-align:left;font-weight:400}.updates-updates-driver-item p{margin:0;line-height:normal;color:#9f9f9f;text-transform:none;text-align:left}.updates-updates-driver nv-accordion-pane{margin-bottom:1px}.updates-updates-driver nv-accordion-pane-header{height:80px}.updates-reinstall-driver{min-width:184px}.updates-reinstall-driver .updates-reinstall-driver-icon{margin:auto 16px auto 0!important;width:16px!important;height:16px;line-height:16px;min-height:16px;min-width:16px}.updates-updates-notification-md-menu-content .progress-container p{margin:0;line-height:normal;font-size:10px;color:#9f9f9f}.updates-updates-notification-md-menu-content .progress-container{margin-left:10px;margin-bottom:15px;margin-right:10px;line-height:normal}.updates-updates-notification-md-menu-content .notification-header{margin:10px 0 3px 15px;font-size:9px}.updates-updates-notification-md-menu-content .md-button{margin:0;padding:0;width:100%;height:inherit}.updates-updates-notification-md-menu-content md-list-item.md-2-line button.md-button{padding:0;margin:0}.updates-updates-notification-md-menu-content{padding:0;margin-top:-8px;margin-bottom:-8px;max-height:none}.updates-updates-details .highlight-container{height:406px}.updates-updates-notification-md-menu-content .checkforupdate-container{min-height:49px}.updates-updates-notification-md-menu-content .checkforupdate-container p{text-align:center}.updates-updates-details .highlight-container md-list-item{background-color:rgba(51,51,51,.5);margin-bottom:1px;padding:0;height:80px}.updates-updates-details{margin:24px 16px 10px}.updates-updates-container h4{margin-top:24px;margin-bottom:8px;font-weight:400}.updates-updates-details md-list-item img{margin-right:10px}.updates-updates-container md-list-item.md-2-line .md-list-item-text h3{line-height:normal;margin:0}.updates-updates-details md-list-item.md-2-line .md-list-item-text{padding:0}.updates-updates-container .updates-updates-driver-container{width:100%;max-width:100%}.updates-updates-container .updates-updates-driver-container .checkforupdate-button{margin-top:14px;margin-bottom:-36px}.updates-updates-details .highlight-container md-list-item img{width:60px;height:60px}.updates-updates-details .highlight-container md-list{padding:0;margin:0}.updates-updates-details .highlight-container md-list-item{margin:10px}.updates-updates-container md-list md-list-item.md-2-line .md-list-item-text p,.updates-updates-container p,md-list md-list-item.md-3-line .md-list-item-text p{color:#9f9f9f}.download-progress md-progress-linear{margin-top:6px}.download-install-controls{margin-right:32px}.updates-updates-driver .download-install-controls .expressInstall{margin-right:10px}.updates-updates-installer-dialog{width:790px;height:442px;background-image:url(" + n(711) + ")}.updates-updates-installer-dialog md-dialog-content{padding:0;overflow:hidden}.updates-updates-intstallation-progress iframe{width:790px;height:376px;border:0}.updates-updates-intstallation-progress .updates-installlation-progress-fallbackImage{width:790px}.updates-updates-intstallation-progress .progress-status-container{margin:10px 15px 5px}.updates-updates-intstallation-progress p{margin:4px 0 0;line-height:10px}.updates-updates-intstallation-progress h4{margin:0 0 4px}.updates-updates-installer-dialog h4{line-height:17px;font-weight:400;margin-top:0}.updates-updates-installer-dialog .updates-updates-installer-dialog-title{margin-bottom:8px}.updates-installer-dialog-installation-complete md-icon{width:48px;height:48px;line-height:normal;font-size:48px;font-weight:700}.updates-installer-dialog-installation-complete div{margin-top:100px}.updates-installer-dialog-installation-error div{margin-left:20px;margin-right:20px}.updates-installer-dialog-installation-error a{margin-top:14px;margin-left:5px;text-decoration:none;height:12px}.updates-installation-custom-container .package-group-table{margin-left:4px;margin-right:4px;height:234px}.updates-installation-custom-container .package-group-header{height:28px;padding-left:20px;margin:0}.updates-installation-custom-container .md-divider{border-top-width:1px;border-bottom-width:1px;border-top-color:#000;border-bottom-color:#1e1e1e}.updates-installation-custom-container md-checkbox,.updates-installation-custom-container p{line-height:normal;margin:0}.updates-installation-custom-container md-divider+div{margin-left:24px;margin-top:16px}.updates-installation-custom-container .warning-clean-install{margin-left:30px}.updates-updates-installer-dialog .updates-installer-dialog-header{margin:24px}.updates-updates-installer-dialog md-icon{margin:0 4px 0 0}.updates-installer-dialog-header:first-child md-icon+p{margin-top:5px}.updates-installer-dialog-header:first-child p{margin:0}.updates-updates-installation-reboot h4,.updates-updates-installation-reboot p{margin:6px 0 0}.updates-updates-installation-reboot div{margin-top:100px}.updates-game-list{padding-left:20px}.updates-game-list .updates-tile-repeater{min-height:232px;max-height:232px}.updates-highlight-tile{width:360px;height:250px;margin:0 16px 16px 0}@media only screen and (min-width:1196px){.updates-highlight-tile:nth-child(3n+0){margin-right:0}}@media only screen and (max-width:1195px){.updates-highlight-tile:nth-child(2n+0){margin-right:0}}.updates-highlight-tile .image-container>img{width:360px;height:154px;display:block}.updates-highlight-tile .image-container .optimal-settings-icon-overlay{width:24px;height:24px;background-color:transparent;top:16px;left:312px}.updates-highlight-tile md-card,.updates-highlight-tile md-card-content{margin:0}.updates-highlight-tile md-card-content>p:last-child{margin-top:4px;margin-bottom:0}.updates-highlight-tile p{line-height:normal;margin:0}.updates-highlight-tile md-card-content .opsTitle{margin-top:3px}.updates-highlight-tile .common-container-gradient{margin:0 16px}.updates-highlight-tile:hover .color-black-hue-1{background-color:#76b900!important}.updates-highlight-tile:hover .color-white-hue-3,.updates-highlight-tile:hover .color-white-hue-4{color:#fff!important}.updates-highlight-tile:hover .common-container-gradient{opacity:0}.updates-updates-details-overlay{margin:0;height:56px;opacity:.45;top:auto;bottom:-10px;position:absolute;width:100%}.updates-updates-details-overlay p{margin:16px}.updates-highlight-tile md-card-content{height:72px;padding-top:12px;padding-bottom:12px}.updates-updates-driver{max-width:1196px;margin:auto;padding-left:26px;padding-right:26px}.updates-updates-details-releaseAbstract{margin-bottom:24px;color:rgba(255,255,255,.75);line-height:1.67}.updates-highlight-tile .highlight-tile-overlay .md-button.md-icon-button{width:50px;height:50px}.updates-highlight-tile .highlight-tile-overlay .md-button.md-icon-button md-icon{width:auto;height:auto;font-size:50px;line-height:50px;margin:0}", ""])
 }, function(e, t, n) {
-    t = e.exports = n(6)(), t.push([e.id, "nv-user-profile .md-dialog-container{padding:0!important}nv-user-profile .help-tooltip{width:320px;margin-left:-20px;pointer-events:auto;cursor:default}nv-user-profile .help-tooltip .tooltip-arrow-up{position:absolute;margin-left:24px;z-index:4;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #272727}nv-user-profile .help-tooltip .help-tooltip-container{position:absolute;z-index:3;top:8px;box-shadow:2px 2px 20px #0c0c0c}nv-user-profile .help-tooltip .help-tooltip-container img{width:24px;height:24px}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-table-header{margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.2)}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-level-column span{min-width:60px}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-value-column span{padding-left:16px}nv-user-profile .material-icons.md-11{width:11px;height:11px;line-height:11px;font-size:11px}nv-user-profile .material-icons.md-36{width:36px;height:36px;line-height:36px}nv-user-profile .material-icons.md-48{width:48px;height:48px;line-height:48px}.user-profile-container{max-width:2560px;margin:0 auto}.user-profile{position:relative;z-index:1;padding:0 36px}.user-profile .user-profile-content .md-tab.md-active{color:rgba(255,255,255,.9)}.user-profile .user-profile-content md-tabs{background-color:#242424}.user-profile .user-profile-content md-tabs md-tabs-wrapper{background-color:#191919}.user-profile .link-disabled{opacity:.45;pointer-events:none}.user-profile .profile-section-header{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.2)}.level-icon-gradient.icon-ranking-silver{background:-moz-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-webkit-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-o-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-ms-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:linear-gradient(to bottom,top,#dce6f0 33.33%,#b8c2ce 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.level-icon-gradient.icon-ranking-gold{background:-moz-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-webkit-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-o-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-ms-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:linear-gradient(to bottom,#fff5b5 33.33%,#ffc142 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.level-icon-gradient.icon-ranking-titanium{background:-moz-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-webkit-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-o-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-ms-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:linear-gradient(to bottom,#cee6eb 33.33%,#75a7b8 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.sweepstakes-dialog{min-height:498px;max-height:498px;min-width:790px;max-width:790px;border-radius:0}.sweepstakes-dialog .input-error-container{margin-left:78px;line-height:1em}.sweepstakes-dialog .line-height-18{line-height:18px}.sweepstakes-dialog .line-height-26{line-height:26px}.sweepstakes-dialog .md-32{width:32px;height:32px;line-height:32px}.sweepstakes-dialog .md-48{width:48px;height:48px;line-height:48px;font-size:48px}.sweepstakes-dialog .md-62{width:62px;height:62px;line-height:62px;font-size:62px}.sweepstakes-dialog .md-button.md-fab-24{padding:0!important;width:24px!important;min-width:24px!important;height:24px!important;min-height:24px!important;line-height:24px!important;border-radius:50%!important}.sweepstakes-dialog .width-100{width:100%}.sweepstakes-dialog .message-banner-container{margin-top:20px;height:40px}.sweepstakes-dialog .message-banner-container .message-banner{position:absolute;left:0;width:100%;height:40px;line-height:40px;background-color:#303030;padding-left:24px;padding-right:24px}.sweepstakes-dialog .message-banner-container .message-banner span{line-height:normal;color:rgba(255,255,255,.45)}.sweepstakes-dialog .animate-show-hide.ng-hide{opacity:0}.sweepstakes-dialog .animate-show-hide.ng-hide-add,.sweepstakes-dialog .animate-show-hide.ng-hide-remove{transition:all ease-in-out .2s}.sweepstakes-dialog .md-icon-button.close-button{position:absolute;top:12px;right:12px;z-index:3}.sweepstakes-dialog .giveaway-subview{position:relative;padding:24px 8px 12px 24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-header{min-height:24px;margin-bottom:24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-header .md-button{min-height:24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-content{padding-right:32px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-content-overlay{height:48px;margin:0 24px 12px;background:linear-gradient(transparent,rgba(25,25,25,.9))}.sweepstakes-dialog .giveaway-rules-container p{margin:0}.sweepstakes-dialog .giveaway-rules-container .header{margin:12px 0}.sweepstakes-dialog .message-overlay{position:absolute;opacity:1;z-index:2;background:rgba(0,0,0,.85)}.sweepstakes-dialog .giveaway-details-container .giveaway-info-section{max-height:180px}.sweepstakes-dialog .giveaway-details-container .giveaway-details-description{margin-bottom:24px;margin-top:22px}.sweepstakes-dialog .giveaway-details-container .giveaway-tokens-section{padding:24px 0;border-top:1px solid #5e5e5e;border-bottom:1px solid #5e5e5e}.sweepstakes-dialog .giveaway-details-container .giveaway-box-art{width:352px}.sweepstakes-dialog .giveaway-details-container .giveaway-box-art img{width:100%;height:auto}.sweepstakes-dialog .giveaway-details-container .giveaway-form input[type=number]::-webkit-inner-spin-button,.sweepstakes-dialog .giveaway-details-container .giveaway-form input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.sweepstakes-dialog .giveaway-details-container .giveaway-form .tokens-input-container{width:48px}.sweepstakes-dialog .giveaway-details-container .giveaway-form .tokens-input-container input{font-size:14px!important;color:rgba(255,255,255,.45)}.mission-details-dialog{width:790px;height:501px;border-radius:0}.mission-details-dialog .close-button{position:absolute;top:12px;right:12px;z-index:2}.mission-details-dialog .slideshow-container{height:444px;width:790px;z-index:1}.mission-details-dialog .gradient-overlay{z-index:1}.mission-details-dialog .gradient-overlay .left{top:0;left:0;width:80px;height:444px;background-image:url(" + n(702) + ");background-repeat:repeat-y}.mission-details-dialog .gradient-overlay .right{top:0;right:0;width:80px;height:444px;background-image:url(" + n(703) + ");background-repeat:repeat-y}.mission-details-dialog .gradient-overlay .top{top:0;left:0;width:100%;height:36px;background-image:url(" + n(704) + ");background-repeat:repeat-x}.mission-details-dialog .details-container{bottom:0;z-index:2;width:100%}.mission-details-dialog .details-container .toggle-button{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:36px;background-color:#191919!important}.mission-details-dialog .details-container .title-container{height:176px;padding-left:24px;padding-right:34px;padding-bottom:12px;background-image:url(" + n(701) + ");background-repeat:repeat-x}.mission-details-dialog .details-container .collapsable-container{padding:20px 34px 12px 24px;background-color:#191919}.mission-details-dialog .details-container .collapsable-container .collapse-icon{transform:rotate(0)}.mission-details-dialog .details-container .collapsable-container .collapse-icon.rotate{transform:rotate(-180deg)}.mission-details-dialog .details-container .collapsable-container .subtitle{margin-bottom:8px}.mission-details-dialog .details-container .collapsable-container .content{overflow:hidden;-webkit-transition:max-height .4s;-moz-transition:max-height .4s;-ms-transition:max-height .4s;-o-transition:max-height .4s;transition:max-height .4s;max-height:501px}.mission-details-dialog .details-container .collapsable-container .content.collapsed{max-height:0}.featured-reward{min-height:440px}.featured-reward .title-container{height:38px;margin:10px 0}.featured-reward .artwork-container{height:185px;margin-bottom:20px}.featured-reward .artwork-container .drawdate-overlay{position:absolute;background:rgba(0,0,0,.75);z-index:2;padding:16px}.user-profile-cover-container{position:absolute;overflow:hidden;z-index:0;padding-bottom:31.25%;width:100%}.user-profile-cover-container .cover-gradient{position:absolute;z-index:3;background:-moz-linear-gradient(top,transparent 96px,#141414 95%);background:-webkit-linear-gradient(top,transparent 96px,#141414 95%);background:linear-gradient(to bottom,transparent 96px,#141414 95%)}.user-profile-cover-container .cover-dark-overlay{background:rgba(0,0,0,.4);z-index:2}.user-profile-cover-container img{position:absolute;top:0;left:0;width:100%;object-fit:cover;z-index:1}.croppie-dialog{max-width:705px;min-width:408px;overflow-x:hidden;border-radius:0}.croppie-dialog .md-32{width:32px;height:32px;line-height:32px}.croppie-dialog .title{font-size:20px;margin:24px 0 0 24px}.croppie-dialog .subtitle{margin:8px 0 0 24px}.croppie-dialog .gallery-tile-container{max-height:134px}.croppie-dialog .gallery-tile{float:left;padding:0 8px 8px 0}.croppie-dialog .gallery-tile img{width:208px}.croppie-dialog .cover-image-preview p{width:60%;text-align:center}.croppie-dialog.edit-profile-cover-container{max-height:620px}.croppie-dialog.edit-profile-cover-container .cover-image-preview{overflow:hidden;min-height:248px;max-height:248px}.croppie-dialog.edit-rig-image-container{max-height:615px}.croppie-dialog.edit-rig-image-container .cover-image-preview{overflow:hidden;min-height:448px;max-height:448px}.user-profile-bio-container{margin-top:-72px;z-index:2;padding-bottom:31.25%;width:100%}.user-profile-bio-container .user-profile-bio{top:0;left:0;right:0;bottom:0}.user-profile-bio-container .cover-edit-button{top:96px;z-index:2}.user-profile-bio-container .more-options{top:96px;z-index:2;right:20px}.user-profile-bio-container .user-profile-avatar-container{position:relative;width:312px;height:200px;margin-right:24px;top:48px}.user-profile-bio-container .user-profile-avatar-container .avatar-edit-button{right:0;top:0;z-index:2}.user-profile-bio-container .user-profile-avatar-container .profile-avatar-overlay{position:absolute;padding:6px 12px}.user-profile-bio-container .user-profile-avatar-container .md-avatar{height:200px;width:200px;border-radius:50%;box-shadow:2px 2px 6px rgba(25,25,25,.75)}.user-profile-bio-container .user-profile-details{max-width:70%}.user-profile-bio-container .user-profile-details .desc-edit-button{right:0;z-index:2}.edit-user-description-container{width:500px}.edit-user-description-container .buttons-container,.edit-user-description-container .description-input-container{width:100%}.user-profile-widgets-container{width:312px;margin-right:24px}.user-profile-widgets-container .profile-status-placeholder{margin-top:80px}.user-profile-widget{width:100%;margin-bottom:12px;background-color:#242424}.user-profile-widget .user-profile-widget-title{padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.2)}.user-profile-widget .winners-widget{margin:12px 24px}.user-profile-status{padding-top:62px}.user-profile-status .margin-top-7{margin-top:7px}.user-profile-status .margin-right-10{margin-right:10px}.user-profile-status .level-badge{right:64px;top:4px;z-index:2;width:56px}.user-profile-status .level-badge .icon-level-bg{z-index:1;top:0;color:#000;transform:scale(1.11)}.user-profile-status .level-badge .nv-custom-icons.level-icon-gradient{z-index:2}.user-profile-status .xp-container{max-width:160px}.user-profile-status .xp-container .current-xp{color:rgba(255,255,255,.75)}.user-profile-status .xp-container .xp-progress{width:120px;margin:5px 0!important}.user-profile-status .xp-container .xp-progress .md-container.md-mode-determinate{background-color:rgba(255,255,255,.3);height:5px}.user-profile-status .tokens-container{max-width:80px}.user-profile-status .empty-state{min-height:106px}.user-profile-giveaway p{margin:0}.user-profile-games-summary{margin-bottom:16px;padding:16px}.user-profile-games-summary .games-summary-item{margin-top:16px;margin-bottom:16px}.user-profile-games-summary .games-summary-item.first{margin-top:0!important}.user-profile-games-summary .games-summary-item.last{margin-bottom:0!important}.user-profile-games-summary .games-summary-value{font-size:24px;color:#76b900!important;margin-right:8px}.user-missions{min-height:600px}.user-missions .profile-section-header .countdown{color:rgba(255,255,255,.8)}.user-missions .mission-tile{background-color:#1a1a1a}.user-missions .mission-tile .mission-title{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #4d4d4d}.user-missions .mission-tile .artwork-container{width:116px;height:164px}.user-missions .mission-tile .details-container{padding-top:24px;padding-left:16px;padding-bottom:16px}.user-missions .mission-tile .mission-progress-container{padding:18px 20px}.user-missions .mission-tile-margin{margin-bottom:16px}.user-missions .mission-tile-margin:last-child{margin-bottom:0!important}.mission-progress-container .md-30{width:30px;height:30px;font-size:30px;line-height:30px}.mission-progress-container .title{color:rgba(255,255,255,.6)}.mission-progress-container .progress-capsule{width:54px;text-align:center;border:1px solid;border-radius:10px;color:rgba(255,255,255,.45)}.mission-progress-container.completed .nv-custom-icons,.mission-progress-container.completed .title{color:#76b900!important}.mission-progress-container.completed .progress-capsule{color:#76b900;border-color:#76b900}.mission-progress-container .mission-value-container{margin-bottom:6px}.activity-log-empty-state-separator{border-top:1px solid rgba(255,255,255,.2)}.activity-log-empty-state{height:360px}.activity-log-container .activity-log-group{margin-top:30px}.activity-log-container .activity-log-group:first-child{margin-top:6px}.activity-log-container .activity-log{margin-bottom:24px;background-color:#1a1a1a}.activity-log-container .activity-log .activity-log-thumbnail{width:160px;height:90px}.activity-log-container .activity-log .activity-log-details{margin:12px;height:66px}.activity-log-container .activity-log .nv-custom-icons{margin-left:6px}.activity-log-container .activity-log em{color:#fff;font-style:normal;font-weight:700}.activity-log-container .activity-log:last-child{margin-bottom:0}.user-gallery-container{min-height:200px}.user-gallery-container .gallery-carousel{width:100%}.user-gallery-tile{margin:0 12px 0 0}.user-gallery-tile .gallery-video-div{position:relative;width:240px;height:135px}.user-gallery-tile .gallery-video-div-mta{filter:grayscale(100%)}.user-gallery-tile .gallery-text-mta{color:#919191!important}.user-gallery-tile .gallery-text-footer-mta{color:#919191}.user-gallery-tile .gallery-video-duration{box-sizing:border-box;position:absolute;display:block;bottom:0;right:0;padding:0 4px;font-size:10px;margin:0;color:#fff;background-color:#000}.user-gallery-tile .gallery-video-overlay-play-button{box-sizing:border-box;position:absolute;top:0;left:0;height:100%;width:100%;display:flex;align-items:center;justify-content:center}.user-gallery-tile .gallery-video-overlay-play-button-icon{width:33px;height:33px;font-size:33px;margin:0;opacity:.95}.user-gallery-tile .gallery-card-footer{color:#fff;font-size:12px;margin:0;padding:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}nv-user-gallery-details{height:100%;width:100%}.user-gallery-details-controller .gallery-detail-image,.user-gallery-details-controller .gallery-detail-video{object-fit:contain;width:100%;height:100%}.user-rig-info-container .user-rig-image-container img{width:100%;max-width:800px}.user-rig-info-container .user-rig-info-list .user-rig-info-item{padding:12px;min-width:100px;max-width:200px;text-align:center}nv-user-achievements .achievements-container{min-height:16px}nv-user-achievements .achievements-loading-container{min-height:24px}nv-user-achievements .achievements-loading-container .loading-icon{height:12px;width:12px;border-radius:50%;background-color:rgba(255,255,255,.2)}.cevo-icons{font-family:Nvidia;width:auto!important}.edit-badges-dialog{width:720px;height:640px;background-color:#2e2e2e;border-radius:0}.edit-badges-dialog .edit-badges-container{padding:24px 24px 0}.edit-badges-dialog .width-100{width:100%}.edit-badges-dialog .md-56{width:56px;height:56px;line-height:56px;font-size:56px}.edit-badges-dialog .checkbox-16{width:16px;height:16px;min-width:16px;min-height:16px}.edit-badges-dialog .checkbox-16 .md-container{width:16px;height:16px}.edit-badges-dialog .checkbox-16 .md-icon{width:16px;height:16px;line-height:16px}.edit-badges-dialog .showcase-section{min-height:144px}.edit-badges-dialog .badge-tile-container{background-color:#212121}.edit-badges-dialog .badge-tile-container .action-elements-container{left:0;top:0;z-index:2}.edit-badges-dialog .showcase-badge-tile{width:120px;height:144px;margin-right:16px}.edit-badges-dialog .showcase-badge-tile .action-elements-container{top:4px;left:4px}.edit-badges-dialog .showcase-badge-tile .title-toggle-button{width:24px;height:24px;min-height:24px}.edit-badges-dialog .showcase-badge-tile .tile-content{padding:24px 10px 10px;background-color:#212121}.edit-badges-dialog .showcase-badge-tile:last-child{margin-right:0!important}.edit-badges-dialog .showcase-badge-tile.dragging .tile-content{background-color:#76b900}.edit-badges-dialog .showcase-badge-tile.dragging .badge-icon-container{background-color:transparent}.edit-badges-dialog .showcase-badge-tile.dropping .tile-content{box-shadow:inset 0 0 0 2px #76b900}.edit-badges-dialog .badge-tile{width:322px;height:114px;margin-right:16px;margin-top:16px}.edit-badges-dialog .badge-tile .tile-content{padding-left:16px}.edit-badges-dialog .badge-tile .badge-icon-container{min-width:80px;max-width:80px}.edit-badges-dialog .badge-tile .action-elements-container{top:8px;left:8px}.edit-badges-dialog .badge-tile:nth-child(2n){margin-right:0!important}.edit-badges-dialog .badge-tile:nth-child(-n+2){margin-top:0!important}.levels-dialog{width:827px;max-width:827px;max-height:606px;border-radius:0;background-color:#252525}.levels-dialog .font-size-18{font-size:18px}.levels-dialog .md-8{width:8px;height:8px;min-width:8px;min-height:8px;line-height:20px}.levels-dialog .md-42{width:42px;height:42px;line-height:42px;font-size:42px}.levels-dialog .md-64{width:64px;height:64px;line-height:64px;font-size:64px}.levels-dialog .margin-right-15{margin-right:15px}.levels-dialog .margin-top-6{margin-top:6px}.levels-dialog .margin-top-18{margin-top:18px}.levels-dialog .margin-top-20{margin-top:20px}.levels-dialog .line-height-20{line-height:20px}.levels-dialog .width-200{width:200px}.levels-dialog .close-button{right:16px;top:16px;z-index:2}.levels-dialog .profile-status{min-height:160px;background-color:#343434}.levels-dialog .profile-status .polygon-clip{width:260px;background-color:#1a1a1a;-webkit-clip-path:polygon(0 0,100% 0,70% 100%,0 100%);clip-path:polygon(0 0,100% 0,70% 100%,0 100%)}.levels-dialog .profile-status .progress-bar-container{margin-right:80px}.levels-dialog .profile-status .level-badge-container{width:182px}.levels-dialog .profile-status .xp-progress-container{min-width:198px}.levels-dialog .profile-status .xp-progress{width:198px;margin-top:10px;height:7px}.levels-dialog .profile-status .xp-progress .md-container{background-color:#252525;height:7px}.levels-dialog .profile-status .xp-progress .md-container .md-bar{height:7px}.levels-dialog .nv-level-details{margin-right:35px}.levels-dialog .nv-level-details:last-child{margin-right:0}.levels-dialog .nv-level-details .perk-item{margin-left:33px}", ""])
+    t = e.exports = n(6)(), t.push([e.id, "nv-user-profile .md-dialog-container{padding:0!important}nv-user-profile .help-tooltip{width:320px;margin-left:-20px;pointer-events:auto;cursor:default}nv-user-profile .help-tooltip .tooltip-arrow-up{position:absolute;margin-left:24px;z-index:4;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #272727}nv-user-profile .help-tooltip .help-tooltip-container{position:absolute;z-index:3;top:8px;box-shadow:2px 2px 20px #0c0c0c}nv-user-profile .help-tooltip .help-tooltip-container img{width:24px;height:24px}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-table-header{margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.2)}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-level-column span{min-width:60px}nv-user-profile .help-tooltip .help-tooltip-container .tokens-table .tokens-value-column span{padding-left:16px}nv-user-profile .material-icons.md-11{width:11px;height:11px;line-height:11px;font-size:11px}nv-user-profile .material-icons.md-36{width:36px;height:36px;line-height:36px}nv-user-profile .material-icons.md-48{width:48px;height:48px;line-height:48px}.user-profile-container{max-width:2560px;margin:0 auto}.user-profile{position:relative;z-index:1;padding:0 36px}.user-profile .user-profile-content .md-tab.md-active{color:rgba(255,255,255,.9)}.user-profile .user-profile-content md-tabs{background-color:#242424}.user-profile .user-profile-content md-tabs md-tabs-wrapper{background-color:#191919}.user-profile .link-disabled{opacity:.45;pointer-events:none}.user-profile .profile-section-header{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.2)}.level-icon-gradient.icon-ranking-silver{background:-moz-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-webkit-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-o-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:-ms-linear-gradient(top,#dce6f0 33.33%,#b8c2ce 58.33%);background:linear-gradient(to bottom,top,#dce6f0 33.33%,#b8c2ce 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.level-icon-gradient.icon-ranking-gold{background:-moz-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-webkit-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-o-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:-ms-linear-gradient(top,#fff5b5 33.33%,#ffc142 58.33%);background:linear-gradient(to bottom,#fff5b5 33.33%,#ffc142 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.level-icon-gradient.icon-ranking-titanium{background:-moz-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-webkit-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-o-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:-ms-linear-gradient(top,#cee6eb 33.33%,#75a7b8 58.33%);background:linear-gradient(to bottom,#cee6eb 33.33%,#75a7b8 58.33%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:initial}.sweepstakes-dialog{min-height:498px;max-height:498px;min-width:790px;max-width:790px;border-radius:0}.sweepstakes-dialog .input-error-container{margin-left:78px;line-height:1em}.sweepstakes-dialog .line-height-18{line-height:18px}.sweepstakes-dialog .line-height-26{line-height:26px}.sweepstakes-dialog .md-32{width:32px;height:32px;line-height:32px}.sweepstakes-dialog .md-48{width:48px;height:48px;line-height:48px;font-size:48px}.sweepstakes-dialog .md-62{width:62px;height:62px;line-height:62px;font-size:62px}.sweepstakes-dialog .md-button.md-fab-24{padding:0!important;width:24px!important;min-width:24px!important;height:24px!important;min-height:24px!important;line-height:24px!important;border-radius:50%!important}.sweepstakes-dialog .width-100{width:100%}.sweepstakes-dialog .message-banner-container{margin-top:20px;height:40px}.sweepstakes-dialog .message-banner-container .message-banner{position:absolute;left:0;width:100%;height:40px;line-height:40px;background-color:#303030;padding-left:24px;padding-right:24px}.sweepstakes-dialog .message-banner-container .message-banner span{line-height:normal;color:rgba(255,255,255,.45)}.sweepstakes-dialog .animate-show-hide.ng-hide{opacity:0}.sweepstakes-dialog .animate-show-hide.ng-hide-add,.sweepstakes-dialog .animate-show-hide.ng-hide-remove{transition:all ease-in-out .2s}.sweepstakes-dialog .md-icon-button.close-button{position:absolute;top:12px;right:12px;z-index:3}.sweepstakes-dialog .giveaway-subview{position:relative;padding:24px 8px 12px 24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-header{min-height:24px;margin-bottom:24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-header .md-button{min-height:24px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-content{padding-right:32px}.sweepstakes-dialog .giveaway-subview .giveaway-subview-content-overlay{height:48px;margin:0 24px 12px;background:linear-gradient(transparent,rgba(25,25,25,.9))}.sweepstakes-dialog .giveaway-rules-container p{margin:0}.sweepstakes-dialog .giveaway-rules-container .header{margin:12px 0}.sweepstakes-dialog .message-overlay{position:absolute;opacity:1;z-index:2;background:rgba(0,0,0,.85)}.sweepstakes-dialog .giveaway-details-container .giveaway-info-section{max-height:180px}.sweepstakes-dialog .giveaway-details-container .giveaway-details-description{margin-bottom:24px;margin-top:22px}.sweepstakes-dialog .giveaway-details-container .giveaway-tokens-section{padding:24px 0;border-top:1px solid #5e5e5e;border-bottom:1px solid #5e5e5e}.sweepstakes-dialog .giveaway-details-container .giveaway-box-art{width:352px}.sweepstakes-dialog .giveaway-details-container .giveaway-box-art img{width:100%;height:auto}.sweepstakes-dialog .giveaway-details-container .giveaway-form input[type=number]::-webkit-inner-spin-button,.sweepstakes-dialog .giveaway-details-container .giveaway-form input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.sweepstakes-dialog .giveaway-details-container .giveaway-form .tokens-input-container{width:48px}.sweepstakes-dialog .giveaway-details-container .giveaway-form .tokens-input-container input{font-size:14px!important;color:rgba(255,255,255,.45)}.mission-details-dialog{width:790px;height:501px;border-radius:0}.mission-details-dialog .close-button{position:absolute;top:12px;right:12px;z-index:2}.mission-details-dialog .slideshow-container{height:444px;width:790px;z-index:1}.mission-details-dialog .gradient-overlay{z-index:1}.mission-details-dialog .gradient-overlay .left{top:0;left:0;width:80px;height:444px;background-image:url(" + n(704) + ");background-repeat:repeat-y}.mission-details-dialog .gradient-overlay .right{top:0;right:0;width:80px;height:444px;background-image:url(" + n(705) + ");background-repeat:repeat-y}.mission-details-dialog .gradient-overlay .top{top:0;left:0;width:100%;height:36px;background-image:url(" + n(706) + ");background-repeat:repeat-x}.mission-details-dialog .details-container{bottom:0;z-index:2;width:100%}.mission-details-dialog .details-container .toggle-button{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:36px;background-color:#191919!important}.mission-details-dialog .details-container .title-container{height:176px;padding-left:24px;padding-right:34px;padding-bottom:12px;background-image:url(" + n(703) + ");background-repeat:repeat-x}.mission-details-dialog .details-container .collapsable-container{padding:20px 34px 12px 24px;background-color:#191919}.mission-details-dialog .details-container .collapsable-container .collapse-icon{transform:rotate(0)}.mission-details-dialog .details-container .collapsable-container .collapse-icon.rotate{transform:rotate(-180deg)}.mission-details-dialog .details-container .collapsable-container .subtitle{margin-bottom:8px}.mission-details-dialog .details-container .collapsable-container .content{overflow:hidden;-webkit-transition:max-height .4s;-moz-transition:max-height .4s;-ms-transition:max-height .4s;-o-transition:max-height .4s;transition:max-height .4s;max-height:501px}.mission-details-dialog .details-container .collapsable-container .content.collapsed{max-height:0}.featured-reward{min-height:440px}.featured-reward .title-container{height:38px;margin:10px 0}.featured-reward .artwork-container{height:185px;margin-bottom:20px}.featured-reward .artwork-container .drawdate-overlay{position:absolute;background:rgba(0,0,0,.75);z-index:2;padding:16px}.user-profile-cover-container{position:absolute;overflow:hidden;z-index:0;padding-bottom:31.25%;width:100%}.user-profile-cover-container .cover-gradient{position:absolute;z-index:3;background:-moz-linear-gradient(top,transparent 96px,#141414 95%);background:-webkit-linear-gradient(top,transparent 96px,#141414 95%);background:linear-gradient(to bottom,transparent 96px,#141414 95%)}.user-profile-cover-container .cover-dark-overlay{background:rgba(0,0,0,.4);z-index:2}.user-profile-cover-container img{position:absolute;top:0;left:0;width:100%;object-fit:cover;z-index:1}.croppie-dialog{max-width:705px;min-width:408px;overflow-x:hidden;border-radius:0}.croppie-dialog .md-32{width:32px;height:32px;line-height:32px}.croppie-dialog .title{font-size:20px;margin:24px 0 0 24px}.croppie-dialog .subtitle{margin:8px 0 0 24px}.croppie-dialog .gallery-tile-container{max-height:134px}.croppie-dialog .gallery-tile{float:left;padding:0 8px 8px 0}.croppie-dialog .gallery-tile img{width:208px}.croppie-dialog .cover-image-preview p{width:60%;text-align:center}.croppie-dialog.edit-profile-cover-container{max-height:620px}.croppie-dialog.edit-profile-cover-container .cover-image-preview{overflow:hidden;min-height:248px;max-height:248px}.croppie-dialog.edit-rig-image-container{max-height:615px}.croppie-dialog.edit-rig-image-container .cover-image-preview{overflow:hidden;min-height:448px;max-height:448px}.user-profile-bio-container{margin-top:-72px;z-index:2;padding-bottom:31.25%;width:100%}.user-profile-bio-container .user-profile-bio{top:0;left:0;right:0;bottom:0}.user-profile-bio-container .cover-edit-button{top:96px;z-index:2}.user-profile-bio-container .more-options{top:96px;z-index:2;right:20px}.user-profile-bio-container .user-profile-avatar-container{position:relative;width:312px;height:200px;margin-right:24px;top:48px}.user-profile-bio-container .user-profile-avatar-container .avatar-edit-button{right:0;top:0;z-index:2}.user-profile-bio-container .user-profile-avatar-container .profile-avatar-overlay{position:absolute;padding:6px 12px}.user-profile-bio-container .user-profile-avatar-container .md-avatar{height:200px;width:200px;border-radius:50%;box-shadow:2px 2px 6px rgba(25,25,25,.75)}.user-profile-bio-container .user-profile-details{max-width:70%}.user-profile-bio-container .user-profile-details .desc-edit-button{right:0;z-index:2}.edit-user-description-container{width:500px}.edit-user-description-container .buttons-container,.edit-user-description-container .description-input-container{width:100%}.user-profile-widgets-container{width:312px;margin-right:24px}.user-profile-widgets-container .profile-status-placeholder{margin-top:80px}.user-profile-widget{width:100%;margin-bottom:12px;background-color:#242424}.user-profile-widget .user-profile-widget-title{padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.2)}.user-profile-widget .winners-widget{margin:12px 24px}.user-profile-status{padding-top:62px}.user-profile-status .margin-top-7{margin-top:7px}.user-profile-status .margin-right-10{margin-right:10px}.user-profile-status .level-badge{right:64px;top:4px;z-index:2;width:56px}.user-profile-status .level-badge .icon-level-bg{z-index:1;top:0;color:#000;transform:scale(1.11)}.user-profile-status .level-badge .nv-custom-icons.level-icon-gradient{z-index:2}.user-profile-status .xp-container{max-width:160px}.user-profile-status .xp-container .current-xp{color:rgba(255,255,255,.75)}.user-profile-status .xp-container .xp-progress{width:120px;margin:5px 0!important}.user-profile-status .xp-container .xp-progress .md-container.md-mode-determinate{background-color:rgba(255,255,255,.3);height:5px}.user-profile-status .tokens-container{max-width:80px}.user-profile-status .empty-state{min-height:106px}.user-profile-giveaway p{margin:0}.user-profile-games-summary{margin-bottom:16px;padding:16px}.user-profile-games-summary .games-summary-item{margin-top:16px;margin-bottom:16px}.user-profile-games-summary .games-summary-item.first{margin-top:0!important}.user-profile-games-summary .games-summary-item.last{margin-bottom:0!important}.user-profile-games-summary .games-summary-value{font-size:24px;color:#76b900!important;margin-right:8px}.user-missions{min-height:600px}.user-missions .profile-section-header .countdown{color:rgba(255,255,255,.8)}.user-missions .mission-tile{background-color:#1a1a1a}.user-missions .mission-tile .mission-title{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #4d4d4d}.user-missions .mission-tile .artwork-container{width:116px;height:164px}.user-missions .mission-tile .details-container{padding-top:24px;padding-left:16px;padding-bottom:16px}.user-missions .mission-tile .mission-progress-container{padding:18px 20px}.user-missions .mission-tile-margin{margin-bottom:16px}.user-missions .mission-tile-margin:last-child{margin-bottom:0!important}.mission-progress-container .md-30{width:30px;height:30px;font-size:30px;line-height:30px}.mission-progress-container .title{color:rgba(255,255,255,.6)}.mission-progress-container .progress-capsule{width:54px;text-align:center;border:1px solid;border-radius:10px;color:rgba(255,255,255,.45)}.mission-progress-container.completed .nv-custom-icons,.mission-progress-container.completed .title{color:#76b900!important}.mission-progress-container.completed .progress-capsule{color:#76b900;border-color:#76b900}.mission-progress-container .mission-value-container{margin-bottom:6px}.activity-log-empty-state-separator{border-top:1px solid rgba(255,255,255,.2)}.activity-log-empty-state{height:360px}.activity-log-container .activity-log-group{margin-top:30px}.activity-log-container .activity-log-group:first-child{margin-top:6px}.activity-log-container .activity-log{margin-bottom:24px;background-color:#1a1a1a}.activity-log-container .activity-log .activity-log-thumbnail{width:160px;height:90px}.activity-log-container .activity-log .activity-log-details{margin:12px;height:66px}.activity-log-container .activity-log .nv-custom-icons{margin-left:6px}.activity-log-container .activity-log em{color:#fff;font-style:normal;font-weight:700}.activity-log-container .activity-log:last-child{margin-bottom:0}.user-gallery-container{min-height:200px}.user-gallery-container .gallery-carousel{width:100%}.user-gallery-tile{margin:0 12px 0 0}.user-gallery-tile .gallery-video-div{position:relative;width:240px;height:135px}.user-gallery-tile .gallery-video-div-mta{filter:grayscale(100%)}.user-gallery-tile .gallery-text-mta{color:#919191!important}.user-gallery-tile .gallery-text-footer-mta{color:#919191}.user-gallery-tile .gallery-video-duration{box-sizing:border-box;position:absolute;display:block;bottom:0;right:0;padding:0 4px;font-size:10px;margin:0;color:#fff;background-color:#000}.user-gallery-tile .gallery-video-overlay-play-button{box-sizing:border-box;position:absolute;top:0;left:0;height:100%;width:100%;display:flex;align-items:center;justify-content:center}.user-gallery-tile .gallery-video-overlay-play-button-icon{width:33px;height:33px;font-size:33px;margin:0;opacity:.95}.user-gallery-tile .gallery-card-footer{color:#fff;font-size:12px;margin:0;padding:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}nv-user-gallery-details{height:100%;width:100%}.user-gallery-details-controller .gallery-detail-image,.user-gallery-details-controller .gallery-detail-video{object-fit:contain;width:100%;height:100%}.user-rig-info-container .user-rig-image-container img{width:100%;max-width:800px}.user-rig-info-container .user-rig-info-list .user-rig-info-item{padding:12px;min-width:100px;max-width:200px;text-align:center}nv-user-achievements .achievements-container{min-height:16px}nv-user-achievements .achievements-loading-container{min-height:24px}nv-user-achievements .achievements-loading-container .loading-icon{height:12px;width:12px;border-radius:50%;background-color:rgba(255,255,255,.2)}.cevo-icons{font-family:Nvidia;width:auto!important}.edit-badges-dialog{width:720px;height:640px;background-color:#2e2e2e;border-radius:0}.edit-badges-dialog .edit-badges-container{padding:24px 24px 0}.edit-badges-dialog .width-100{width:100%}.edit-badges-dialog .md-56{width:56px;height:56px;line-height:56px;font-size:56px}.edit-badges-dialog .checkbox-16{width:16px;height:16px;min-width:16px;min-height:16px}.edit-badges-dialog .checkbox-16 .md-container{width:16px;height:16px}.edit-badges-dialog .checkbox-16 .md-icon{width:16px;height:16px;line-height:16px}.edit-badges-dialog .showcase-section{min-height:144px}.edit-badges-dialog .badge-tile-container{background-color:#212121}.edit-badges-dialog .badge-tile-container .action-elements-container{left:0;top:0;z-index:2}.edit-badges-dialog .showcase-badge-tile{width:120px;height:144px;margin-right:16px}.edit-badges-dialog .showcase-badge-tile .action-elements-container{top:4px;left:4px}.edit-badges-dialog .showcase-badge-tile .title-toggle-button{width:24px;height:24px;min-height:24px}.edit-badges-dialog .showcase-badge-tile .tile-content{padding:24px 10px 10px;background-color:#212121}.edit-badges-dialog .showcase-badge-tile:last-child{margin-right:0!important}.edit-badges-dialog .showcase-badge-tile.dragging .tile-content{background-color:#76b900}.edit-badges-dialog .showcase-badge-tile.dragging .badge-icon-container{background-color:transparent}.edit-badges-dialog .showcase-badge-tile.dropping .tile-content{box-shadow:inset 0 0 0 2px #76b900}.edit-badges-dialog .badge-tile{width:322px;height:114px;margin-right:16px;margin-top:16px}.edit-badges-dialog .badge-tile .tile-content{padding-left:16px}.edit-badges-dialog .badge-tile .badge-icon-container{min-width:80px;max-width:80px}.edit-badges-dialog .badge-tile .action-elements-container{top:8px;left:8px}.edit-badges-dialog .badge-tile:nth-child(2n){margin-right:0!important}.edit-badges-dialog .badge-tile:nth-child(-n+2){margin-top:0!important}.levels-dialog{width:827px;max-width:827px;max-height:606px;border-radius:0;background-color:#252525}.levels-dialog .font-size-18{font-size:18px}.levels-dialog .md-8{width:8px;height:8px;min-width:8px;min-height:8px;line-height:20px}.levels-dialog .md-42{width:42px;height:42px;line-height:42px;font-size:42px}.levels-dialog .md-64{width:64px;height:64px;line-height:64px;font-size:64px}.levels-dialog .margin-right-15{margin-right:15px}.levels-dialog .margin-top-6{margin-top:6px}.levels-dialog .margin-top-18{margin-top:18px}.levels-dialog .margin-top-20{margin-top:20px}.levels-dialog .line-height-20{line-height:20px}.levels-dialog .width-200{width:200px}.levels-dialog .close-button{right:16px;top:16px;z-index:2}.levels-dialog .profile-status{min-height:160px;background-color:#343434}.levels-dialog .profile-status .polygon-clip{width:260px;background-color:#1a1a1a;-webkit-clip-path:polygon(0 0,100% 0,70% 100%,0 100%);clip-path:polygon(0 0,100% 0,70% 100%,0 100%)}.levels-dialog .profile-status .progress-bar-container{margin-right:80px}.levels-dialog .profile-status .level-badge-container{width:182px}.levels-dialog .profile-status .xp-progress-container{min-width:198px}.levels-dialog .profile-status .xp-progress{width:198px;margin-top:10px;height:7px}.levels-dialog .profile-status .xp-progress .md-container{background-color:#252525;height:7px}.levels-dialog .profile-status .xp-progress .md-container .md-bar{height:7px}.levels-dialog .nv-level-details{margin-right:35px}.levels-dialog .nv-level-details:last-child{margin-right:0}.levels-dialog .nv-level-details .perk-item{margin-left:33px}", ""])
 }, function(e, t, n) {
     e.exports = n.p + "defaultRig.jpg"
 }, function(e, t, n) {
@@ -21413,7 +21476,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div class="md-primary md-hue-2 foreground" ng-bind-html=dialogHtmlCtrl.nvDialogModel.html></div> '
 }, function(e, t) {
-    e.exports = '<div class=dialog-message layout-align="start start" layout=column> <div layout=row> <md-icon material-icons class="md-32 font-size-32 margin-top-zero" color-white-hue-4>error</md-icon> <div layout=column class=margin-left-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.somethingWrong></span> <span class="md-primary foreground" color-white-hue-4 translate={{dialogMessageCtrl.nvDialogModel.text}}></span> <div layout=row class=margin-top-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.errorCode></span> <span>&nbsp;</span> <span class="md-primary foreground" color-white-hue-4>{{dialogMessageCtrl.nvDialogModel.errorCode}}</span> </div> </div> </div> </div> '
+    e.exports = '<div class=dialog-message layout-align="start start" layout=column> <div layout=row> <md-icon material-icons class="md-32 font-size-32 margin-top-zero" color-white-hue-4>error</md-icon> <div layout=column class=margin-left-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.somethingWrong></span> <span class="md-primary foreground" color-white-hue-4 translate={{dialogMessageCtrl.nvDialogModel.text}}></span> <div layout=row class=margin-top-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.errorCode></span> <span>&nbsp;</span> <span class="md-primary foreground" color-white-hue-4>{{dialogMessageCtrl.nvDialogModel.errorCode}}</span> <a class="md-default-theme margin-left-16" ng-click=dialogMessageCtrl.nvDialogModel.onLaunchFaq() translate=l10n.learnMore> </a> </div> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<p class="md-primary md-hue-2 foreground" translate={{dialogTextCtrl.nvDialogModel.text}} translate-values={{dialogTextCtrl.nvDialogModel.translateValues}}></p> '
 }, function(e, t) {
@@ -21458,10 +21521,6 @@ webpackJsonp([4], [function(e, t, n) {
     e.exports = "<div class=main-toolbar-top-dividers flex layout=column> <div class=bg-dark-eh-hue-1></div> <div class=bg-dark-im-hue-6></div> </div> <md-toolbar layout=row class=bg-dark-vh-hue-1 ui-tour=oobeTour ui-tour-on-shown=mainToolbarCtrl.onTourStepShown()> <div class=md-toolbar-tools flex layout=row> <div tour-step=oobe-home tour-step-title=\"{{'l10n.launchYourGames' | translate}}\" tour-step-placement=bottom-left tour-step-order=0> <nv-main-tab-button nv-md-icon=home nv-label=l10n.home nv-telemetry='{\"tarconID\":{{::$root.telemetryEventNames.HOME_VIEW_GAMES_AND_FRIENDS}}}' nv-disabled={{mainToolbarCtrl.driverless}} nv-state=main.auth.home.gamesAndFriends></nv-main-tab-button> </div> <img src=" + n(96) + "> <div tour-step=oobe-drivers tour-step-title=\"{{'l10n.getTheLatestGrds' | translate}}\" tour-step-placement=bottom-left tour-step-order=1> <nv-main-tab-button nv-md-icon=archive nv-label=l10n.drivers nv-telemetry='{\"tarconID\":{{::$root.telemetryEventNames.UPDATES_VIEW_UPDATES}}}' nv-state=main.auth.updates></nv-main-tab-button> </div> <div class=md-toolbar-tools flex layout=row ng-if=::mainToolbarCtrl.devFeatures.experimental> <img src=" + n(96) + "> <nv-main-tab-button nv-md-icon=video_library nv-label=l10n.gallery nv-state=main.auth.gallery nv-disabled={{mainToolbarCtrl.driverless}}></nv-main-tab-button> <img src=" + n(96) + '> <nv-main-tab-button nv-md-icon=shopping_basket nv-label=l10n.gfn nv-state=main.auth.gfn nv-disabled={{mainToolbarCtrl.driverless}}></nv-main-tab-button> </div> <span flex></span> <div ng-if=mainToolbarCtrl.searchEnabled> <nv-search></nv-search> </div> <div ng-if=mainToolbarCtrl.notificationsEnabled> <nv-notifications class=notifications nv-disabled=mainToolbarCtrl.driverless></nv-notifications> </div> <div ng-if=::mainToolbarCtrl.devFeatures.experimental> <nv-updates-notification class=updates-updates-notification></nv-updates-notification> </div> <nv-main-tab-icon id=main-share-icon class=margin-right-16 nv-md-icon=icon-share nv-custom-icon=true nv-tab-icon-clicked=mainToolbarCtrl.enableAndLaunchShare() nv-tool-tip=l10n.openGfeInGame ng-if=mainToolbarCtrl.canShowShareIcon() nv-disabled={{mainToolbarCtrl.isShareButtonDisabled}} nv-change-icon-color-green={{mainToolbarCtrl.isShareRunning}} nv-share-addon-loaded=mainToolbarCtrl.shareLoaded></nv-main-tab-icon> <div class="settings-icon-container margin-right-16" tour-step=oobe-settings tour-step-title="{{\'l10n.configureOptions\' | translate}}" tour-step-placement=bottom-right tour-step-order=3> <nv-main-tab-icon class=margin-right-16 nv-md-icon=settings nv-custom-icon=false nv-tool-tip=" l10n.settings" nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.PREFERENCES_VIEW_PREFERENCES}}}\' nv-state=main.auth.preferences nv-disabled={{mainToolbarCtrl.driverless}}></nv-main-tab-icon> </div> <img src=' + n(96) + '> <md-button id=main-user-profile class=user-profile-button layout=row layout-align="start center" nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.USER_VIEW_PROFILE_FROM_AVATAR}}}\' ng-show=mainToolbarCtrl.userProfileEnabled ng-click="mainToolbarCtrl.displayUserProfile(\'DEFAULT_TAB\')" ng-disabled=mainToolbarCtrl.driverless> <div class=avatar-container layout=column layout-align="center center"> <img nv-circle ng-src={{mainToolbarCtrl.avatar.url}} alt={{::mainToolbarCtrl.displayName}} class=md-avatar nv-fallback-src={{mainToolbarCtrl.defaultAvatarUrl}} /> </div> <h3 class="font-size-lg clickable-element" nv-ellipsis-lines=1 ng-class="{\'color-green\': mainToolbarCtrl.userProfileActive, \'display-name\': mainToolbarCtrl.userProfileEnabled}">{{mainToolbarCtrl.displayName}}</h3> <md-tooltip md-autohide ng-if=mainToolbarCtrl.showTooltip>{{mainToolbarCtrl.displayName}}</md-tooltip> </md-button> <img ng-if=mainToolbarCtrl.userProfileEnabled src=' + n(96) + '> <nv-inline-dropdown nv-collapse-after="{{ mainToolbarCtrl.dropdownCollapseTimeout }}" nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.OOBE_CLICK_USERNAME}}}\' layout-fill ng-class="{\'main-toolbar-compact-dropdown layout-align-start-end\': mainToolbarCtrl.userProfileEnabled, \'constants-friend-list-width\': !mainToolbarCtrl.userProfileEnabled}"> <nv-inline-dropdown-header id=main-user-profile-container> <div ng-if=!mainToolbarCtrl.userProfileEnabled layout=row layout-align="center center"> <img nv-circle ng-src={{mainToolbarCtrl.avatar.url}} alt={{::mainToolbarCtrl.displayName}} class=md-avatar nv-fallback-src={{mainToolbarCtrl.defaultAvatarUrl}} /> <h3 class="display-name font-size-lg" nv-ellipsis-lines=1>{{mainToolbarCtrl.displayName}}</h3> <md-tooltip md-autohide ng-if=mainToolbarCtrl.showTooltip>{{mainToolbarCtrl.displayName}}</md-tooltip> </div> </nv-inline-dropdown-header> <md-list> <md-list-item nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.USER_VIEW_PROFILE_FROM_DROPDOWN}}}\' ng-click="mainToolbarCtrl.displayUserProfile(\'DEFAULT_TAB\')" ng-disabled=mainToolbarCtrl.driverless ng-if=mainToolbarCtrl.userProfileEnabled> <p class=font-size-lg translate=l10n.myProfile></p> </md-list-item> <md-list-item ng-click=mainToolbarCtrl.onClickRedeem($event) ng-disabled=mainToolbarCtrl.driverless nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.HOME_VIEW_REWARDS}}}\'> <p class=font-size-lg translate=l10n.redeem></p> </md-list-item> <md-list-item ng-click="$state.go(\'main.auth.preferences.accounts\')" ng-disabled=mainToolbarCtrl.driverless> <p class=font-size-lg translate=l10n.account></p> </md-list-item> <md-list-item ng-click=mainToolbarCtrl.logout(false,true) nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.OOBE_LOGOUT}}}\'> <p class=font-size-lg translate=l10n.logOut></p> </md-list-item> </md-list> </nv-inline-dropdown> </div> </md-toolbar> '
 }, function(e, t) {
     e.exports = '<nv-window class=common-window nv-resizable=main.isWindowsOS() nv-movable=main.isWindowsOS() nv-controllable=main.isWindowsOS() flex layout=column> <div layout=column flex> <nv-main-toolbar class=common-main-toolbar></nv-main-toolbar> <md-toolbar class="md-toolbar-tools padding-top-4 padding-left-36 padding-right-28 bg-grey-im" ng-if=main.showTopToolbar()> <div layout=row layout-align=end ng-if=main.newVersionAvailable class=highlight> <md-button ng-click=main.install() ng-disabled=!main.newVersionAvailable> <md-tooltip md-direction=left> <span translate=l10n.installNewVersion></span> </md-tooltip> <span ng-class="{\'md-accent foreground\': main.newVersionAvailable}" translate=l10n.updateNow></span> </md-button> </div> <div layout=row layout-align="space-between center" ng-if=main.driverUpdateRequired flex> <div layout=row> <md-icon class="material-icons md-24 color-white-hue-3">file_download</md-icon> <div layout=row class=margin-left-8> <p class="margin-zero line-height-36" translate=l10n.driverUpdateRequired></p> <p class="margin-top-zero margin-bottom-zero margin-right-left-4 line-height-36">&#124;</p> <p class="margin-zero line-height-36">{{main.driverUpdateText}}</p> </div> </div> <div layout=row> <md-button class=margin-zero ng-click=main.resetDriverUpdateRequired()> <p class="margin-zero line-height-36 color-white-hue-3" translate=l10n.later></p> </md-button> <md-button class="margin-zero margin-left-16" ng-click=main.onClickUpdateDriver()> <p class="margin-zero line-height-36 color-white-hue-3" translate=l10n.updateDriver></p> </md-button> </div> </div> </md-toolbar> <div layout flex ui-view> </div> </div> <nv-feedback-float></nv-feedback-float> </nv-window> <nv-prefetch-directive></nv-prefetch-directive> '
-}, function(e, t) {
-    e.exports = "<div class=\"bg-dark-bluish-gray tourStep nv-ui-tour-popup nv-popover {{ tourStep.config('popupClass') }} {{ tourStep.config('orphan') ? 'nv-ui-tour-popup-orphan' : tourStep.config('placement').split('-')[0] + ' ' + tourStep.config('placement') }}\" ng-style=\"{\r\nvisibility: 'hidden',\r\ndisplay: 'block',\r\nposition: tourStep.config('fixed') || tourStep.config('orphan') ? 'fixed' : 'absolute',\r\nzIndex: tourStep.config('backdropZIndex') + 2\r\n}\" tabindex=0 aria-hidden=\"{{ tour._getCurrentStep() !== tourStep }}\"> <div class=arrow></div> <div class=\"nv-popover-inner tour-step-inner\" layout=column> <p class=\"tour-step-title padding-24 margin-zero font-size-lg\" ng-bind=\"tourStep.config('title')\" ng-if=\"tourStep.config('title')\"></p> <div layout=row layout-align=\"end center\" class=\"constants-position-absolute right-zero top-zero padding-8\"> <md-button class=\"md-icon-button nv-popover-close-button\" ng-click=tour.pause()> <md-icon md-font-set=material-icons class=nv-popover-close-button>close</md-icon> </md-button> </div> <div class=\"nv-popover-content-container tour-step-content\" ng-include=\"tourStep.config('templateUrl') || 'tour-step-template.html'\" flex layout=row></div> </div> </div> "
-}, function(e, t) {
-    e.exports = '<div layout=column layout-align="space-between start" flex> <div class="nv-popover-content tour-step-content margin-top-16" bind-html-compile="tourStep.trustedContent || tourStep.content" ng-if=tourStep.content></div> <div layout=row layout-align="end center" class="nv-popover-navigation tour-step-navigation padding-8"> <md-button ng-if=tourStep.isNext() ng-click=tour.next() class="md-accent foreground margin-zero" translate=l10n.nextTip> </md-button> <md-button ng-if=!tourStep.isNext() ng-click=tour.next() class="md-accent foreground margin-zero" translate=l10n.gotItText> </md-button> </div> </div> '
 }, , , , , , , , , , function(e, t) {
     e.exports = '<div class=friends-friend-about> <div class=content-container flex=100> <div class="left-column bg-dark-hv"> <div class="left-content color-dark-gray font-size-lg"> {{\'l10n.realName\' | translate}}: {{friendAbout.userAboutGeneral.realName}} </div> <div class="left-content color-dark-gray font-size-lg"> {{\'l10n.lastSeen\' | translate}}: {{friendAbout.userAboutGeneral.lastSeen}} </div> <div class="left-content color-dark-gray font-size-lg"> {{\'l10n.memberSince\' | translate}}: {{friendAbout.userAboutGeneral.memberSince}} </div> <div class="left-content color-dark-gray font-size-lg"> {{\'l10n.reputation\' | translate}}: </div> <div class=star-rating> <div ng-repeat="item in friendAbout.getArray() track by $index"> <div name=rating-item class=rating> <img ng-src={{friendAbout.loadRatingImage(item)}} class=golden-star /> </div> </div> </div> </div> <div class="right-column bg-dark-hv"> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>movie_creation</md-icon> {{friendAbout.userAboutSpecification.graphicsHardware}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>visibility</md-icon> {{friendAbout.userAboutSpecification.driverVersion}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>select_all</md-icon> {{friendAbout.userAboutSpecification.CPU}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>memory</md-icon> {{friendAbout.userAboutSpecification.RAM}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>desktop_windows</md-icon> {{friendAbout.userAboutSpecification.displayResolution}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>favorite</md-icon> {{friendAbout.userAboutSpecification.OS}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>mouse</md-icon> {{friendAbout.userAboutSpecification.interface.pointingDevice}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>keyboard</md-icon> {{friendAbout.userAboutSpecification.interface.textInput}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>gamepad</md-icon> {{friendAbout.userAboutSpecification.interface.gameController}} </div> <div class="right-content color-light-gray"> <md-icon class="material-icons md-default-theme" md-font-set=material-icons>nature_people</md-icon> {{friendAbout.userAboutSpecification.interface.augmentedRealityHardware}} </div> </div> </div> </div> '
 }, function(e, t) {
@@ -21469,11 +21528,11 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = "<md-content class=md-padding> </md-content> "
 }, function(e, t, n) {
-    e.exports = "<div layout=column class=friends-friend-broadcast> <div flex layout=column class=image-position ng-switch on=friendBroadcast.view> <nv-broadcast-viewer ng-switch-when=broadcast layout=column flex portal={{friendBroadcast.broadcastStatus.data.portal}} channel={{friendBroadcast.broadcastStatus.data.channel}}></nv-broadcast-viewer> <img ng-switch-when=image ng-src=" + n(302) + ' alt="{{\'l10n.alt.background\' | translate}}" layout-fill="" class=ng-scope src=' + n(302) + ' /> <nv-overlay nv-position=bottom class=common-overlay> <div layout=row layout-align="start center" class=overlay-width> <div flex=10 class=md-padding> <img ng-src={{friendBroadcast.selectedUser.avatar}} class=rounded-image alt={{friendBroadcast.selectedUser.name}} layout-fill/> </div> <div flex layout=column> <div class="font-size-xxxl line-height-md">{{friendBroadcast.selectedUser.core.displayName}}</div> <span class="font-size-xl color-medium-gray">{{\'l10n.broadcasting\' | translate:friendBroadcast.translateInterpolation}} {{}}</span> </div> <md-button ng-click=friendBroadcast.watchBroadcast() ng-if="friendBroadcast.view === \'broadcast\'" class="md-accent md-raised watch-broadcast-button">{{\'l10n.watchBroadcast\' | translate}}</md-button> </div> </nv-overlay> <div class=label> <div> <div>{{l10n.placeholderText | translate}}</div> </div> </div> </div> </div> ';
+    e.exports = "<div layout=column class=friends-friend-broadcast> <div flex layout=column class=image-position ng-switch on=friendBroadcast.view> <nv-broadcast-viewer ng-switch-when=broadcast layout=column flex portal={{friendBroadcast.broadcastStatus.data.portal}} channel={{friendBroadcast.broadcastStatus.data.channel}}></nv-broadcast-viewer> <img ng-switch-when=image ng-src=" + n(302) + ' alt="{{\'l10n.alt.background\' | translate}}" layout-fill="" class=ng-scope src=' + n(302) + ' /> <nv-overlay nv-position=bottom class=common-overlay> <div layout=row layout-align="start center" class=overlay-width> <div flex=10 class=md-padding> <img ng-src={{friendBroadcast.selectedUser.avatar}} class=rounded-image alt={{friendBroadcast.selectedUser.name}} layout-fill/> </div> <div flex layout=column> <div class="font-size-xxxl line-height-md">{{friendBroadcast.selectedUser.core.displayName}}</div> <span class="font-size-xl color-medium-gray">{{\'l10n.broadcasting\' | translate:friendBroadcast.translateInterpolation}} {{}}</span> </div> <md-button ng-click=friendBroadcast.watchBroadcast() ng-if="friendBroadcast.view === \'broadcast\'" class="md-accent md-raised watch-broadcast-button">{{\'l10n.watchBroadcast\' | translate}}</md-button> </div> </nv-overlay> <div class=label> <div> <div>{{l10n.placeholderText | translate}}</div> </div> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<md-content class="md-padding friend-compare-games-holder"> </md-content> '
 }, function(e, t) {
-    e.exports = '<md-content flex class="md-padding friends-friend-details"> <p>{{friendDetails.user.core.displayName}}</p> <div layout=column> <div layout=row> <nv-friend-broadcast layout></nv-friend-broadcast> <div flex layout=column class=summary-compare> <md-tabs flex layout=column> <md-tab flex layout label="{{\'l10n.gameSummary\' | translate}}"> <md-tab-body flex layout> <nv-friend-game-summary class="md-primary md-hue-3 background" flex layout=column></nv-friend-game-summary> </md-tab-body> </md-tab> <md-tab label="{{\'l10n.compareGames\' | translate}}"> <md-content class=md-padding> <nv-friend-compare-games></nv-friend-compare-games> </md-content> </md-tab> </md-tabs> </div> </div> <div flex layout=row> <div class=friend-info> <md-tabs md-border-bottom> <md-tab label=Achievements> <nv-friend-achievements></nv-friend-achievements> </md-tab> <md-tab label="Activity Feed"> <nv-friend-activity-feed></nv-friend-activity-feed> </md-tab> <md-tab label="{{\'about\' | translate | uppercase}}"> <nv-friend-about></nv-friend-about> </md-tab> </md-tabs> </div> <div flex class=friends-groups> <md-tabs md-border-bottom> <md-tab label=Friends class=friends-friend-details> <md-content class="md-padding list-layout" flex layout> <nv-friend-list class=friends-friend-list nv-type=grid nv-user-id={{friendDetails.user.userId}} flex layout></nv-friend-list> </md-content> </md-tab> <md-tab label=Groups> <md-content class=md-padding> <nv-friend-group-list nv-type=grid class=friends-friend-group-list nv-user-id={{friendDetails.user.userId}}></nv-friend-group-list> </md-content> </md-tab> </md-tabs> </div> </div> </div> </md-content> '
+    e.exports = '<md-content flex class="md-padding friends-friend-details"> <p>{{friendDetails.user.core.displayName}}</p> <div layout=column> <div layout=row> <nv-friend-broadcast layout></nv-friend-broadcast> <div flex layout=column class=summary-compare> <md-tabs flex layout=column> <md-tab flex layout label="{{\'l10n.gameSummary\' | translate}}"> <md-tab-body flex layout> <nv-friend-game-summary class="md-primary md-hue-3 background" flex layout=column></nv-friend-game-summary> </md-tab-body> </md-tab> <md-tab label="{{\'l10n.compareGames\' | translate}}"> <md-content class=md-padding> <nv-friend-compare-games></nv-friend-compare-games> </md-content> </md-tab> </md-tabs> </div> </div> <div flex layout=row> <div class=friend-info> <md-tabs md-border-bottom> <md-tab label=Achievements> <nv-friend-achievements></nv-friend-achievements> </md-tab> <md-tab label="Activity Feed"> <nv-friend-activity-feed></nv-friend-activity-feed> </md-tab> <md-tab label="{{\'about\' | translate | uppercase}}"> <nv-friend-about></nv-friend-about> </md-tab> </md-tabs> </div> <div flex class=friends-groups> <md-tabs md-border-bottom> <md-tab label=Friends class=friends-friend-details> <md-content class="md-padding list-layout" flex layout> <nv-friend-list class=friends-friend-list nv-type=grid nv-user-id={{friendDetails.user.userId}} flex layout></nv-friend-list> </md-content> </md-tab> <md-tab label=Groups> <md-content class=md-padding> <nv-friend-group-list nv-type=grid class=friends-friend-group-list nv-user-id={{friendDetails.user.userId}}></nv-friend-group-list> </md-content> </md-tab> </md-tabs> </div> </div> </div> </md-content> ';
 }, function(e, t) {
     e.exports = '<md-content class=friends-friend-game-summary flex layout=column> <nv-accordion nv-accordion-mode=alwaysOne flex layout=column> <nv-accordion-pane nv-start-expanded=true> <nv-accordion-pane-header flex layout=row layout-align="start center"> <span flex>{{\'l10n.gameSummary\' | translate}}</span> </nv-accordion-pane-header> <nv-accordion-pane-content id=donut-chart layout=column> <style>.friends-friend-game-summary .nvd3.nv-pie path{stroke-width:0}</style> <svg flex ng-show=friendGameSummary.showChart()></svg> <div class=overlay-text layout-align="center center" layout=column> {{\'l10n.numGames\' | translate:friendGameSummary.translateInterpolation()}} </div> </nv-accordion-pane-content> </nv-accordion-pane> <nv-accordion-pane ng-repeat="genreEntry in friendGameSummary.data track by $index"> <nv-accordion-pane-header flex layout=row layout-align="start center"> <md-content flex layout-align="start center" layout=row> <div class=rectangle-bullet ng-style=friendGameSummary.rectColor($index)> &nbsp; </div> {{genreEntry.label | translate}} </md-content> </nv-accordion-pane-header> <nv-accordion-pane-content layout=column> <md-content flex> <div ng-repeat="gameEntry in genreEntry.data"> <img ng-src={{gameEntry.infoImage}} style=width:200px;height:100px /> <p> {{gameEntry.displayName}} </p> </div> </md-content> </nv-accordion-pane-content> </nv-accordion-pane> </nv-accordion> </md-content> '
 }, function(e, t) {
@@ -21507,11 +21566,11 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<md-dialog class=games-custom-fps> <div layout=column class=games-custom-fps-container> <div layout=column ng-hide=fpsCtrl.showErrorMessage layout-fill> <h4 class="color-white-hue-1 font-size-sm line-height-sm1" translate={{::fpsCtrl.fpsDlgHeader}}></h4> <div layout=column class=fps-details-container> <div layout=row layout-align="space between"> <p class="color-white-hue-3 font-size-sm line-height-sm1" translate=l10n.maximumFramerate></p> <h4 class=color-white-hue-3> <span translate=l10n.fpsCount translate-value-number={{fpsCtrl.currentFpsSliderIndex}}></span> </h4> </div> <div layout=column class=fps-slider-container> <div layout=row layout-fill layout-align="center center"> <p class="slider-min-index-label margin-right-16">{{ fpsCtrl.minFpsIndex }}</p> <div class=constants-position-relative> <nv-slider nv-slider-index=fpsCtrl.currentFpsSliderIndex nv-min-index=fpsCtrl.minFpsIndex nv-max-index=fpsCtrl.maxFpsIndex nv-step=fpsCtrl.sliderStep nv-current-slider-changed=fpsCtrl.currentFpsSliderChanged() nv-is-disabled="fpsCtrl.controlDisabled || !fpsCtrl.maxFpsIndex"> </nv-slider> </div> <p class="slider-max-index-label margin-left-16">{{ fpsCtrl.maxFpsIndex }}</p> </div> <div class=optimal-button-container> <div class="optimal-line-indicator md-accent background" ng-disabled=fpsCtrl.controlDisabled></div> <md-button class="md-raised md-accent color-white-important optimal-value-button" ng-click=fpsCtrl.applyOptimalValue() ng-disabled=fpsCtrl.controlDisabled translate=l10n.recommendedFps></md-button> </div> </div> </div> </div> <div layout=column ng-show=fpsCtrl.showErrorMessage layout-align="center center" class=games-custom-fps-container layout-fill> <span translate=l10n.couldNotRetrieveWMFps ng-if=fpsCtrl.isCurrentSettingTypeAC()></span> <span translate=l10n.couldNotRetrieveBBFps ng-if=!fpsCtrl.isCurrentSettingTypeAC()></span> </div> </div> <div class=cancel-apply-container layout=row layout-align="end end"> <md-button ng-click=fpsCtrl.cancelCustomFps() translate=l10n.cancel></md-button> <md-button ng-hide=fpsCtrl.showErrorMessage class=md-accent ng-click=fpsCtrl.applyCustomFps() translate=l10n.apply ng-disabled="fpsCtrl.applyButtonDisabled || fpsCtrl.controlDisabled"></md-button> </div> <nv-overlay class="common-overlay .constants-z-layers-one" layout-fill ng-show=fpsCtrl.showProgressIndicator> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> </md-dialog> '
 }, function(e, t) {
-    e.exports = '<md-dialog class=games-custom-ops> <div layout=column class=games-custom-ops-container> <div layout=column ng-hide=opsCtrl.showErrorMessage layout-fill> <h4 class="color-white-hue-1 font-size-sm line-height-sm1" translate={{opsCtrl.getHeading()}}></h4> <div layout=row class=resolution-display-mode-container> <div flex> <md-input-container> <p class="font-size-xxs color-white-hue-4" translate=l10n.resolution></p> <md-select class=color-white-hue-3 ng-model=opsCtrl.selectedResolution ng-disabled=opsCtrl.isResolutionDisabled() ng-change=opsCtrl.resolutionOrDisplayModeChanged() md-container-class=resolution-container> <header class=resolution-header ng-repeat-start="resolution in opsCtrl.resolutions"> <p ng-disabled=true ng-if=opsCtrl.showResolutionHeader($index) translate={{opsCtrl.resolutionHeader(resolution)}}></p> </header> <md-option class=resolution-options ng-value=resolution>{{opsCtrl.getResolutionString(resolution)}}</md-option> <footer ng-repeat-end></footer> </md-select> </md-input-container> </div> <div class=resolution-display-mode-separator></div> <div flex> <md-input-container> <p class="font-size-xxs color-white-hue-4" translate=l10n.displayMode></p> <md-select class=color-white-hue-3 ng-model=opsCtrl.selectedDisplayMode ng-disabled=opsCtrl.isDisplayModeDisabled() ng-change=opsCtrl.resolutionOrDisplayModeChanged() md-container-class=display-mode-container> <md-option class=display-mode-options ng-value=displayMode ng-repeat="displayMode in opsCtrl.displayModes">{{opsCtrl.getDisplayModeString(displayMode)}}</md-option> </md-select> </md-input-container> </div> </div> <div layout=column class=optimize-for-container> <p class="color-white-hue-3 font-size-sm line-height-sm1" translate=l10n.optimizeFor></p> <div layout=row layout-align="space-between center" class="optimized-slider-items-header color-white-hue-3"> <p ng-show=opsCtrl.isCurrentSettingTypeAC() class="font-size-xxs line-height-sm1" translate=l10n.performance></p> <p ng-hide=opsCtrl.isCurrentSettingTypeAC() class="font-size-xxs line-height-sm1" translate=l10n.battery></p> <p class="font-size-xxs line-height-sm1" translate=l10n.quality></p> </div> <div layout=column class=optimized-slider-container> <div layout=row layout-fill layout-align="center center"> <md-icon ng-show=opsCtrl.isCurrentSettingTypeAC() class="nv-custom-icons md-18 performance-icon" md-font-icon=icon-speedometer> <md-tooltip> <span translate=l10n.higherPerformance></span> </md-tooltip> </md-icon> <md-icon ng-hide=opsCtrl.isCurrentSettingTypeAC() class="nv-custom-icons md-18 battery-icon" md-font-icon=icon-onbattery> <md-tooltip> <span translate=l10n.longerBatteryLife></span> </md-tooltip> </md-icon> <div class=constants-position-relative> <md-slider md-discrete flex ng-model=opsCtrl.currentSliderIndex min=0 max={{opsCtrl.maxIndex}} step=1 ng-change=opsCtrl.currentSliderChanged() ng-disabled="opsCtrl.controlDisabled || !opsCtrl.maxIndex"> </md-slider> </div> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-quality-high class="nv-custom-icons quality-icon"> <md-tooltip> <span translate=l10n.betterQuality></span> </md-tooltip> </md-icon> </div> <div class=optimal-button-container> <div class="optimal-line-indicator md-accent background" ng-disabled=opsCtrl.controlDisabled></div> <md-button class="md-raised md-accent color-white-important optimal-value-button" ng-click=opsCtrl.applyOptimalValue() ng-disabled=opsCtrl.controlDisabled translate=l10n.optimal></md-button> </div> </div> </div> </div> <div layout=column ng-show=opsCtrl.showErrorMessage layout-align="center center" class=games-custom-ops-container layout-fill> <span translate=l10n.couldNotRetrieveCustomSettings></span> </div> </div> <div class=cancel-apply-container layout=row layout-align="end end"> <md-button ng-click=opsCtrl.cancelCustomSettings() translate=l10n.cancel></md-button> <md-button ng-hide=opsCtrl.showErrorMessage class=md-accent ng-click=opsCtrl.applyCustomSettings() translate=l10n.apply ng-disabled="opsCtrl.applyButtonDisabled || opsCtrl.controlDisabled"></md-button> </div> <nv-overlay class="common-overlay constants-z-layers-zero" layout-fill ng-show=opsCtrl.showProgressIndicator> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> </md-dialog> ';
+    e.exports = '<md-dialog class=games-custom-ops> <div layout=column class=games-custom-ops-container> <div layout=column ng-hide=opsCtrl.showErrorMessage layout-fill> <h4 class="color-white-hue-1 font-size-sm line-height-sm1" translate={{opsCtrl.getHeading()}}></h4> <div layout=row class=resolution-display-mode-container> <div flex> <md-input-container> <p class="font-size-xxs color-white-hue-4" translate=l10n.resolution></p> <md-select class=color-white-hue-3 ng-model=opsCtrl.selectedResolution ng-disabled=opsCtrl.isResolutionDisabled() ng-change=opsCtrl.resolutionOrDisplayModeChanged() md-container-class=resolution-container> <header class=resolution-header ng-repeat-start="resolution in opsCtrl.resolutions"> <p ng-disabled=true ng-if=opsCtrl.showResolutionHeader($index) translate={{opsCtrl.resolutionHeader(resolution)}}></p> </header> <md-option class=resolution-options ng-value=resolution>{{opsCtrl.getResolutionString(resolution)}}</md-option> <footer ng-repeat-end></footer> </md-select> </md-input-container> </div> <div class=resolution-display-mode-separator></div> <div flex> <md-input-container> <p class="font-size-xxs color-white-hue-4" translate=l10n.displayMode></p> <md-select class=color-white-hue-3 ng-model=opsCtrl.selectedDisplayMode ng-disabled=opsCtrl.isDisplayModeDisabled() ng-change=opsCtrl.resolutionOrDisplayModeChanged() md-container-class=display-mode-container> <md-option class=display-mode-options ng-value=displayMode ng-repeat="displayMode in opsCtrl.displayModes">{{opsCtrl.getDisplayModeString(displayMode)}}</md-option> </md-select> </md-input-container> </div> </div> <div layout=column class=optimize-for-container> <p class="color-white-hue-3 font-size-sm line-height-sm1" translate=l10n.optimizeFor></p> <div layout=row layout-align="space-between center" class="optimized-slider-items-header color-white-hue-3"> <p ng-show=opsCtrl.isCurrentSettingTypeAC() class="font-size-xxs line-height-sm1" translate=l10n.performance></p> <p ng-hide=opsCtrl.isCurrentSettingTypeAC() class="font-size-xxs line-height-sm1" translate=l10n.battery></p> <p class="font-size-xxs line-height-sm1" translate=l10n.quality></p> </div> <div layout=column class=optimized-slider-container> <div layout=row layout-fill layout-align="center center"> <md-icon ng-show=opsCtrl.isCurrentSettingTypeAC() class="nv-custom-icons md-18 performance-icon" md-font-icon=icon-speedometer> <md-tooltip> <span translate=l10n.higherPerformance></span> </md-tooltip> </md-icon> <md-icon ng-hide=opsCtrl.isCurrentSettingTypeAC() class="nv-custom-icons md-18 battery-icon" md-font-icon=icon-onbattery> <md-tooltip> <span translate=l10n.longerBatteryLife></span> </md-tooltip> </md-icon> <div class=constants-position-relative> <md-slider md-discrete flex ng-model=opsCtrl.currentSliderIndex min=0 max={{opsCtrl.maxIndex}} step=1 ng-change=opsCtrl.currentSliderChanged() ng-disabled="opsCtrl.controlDisabled || !opsCtrl.maxIndex"> </md-slider> </div> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-quality-high class="nv-custom-icons quality-icon"> <md-tooltip> <span translate=l10n.betterQuality></span> </md-tooltip> </md-icon> </div> <div class=optimal-button-container> <div class="optimal-line-indicator md-accent background" ng-disabled=opsCtrl.controlDisabled></div> <md-button class="md-raised md-accent color-white-important optimal-value-button" ng-click=opsCtrl.applyOptimalValue() ng-disabled=opsCtrl.controlDisabled translate=l10n.optimal></md-button> </div> </div> </div> </div> <div layout=column ng-show=opsCtrl.showErrorMessage layout-align="center center" class=games-custom-ops-container layout-fill> <span translate=l10n.couldNotRetrieveCustomSettings></span> </div> </div> <div class=cancel-apply-container layout=row layout-align="end end"> <md-button ng-click=opsCtrl.cancelCustomSettings() translate=l10n.cancel></md-button> <md-button ng-hide=opsCtrl.showErrorMessage class=md-accent ng-click=opsCtrl.applyCustomSettings() translate=l10n.apply ng-disabled="opsCtrl.applyButtonDisabled || opsCtrl.controlDisabled"></md-button> </div> <nv-overlay class="common-overlay constants-z-layers-zero" layout-fill ng-show=opsCtrl.showProgressIndicator> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> </md-dialog> '
 }, function(e, t) {
     e.exports = '<span translate=l10n.dsr></span> <md-tooltip><span translate=l10n.dsrInfo></span></md-tooltip> <md-icon md-font-set=material-icons class="material-icons color-inherit">info_outline</md-icon> '
 }, function(e, t) {
-    e.exports = "<md-toolbar> <div class=md-toolbar-tools> <span flex></span> <md-button class=md-icon-button ng-click=gameDetailPreview.toggleFavorite() nv-telemetry='{\"tarconID\":{{$root.telemetryEventNames.GAMEDETAILS_SET_GAME_FAVORITE}},\"url\":\"{{gameDetailPreview.userGame.systemGame.shortName}},{{gameDetailPreview.userGame.favorite}}\"}'> <div ng-show=gameDetailPreview.userGame.favorite> <md-icon class=material-icons>star_rate</md-icon> <md-tooltip> {{'l10n.removeFavorite' | translate }} </md-tooltip> </div> <div ng-hide=gameDetailPreview.userGame.favorite> <md-icon class=material-icons>star_border</md-icon> <md-tooltip> {{'l10n.favorite' | translate }} </md-tooltip> </div> </md-button> <md-button class=md-icon-button ng-click=gameDetailPreview.showTagsModalDialog() ng-if=::gameDetailPreview.devFeatures.experimental> <md-tooltip> {{'l10n.tags' | translate }} </md-tooltip> <md-icon class=material-icons>local_offer</md-icon> </md-button> <md-button class=md-icon-button ng-click=gameDetailPreview.toggleVisibility()> <div ng-show=gameDetailPreview.userGame.hidden> <md-tooltip> {{'l10n.showGame' | translate }} </md-tooltip> <md-icon class=material-icons>visibility_off</md-icon> </div> <div ng-hide=gameDetailPreview.userGame.hidden> <md-tooltip> {{'l10n.hideGame' | translate }} </md-tooltip> <md-icon class=material-icons>visibility</md-icon> </div> </md-button> <md-button class=md-icon-button ng-if=::gameDetailPreview.devFeatures.experimental> <md-tooltip> {{'l10n.moreDots' | translate }} </md-tooltip> <md-icon class=material-icons>more_horiz</md-icon> </md-button> </div> </md-toolbar> <md-card class=md-card-no-hover> <nv-optimized-icon nv-system-game=gameDetailPreview.userGame class=games-optimized-icon ng-if=gameDetailPreview.isGameOpsSupported></nv-optimized-icon> <img ng-src={{gameDetailPreview.userGame.systemGame.infoImage}} alt={{gameDetailPreview.userGame.systemGame.displayName}} class=games-info-image nv-image-fallback/> <md-card-content layout=row layout-align=\"start center\" flex class=games-game-detail-preview-description> <img ng-src={{gameDetailPreview.userGame.systemGame.iconFile}} alt={{gameDetailPreview.userGame.systemGame.displayName}} nv-image-fallback=nv-no-loading-indicator /> <div flex layout=column> <h1>{{gameDetailPreview.userGame.systemGame.displayName}}</h1> <span class=\"md-body-1 game-preview-information\">{{gameDetailPreview.userGame.systemGame.installDirectory}}</span> </div> <div layout=column layout-align=\"center end\" ng-if=gameDetailPreview.isPlayed()> <div class=md-caption> <span translate=l10n.lastPlayed></span>{{ gameDetailPreview.userGame.lastLaunchDate | convertUTCToTimeAgo}} </div> <div class=md-caption> {{'l10n.totalPlayed' | convertSecondsToRelativeDate:gameDetailPreview.userGame.playedTime}} </div> </div> <nv-play-game class=games-play-game nv-system-game=gameDetailPreview.userGame.systemGame nv-telemetry='{\"tarconID\":{{$root.telemetryEventNames.GAMEINFO_LAUNCH_LOCALGAME}},\"url\":\"{{gameDetailPreview.userGame.systemGame.shortName}}\"}'></nv-play-game> </md-card-content> </md-card> "
+    e.exports = "<md-toolbar> <div class=md-toolbar-tools> <span flex></span> <md-button class=md-icon-button ng-click=gameDetailPreview.toggleFavorite() nv-telemetry='{\"tarconID\":{{$root.telemetryEventNames.GAMEDETAILS_SET_GAME_FAVORITE}},\"url\":\"{{gameDetailPreview.userGame.systemGame.shortName}},{{gameDetailPreview.userGame.favorite}}\"}'> <div ng-show=gameDetailPreview.userGame.favorite> <md-icon class=material-icons>star_rate</md-icon> <md-tooltip> {{'l10n.removeFavorite' | translate }} </md-tooltip> </div> <div ng-hide=gameDetailPreview.userGame.favorite> <md-icon class=material-icons>star_border</md-icon> <md-tooltip> {{'l10n.favorite' | translate }} </md-tooltip> </div> </md-button> <md-button class=md-icon-button ng-click=gameDetailPreview.showTagsModalDialog() ng-if=::gameDetailPreview.devFeatures.experimental> <md-tooltip> {{'l10n.tags' | translate }} </md-tooltip> <md-icon class=material-icons>local_offer</md-icon> </md-button> <md-button class=md-icon-button ng-click=gameDetailPreview.toggleVisibility()> <div ng-show=gameDetailPreview.userGame.hidden> <md-tooltip> {{'l10n.showGame' | translate }} </md-tooltip> <md-icon class=material-icons>visibility_off</md-icon> </div> <div ng-hide=gameDetailPreview.userGame.hidden> <md-tooltip> {{'l10n.hideGame' | translate }} </md-tooltip> <md-icon class=material-icons>visibility</md-icon> </div> </md-button> <md-button class=md-icon-button ng-if=::gameDetailPreview.devFeatures.experimental> <md-tooltip> {{'l10n.moreDots' | translate }} </md-tooltip> <md-icon class=material-icons>more_horiz</md-icon> </md-button> </div> </md-toolbar> <md-card class=md-card-no-hover> <nv-optimized-icon nv-system-game=gameDetailPreview.userGame class=games-optimized-icon ng-if=gameDetailPreview.isGameOpsSupported></nv-optimized-icon> <img ng-src={{gameDetailPreview.userGame.systemGame.infoImage}} alt={{gameDetailPreview.userGame.systemGame.displayName}} class=games-info-image nv-image-fallback/> <md-card-content layout=row layout-align=\"start center\" flex class=games-game-detail-preview-description> <img ng-src={{gameDetailPreview.userGame.systemGame.iconFile}} alt={{gameDetailPreview.userGame.systemGame.displayName}} nv-image-fallback=nv-no-loading-indicator /> <div flex layout=column> <h1>{{gameDetailPreview.userGame.systemGame.displayName}}</h1> <span class=\"md-body-1 game-preview-information\">{{gameDetailPreview.userGame.systemGame.installDirectory}}</span> </div> <div layout=column layout-align=\"center end\" ng-if=gameDetailPreview.isPlayed()> <div class=md-caption> <span translate=l10n.lastPlayed></span>{{ gameDetailPreview.userGame.lastLaunchDate | convertUTCToTimeAgo}} </div> <div class=md-caption> {{'l10n.totalPlayed' | convertSecondsToRelativeDate:gameDetailPreview.userGame.playedTime}} </div> </div> <nv-play-game class=games-play-game nv-system-game=gameDetailPreview.userGame.systemGame nv-telemetry='{\"tarconID\":{{$root.telemetryEventNames.GAMEINFO_LAUNCH_LOCALGAME}},\"url\":\"{{gameDetailPreview.userGame.systemGame.shortName}}\"}'></nv-play-game> </md-card-content> </md-card> ";
 }, function(e, t, n) {
     e.exports = '<div flex class=games-game-details layout=column> <div ng-if=::!gameDetails.devFeatures.experimental flex layout=column> <md-toolbar class=game-details-toolbar nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.GAMEINFO_VIEW_GAME_OPTIMIZATIONS}},"url":"{{gameDetails.userGame.systemGame.shortName}}"}\'> <div class="md-toolbar-tools bg-black-hv-hue-1" layout=row layout-align="space-between center"> <div layout=row class=game-details-toolbar-left-container> <md-button class="md-icon-button game-details-back-button" ng-click="$state.go(\'main.auth.home.gamesAndFriends\')" ng-if=::!gameDetails.classicViewEnabled> <md-icon md-font-set=material-icons class="md-24 color-white-hue-1">arrow_back</md-icon> <md-tooltip><span translate=l10n.back></span></md-tooltip> </md-button> <span class=game-details-game-icon-container> <img ng-src={{gameDetails.userGame.systemGame.iconImage36}} alt={{gameDetails.userGame.systemGame.iconImage36}} nv-image-fallback=nv-no-loading-indicator /> </span> <span layout=column> <h4 class="color-white-hue-1 font-size-lg">{{gameDetails.userGame.systemGame.displayName}}</h4> <p class="color-white-hue-4 font-size-sm selectable-text">{{gameDetails.userGame.systemGame.installDirectory}}</p> </span> </div> <div layout=row layout-align="center center" class=game-details-toolbar-right-container> <div class=padding-left-20> <md-button class=md-icon-button ng-click=gameDetails.toggleFavorite($event)> <div ng-if=!gameDetails.userGame.favorite> <md-tooltip><span translate=l10n.markFavorite></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>star_border</md-icon> </div> <div ng-if=gameDetails.userGame.favorite> <md-tooltip><span translate=l10n.removeFavorite></span></md-tooltip> <md-icon md-font-set=material-icons class="md-18 color-white-hue-2">star_rate</md-icon> </div> </md-button> </div> <div class=padding-left-20> <md-button class=md-icon-button ng-click=gameDetails.toggleVisibility($event)> <div ng-if=!gameDetails.userGame.hidden> <md-tooltip><span translate=l10n.hideGame></span></md-tooltip> <md-icon md-font-set=material-icons class="md-18 color-white-hue-2">visibility</md-icon> </div> <div ng-if=gameDetails.userGame.hidden> <md-tooltip><span translate=l10n.showGame></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>visibility_off</md-icon> </div> </md-button> </div> <img class="padding-left-16 padding-right-16" src=' + n(96) + '> <div layout=row class="color-white-hue-4 font-size-xxs" layout-align="center center" ng-if=gameDetails.isPlayed()> <span translate=l10n.lastPlayed></span> <span>&nbsp;{{gameDetails.userGame.lastLaunchDate | convertUTCToTimeAgo}}</span> </div> <nv-play-game class=games-play-game nv-system-game=gameDetails.userGame.systemGame nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.GAMEINFO_LAUNCH_LOCALGAME}},"url":"{{gameDetails.userGame.systemGame.shortName}}"}\'></nv-play-game> </div> </div> </md-toolbar> <div class=games-game-optimization flex layout=column ng-if=gameDetails.doesSystemSupportOPS> <div class=constants-position-relative flex> <ui-layout options="::{disableToggle: true, disableMobileToggle: true, dividerSize: 3}" class=games-game-optimization-container> <div layout=row class="vops-image-container ui-splitbar-border" ui-layout-container min-size=249px size={{gameDetails.viewState.vopsImageContainerSize}}> <nv-vops nv-system-game=gameDetails.userGame.systemGame nv-classic-view-enabled={{::gameDetails.classicViewEnabled}} flex layout=column></nv-vops> </div> <div layout=column class=game-settings-table-container ui-layout-container min-size=210px> <nv-optimization nv-system-game=gameDetails.userGame.systemGame nv-classic-view-enabled={{::gameDetails.classicViewEnabled}} class=games-optimization layout=column flex></nv-optimization> </div> </ui-layout> </div> </div> <div layout=column class=game-system-ops-not-supported layout-align="center center" flex style=background-color:#000 ng-if=gameDetails.showOpsNotSupported()> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-notoptimized_reg class="nv-custom-icons md-48 color-white-hue-3"></md-icon> <p class="color-white-hue-3 font-size-12" translate=l10n.systemDoesNotSupportOps></p> <div layout=row layout-align="center center"> <p class="color-white-hue-3 font-size-12" translate=l10n.needToMeetSystemRequirement></p> <a ng-click=gameDetails.systemNoOpsRequirementLink() class="md-default-theme font-size-sm top-margin-linksection" flex>&nbsp;<span class=font-lowercase translate=l10n.systemRequirement></span> </a> </div> </div> <div layout=column class=game-system-ops-not-supported layout-align="center center" flex ng-if=gameDetails.opsNotDetermined> <md-icon class=md-48 md-font-set=material-icons>warning</md-icon> <p class="color-white-hue-3 font-size-12" translate=l10n.unableToReachNvidiaServers></p> </div> <div layout=column layout-align="center center" flex ng-show=gameDetails.opsSupportedRequestInProgress> <md-progress-circular id=progressIndicator class=md-accent md-diameter=15 md-mode=indeterminate></md-progress-circular> </div> </div> <md-tabs md-dynamic-height ng-if=::gameDetails.devFeatures.experimental> <md-tab label="{{\'l10n.optimization\' | translate | uppercase}}" ng-if=gameDetails.userGame.systemGame.regularSupported nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.GAMEINFO_VIEW_GAME_OPTIMIZATIONS}},"url":"{{gameDetails.userGame.systemGame.shortName}}"}\'> <div class="games-game-optimization constants-position-relative" layout=column> <div layout=row class=vops-image-container> <nv-vops nv-system-game=gameDetails.userGame.systemGame flex></nv-vops> </div> <div layout=row flex> <nv-optimization nv-system-game=gameDetails.userGame.systemGame nv-classic-view-enabled={{::gameDetails.classicViewEnabled}} flex class=games-optimization></nv-optimization> </div> </div> </md-tab> <md-tab label="{{\'l10n.gameInfo\' | translate | uppercase}}" nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.GAMEINFO_VIEW_GAME_DETAILS}},"url":"{{gameDetails.userGame.systemGame.shortName}}"}\'> <div layout=column> <div layout=row class=top-container> <nv-game-detail-preview nv-user-game=gameDetails.userGame class=games-game-detail-preview nv-ops-supported=gameDetails.doesSystemSupportOPS></nv-game-detail-preview> <div flex class=top-right-container> <md-toolbar> <div class=md-toolbar-tools> {{\'l10n.news\' | translate | uppercase}} </div> </md-toolbar> <md-content class=news-container> <nv-news ng-if=gameDetails.userGame.systemGame.shortName nv-short-name={{gameDetails.userGame.systemGame.shortName}} class=games-news></nv-news> </md-content> </div> </div> <div flex layout=row> <div class=bottom-left-container> <md-tabs md-border-bottom md-dynamic-height> <md-tab label="{{\'l10n.screenshots\' | translate | uppercase}}"> <md-card class="md-card-no-hover game-detail-screenshots-container"> <div ng-if=gameDetails.hasScreenshots() layout=row layout-wrap> <nv-media-tile nv-media-thumbnail={{screenshot.thumbnail}} nv-media-original={{screenshot.original}} nv-media-type={{gameDetails.mediaFileType.IMAGE}} nv-media-alt={{gameDetails.userGame.systemGame.displayName}} ng-repeat="screenshot in gameDetails.screenShots track by $index" class="common-media-tile bg-dark-im"></nv-media-tile> </div> <nv-no-content-fallback ng-if=!gameDetails.hasScreenshots() nv-tip="{{\'l10n.noContent\' | translate}}" flex></nv-no-content-fallback> </md-card> </md-tab> <md-tab label="{{\'l10n.videos\' | translate | uppercase}}"> <md-card class="md-card-no-hover game-detail-videos-container"> <nv-no-content-fallback ng-if=true nv-tip="{{\'l10n.noContent\' | translate}}" flex></nv-no-content-fallback> </md-card> </md-tab> </md-tabs> </div> <div flex> <md-tabs md-border-bottom md-dynamic-height> <md-tab label="{{\'l10n.description\' | translate | uppercase}}"> <md-card class=md-card-no-hover> <md-card-content flex ng-if=gameDetails.userGame.systemGame.longDescription> {{gameDetails.userGame.systemGame.longDescription}} </md-card-content> <nv-no-content-fallback ng-if=!gameDetails.userGame.systemGame.longDescription nv-tip="{{\'l10n.noDescription\' | translate}}" flex></nv-no-content-fallback> </md-card> </md-tab> <md-tab label="{{\'l10n.systemRequirement\' | translate | uppercase}}"> <md-card class=md-card-no-hover> <md-card-content flex></md-card-content> </md-card> </md-tab> </md-tabs> </div> </div> </div> </md-tab> </md-tabs> </div> '
 }, function(e, t) {
@@ -21533,13 +21592,13 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = "<md-content flex class=md-padding> <md-tabs flex md-border-bottom md-dynamic-height md-selected=gfn.pageNo> <md-tab label=\"{{'l10n.feature' | translate | uppercase }}\"> <nv-gfn-feature></nv-gfn-feature> </md-tab> <md-tab label=\"{{'l10n.freeForMembers' | translate}}\"> <nv-game-store nv-game-type=freeForMember></nv-game-store> </md-tab> <md-tab label=\"{{'l10n.buyAndPlay' | translate}}\"> <nv-game-store nv-game-type=buyAndPlay></nv-game-store> </md-tab> <md-tab label=\"{{'l10n.mostPopular' | translate}}\"> <nv-game-store nv-game-type=mostPopular></nv-game-store> </md-tab> <md-tab label={{gfn.labels.gameSeries1}}> <nv-game-store nv-game-type=gameSeries1></nv-game-store> </md-tab> <md-tab label={{gfn.labels.gameSeries2}}> <nv-game-store nv-game-type=gameSeries2></nv-game-store> </md-tab> <md-tab label=\"{{'l10n.genres' | translate}}\"> <nv-gfn-genres></nv-gfn-genres> </md-tab> </md-tabs> </md-content> "
 }, function(e, t, n) {
-    e.exports = "<div flex layout=row> <div layout=column> <div class=gfn-gfn-feature> <img src=" + n(711) + " alt=\"{{'l10n.alt.background' | translate}}\" layout-fill=\"\" class=ng-scope /> <h1>{{ gfnFeature.bannerTexts.bannerPlayGame1 | uppercase}}</h1> <h1>{{ gfnFeature.bannerTexts.bannerPlayGame2| uppercase}}</h1> <h3 class=gfn-gfn-feature-subscribe> <a href=#>{{ gfnFeature.bannerTexts.bannerSubscribe }}</a> </h3> <div class=gfn-gfn-feature-pane> <h3>{{'l10n.news' | translate | uppercase}}</h3> <div flex> <nv-news nv-news-source=gfn></nv-news> </div> </div> </div> </div> <div flex layout=column class=gfn-gfn-feature-pane> <h3 class=md-flex>{{'l10n.latestGames' | translate | uppercase}}</h3> <div flex> <nv-latest-games></nv-latest-games> </div> </div> </div> "
+    e.exports = "<div flex layout=row> <div layout=column> <div class=gfn-gfn-feature> <img src=" + n(713) + " alt=\"{{'l10n.alt.background' | translate}}\" layout-fill=\"\" class=ng-scope /> <h1>{{ gfnFeature.bannerTexts.bannerPlayGame1 | uppercase}}</h1> <h1>{{ gfnFeature.bannerTexts.bannerPlayGame2| uppercase}}</h1> <h3 class=gfn-gfn-feature-subscribe> <a href=#>{{ gfnFeature.bannerTexts.bannerSubscribe }}</a> </h3> <div class=gfn-gfn-feature-pane> <h3>{{'l10n.news' | translate | uppercase}}</h3> <div flex> <nv-news nv-news-source=gfn></nv-news> </div> </div> </div> </div> <div flex layout=column class=gfn-gfn-feature-pane> <h3 class=md-flex>{{'l10n.latestGames' | translate | uppercase}}</h3> <div flex> <nv-latest-games></nv-latest-games> </div> </div> </div> "
 }, function(e, t) {
     e.exports = ' <md-list-item layout=column layout-align="start start"> <md_button layout-align="start start" class=gfn-store-button ng-click=gameItem.onClickedGameItem()> <img ng-src={{gameItem.nvGame.infoImage}} alt=gameitem /> <div layout=column layout-align="start start" class=md-list-item-text> <p>{{gameItem.nvGame.displayName}}</p> <p ng-if=gameItem.nvGame.storeInfo.isPurchased> {{\'l10n.purchased\' | translate}} </p> <p ng-if=gameItem.isNeedPurchase()> ${{gameItem.nvGame.storeInfo.price}} </p> </div> </md_button> </md-list-item> '
 }, function(e, t) {
     e.exports = '<md-content layout=row layout-align="start start" layout-wrap> <md-list layout=row layout-align="start start" layout-wrap> <nv-game-store-item ng-repeat="gameItem in games.gameStoreList" nv-game=gameItem nv-show-type=games.gameType class=gfn-games-item></nv-game-store-item> </md-list> </md-content> '
 }, function(e, t) {
-    e.exports = '<md-content flex class="games-game-details md-padding"> <md-button ng-click="$state.go( \'main.auth.gfn\', {tabId: \'6\'}) " class=md-padding> &lt; {{gfnGenreGames.goBackString | translate}} </md-button> <nv-game-store nv-game-type="genre "></nv-game-store> </md-content> ';
+    e.exports = '<md-content flex class="games-game-details md-padding"> <md-button ng-click="$state.go( \'main.auth.gfn\', {tabId: \'6\'}) " class=md-padding> &lt; {{gfnGenreGames.goBackString | translate}} </md-button> <nv-game-store nv-game-type="genre "></nv-game-store> </md-content> '
 }, function(e, t) {
     e.exports = '<md-list-item layout=column layout-align="start start"> <md-button layout=column layout-align="start start" class=gfn-store-button ng-click="$state.go(\'main.auth.gfn.genreGames\', {id: gfnGenreItem.id})"> <img ng-src={{gfnGenreItem.img}} alt=genreItem /> <div layout-align="start start" class=md-list-item-text> <p>{{gfnGenreItem.name | translate}}</p> </div> </md-button> </md-list-item> '
 }, function(e, t) {
@@ -21551,9 +21610,9 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = "<html> <head> <style>body{background-color:#1a1a1a;font-family:Roboto,sans-serif}.centered{position:absolute;top:50%;left:50%;margin-right:50%;transform:translate(-50%,-50%)}p{color:rgba(255,255,255,.3);width:410px;text-align:center}a{color:#76b900;text-transform:capitalize;text-decoration:none}</style> <script> function sendErrorMessage() {\r\n            let errorMessage = {\r\n                error: {\r\n                    errorCode: '?ERROR_CODE',\r\n                    errorText: '?ERROR_TEXT',\r\n                    failedUrl: '?FAILED_URL'\r\n                }\r\n            };\r\n            window.opener.postMessage(errorMessage, \"*\")\r\n        } </script> </head> <body onload=sendErrorMessage()> <div class=centered> <p aria-hidden=true> <img src=\"data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNWE1YTVhIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=\"> </p> <p> {{errorMessage}} </p> <p> <a href=.>{{retry}}</a> </p> </div> </body> </html> "
 }, function(e, t, n) {
-    e.exports = '<md-menu md-offset="210 25" md-position-mode="target-right target" data-ng-init=notifications.onInit($mdOpenMenu);> <div class=constants-position-relative> <div class="notification-badge-container text-align-center constants-position-absolute"> <div ng-hide=notifications.nvDisabled nv-badge={{notifications.getNotificationBadgeNumber()}}></div> </div> <md-button class="md-icon-button notification-menu-button" ng-click=notifications.showNotifications($mdMenu)> <md-tooltip><span translate=l10n.notifications></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>notifications</md-icon> </md-button> </div> <md-menu-content md-menu-align-target md-menu-origin class="notifications-md-menu-content margin-zero padding-zero bg-dark-vh-hue-4 common-overflow-auto padding-bottom-3"> <img class="notification-direction notifications-menu-width constants-position-absolute" ng-src=' + n(682) + ' /> <md-list class="notifications-md-list margin-zero padding-zero"> <md-list-item class="no-focus-outline cursor-pointer-on-hover clickable-element notification-item padding-zero-important" ng-repeat="notification in notifications.notificationList"> <div class="no-focus-outline margin-left-4" ng-click=notifications.onNotificationClicked(notification); layout=column flex layout-fill> <div layout=column flex layout-fill ng-if="!notifications.showBigNotification($index, notification)"> <md-divider class="top-zero constants-position-relative"></md-divider> <div layout=row flex layout-fill> <div class="notification-color-bar-width small-notification-height bg-green-hv constants-position-absolute left-1"></div> <div class="small-notification-image-width small-notification-height"> <img ng-src={{notification.artWork}} flex=none layout-fill alt={{::notification.artWork}} nv-image-fallback=nv-no-loading-indicator /> </div> <div flex layout=column class="small-notification-height notifications-menu-width margin-left-36 margin-right-12 margin-top-zero"> <span class="color-white-hue-5 font-size-xxs line-height-12 constants-position-absolute right-12 top-8">{{ notification.readableTime }}</span> <div layout=column flex layout-align="center start"> <div class=small-notification-header> <p id="{{ \'small-notification-heading\' + $index }}" class="font-size-sm margin-zero padding-zero small-notification-details" nv-ellipsis-lines=1 translate={{notification.heading.text}} translate-values={{notification.heading.values}}></p> <md-tooltip ng-if="notifications.showTooltip($index,\'small-notification-heading\')" md-z-index=300 md-autohide><span translate={{notification.heading.text}} translate-values={{notification.heading.values}}></span></md-tooltip> </div> <p class="color-green font-size-xxs margin-zero padding-zero margin-top-4 notifications-ellipsis small-notification-details" translate={{notification.description.text}} translate-values={{notification.description.values}}></p> </div> </div> </div> </div> <div layout=row flex layout-fill ng-if="notifications.showBigNotification($index, notification)"> <div class="notification-color-bar-width bg-green-hv constants-position-absolute left-1 large-notification-height"></div> <div layout=column flex layout-fill> <div class="notifications-menu-width large-notification-image-height"> <img ng-src={{notification.artWorkHighRes}} flex=none layout-fill alt={{::notification.artWork}} nv-image-fallback=nv-no-loading-indicator /> </div> <div layout=column class="small-notification-height margin-top-8"> <span class="color-white-hue-5 font-size-xxs line-height-12 constants-position-absolute right-12">{{ notification.readableTime }}</span> <div layout=column flex layout-align="center center" class="margin-right-36 margin-left-36"> <div class=big-notification-header> <p id="{{ \'big-notification-heading\' + $index }}" class="font-size-xl1 margin-zero padding-zero" nv-ellipsis-lines=1 translate={{notification.heading.text}} translate-values={{notification.heading.values}}></p> <md-tooltip ng-if="notifications.showTooltip($index,\'big-notification-heading\')" md-z-index=300 md-autohide><span translate={{notification.heading.text}} translate-values={{notification.heading.values}}></span></md-tooltip> </div> <p class="color-green font-size-xl margin-zero padding-zero margin-top-4 notifications-ellipsis" translate={{notification.description.text}} translate-values={{notification.description.values}}></p> </div> </div> </div> </div> </div> </md-list-item> <md-list-item ng-if=!notifications.notificationList.length> <div layout=row flex layout-fill layout-align="center center" class="notifications-menu-width notifications-menu-height"> <div layout=column> <md-icon md-font-set=material-icons class=md-18>notifications</md-icon> <p translate=l10n.noNotifications></p> </div> </div> </md-list-item> </md-list> <div class="notifications-menu-left-outline-width constants-position-absolute bg-dark-eh left-zero top-zero" layout-fill></div> </md-menu-content> </md-menu> '
+    e.exports = '<md-menu md-offset="210 25" md-position-mode="target-right target" data-ng-init=notifications.onInit($mdOpenMenu);> <div class=constants-position-relative> <div class="notification-badge-container text-align-center constants-position-absolute"> <div ng-hide=notifications.nvDisabled nv-badge={{notifications.getNotificationBadgeNumber()}}></div> </div> <md-button class="md-icon-button notification-menu-button" ng-click=notifications.showNotifications($mdMenu)> <md-tooltip><span translate=l10n.notifications></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>notifications</md-icon> </md-button> </div> <md-menu-content md-menu-align-target md-menu-origin class="notifications-md-menu-content margin-zero padding-zero bg-dark-vh-hue-4 common-overflow-auto padding-bottom-3"> <img class="notification-direction notifications-menu-width constants-position-absolute" ng-src=' + n(684) + ' /> <md-list class="notifications-md-list margin-zero padding-zero"> <md-list-item class="no-focus-outline cursor-pointer-on-hover clickable-element notification-item padding-zero-important" ng-repeat="notification in notifications.notificationList"> <div class="no-focus-outline margin-left-4" ng-click=notifications.onNotificationClicked(notification); layout=column flex layout-fill> <div layout=column flex layout-fill ng-if="!notifications.showBigNotification($index, notification)"> <md-divider class="top-zero constants-position-relative"></md-divider> <div layout=row flex layout-fill> <div class="notification-color-bar-width small-notification-height bg-green-hv constants-position-absolute left-1"></div> <div class="small-notification-image-width small-notification-height"> <img ng-src={{notification.artWork}} flex=none layout-fill alt={{::notification.artWork}} nv-image-fallback=nv-no-loading-indicator /> </div> <div flex layout=column class="small-notification-height notifications-menu-width margin-left-36 margin-right-12 margin-top-zero"> <span class="color-white-hue-5 font-size-xxs line-height-12 constants-position-absolute right-12 top-8">{{ notification.readableTime }}</span> <div layout=column flex layout-align="center start"> <div class=small-notification-header> <p id="{{ \'small-notification-heading\' + $index }}" class="font-size-sm margin-zero padding-zero small-notification-details" nv-ellipsis-lines=1 translate={{notification.heading.text}} translate-values={{notification.heading.values}}></p> <md-tooltip ng-if="notifications.showTooltip($index,\'small-notification-heading\')" md-z-index=300 md-autohide><span translate={{notification.heading.text}} translate-values={{notification.heading.values}}></span></md-tooltip> </div> <p class="color-green font-size-xxs margin-zero padding-zero margin-top-4 notifications-ellipsis small-notification-details" translate={{notification.description.text}} translate-values={{notification.description.values}}></p> </div> </div> </div> </div> <div layout=row flex layout-fill ng-if="notifications.showBigNotification($index, notification)"> <div class="notification-color-bar-width bg-green-hv constants-position-absolute left-1 large-notification-height"></div> <div layout=column flex layout-fill> <div class="notifications-menu-width large-notification-image-height"> <img ng-src={{notification.artWorkHighRes}} flex=none layout-fill alt={{::notification.artWork}} nv-image-fallback=nv-no-loading-indicator /> </div> <div layout=column class="small-notification-height margin-top-8"> <span class="color-white-hue-5 font-size-xxs line-height-12 constants-position-absolute right-12">{{ notification.readableTime }}</span> <div layout=column flex layout-align="center center" class="margin-right-36 margin-left-36"> <div class=big-notification-header> <p id="{{ \'big-notification-heading\' + $index }}" class="font-size-xl1 margin-zero padding-zero" nv-ellipsis-lines=1 translate={{notification.heading.text}} translate-values={{notification.heading.values}}></p> <md-tooltip ng-if="notifications.showTooltip($index,\'big-notification-heading\')" md-z-index=300 md-autohide><span translate={{notification.heading.text}} translate-values={{notification.heading.values}}></span></md-tooltip> </div> <p class="color-green font-size-xl margin-zero padding-zero margin-top-4 notifications-ellipsis" translate={{notification.description.text}} translate-values={{notification.description.values}}></p> </div> </div> </div> </div> </div> </md-list-item> <md-list-item ng-if=!notifications.notificationList.length> <div layout=row flex layout-fill layout-align="center center" class="notifications-menu-width notifications-menu-height"> <div layout=column> <md-icon md-font-set=material-icons class=md-18>notifications</md-icon> <p translate=l10n.noNotifications></p> </div> </div> </md-list-item> </md-list> <div class="notifications-menu-left-outline-width constants-position-absolute bg-dark-eh left-zero top-zero" layout-fill></div> </md-menu-content> </md-menu> ';
 }, function(e, t, n) {
-    e.exports = '<div class=oobe-dialog-right-pane flex layout=column ng-if=!oobeAuthChooseCtrl.loginWithJarvisOAuth> <div class="title blank" layout=column> <div class=message-banner ng-if=oobeAuthChooseCtrl.messageBanner()> <span translate={{oobeAuthChooseCtrl.messageBanner()}}></span> </div> </div> <md-content class=login-content flex layout=column layout-align="start center"> <div ng-show=oobeAuthChooseCtrl.showNvLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 1 : -1}}" ng-click=oobeAuthChooseCtrl.onClickNVIDIA()> <img alt="{{\'l10n.alt.nvidiaSignIn\' | translate}}" src=' + n(687) + '> <div class="login-text color-white" translate=l10n.alt.nvidiaSignIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showGoogleLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 2 : -1}}" ng-click=oobeAuthChooseCtrl.onClickGoogle()> <img alt="{{\'l10n.logInWithGoogle\' | translate}}" src=' + n(685) + '> <div class="login-text color-dim-gray" translate=l10n.logInWithGoogle></div> </div> <div ng-show=oobeAuthChooseCtrl.showFacebookLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 3 : -1}}" ng-click=oobeAuthChooseCtrl.onClickFacebook()> <img alt="{{\'l10n.alt.facebookSignIn\' | translate}}" src=' + n(684) + '> <div class="login-text color-white" translate=l10n.alt.facebookSignIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showWechatLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 4 : -1}}" ng-click=oobeAuthChooseCtrl.onClickWeChat()> <img alt="{{\'l10n.alt.qqLogIn\' | translate}}" src=' + n(696) + '> <div class="login-text login-text color-white" translate=l10n.alt.wechatLogIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showQqLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 4 : -1}}" ng-click=oobeAuthChooseCtrl.onClickQq()> <img alt="{{\'l10n.alt.qqLogIn\' | translate}}" src=' + n(691) + '> <div class="login-text login-text color-white" translate=l10n.alt.qqLogIn></div> </div> </md-content> </div> <div class=oobe-dialog-right-pane ng-class="{\'oobe-oauth-login-image\': !oobeAuthChooseCtrl.showLoadingIndicator }" layout=column ng-if=oobeAuthChooseCtrl.loginWithJarvisOAuth layout-fill> <div ng-if=oobeAuthChooseCtrl.showLoadingIndicator layout=row layout-align="center center" flex> <md-progress-circular class=md-accent md-diameter=30 md-mode=indeterminate> </md-progress-circular> </div> <div ng-if=!oobeAuthChooseCtrl.showLoadingIndicator flex layout=column layout-align="start center" ng-show=oobeAuthChooseCtrl.showNvLogin> <div class=oobe-oauth-login-top-filler></div> <div class=oobe-oauth-login-scrim ng-if=oobeAuthChooseCtrl.messageBanner() layout=column layout-align=center> <div class=oobe-oauth-message-banner layout=row layout-align="start center"> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-alert-circle_reg class="nv-custom-icons margin-zero md-32"></md-icon> <div class="color-white-hue-4 font-size-lg margin-left-16"> <span translate={{oobeAuthChooseCtrl.messageBanner()}}></span> </div> </div> </div> <div class=oobe-oauth-login-text> <span translate=l10n.gameMaxPerformance></span> </div> <div class=oobe-oauth-login-text> <span translate=l10n.gameReadyDrivers></span> </div> <div class=oobe-oauth-login-text> <span translate=l10n.shareGameMoments></span> </div> <div flex layout=row layout-align="end center" layout-fill> <md-button class="md-accent color-white md-raised" ng-click=oobeAuthChooseCtrl.initLoginWithJarvisOAuth() ng-disabled=!oobeAuthChooseCtrl.onlineState.online translate=l10n.logIn> </md-button> </div> </div> </div> '
+    e.exports = '<div class=oobe-dialog-right-pane flex layout=column ng-if=!oobeAuthChooseCtrl.loginWithJarvisOAuth> <div class="title blank" layout=column> <div class=message-banner ng-if=oobeAuthChooseCtrl.messageBanner()> <span translate={{oobeAuthChooseCtrl.messageBanner()}}></span> </div> </div> <md-content class=login-content flex layout=column layout-align="start center"> <div ng-show=oobeAuthChooseCtrl.showNvLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 1 : -1}}" ng-click=oobeAuthChooseCtrl.onClickNVIDIA()> <img alt="{{\'l10n.alt.nvidiaSignIn\' | translate}}" src=' + n(689) + '> <div class="login-text color-white" translate=l10n.alt.nvidiaSignIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showGoogleLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 2 : -1}}" ng-click=oobeAuthChooseCtrl.onClickGoogle()> <img alt="{{\'l10n.logInWithGoogle\' | translate}}" src=' + n(687) + '> <div class="login-text color-dim-gray" translate=l10n.logInWithGoogle></div> </div> <div ng-show=oobeAuthChooseCtrl.showFacebookLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 3 : -1}}" ng-click=oobeAuthChooseCtrl.onClickFacebook()> <img alt="{{\'l10n.alt.facebookSignIn\' | translate}}" src=' + n(686) + '> <div class="login-text color-white" translate=l10n.alt.facebookSignIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showWechatLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 4 : -1}}" ng-click=oobeAuthChooseCtrl.onClickWeChat()> <img alt="{{\'l10n.alt.qqLogIn\' | translate}}" src=' + n(698) + '> <div class="login-text login-text color-white" translate=l10n.alt.wechatLogIn></div> </div> <div ng-show=oobeAuthChooseCtrl.showQqLogin class="login-button oobe-login-pointer" ng-disabled=!oobeAuthChooseCtrl.onlineState.online ng-attr-tabindex="{{oobeAuthChooseCtrl.onlineState.online ? 4 : -1}}" ng-click=oobeAuthChooseCtrl.onClickQq()> <img alt="{{\'l10n.alt.qqLogIn\' | translate}}" src=' + n(693) + '> <div class="login-text login-text color-white" translate=l10n.alt.qqLogIn></div> </div> </md-content> </div> <div class=oobe-dialog-right-pane ng-class="{\'oobe-oauth-login-image\': !oobeAuthChooseCtrl.showLoadingIndicator }" layout=column ng-if=oobeAuthChooseCtrl.loginWithJarvisOAuth layout-fill> <div ng-if=oobeAuthChooseCtrl.showLoadingIndicator layout=row layout-align="center center" flex> <md-progress-circular class=md-accent md-diameter=30 md-mode=indeterminate> </md-progress-circular> </div> <div ng-if=!oobeAuthChooseCtrl.showLoadingIndicator flex layout=column layout-align="start center" ng-show=oobeAuthChooseCtrl.showNvLogin> <div class=oobe-oauth-login-top-filler></div> <div class=oobe-oauth-login-scrim ng-if=oobeAuthChooseCtrl.messageBanner() layout=column layout-align=center> <div class=oobe-oauth-message-banner layout=row layout-align="start center"> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-alert-circle_reg class="nv-custom-icons margin-zero md-32"></md-icon> <div class="color-white-hue-4 font-size-lg margin-left-16"> <span translate={{oobeAuthChooseCtrl.messageBanner()}}></span> </div> </div> </div> <div class=oobe-oauth-login-text> <span translate=l10n.gameMaxPerformance></span> </div> <div class=oobe-oauth-login-text> <span translate=l10n.gameReadyDrivers></span> </div> <div class=oobe-oauth-login-text> <span translate=l10n.shareGameMoments></span> </div> <div flex layout=row layout-align="end center" layout-fill> <md-button class="md-accent color-white md-raised" ng-click=oobeAuthChooseCtrl.initLoginWithJarvisOAuth() ng-disabled=!oobeAuthChooseCtrl.onlineState.online translate=l10n.logIn> </md-button> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<form class=oobe-dialog-right-pane autocomplete=off flex layout=column name=oobeAuthEditEmailCtrl.emailForm ng-submit=oobeAuthEditEmailCtrl.onDone()> <waiting-overlay layout layout-align="center center" ng-if=oobeAuthEditEmailCtrl.waiting> <md-progress-circular class=md-accent md-mode=indeterminate md-diameter=35></md-progress-circular> </waiting-overlay> <div class=title layout=row layout-align="start center"> <h1 flex translate=l10n.editEmailAddress></h1> </div> <div class=message-banner ng-if=oobeAuthEditEmailCtrl.message translate={{oobeAuthEditEmailCtrl.message}}></div> <md-content flex layout=column class=content> <div class=secondary-title translate=l10n.enterYourInformation></div> <div layout=column layout-align="start start"> <md-input-container layout-fill class=md-icon-right ng-init="oobeAuthEditEmailCtrl.passwordBoxType = \'password\'"> <label translate=l10n.currentPassword></label> <input nv-input name=password ng-model=oobeAuthEditEmailCtrl.password ng-change=oobeAuthEditEmailCtrl.passwordChanged() required tabindex=1 type={{oobeAuthEditEmailCtrl.passwordBoxType}} md-no-asterisk/> <md-icon ng-if="oobeAuthEditEmailCtrl.passwordBoxType == \'password\'" class="nv-custom-icons oobe-login-pointer" md-font-icon=icon-eye ng-click="oobeAuthEditEmailCtrl.passwordBoxType = \'text\'"></md-icon> <md-icon ng-if="oobeAuthEditEmailCtrl.passwordBoxType == \'text\'" class="nv-custom-icons oobe-login-pointer" md-font-icon=icon-eye-off ng-click="oobeAuthEditEmailCtrl.passwordBoxType = \'password\'"></md-icon> <div class=error-message ng-messages=oobeAuthEditEmailCtrl.emailForm.password.$error ng-show=oobeAuthEditEmailCtrl.emailForm.password.$touched md-auto-hide=false> <div ng-message=required> <div translate=l10n.required></div> </div> <div ng-message=invalidPassword> <div translate=l10n.incorrectPassword></div> </div> </div> </md-input-container> <md-input-container layout-fill> <label translate=l10n.newEmailAddress></label> <input nv-input name=email ng-model=oobeAuthEditEmailCtrl.email ng-change=oobeAuthEditEmailCtrl.emailChanged() required tabindex=2 type=email md-no-asterisk/> <div class=error-message ng-messages=oobeAuthEditEmailCtrl.emailForm.email.$error ng-show=oobeAuthEditEmailCtrl.emailForm.email.$touched md-auto-hide=false> <div ng-message=email> <div translate=l10n.invalidEmail></div> </div> <div ng-message=required> <div translate=l10n.required></div> </div> <div ng-message=notAvailable> <div translate=l10n.emailAddressInUse></div> </div> </div> </md-input-container> <md-input-container layout-fill> <label translate=l10n.reEnterEmailAddress></label> <input nv-input name=reEnterEmail ng-model=oobeAuthEditEmailCtrl.reEnterEmail required nv-fields-match={{oobeAuthEditEmailCtrl.emailForm.email.$viewValue}} tabindex=3 type=email md-no-asterisk/> <div class=error-message ng-messages=oobeAuthEditEmailCtrl.emailForm.reEnterEmail.$error ng-show=oobeAuthEditEmailCtrl.emailForm.reEnterEmail.$touched md-auto-hide=false> <div ng-message=email> <div translate=l10n.invalidEmail></div> </div> <div ng-message=required> <div translate=l10n.required></div> </div> <div ng-message=fieldsMatch> <div translate=l10n.emailAddressesDoNotMatch></div> </div> </div> </md-input-container> </div> </md-content> <div class=md-actions layout=row dir=rtl> <md-button type=submit class=md-accent translate=l10n.done></md-button> <md-button ng-click=oobeAuthEditEmailCtrl.onCancel() translate=l10n.cancel></md-button> <span flex></span> </div> </form> '
 }, function(e, t) {
@@ -21575,7 +21634,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div class=oobe-login-left-side> <div class=oobe-side-text layout layout-align="center center"> <p translate=l10n.gameMaxPerformance></p> </div> <div class=oobe-side-text layout layout-align="center center"> <p translate=l10n.gameReadyDrivers></p> </div> <div class=oobe-side-text layout layout-align="center center"> <p translate=l10n.shareGameMoments></p> </div> </div> '
 }, function(e, t) {
-    e.exports = "<div class=crimson layout=row ng-class=\"{'oobe-oauth-login-pane': oobeCtrl.onJarvisOAuthLogin(), 'oobe-dialog': !oobeCtrl.onJarvisOAuthLogin()}\" ng-switch on=oobeCtrl.nvActiveView> <nv-dialog-progress-bar layout=row class=oobe-dialog-progress-bar ng-if=oobeCtrl.progressShow nv-progress-active={{oobeCtrl.progressActive}} nv-progress-sections={{oobeCtrl.progressSections}}> </nv-dialog-progress-bar> <nv-oobe-auth flex layout=row ng-switch-when=auth nv-oobe-params=oobeCtrl.nvOobeParams></nv-oobe-auth> <nv-oobe-ul-welcome flex layout=row ng-switch-when=ulWelcome></nv-oobe-ul-welcome> <nv-oobe-no-driver flex layout=row ng-switch-when=noDriver></nv-oobe-no-driver> </div> ";
+    e.exports = "<div class=crimson layout=row ng-class=\"{'oobe-oauth-login-pane': oobeCtrl.onJarvisOAuthLogin(), 'oobe-dialog': !oobeCtrl.onJarvisOAuthLogin()}\" ng-switch on=oobeCtrl.nvActiveView> <nv-dialog-progress-bar layout=row class=oobe-dialog-progress-bar ng-if=oobeCtrl.progressShow nv-progress-active={{oobeCtrl.progressActive}} nv-progress-sections={{oobeCtrl.progressSections}}> </nv-dialog-progress-bar> <nv-oobe-auth flex layout=row ng-switch-when=auth nv-oobe-params=oobeCtrl.nvOobeParams></nv-oobe-auth> <nv-oobe-ul-welcome flex layout=row ng-switch-when=ulWelcome></nv-oobe-ul-welcome> <nv-oobe-no-driver flex layout=row ng-switch-when=noDriver></nv-oobe-no-driver> </div> "
 }, function(e, t) {
     e.exports = '<md-content layout=row flex> <nv-oobe-dialog-left-side></nv-oobe-dialog-left-side> <div class=oobe-dialog-right-pane flex layout=column> <div class="title large"> <h1 translate=l10n.noDriverFound></h1> </div> <div class="font-size-sm color-medium-gray content" translate=l10n.clickContinueToInstallDriver> </div> <span flex></span> <div class=md-actions layout=row dir=rtl> <md-button class="md-raised md-accent color-white-important" ng-click=oobeNoDriverCtrl.onClickContinue() translate=l10n.continue></md-button> <span flex></span> </div> </div> </md-content> '
 }, function(e, t) {
@@ -21587,7 +21646,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<ng-form autocomplete=off flex layout-align="start start" layout=column layout-fill name=editPasswordCtrl.passwordForm> <md-input-container layout-fill md-no-float> <label translate=l10n.currentPassword></label> <input nv-input name=currentPassword ng-model=editPasswordCtrl.nvDialogModel.passwordModel.currentPassword required type=password md-no-asterisk> <div class=error-message ng-messages=editPasswordCtrl.passwordForm.currentPassword.$error ng-show=editPasswordCtrl.passwordForm.currentPassword.$touched> <div ng-message=required> <div translate=l10n.required></div> </div> </div> </md-input-container> <md-input-container layout-fill md-no-float> <label translate=l10n.newPassword></label> <input nv-input name=changedPassword ng-model=editPasswordCtrl.nvDialogModel.passwordModel.changedPassword minlength={{editPasswordCtrl.validationObject.password.minsize}} maxlength={{editPasswordCtrl.validationObject.password.maxsize}} nv-extended-pattern={{editPasswordCtrl.validationObject.password}} required type=password md-no-asterisk> <div class=error-message ng-messages=editPasswordCtrl.passwordForm.changedPassword.$error ng-show=editPasswordCtrl.passwordForm.changedPassword.$touched> <div ng-message=required> <div translate=l10n.required></div> </div> <div ng-message="minlength, maxlength, extendedPattern"> <div translate-values={{editPasswordCtrl.validationObject.password}} translate=l10n.passwordReqs></div> </div> </div> </md-input-container> <md-input-container layout-fill md-no-float> <label translate=l10n.confirmPassword></label> <input nv-input name=confirmedPassword ng-model=editPasswordCtrl.nvDialogModel.passwordModel.confirmedPassword minlength={{editPasswordCtrl.validationObject.password.minsize}} maxlength={{editPasswordCtrl.validationObject.password.maxsize}} required type=password nv-fields-match={{editPasswordCtrl.passwordForm.changedPassword.$viewValue}} md-no-asterisk> <div class=error-message ng-messages=editPasswordCtrl.passwordForm.confirmedPassword.$error ng-show=editPasswordCtrl.passwordForm.confirmedPassword.$touched> <div ng-message=required> <div translate=l10n.required></div> </div> <div ng-message=fieldsMatch> <div translate=l10n.passwordDoesNotMatch></div> </div> </div> </md-input-container> </ng-form> '
 }, function(e, t) {
-    e.exports = '<div layout=column class=preferences-feature-description-section> <div class=preferences-feature-requirement layout=row layout-align="start center" ng-repeat="requirement in featureDescription.requirements" flex> <div ng-if=!requirement.isRecommendation class=margin-right-8> <md-icon class=md-16 md-font-set=material-icons ng-show={{requirement.state}}>check</md-icon> <md-icon class=md-16 md-font-set=material-icons ng-hide={{requirement.state}}>do_not_disturb</md-icon> </div> <div ng-if=requirement.isRecommendation layout=column layout-align="center center" class="requirement-recommendation-icon-container margin-right-8"> <div class=recommendation-circle></div> </div> <span class="font-size-sm nv-ellipsis-lines-3" ng-class="requirement.state ? \'color-white-hue-3\' : \'color-white-hue-4\'">{{requirement.message}}</span> <md-button class="md-accent margin-zero margin-left-8-important feature-driver-update-button" ng-if=featureDescription.showDriverDownloadButton(requirement) ng-click=featureDescription.onDownloadClicked()><span translate=l10n.updateDriver></span></md-button> </div> <div class="feature-readiness-content requirement-link-container" ng-if=featureDescription.systemRequirement> <a ng-click=featureDescription.openLink() class="md-default-theme font-size-sm top-margin-linksection" translate={{featureDescription.systemRequirement.text}} flex></a> </div> </div> '
+    e.exports = '<div layout=column class=preferences-feature-description-section> <div class=preferences-feature-requirement layout=row layout-align="start center" ng-repeat="requirement in featureDescription.requirements" flex> <div ng-if=!requirement.isRecommendation class=margin-right-8> <md-icon class=md-16 md-font-set=material-icons ng-show={{requirement.state}}>check</md-icon> <md-icon class=md-16 md-font-set=material-icons ng-hide={{requirement.state}}>do_not_disturb</md-icon> </div> <div ng-if=requirement.isRecommendation layout=column layout-align="center center" class="requirement-recommendation-icon-container margin-right-8"> <div class=recommendation-circle></div> </div> <span class="font-size-sm nv-ellipsis-lines-3" ng-class="requirement.state ? \'color-white-hue-3\' : \'color-white-hue-4\'">{{requirement.message}}</span> <md-button class="md-accent margin-zero margin-left-8-important feature-driver-update-button" ng-if=featureDescription.showDriverDownloadButton(requirement) ng-click=featureDescription.onDownloadClicked()><span translate=l10n.updateDriver></span></md-button> </div> <div class="feature-readiness-content requirement-link-container" ng-if=featureDescription.systemRequirement> <a ng-click=featureDescription.openLink() class="md-default-theme font-size-sm top-margin-linksection" translate={{featureDescription.systemRequirement.text}} flex></a> </div> </div> ';
 }, function(e, t) {
     e.exports = '<div flex layout=row class=preferences-feature-header-section> <div layout=column class="image-container constants-position-relative" ng-hide={{featureHeader.nvOverallState}}> <nv-overlay layout-fill class="common-overlay no-background"> <md-icon class="nv-custom-icons md-16 feature-notready-overlay nv-custom-alert-icon-color" md-font-icon=icon-alert></md-icon> </nv-overlay> <md-icon class="nv-custom-icons md-32 feature-not-supported-icon-color" md-font-icon={{featureHeader.featureThumbnail}}></md-icon> </div> <md-icon class="nv-custom-icons md-32 color-white" ng-show={{featureHeader.nvOverallState}} md-font-icon={{featureHeader.featureThumbnail}}></md-icon> <div class=md-list-item-text flex> <h3 class="feature-title color-white-hue-3 font-size-sm font-uppercase">{{featureHeader.featureName}}</h3> <p class="color-white-hue-4 font-size-sm font-uppercase" ng-hide={{featureHeader.nvOverallState}} translate=l10n.notReady></p> <p class="color-white-hue-4 font-size-sm font-uppercase" ng-show={{featureHeader.nvOverallState}} translate=l10n.ready></p> <p class="color-white-hue-4 font-size-sm">{{featureHeader.featureDescription}}</p> </div> </div> '
 }, function(e, t) {
@@ -21625,7 +21684,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div flex> <div class=preferences-section-header> <h4 class="color-white-hue-3 font-size-lg" translate=l10n.gameScan></h4> </div> <div class=preferences-section-content> <div layout=row class=games-scan-container layout-align=space-around> <div layout=column layout-align="center center"> <h4 class="color-white-hue-4 font-size-sm line-height-sm1" translate=l10n.gamesFound></h4> <h4 class="color-white-hue-3 font-size-xxxl line-height-lg1">{{preferencesGamesScan.totalGames}}</h4> <a ng-click=preferencesGamesScan.onLaunchUrl() class="color-lighter-gray md-default-theme font-size-sm" translate=l10n.viewSupportedGames flex> </a> </div> <div class="games-scan-divider bg-grey-im"></div> <div class=button-text-padding layout=column layout-align="center center"> <h4 class="color-white-hue-4 font-size-sm line-height-sm1" translate=l10n.lastChecked></h4> <h4 class="color-white-hue-3 font-size-xl1 line-height-sm1">{{preferencesGamesScan.lastRereshTime | convertUTCToTimeAgo}}</h4> <md-button class="md-raised md-secondary" ng-click=preferencesGamesScan.scanGames() ng-disabled=preferencesGamesScan.scanInProgress>{{preferencesGamesScan.scanStatus}}</md-button> </div> </div> </div> </div> '
 }, function(e, t, n) {
-    e.exports = '<div class="preferences-preference-section md-primary md-hue-3 background"> <div class=preferences-section-header> <h4 class="color-white-hue-3 font-size-lg">{{\'l10n.about\' | translate |uppercase}}</h4> </div> <div class="preferences-about-section-content about-section"> <div layout=column> <img src=' + n(681) + '> <div flex class="gfe-version-container preferences-md-icon"> <p class="color-white-hue-3 font-size-lg margin-top-zero" translate=l10n.nvidiaGeforceExperience></p> <p class="color-white-hue-4 font-size-lg title-content-top-margin"><span translate=l10n.version></span>&nbsp;<span>{{preferencesGeneralAbout.version}}&nbsp;{{preferencesGeneralAbout.beta}}</span></p> <p class="color-white-hue-4 font-size-xxs data-container-lastrow title-content-top-margin" nv-ellipsis-lines=1 translate=l10n.nvidiaRightReserved></p> </div> </div> <div class="preferences-md-icon links-top-margin font-size-xxs"> <md-checkbox ng-disabled=!preferencesGeneralAbout.clientBetaUpdateCheckboxEnabled class="font-size-sm preferences-md-icon checkbox-16 margin-bottom-12" ng-change=preferencesGeneralAbout.setClientBetaUpdateEnabled() ng-model=preferencesGeneralAbout.clientBetaUpdateEnabled> <span translate=l10n.clientBetaUpdate></span> </md-checkbox> <div class="preference-gfe-check-for-update-container margin-bottom-8 margin-left-zero" ng-show=preferencesGeneralAbout.showCheckingForUpdate() flex> <p class="color-white-hue-4 font-size-xxs margin-top-zero margin-left-zero margin-bottom-10" translate=l10n.checkingforUpdates></p> <md-progress-linear class=md-accent flex md-mode=indeterminate></md-progress-linear> </div> <div class="preference-gfe-check-for-update-container margin-bottom-8 margin-left-zero" ng-show="preferencesGeneralAbout.showPreparingForInstall(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status, preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete)" flex> <p class="color-white-hue-4 font-size-xxs margin-left-zero margin-bottom-10" translate=l10n.preparingForInstallation></p> <md-progress-linear class=md-accent flex md-mode=indeterminate></md-progress-linear> </div> <div ng-hide="preferencesGeneralAbout.showPreparingForInstall(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status, preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete)" class="download-install-controls layout-fill" flex> <div class=margin-bottom-2 ng-if=preferencesGeneralAbout.showDownloadButton(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <p class="color-white-hue-4 font-size-xxs" translate=l10n.updateIsAvailable></p> <div layout=row layout-align="end end"> <md-button class="margin-right-zero md-raised md-accent color-white-important" ng-show=preferencesGeneralAbout.showDownloadButton(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status) ng-click=preferencesGeneralAbout.startDownload(preferencesGeneralAbout.gfeBetaUpdate) translate=l10n.download></md-button> </div> </div> <div class="download-container margin-bottom-8" layout=row ng-if=preferencesGeneralAbout.isDownloadStarted(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <div layout=column class=download-details-container> <nv-update-download-progress nv-message={{preferencesGeneralAbout.getDownloadStatusMessage(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)}} nv-value={{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row flex layout-align="space-between start" class=download-details-status-container> <p flex=50% class="font-size-xxs color-white-hue-4">{{preferencesGeneralAbout.getProgressString(preferencesGeneralAbout.gfeBetaUpdate)}}</p> <div layout=row flex=50% layout-align="space-between start"> <p class="font-size-xxs color-white-hue-4 download-speed margin-right-16">{{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-4">{{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> </div> <div class=margin-bottom-2 ng-if=preferencesGeneralAbout.showRestartGfeMessage(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <p class="margin-zero color-white-hue-4 font-size-xxs" translate=l10n.downloadCompleteRestartGfe></p> <div layout=row layout-align="end end"> <md-button class="margin-right-zero md-raised md-accent color-white-important" ng-click=preferencesGeneralAbout.restartNow() translate=l10n.restartNow></md-button> </div> </div> </div> <md-divider></md-divider> <md-divider class=color-black-hue-2></md-divider> <div layout-align="start start" class=margin-top-12> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onShowReleaseHighlight() translate=l10n.releaseHighlights> </a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onShowLicense() translate=l10n.licenseAggrement> </a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onLaunchPrivacyPolicy() translate=l10n.privacyPolicy></a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onLaunchFaq() translate=l10n.faq> </a> </div> </div> </div> </div> ';
+    e.exports = '<div class="preferences-preference-section md-primary md-hue-3 background"> <div class=preferences-section-header> <h4 class="color-white-hue-3 font-size-lg">{{\'l10n.about\' | translate |uppercase}}</h4> </div> <div class="preferences-about-section-content about-section"> <div layout=column> <img src=' + n(683) + '> <div flex class="gfe-version-container preferences-md-icon"> <p class="color-white-hue-3 font-size-lg margin-top-zero" translate=l10n.nvidiaGeforceExperience></p> <p class="color-white-hue-4 font-size-lg title-content-top-margin"><span translate=l10n.version></span>&nbsp;<span>{{preferencesGeneralAbout.version}}&nbsp;{{preferencesGeneralAbout.beta}}</span></p> <p class="color-white-hue-4 font-size-xxs data-container-lastrow title-content-top-margin" nv-ellipsis-lines=1 translate=l10n.nvidiaRightReserved></p> </div> </div> <div class="preferences-md-icon links-top-margin font-size-xxs"> <md-checkbox ng-disabled=!preferencesGeneralAbout.clientBetaUpdateCheckboxEnabled class="font-size-sm preferences-md-icon checkbox-16 margin-bottom-12" ng-change=preferencesGeneralAbout.setClientBetaUpdateEnabled() ng-model=preferencesGeneralAbout.clientBetaUpdateEnabled> <span translate=l10n.clientBetaUpdate></span> </md-checkbox> <div class="preference-gfe-check-for-update-container margin-bottom-8 margin-left-zero" ng-show=preferencesGeneralAbout.showCheckingForUpdate() flex> <p class="color-white-hue-4 font-size-xxs margin-top-zero margin-left-zero margin-bottom-10" translate=l10n.checkingforUpdates></p> <md-progress-linear class=md-accent flex md-mode=indeterminate></md-progress-linear> </div> <div class="preference-gfe-check-for-update-container margin-bottom-8 margin-left-zero" ng-show="preferencesGeneralAbout.showPreparingForInstall(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status, preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete)" flex> <p class="color-white-hue-4 font-size-xxs margin-left-zero margin-bottom-10" translate=l10n.preparingForInstallation></p> <md-progress-linear class=md-accent flex md-mode=indeterminate></md-progress-linear> </div> <div ng-hide="preferencesGeneralAbout.showPreparingForInstall(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status, preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete)" class="download-install-controls layout-fill" flex> <div class=margin-bottom-2 ng-if=preferencesGeneralAbout.showDownloadButton(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <p class="color-white-hue-4 font-size-xxs" translate=l10n.updateIsAvailable></p> <div layout=row layout-align="end end"> <md-button class="margin-right-zero md-raised md-accent color-white-important" ng-show=preferencesGeneralAbout.showDownloadButton(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status) ng-click=preferencesGeneralAbout.startDownload(preferencesGeneralAbout.gfeBetaUpdate) translate=l10n.download></md-button> </div> </div> <div class="download-container margin-bottom-8" layout=row ng-if=preferencesGeneralAbout.isDownloadStarted(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <div layout=column class=download-details-container> <nv-update-download-progress nv-message={{preferencesGeneralAbout.getDownloadStatusMessage(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)}} nv-value={{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row flex layout-align="space-between start" class=download-details-status-container> <p flex=50% class="font-size-xxs color-white-hue-4">{{preferencesGeneralAbout.getProgressString(preferencesGeneralAbout.gfeBetaUpdate)}}</p> <div layout=row flex=50% layout-align="space-between start"> <p class="font-size-xxs color-white-hue-4 download-speed margin-right-16">{{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-4">{{preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> </div> <div class=margin-bottom-2 ng-if=preferencesGeneralAbout.showRestartGfeMessage(preferencesGeneralAbout.gfeBetaUpdate.downloadStatus.status)> <p class="margin-zero color-white-hue-4 font-size-xxs" translate=l10n.downloadCompleteRestartGfe></p> <div layout=row layout-align="end end"> <md-button class="margin-right-zero md-raised md-accent color-white-important" ng-click=preferencesGeneralAbout.restartNow() translate=l10n.restartNow></md-button> </div> </div> </div> <md-divider></md-divider> <md-divider class=color-black-hue-2></md-divider> <div layout-align="start start" class=margin-top-12> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onShowReleaseHighlight() translate=l10n.releaseHighlights> </a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onShowLicense() translate=l10n.licenseAggrement> </a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onLaunchPrivacyPolicy() translate=l10n.privacyPolicy></a> </div> <div layout-align="start start" class=margin-between-links> <a class="md-default-theme font-size-sm" ng-click=preferencesGeneralAbout.onLaunchFaq() translate=l10n.faq> </a> </div> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<div layout-align="space-between top"> <div class=preferences-col-1> <nv-preference-general-about></nv-preference-general-about> <nv-preference-general-language></nv-preference-general-language> <nv-preference-general-share></nv-preference-general-share> <nv-preference-general-notifications></nv-preference-general-notifications> <nv-preference-general-downloads></nv-preference-general-downloads> </div> <div class=preferences-col-2> <nv-preferences-system-info></nv-preferences-system-info> <nv-preferences-feature-readiness></nv-preferences-feature-readiness> </div> </div> '
 }, function(e, t) {
@@ -21637,7 +21696,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div layout=column class=constants-position-relative> <div class="preferences-preference-section md-primary md-hue-3 background" ng-if=preferencesGeneralShare.isShareSupported> <div class="preferences-section-header-description-switch share-section"> <div layout=row layout-align=space-between> <div layout=column> <div layout=row> <h4 class="color-white-hue-3 font-size-lg" translate=l10n.share></h4> <md-icon class="nv-custom-icons md-16 preferences-share-alert-icon nv-custom-alert-icon-color" md-font-icon=icon-alert ng-show=!preferencesGeneralShare.shareLoaded></md-icon> </div> <p class="color-white-hue-4 font-size-xxs">{{preferencesGeneralShare.shareDialogDescription}}</p> <div layout=row class=share-hotkey-info ng-if=preferencesGeneralShare.showHotkeyInfoAndIcon()> <md-icon md-font-set=nv-custom-icons class="nv-custom-icons md-24 color-green" md-font-icon=icon-share></md-icon> <p class="color-white-hue-4 font-size-xxs" translate-values={{preferencesGeneralShare.translateValues}} translate=l10n.oobeShareHotkeyInfo></p> </div> </div> <div ng-if=preferencesGeneralShare.loadingDone> <md-switch ng-model=preferencesGeneralShare.enabledShare ng-change=preferencesGeneralShare.onChangeShareState() ng-disabled=preferencesGeneralShare.toggleState></md-switch> </div> </div> <div layout=row class=share-section-button layout-align="end end" ng-if=preferencesGeneralShare.showHotkeyInfoAndIcon()> <md-button class="md-raised md-secondary font-uppercase" ng-click=preferencesGeneralShare.openOscSettings() translate=l10n.settings></md-button> </div> </div> </div> <nv-overlay class="common-overlay preferences-share-overlay" ng-if=preferencesGeneralShare.toggleState> <span flex layout-fill layout-align="center center" layout=column> <md-progress-circular class=md-accent layout-align="center center" md-diameter=14 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> </div> '
 }, function(e, t) {
-    e.exports = '<div layout=column layout-fill class=preferences-led> <div class="preferences-preference-section md-hue-3 background md-primary" layout=row layout-align="space-between center"> <div layout=row layout-align="start center"> <md-button class=md-secondary ng-click=preferencesLed.applyAllGpu() translate=l10n.allLed ng-class="preferencesLed.syncAll ? \'md-button-selected md-accent foreground\': \'\'" ng-if=preferencesLed.showAllLedOption()></md-button> <md-button class=md-secondary ng-click=preferencesLed.applyEachGpu() translate=l10n.eachLed ng-class="!preferencesLed.syncAll ? \'md-button-selected md-accent foreground\': \'\'"></md-button> </div> <div layout=row layout-align="end center" class=preferences-led-switch ng-if=preferencesLed.showZones()> <p translate=l10n.syncZones></p> <md-switch ng-model=preferencesLed.syncZones ng-change=preferencesLed.onSyncZonesChanged()></md-switch> </div> </div> <div class="preferences-preference-section md-hue-3 background md-primary" layout=row> <div layout=row layout-align="start center"> <md-list layout=row layout-align="start center"> <md-list-item class=color-white-hue-3 ng-repeat="device in preferencesLed.devices" ng-if=preferencesLed.isSliDevice(device) ng-click=preferencesLed.selectGpu(device) ng-class="{\'md-button-selected md-accent foreground\': preferencesLed.isSelectedGpu(device)}"> <p class=font-size-sm> {{device.gpuName | uppercase}} </p> </md-list-item> </md-list> <md-list layout=column layout-align="start center"> <md-list-item class=color-white-hue-3 ng-repeat="device in preferencesLed.devices" ng-if=!preferencesLed.isSliDevice(device) ng-click=preferencesLed.selectGpu(device) ng-class="{\'md-button-selected md-accent foreground\': preferencesLed.isSelectedGpu(device)}"> <p class=font-size-sm> {{device.gpuName | uppercase}} </p> </md-list-item> </md-list> </div> <div layout=row class="section-divider bg-grey-im"></div> <div layout=row layout-align="center center"> <md-list layout=row layout-align="center center" ng-if=preferencesLed.showZones()> <md-list-item class=color-white-hue-3 ng-repeat="zone in preferencesLed.selectedGpu.zone" ng-disabled=!preferencesLed.isIndivisualLedSelected()> <md-button translate=l10n.zone translate-values={{zone}} ng-click=preferencesLed.selectedZone($index) ng-class="$index === preferencesLed.selectedZoneIndex ? \'md-button-selected md-accent foreground\': \'\'"></md-button> </md-list-item> </md-list> </div> </div> <div class="preferences-preference-section md-hue-3 background md-primary" layout=column> <div layout=row layout-align=space-between> <h5 class="font-size-lg color-white-hue-3" translate=l10n.turnLedOn ng-if=preferencesLed.featureState></h5> <h5 class="font-size-lg color-white-hue-3" translate=l10n.turnLedOff ng-if=!preferencesLed.featureState></h5> <div layout=row class=preferences-led-switch> <p translate=l10n.ledLighting></p> <md-switch ng-model=preferencesLed.featureState ng-change=preferencesLed.onfeatureStateChange()></md-switch> </div> </div> <md-divider></md-divider> <div layout=column class=preferences-preference-section> <div layout=row flex=100> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.effect></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedLedEffect ng-change=preferencesLed.onLedEffectChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=effect.ledEffect ng-repeat="effect in preferencesLed.ledEffects"> {{effect.name | translate}} </md-option> </md-select> </md-input-container> </div> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.style></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedAnimationType ng-change=preferencesLed.onAnimationTypeChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=style.animation ng-repeat="style in preferencesLed.styleList"> {{style.style | translate}} </md-option> </md-select> </md-input-container> </div> </div> <div layout=row flex=100> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.variation></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedVariation ng-change=preferencesLed.onLedVariationChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=variation.variation ng-repeat="variation in preferencesLed.variationList"> {{variation.name | translate}} </md-option> </md-select> </md-input-container> </div> <div flex=50 layout=column> <div ng-if=preferencesLed.showAnimationSliderPanel> <label class=font-uppercase>{{preferencesLed.labelAnimationSpeed}}</label> <div layout=row layout-align="start center"> <md-slider ng-change=preferencesLed.onAnimationSliderChange() min={{preferencesLed.animationSliderMin}} max={{preferencesLed.animationSliderMax}} ng-model=preferencesLed.sliderAnimation ng-disabled=!preferencesLed.featureState></md-slider> </div> </div> </div> </div> <div layout=row flex=100> <div class=colorpicker layout=row flex=50 ng-show=preferencesLed.showColorPickerControl> <canvas id=picker width=239 height=220></canvas> <div class=controls ng-click=preferencesLed.colorPreviewClicked(1)> <div class=preview flex></div> <div layout=row> <label>R</label> <h4 class=red></h4> </div> <div layout=row> <label>G</label> <h4 class=green></h4> </div> <div layout=row> <label>B</label> <h4 class=blue></h4> </div> </div> <div class=controls ng-click=preferencesLed.colorPreviewClicked(2) ng-if=preferencesLed.selectedMultiColorAnimation> <div class=secondPreview flex></div> <div layout=row> <label>R</label> <h4 class=red1></h4> </div> <div layout=row> <label>G</label> <h4 class=green1></h4> </div> <div layout=row> <label>B</label> <h4 class=blue1></h4> </div> </div> </div> <div> <div ng-if=preferencesLed.showBrightnessSliderPanel> <label class=font-uppercase>{{preferencesLed.labelBrightnessSlider}}</label> <div ng-if=preferencesLed.showSliderBrightness> <md-slider flex ng-change=preferencesLed.onBrightnessSliderChange() min={{preferencesLed.brightnessSliderMin}} max={{preferencesLed.brightnessSliderMax}} ng-model=preferencesLed.sliderBrightness ng-disabled=!preferencesLed.featureState></md-slider> </div> <div ng-if=preferencesLed.showSliderBrightnessRange> <nv-range-slider on-slider-change=preferencesLed.onBrightnessRangeSliderChange() lower-value=preferencesLed.selectedGpu.zone[preferencesLed.selectedZoneIndex].minBrightness upper-value=preferencesLed.selectedGpu.zone[preferencesLed.selectedZoneIndex].variationParameter step=2 min-gap=2 minimum=preferencesLed.brightnessRangeSliderMin maximum=preferencesLed.brightnessRangeSliderMax nv-disabled=!preferencesLed.featureState> </nv-range-slider> </div> </div> </div> </div> </div> <div class=cancel-apply-container layout=row layout-align="end center"> <md-button ng-click=preferencesLed.cancelSettings() translate=l10n.cancel ng-disabled=!preferencesLed.buttonCancel></md-button> <md-button class=md-accent ng-click=preferencesLed.applySettings() translate=l10n.apply ng-disabled=!preferencesLed.buttonApply></md-button> </div> </div> </div> '
+    e.exports = '<div layout=column layout-fill class=preferences-led> <div class="preferences-preference-section md-hue-3 background md-primary" layout=row layout-align="space-between center"> <div layout=row layout-align="start center"> <md-button class=md-secondary ng-click=preferencesLed.applyAllGpu() translate=l10n.allLed ng-class="preferencesLed.syncAll ? \'md-button-selected md-accent foreground\': \'\'" ng-if=preferencesLed.showAllLedOption()></md-button> <md-button class=md-secondary ng-click=preferencesLed.applyEachGpu() translate=l10n.eachLed ng-class="!preferencesLed.syncAll ? \'md-button-selected md-accent foreground\': \'\'"></md-button> </div> <div layout=row layout-align="end center" class=preferences-led-switch ng-if=preferencesLed.showZones()> <p translate=l10n.syncZones></p> <md-switch ng-model=preferencesLed.syncZones ng-change=preferencesLed.onSyncZonesChanged()></md-switch> </div> </div> <div class="preferences-preference-section md-hue-3 background md-primary" layout=row> <div layout=row layout-align="start center"> <md-list layout=row layout-align="start center"> <md-list-item class=color-white-hue-3 ng-repeat="device in preferencesLed.devices" ng-if=preferencesLed.isSliDevice(device) ng-click=preferencesLed.selectGpu(device) ng-class="{\'md-button-selected md-accent foreground\': preferencesLed.isSelectedGpu(device)}"> <p class=font-size-sm> {{device.gpuName | uppercase}} </p> </md-list-item> </md-list> <md-list layout=column layout-align="start center"> <md-list-item class=color-white-hue-3 ng-repeat="device in preferencesLed.devices" ng-if=!preferencesLed.isSliDevice(device) ng-click=preferencesLed.selectGpu(device) ng-class="{\'md-button-selected md-accent foreground\': preferencesLed.isSelectedGpu(device)}"> <p class=font-size-sm> {{device.gpuName | uppercase}} </p> </md-list-item> </md-list> </div> <div layout=row class="section-divider bg-grey-im"></div> <div layout=row layout-align="center center"> <md-list layout=row layout-align="center center" ng-if=preferencesLed.showZones()> <md-list-item class=color-white-hue-3 ng-repeat="zone in preferencesLed.selectedGpu.zone" ng-disabled=!preferencesLed.isIndivisualLedSelected()> <md-button translate=l10n.zone translate-values={{zone}} ng-click=preferencesLed.selectedZone($index) ng-class="$index === preferencesLed.selectedZoneIndex ? \'md-button-selected md-accent foreground\': \'\'"></md-button> </md-list-item> </md-list> </div> </div> <div class="preferences-preference-section md-hue-3 background md-primary" layout=column> <div layout=row layout-align=space-between> <h5 class="font-size-lg color-white-hue-3" translate=l10n.turnLedOn ng-if=preferencesLed.featureState></h5> <h5 class="font-size-lg color-white-hue-3" translate=l10n.turnLedOff ng-if=!preferencesLed.featureState></h5> <div layout=row class=preferences-led-switch> <p translate=l10n.ledLighting></p> <md-switch ng-model=preferencesLed.featureState ng-change=preferencesLed.onfeatureStateChange()></md-switch> </div> </div> <md-divider></md-divider> <div layout=column class=preferences-preference-section> <div layout=row flex=100> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.effect></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedLedEffect ng-change=preferencesLed.onLedEffectChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=effect.ledEffect ng-repeat="effect in preferencesLed.ledEffects"> {{effect.name | translate}} </md-option> </md-select> </md-input-container> </div> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.style></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedAnimationType ng-change=preferencesLed.onAnimationTypeChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=style.animation ng-repeat="style in preferencesLed.styleList"> {{style.style | translate}} </md-option> </md-select> </md-input-container> </div> </div> <div layout=row flex=100> <div flex=50 layout=column> <label class=font-uppercase translate=l10n.variation></label> <md-input-container class=led-input-container-position> <md-select ng-model=preferencesLed.selectedVariation ng-change=preferencesLed.onLedVariationChange() ng-disabled=!preferencesLed.featureState> <md-option ng-value=variation.variation ng-repeat="variation in preferencesLed.variationList"> {{variation.name | translate}} </md-option> </md-select> </md-input-container> </div> <div flex=50 layout=column> <div ng-if=preferencesLed.showAnimationSliderPanel> <label class=font-uppercase>{{preferencesLed.labelAnimationSpeed}}</label> <div layout=row layout-align="start center"> <md-slider ng-change=preferencesLed.onAnimationSliderChange() min={{preferencesLed.animationSliderMin}} max={{preferencesLed.animationSliderMax}} ng-model=preferencesLed.sliderAnimation ng-disabled=!preferencesLed.featureState></md-slider> </div> </div> </div> </div> <div layout=row flex=100> <div class=colorpicker layout=row flex=50 ng-show=preferencesLed.showColorPickerControl> <canvas id=picker width=239 height=220></canvas> <div class=controls ng-click=preferencesLed.colorPreviewClicked(1)> <div class=preview flex></div> <div layout=row> <label>R</label> <h4 class=red></h4> </div> <div layout=row> <label>G</label> <h4 class=green></h4> </div> <div layout=row> <label>B</label> <h4 class=blue></h4> </div> </div> <div class=controls ng-click=preferencesLed.colorPreviewClicked(2) ng-if=preferencesLed.selectedMultiColorAnimation> <div class=secondPreview flex></div> <div layout=row> <label>R</label> <h4 class=red1></h4> </div> <div layout=row> <label>G</label> <h4 class=green1></h4> </div> <div layout=row> <label>B</label> <h4 class=blue1></h4> </div> </div> </div> <div> <div ng-if=preferencesLed.showBrightnessSliderPanel> <label class=font-uppercase>{{preferencesLed.labelBrightnessSlider}}</label> <div ng-if=preferencesLed.showSliderBrightness> <md-slider flex ng-change=preferencesLed.onBrightnessSliderChange() min={{preferencesLed.brightnessSliderMin}} max={{preferencesLed.brightnessSliderMax}} ng-model=preferencesLed.sliderBrightness ng-disabled=!preferencesLed.featureState></md-slider> </div> <div ng-if=preferencesLed.showSliderBrightnessRange> <nv-range-slider on-slider-change=preferencesLed.onBrightnessRangeSliderChange() lower-value=preferencesLed.selectedGpu.zone[preferencesLed.selectedZoneIndex].minBrightness upper-value=preferencesLed.selectedGpu.zone[preferencesLed.selectedZoneIndex].variationParameter step=2 min-gap=2 minimum=preferencesLed.brightnessRangeSliderMin maximum=preferencesLed.brightnessRangeSliderMax nv-disabled=!preferencesLed.featureState> </nv-range-slider> </div> </div> </div> </div> </div> <div class=cancel-apply-container layout=row layout-align="end center"> <md-button ng-click=preferencesLed.cancelSettings() translate=l10n.cancel ng-disabled=!preferencesLed.buttonCancel></md-button> <md-button class=md-accent ng-click=preferencesLed.applySettings() translate=l10n.apply ng-disabled=!preferencesLed.buttonApply></md-button> </div> </div> </div> ';
 }, function(e, t) {
     e.exports = '<div class="preferences-preference-section md-primary md-hue-3 background"> <div class=preferences-section-header> <h4 class="color-white-hue-3 font-size-lg" translate=l10n.shieldDevices></h4> </div> <div class=preferences-section-content> <div class=button-text-padding layout=row layout-align="space-between cente"> <md-button class="margin-zero md-raised md-secondary ng-scope md-ink-ripple font-size-sm" ng-click=preferencesShieldDevices.removeAllDevices() translate=l10n.removeAllDevices tabindex=0></md-button> </div> </div> </div> '
 }, function(e, t, n) {
@@ -21653,19 +21712,19 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<md-card class=reward-card ng-mouseenter=rewardCard.onMouseEnter() ng-mouseleave=rewardCard.onMouseLeave() ng-class="{\'md-accent background-on-hover clickable-element\': rewardCard.isRewardAvailable(), \'clickable-element\': rewardCard.isRewardRedeemed() || rewardCard.isRewardLocked()}" ng-click=rewardCard.redeemReward($event)> <div class=new-item-icon-wrapper ng-if=rewardCard.isPushedReward()> <md-icon md-font-set=material-icons class="color-green md-16">new_releases</md-icon> </div> <div class="reward-card-image-container constants-position-relative"> <img flex layout-fill ng-src={{::rewardCard.rewardImageUrl}} nv-image-fallback=nv-no-loading-indicator nv-image-format alt=reward_card_image /> <nv-overlay flex layout-fill class="common-overlay light-background background-animated reward-card-overlay" layout=column layout-align="center center" ng-if=rewardCard.showOverlay> <div flex layout-fill layout=column layout-align="center center" class=padding-16> <md-button class="md-raised md-accent" ng-if=rewardCard.isRewardAvailable()> <span class=color-white-important translate=l10n.redeem></span> </md-button> <div flex layout=row layout-align="start start" layout-fill ng-if=rewardCard.isRewardRedeemedOrExpired()> <md-icon class="color-white-hue-1 material-icons reward-status-icon margin-zero">{{::rewardCard.rewardStatusIcon}}</md-icon> <span class="margin-left-8 color-white-important font-uppercase line-height-16">{{::rewardCard.rewardStatusMessage}}</span> </div> <div flex layout=column class=constants-position-absolute layout-align="center center" layout-fill ng-if=rewardCard.isDetailsButtonVisible()> <md-button class="md-raised md-secondary color-white-important"> <span translate=l10n.details></span> </md-button> </div> <div flex layout=column layout-fill ng-if=rewardCard.isRewardLocked()> <md-icon class="color-white-hue-1 material-icons md-24">lock</md-icon> </div> </div> </nv-overlay> </div> <md-card-content> <h4 class="reward-card-title margin-zero font-size-xxs line-height-sm1 font-style-normal color-white-hue-3" nv-ellipsis-lines=1>{{::rewardCard.nvReward.campaign.title}}</h4> <div class=reward-card-details-container layout=row> <p class="reward-date margin-zero color-white-hue-4 font-size-xxs line-height-sm1" nv-ellipsis-lines=1>{{::rewardCard.rewardDate}}</p> <p class="reward-date margin-zero color-white-hue-4 font-size-xxs line-height-sm1" nv-ellipsis-lines=1 ng-if=rewardCard.isRewardLocked()>{{::rewardCard.perkLevel}}</p> </div> </md-card-content> </md-card> '
 }, function(e, t, n) {
-    e.exports = ' <div layout=column layout-fill class="rewards-center-items-container constants-position-relative" ng-class="{\'user-profile-disabled\': !rewardsCenter.userProfileEnabled}"> <md-toolbar flex=none layout=row class=rewards-center-top-toolbar layout-align="space-between center"> <div layout=row> <md-button class="back-button padding-zero md-icon-button" ng-click=rewardsCenter.backToPreviousState() ng-if=!rewardsCenter.userProfileEnabled> <md-icon md-font-set=material-icons class="md-24 color-white-hue-1">arrow_back</md-icon> <md-tooltip><span translate=l10n.back></span></md-tooltip> </md-button> <h4 class="color-white-hue-1 margin-zero font-size-sm rewards-center-title line-height-sm1 font-uppercase" translate=l10n.redeem ng-if=!rewardsCenter.userProfileEnabled></h4> </div> <nv-select-menu nv-md-icon=filter_list nv-label=l10n.filter class=constants-position-relative nv-filtered="!rewardsCenter.matchFilter(\'all\')"> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'all\')" nv-selected-test="rewardsCenter.matchFilter(\'all\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'all\')"> <div translate=l10n.allNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'all\')}}"></div> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'available\')" nv-selected-test="rewardsCenter.matchFilter(\'available\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'available\')"> <span translate=l10n.availableNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'available\')}}"></span> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'redeemed\')" nv-selected-test="rewardsCenter.matchFilter(\'redeemed\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'redeemed\')"> <span translate=l10n.redeemedNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'redeemed\')}}"></span> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'expired\')" nv-selected-test="rewardsCenter.matchFilter(\'expired\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'expired\')"> <span translate=l10n.expiredNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'expired\')}}"></span> </nv-select-menu-item> </nv-select-menu> </md-toolbar> <md-content flex layout-fill ng-class="{\'overflow-y-hidden-important\': rewardsCenter.userProfileEnabled}"> <div layout=column layout-align="start center" flex=auto class="rewards-center-coupon-code-banner constants-position-relative" ng-class="{\'expanded-state\': rewardsCenter.couponBannerExpanded}"> <div flex layout-fill layout=column layout-align="start center" class=bg-grey-lt-hue-1> <nv-coupon-input nv-input-placeholder=rewardsCenter.translatedInputPlaceholder nv-button=rewardsCenter.nvCouponInputButton nv-error-message=l10n.checkCodeAndTryAgain></nv-coupon-input> </div> <div layout=row layout-align="center center" class=section-separator-horizontal> <div flex layout-fill class=bg-grey-lt-hue-1></div> <div class=section-separator-horizontal-center></div> <div flex layout-fill class=bg-grey-lt-hue-1></div> </div> <div layout=row class="no-focus-outline learn-more-expandable-header" ng-click=rewardsCenter.toggleCouponBannerExpansionState() layout-align="space-between center"> <div flex layout-fill class=bg-grey-lt-hue-1></div> <div class=section-separator-vertical></div> <div layout=row layout-align="center center" class="learn-more-header-button bg-grey-lt-hue-1 clickable-element"> <p class="margin-zero color-white-hue-5 line-height-16" translate=l10n.whereToFindCoupons></p> <md-icon class="material-icons margin-zero md-16 line-height-16 color-white-hue-5 toggle-icon margin-left-4">expand_more</md-icon> </div> <div class=section-separator-vertical></div> <div flex layout-fill class=bg-grey-lt-hue-1></div> </div> <div class=learn-more-expandable-content layout=row layout-align="center center"> <img src=' + n(706) + ' alt=learn_more class=constants-position-absolute /> <div class="learn-more-text-container constants-position-absolute"> <div layout=row layout-align="start center" ng-repeat="message in rewardsCenter.couponsLearnMoreMessages" class=margin-bottom-10> <img src=' + n(705) + ' alt=learn_more_bullet class="learn-more-bullet margin-bottom-1"/> <p class="margin-zero margin-left-8 learn-more-message color-white-hue-5" translate={{message}}></p> </div> </div> </div> </div> <div flex=none class=filtered-list-separator ng-if="!rewardsCenter.matchFilter(\'all\')"></div> <div flex class=reward-cards-container ng-if=rewardsCenter.unRedeemedItemsExist()> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.available class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase" ng-if=!rewardsCenter.userProfileEnabled></h4> <h4 translate=l10n.readyToRedeem class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase" ng-if=rewardsCenter.userProfileEnabled></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if=rewardsCenter.showAvailableCards()> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.filteredUnRedeemedList | limitTo: rewardsCenter.unRedeemedListLimitTo track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> </div> <div flex class=reward-cards-container ng-if=rewardsCenter.showPerksSection()> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.levelUpToUnlock class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase margin-top-16"></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if="!rewardsCenter.matchFilter(\'available\')"> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.lockedPerksList track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> </div> <div flex class=reward-cards-container> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.redeemedAndExpired class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase margin-top-16"></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if="!rewardsCenter.matchFilter(\'available\')"> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.filteredRedeemedOrExpiredList | limitTo: rewardsCenter.redeemedOrExpiredListLimitTo track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> <p class="color-white-hue-4 margin-zero no-items-message" translate=l10n.noRewardsRedeemedYet ng-if=rewardsCenter.showNoRedeemedItemsMessage()></p> </div> </md-content> </div> <nv-overlay class="common-overlay light-background constants-z-layers-two" flex layout-fill ng-if=rewardsCenter.requestInProgress> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=25 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> '
+    e.exports = ' <div layout=column layout-fill class="rewards-center-items-container constants-position-relative" ng-class="{\'user-profile-disabled\': !rewardsCenter.userProfileEnabled}"> <md-toolbar flex=none layout=row class=rewards-center-top-toolbar layout-align="space-between center"> <div layout=row> <md-button class="back-button padding-zero md-icon-button" ng-click=rewardsCenter.backToPreviousState() ng-if=!rewardsCenter.userProfileEnabled> <md-icon md-font-set=material-icons class="md-24 color-white-hue-1">arrow_back</md-icon> <md-tooltip><span translate=l10n.back></span></md-tooltip> </md-button> <h4 class="color-white-hue-1 margin-zero font-size-sm rewards-center-title line-height-sm1 font-uppercase" translate=l10n.redeem ng-if=!rewardsCenter.userProfileEnabled></h4> </div> <nv-select-menu nv-md-icon=filter_list nv-label=l10n.filter class=constants-position-relative nv-filtered="!rewardsCenter.matchFilter(\'all\')"> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'all\')" nv-selected-test="rewardsCenter.matchFilter(\'all\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'all\')"> <div translate=l10n.allNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'all\')}}"></div> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'available\')" nv-selected-test="rewardsCenter.matchFilter(\'available\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'available\')"> <span translate=l10n.availableNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'available\')}}"></span> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'redeemed\')" nv-selected-test="rewardsCenter.matchFilter(\'redeemed\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'redeemed\')"> <span translate=l10n.redeemedNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'redeemed\')}}"></span> </nv-select-menu-item> <nv-select-menu-item nv-action="rewardsCenter.setFilter(\'expired\')" nv-selected-test="rewardsCenter.matchFilter(\'expired\')" ng-disabled="rewardsCenter.isFilterButtonDisabled(\'expired\')"> <span translate=l10n.expiredNumber translate-value-number="{{rewardsCenter.getRewardsCount(\'expired\')}}"></span> </nv-select-menu-item> </nv-select-menu> </md-toolbar> <md-content flex layout-fill ng-class="{\'overflow-y-hidden-important\': rewardsCenter.userProfileEnabled}"> <div layout=column layout-align="start center" flex=auto class="rewards-center-coupon-code-banner constants-position-relative" ng-class="{\'expanded-state\': rewardsCenter.couponBannerExpanded}"> <div flex layout-fill layout=column layout-align="start center" class=bg-grey-lt-hue-1> <nv-coupon-input nv-input-placeholder=rewardsCenter.translatedInputPlaceholder nv-button=rewardsCenter.nvCouponInputButton nv-error-message=l10n.checkCodeAndTryAgain></nv-coupon-input> </div> <div layout=row layout-align="center center" class=section-separator-horizontal> <div flex layout-fill class=bg-grey-lt-hue-1></div> <div class=section-separator-horizontal-center></div> <div flex layout-fill class=bg-grey-lt-hue-1></div> </div> <div layout=row class="no-focus-outline learn-more-expandable-header" ng-click=rewardsCenter.toggleCouponBannerExpansionState() layout-align="space-between center"> <div flex layout-fill class=bg-grey-lt-hue-1></div> <div class=section-separator-vertical></div> <div layout=row layout-align="center center" class="learn-more-header-button bg-grey-lt-hue-1 clickable-element"> <p class="margin-zero color-white-hue-5 line-height-16" translate=l10n.whereToFindCoupons></p> <md-icon class="material-icons margin-zero md-16 line-height-16 color-white-hue-5 toggle-icon margin-left-4">expand_more</md-icon> </div> <div class=section-separator-vertical></div> <div flex layout-fill class=bg-grey-lt-hue-1></div> </div> <div class=learn-more-expandable-content layout=row layout-align="center center"> <img src=' + n(708) + ' alt=learn_more class=constants-position-absolute /> <div class="learn-more-text-container constants-position-absolute"> <div layout=row layout-align="start center" ng-repeat="message in rewardsCenter.couponsLearnMoreMessages" class=margin-bottom-10> <img src=' + n(707) + ' alt=learn_more_bullet class="learn-more-bullet margin-bottom-1"/> <p class="margin-zero margin-left-8 learn-more-message color-white-hue-5" translate={{message}}></p> </div> </div> </div> </div> <div flex=none class=filtered-list-separator ng-if="!rewardsCenter.matchFilter(\'all\')"></div> <div flex class=reward-cards-container ng-if=rewardsCenter.unRedeemedItemsExist()> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.available class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase" ng-if=!rewardsCenter.userProfileEnabled></h4> <h4 translate=l10n.readyToRedeem class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase" ng-if=rewardsCenter.userProfileEnabled></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if=rewardsCenter.showAvailableCards()> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.filteredUnRedeemedList | limitTo: rewardsCenter.unRedeemedListLimitTo track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> </div> <div flex class=reward-cards-container ng-if=rewardsCenter.showPerksSection()> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.levelUpToUnlock class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase margin-top-16"></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if="!rewardsCenter.matchFilter(\'available\')"> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.lockedPerksList track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> </div> <div flex class=reward-cards-container> <md-toolbar layout=row ng-if="rewardsCenter.matchFilter(\'all\')"> <h4 translate=l10n.redeemedAndExpired class="rewards-center-section-title color-white-hue-3 font-size-sm line-height-sm1 font-uppercase margin-top-16"></h4> </md-toolbar> <div layout=row class=reward-cards-container layout-align="start start" layout-wrap flex layout-fill ng-if="!rewardsCenter.matchFilter(\'available\')"> <nv-reward-card class=rewards-reward-card ng-repeat="reward in rewardsCenter.filteredRedeemedOrExpiredList | limitTo: rewardsCenter.redeemedOrExpiredListLimitTo track by rewardsCenter.rewardsTrackBy(reward)" nv-reward=reward></nv-reward-card> </div> <p class="color-white-hue-4 margin-zero no-items-message" translate=l10n.noRewardsRedeemedYet ng-if=rewardsCenter.showNoRedeemedItemsMessage()></p> </div> </md-content> </div> <nv-overlay class="common-overlay light-background constants-z-layers-two" flex layout-fill ng-if=rewardsCenter.requestInProgress> <span layout-fill layout-align="center center" layout=column> <md-progress-circular id=progressIndicator class=md-accent md-diameter=25 md-mode=indeterminate></md-progress-circular> </span> </nv-overlay> '
 }, function(e, t) {
-    e.exports = '<div class=search-container> <div class=search-input-wrapper> <div layout=row> <md-input-container ng-class="{\'visible\': searchCtrl.searchInputVisble, \'hidden\': !searchCtrl.searchInputVisble}" md-no-float class="md-block search-input-container"> <md-icon md-font-set=material-icons class="md-18 search-icon" ng-if=!searchCtrl.resultsShouldBeVisible()>search</md-icon> <md-icon md-font-set=material-icons class="md-18 active-search-icon" ng-if=searchCtrl.resultsShouldBeVisible()>search</md-icon> <input class=search-input maxlength=40 type=text ng-model=searchCtrl.query ng-focus=searchCtrl.showRecentSearches() ng-blur="searchCtrl.searchInputFocused = false" placeholder="{{ \'l10n.search\' | translate }}" ng-change=searchCtrl.performSearch(searchCtrl.query) autocomplete=off ng-keydown=searchCtrl.keydownevt($event)> <md-button class="md-icon-button clear-icon-button" ng-click=searchCtrl.toggleSearchInput()> <md-icon md-font-set=material-icons class=md-18>clear</md-icon> </md-button> </md-input-container> <md-button class="search-input-toggle-button md-icon-button margin-right-16" ng-if=!searchCtrl.searchInputVisble ng-click=searchCtrl.toggleSearchInput()> <md-tooltip><span translate=l10n.search></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>search</md-icon> </md-button> </div> </div> <div class=search-result-container ng-class="{\'hidden\': (!searchCtrl.recentSearchesCache.length  && searchCtrl.searchResult === \'\') }" ng-show=searchCtrl.resultsShouldBeVisible()> <div ng-switch on=searchCtrl.searchResult> <md-content class=search-result-scroll-content ng-switch-when=recentQueries> <div class=search-category-title> <h4 class="font-size-sm color-white-hue-5 font-uppercase" translate=l10n.recentSearches></h4> </div> <md-list> <div ng-repeat="result in searchCtrl.recentSearchesCache track by $index"> <md-list-item tabindex=0 class=recent-search-item ng-click=searchCtrl.addQuery(result) ng-class="{ \'selected-search-item\' : searchCtrl.selectedRecentSearchIndex === $index}"> <div layout=row layout-fill layout-align="space-around center" class=search-result-height> <div ng-if=result.hasThumbnail class=search-item-thumbnail> <img ng-src="{{ result.thumbnail }}" nv-image-fallback=nv-default-game-art /> </div> <div ng-if=result.hasIcon layout=row layout-align="center center" class=search-item-icon> <md-icon md-font-set=material-icons class=md-primary>{{result.icon}}</md-icon> </div> <p id="{{ \'recent-searches\' + $index }}" flex class="search-title single-line-ellipsis" translate={{result.title}}></p> </div> </md-list-item> <md-tooltip ng-if="searchCtrl.showTooltip($index, \'recent-searches\')"><span translate={{result.title}}></span></md-tooltip> </div> </md-list> </md-content> <md-content id=search-result-list class=search-result-scroll-content ng-switch-when=resultAvailable> <div ng-repeat="(category, results) in searchCtrl.categorizedResult" ng-show="results.length > 0"> <div class=search-category-title> <h4 class="font-size-sm color-white-hue-5">{{ searchCtrl.searchCategories[category] | translate | uppercase}}</h4> </div> <md-list> <div ng-repeat="result in results track by $index"> <div> <md-list-item tabindex=0 class=search-result-item ng-click=searchCtrl.redirect(result) ng-class="{ \'selected-search-item\' : searchCtrl.isSearchItemSelected($index,category) }"> <div layout=row layout-fill flex layout-align="space-around center" class=search-result-height> <div ng-if=result.hasThumbnail class=search-item-thumbnail> <img ng-src="{{ result.thumbnail }}" nv-image-fallback=nv-default-game-art /> </div> <div ng-if=result.hasIcon layout=row layout-align="center center" class=search-item-icon> <md-icon md-font-set=material-icons class=md-primary>{{result.icon}}</md-icon> </div> <div layout=column flex> <p id="{{ \'new-searches-\' + category.split(\'.\').join(\'-\') + $index  }}" class="single-line-ellipsis search-title" translate={{result.title}}></p> <span class=search-preview>{{ result.preview }}</span> </div> </div> </md-list-item> <md-tooltip ng-if="searchCtrl.showTooltip($index, \'new-searches-\' + category.split(\'.\').join(\'-\') )"><span translate={{result.title}}></span></md-tooltip> </div> </div> </md-list> <div class=search-category-divider></div> </div> </md-content> <div class=search-result-fallback ng-switch-when=resultNotAvailable> <div class=search-result-not-found layout=column layout-align="center center" flex layout-fill> <md-icon md-font-set=material-icons class="search-error-icon md-32">error</md-icon> <p class=search-error-header translate=l10n.noResults></p> <p class=search-error-message translate=l10n.noResultsSearchMessage></p> </div> </div> </div> <nv-overlay class="common-overlay search-container-bottom-gradient" nv-position=bottom></nv-overlay> </div> </div> ';
+    e.exports = '<div class=search-container> <div class=search-input-wrapper> <div layout=row> <md-input-container ng-class="{\'visible\': searchCtrl.searchInputVisble, \'hidden\': !searchCtrl.searchInputVisble}" md-no-float class="md-block search-input-container"> <md-icon md-font-set=material-icons class="md-18 search-icon" ng-if=!searchCtrl.resultsShouldBeVisible()>search</md-icon> <md-icon md-font-set=material-icons class="md-18 active-search-icon" ng-if=searchCtrl.resultsShouldBeVisible()>search</md-icon> <input class=search-input maxlength=40 type=text ng-model=searchCtrl.query ng-focus=searchCtrl.showRecentSearches() ng-blur="searchCtrl.searchInputFocused = false" placeholder="{{ \'l10n.search\' | translate }}" ng-change=searchCtrl.performSearch(searchCtrl.query) autocomplete=off ng-keydown=searchCtrl.keydownevt($event)> <md-button class="md-icon-button clear-icon-button" ng-click=searchCtrl.toggleSearchInput()> <md-icon md-font-set=material-icons class=md-18>clear</md-icon> </md-button> </md-input-container> <md-button class="search-input-toggle-button md-icon-button margin-right-16" ng-if=!searchCtrl.searchInputVisble ng-click=searchCtrl.toggleSearchInput()> <md-tooltip><span translate=l10n.search></span></md-tooltip> <md-icon md-font-set=material-icons class=md-18>search</md-icon> </md-button> </div> </div> <div class=search-result-container ng-class="{\'hidden\': (!searchCtrl.recentSearchesCache.length  && searchCtrl.searchResult === \'\') }" ng-show=searchCtrl.resultsShouldBeVisible()> <div ng-switch on=searchCtrl.searchResult> <md-content class=search-result-scroll-content ng-switch-when=recentQueries> <div class=search-category-title> <h4 class="font-size-sm color-white-hue-5 font-uppercase" translate=l10n.recentSearches></h4> </div> <md-list> <div ng-repeat="result in searchCtrl.recentSearchesCache track by $index"> <md-list-item tabindex=0 class=recent-search-item ng-click=searchCtrl.addQuery(result) ng-class="{ \'selected-search-item\' : searchCtrl.selectedRecentSearchIndex === $index}"> <div layout=row layout-fill layout-align="space-around center" class=search-result-height> <div ng-if=result.hasThumbnail class=search-item-thumbnail> <img ng-src="{{ result.thumbnail }}" nv-image-fallback=nv-default-game-art /> </div> <div ng-if=result.hasIcon layout=row layout-align="center center" class=search-item-icon> <md-icon md-font-set=material-icons class=md-primary>{{result.icon}}</md-icon> </div> <p id="{{ \'recent-searches\' + $index }}" flex class="search-title single-line-ellipsis" translate={{result.title}}></p> </div> </md-list-item> <md-tooltip ng-if="searchCtrl.showTooltip($index, \'recent-searches\')"><span translate={{result.title}}></span></md-tooltip> </div> </md-list> </md-content> <md-content id=search-result-list class=search-result-scroll-content ng-switch-when=resultAvailable> <div ng-repeat="(category, results) in searchCtrl.categorizedResult" ng-show="results.length > 0"> <div class=search-category-title> <h4 class="font-size-sm color-white-hue-5">{{ searchCtrl.searchCategories[category] | translate | uppercase}}</h4> </div> <md-list> <div ng-repeat="result in results track by $index"> <div> <md-list-item tabindex=0 class=search-result-item ng-click=searchCtrl.redirect(result) ng-class="{ \'selected-search-item\' : searchCtrl.isSearchItemSelected($index,category) }"> <div layout=row layout-fill flex layout-align="space-around center" class=search-result-height> <div ng-if=result.hasThumbnail class=search-item-thumbnail> <img ng-src="{{ result.thumbnail }}" nv-image-fallback=nv-default-game-art /> </div> <div ng-if=result.hasIcon layout=row layout-align="center center" class=search-item-icon> <md-icon md-font-set=material-icons class=md-primary>{{result.icon}}</md-icon> </div> <div layout=column flex> <p id="{{ \'new-searches-\' + category.split(\'.\').join(\'-\') + $index  }}" class="single-line-ellipsis search-title" translate={{result.title}}></p> <span class=search-preview>{{ result.preview }}</span> </div> </div> </md-list-item> <md-tooltip ng-if="searchCtrl.showTooltip($index, \'new-searches-\' + category.split(\'.\').join(\'-\') )"><span translate={{result.title}}></span></md-tooltip> </div> </div> </md-list> <div class=search-category-divider></div> </div> </md-content> <div class=search-result-fallback ng-switch-when=resultNotAvailable> <div class=search-result-not-found layout=column layout-align="center center" flex layout-fill> <md-icon md-font-set=material-icons class="search-error-icon md-32">error</md-icon> <p class=search-error-header translate=l10n.noResults></p> <p class=search-error-message translate=l10n.noResultsSearchMessage></p> </div> </div> </div> <nv-overlay class="common-overlay search-container-bottom-gradient" nv-position=bottom></nv-overlay> </div> </div> '
 }, , , , function(e, t) {
     e.exports = '<div layout-fill layout=column flex class=constants-position-relative> <md-card class="updates-highlight-tile bg-black-hv" layout=column ng-click=highlightTile.showDetails($event) nv-telemetry=\'{"tarconID":{{highlightTile.getTelemetryEventName()}},"url":{{highlightTile.getTelemetryEventInfo()}}}\'> <div class="constants-position-relative image-container"> <img ng-src={{nvContent.coverImage}} class=md-card-image alt={{nvContent.name}} nv-image-fallback=nv-no-loading-indicator layout-fill> <nv-overlay class="common-overlay optimal-settings-icon-overlay" ng-if=highlightTile.isContentGame()> <md-icon md-font-set=nv-custom-icons md-font-icon=icon-optimized_reg class="nv-custom-icons md-accent md-24"></md-icon> <md-tooltip><span translate=l10n.optimalSettingsAvailable></span></md-tooltip> </nv-overlay> <nv-overlay layout-fill class="common-overlay no-background highlight-tile-overlay" ng-if=highlightTile.isVideoAvailable(nvContent)> <div layout=column layout-align="center center" flex> <md-button class=md-icon-button> <md-icon md-font-set=material-icons class="md-18 color-white-hue-1">play_circle_outline</md-icon> </md-button> </div> </nv-overlay> </div> <md-card-content class=color-black-hue-1> <p class="font-size-lg color-white-hue-3" nv-ellipsis-lines=2>{{nvContent.name}}</p> <p ng-if=nvContent.id class="font-size-sm color-white-hue-4" nv-ellipsis-lines=2>{{nvContent.description}}</p> <p ng-if=nvContent.featureId class="font-size-sm color-white-hue-4" nv-ellipsis-lines=3>{{nvContent.description}}</p> <p ng-if=nvContent.overviewContent class="font-size-sm color-white-hue-4" nv-ellipsis-lines=3>{{nvContent.description}}</p> </md-card-content> </md-card> <nv-overlay class="common-overlay common-container-gradient" nv-position=bottom></nv-overlay> </div> '
 }, function(e, t, n) {
-    e.exports = '<div class="constants-position-relative updates-updates-details-highlights-banner-container bg-dark-vh23" ng-if=updateDetails.showDefaultBanner() layout=row layout-align="center center"> <img ng-src=' + n(708) + ' alt=default-banner /> </div> <nv-no-content-fallback ng-if=updateDetails.showDefaultContentImage() nv-tip=l10n.noInformationAvailable class=updates-updates-details-highlights-banner-container flex> </nv-no-content-fallback> <div layout=column ng-if=updateDetails.driverInformation> <div class="constants-position-relative updates-updates-details-highlights-banner-container bg-dark-vh23" ng-if=updateDetails.driverInformation.bannerGfeNg> <nv-updates-highlights-banner nv-driver-banner=updateDetails.driverInformation.bannerGfeNg nv-driver-type=updateDetails.driverType nv-driver-version={{updateDetails.driverVersion}} flex></nv-updates-highlights-banner> </div> <div class=updates-updates-details ng-if=updateDetails.showHighLights()> <div class=updates-updates-details-releaseAbstract ng-bind-html=updateDetails.driverInformation.ReleaseNotesAbstract></div> <nv-updates-driver-highlights nv-driver-highlight=updateDetails.driverInformation.highlightGfeNg nv-driver-type=updateDetails.driverType nv-driver-version={{updateDetails.driverVersion}}></nv-updates-driver-highlights> </div> </div> <div class=updates-updates-details-highlights-banner-container ng-if=updateDetails.showLoadingIndicator layout=row layout-align="center center" flex> <md-progress-circular class=md-accent md-diameter=30 md-mode=indeterminate> </md-progress-circular> </div> '
+    e.exports = '<div class="constants-position-relative updates-updates-details-highlights-banner-container bg-dark-vh23" ng-if=updateDetails.showDefaultBanner() layout=row layout-align="center center"> <img ng-src=' + n(710) + ' alt=default-banner /> </div> <nv-no-content-fallback ng-if=updateDetails.showDefaultContentImage() nv-tip=l10n.noInformationAvailable class=updates-updates-details-highlights-banner-container flex> </nv-no-content-fallback> <div layout=column ng-if=updateDetails.driverInformation> <div class="constants-position-relative updates-updates-details-highlights-banner-container bg-dark-vh23" ng-if=updateDetails.driverInformation.bannerGfeNg> <nv-updates-highlights-banner nv-driver-banner=updateDetails.driverInformation.bannerGfeNg nv-driver-type=updateDetails.driverType nv-driver-version={{updateDetails.driverVersion}} flex></nv-updates-highlights-banner> </div> <div class=updates-updates-details ng-if=updateDetails.showHighLights()> <div class=updates-updates-details-releaseAbstract ng-bind-html=updateDetails.driverInformation.ReleaseNotesAbstract></div> <nv-updates-driver-highlights nv-driver-highlight=updateDetails.driverInformation.highlightGfeNg nv-driver-type=updateDetails.driverType nv-driver-version={{updateDetails.driverVersion}}></nv-updates-driver-highlights> </div> </div> <div class=updates-updates-details-highlights-banner-container ng-if=updateDetails.showLoadingIndicator layout=row layout-align="center center" flex> <md-progress-circular class=md-accent md-diameter=30 md-mode=indeterminate> </md-progress-circular> </div> '
 }, function(e, t) {
     e.exports = "<nv-updates-driver flex layout=column class=updates-updates-container></nv-updates-driver> "
 }, function(e, t) {
     e.exports = '<div flex class=download-progress> <div layout=row layout-align="space-between start"> <p class="font-size-xxs color-white-hue-3">{{nvMessage}}</p> <p ng-show="nvValue > 0" class="font-size-xxs color-white-hue-3">{{nvValue | number:0}}%</p> </div> <md-progress-linear class=md-accent flex md-mode="{{(nvValue > 0) ? \'determinate\':\'indeterminate\'}}" value={{nvValue}} ng-cloak></md-progress-linear> </div> '
 }, function(e, t, n) {
-    e.exports = '<md-content flex class=updates-updates-driver-container id=toast-container> <div class=updates-updates-driver layout=column> <md-progress-circular class="md-accent left-50-percent" md-diameter=15 md-mode=indeterminate ng-if=updatesDriver.showLoadingIndicator()></md-progress-circular> <div layout=row class=checkforupdate-button layout-align="end center" ng-if=updatesDriver.anydriverInfoOrUpdatesFound> <md-button ng-click=updatesDriver.onCheckForUpdate() ng-disabled=updatesDriver.isCheckForUpdateDisabled() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_CHECK_DRIVER_UPDATES}}}\'>{{\'l10n.checkforUpdates\' | translate | uppercase}}</md-button> <div layout=row layout-align="end center" ng-if=updatesDriver.CRDSupported> <img class="padding-left-16 padding-right-16" src=' + n(96) + '> <md-menu md-offset="30 60" class=driver-type-preference-menu> <md-button class=md-icon-button ng-click=$mdOpenMenu($event)> <md-icon md-font-set=material-icons class=color-white-hue-2 ng-hide={{::nvCustomIcon}}>more_vert</md-icon> </md-button> <md-menu-content class="margin-zero padding-24 driver-type-selection-container"> <p class="margin-zero margin-bottom-20 font-size-xl foreground driver-type-title" translate=l10n.showDriverRecommendationFor></p> <md-radio-group ng-model=updatesDriver.currentlySelectedDriver> <md-menu-item layout=row style=margin-bottom:15px> <md-radio-button class="padding-zero margin-zero" value={{updatesDriver.driverType.GRD}} nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.DRIVER_TYPE_GRD_SELECTED}}}\' ng-click=updatesDriver.onRecommendedDriverTypeChanged(updatesDriver.driverType.GRD)> <div layout=column> <p translate=l10n.fallbackGeforceDriverName class="font-size-lg margin-zero margin-top-2 driver-type-heading1"></p> <p translate=l10n.recommendedForGameUpdates class="font-size-sm margin-zero margin-top-2 line-height-16 driver-type-heading2"></p> </div> </md-radio-button> </md-menu-item> <md-menu-item> <md-radio-button class="padding-zero margin-zero" value={{updatesDriver.driverType.CRD}} nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.DRIVER_TYPE_CRD_SELECTED}}}\' ng-click=updatesDriver.onRecommendedDriverTypeChanged(updatesDriver.driverType.CRD) layout=column> <div layout=column> <p translate=l10n.creatorReadyDriver class="font-size-lg margin-zero margin-top-2 driver-type-heading1"></p> <p translate=l10n.recommendedForCreativeApp class="font-size-sm margin-zero margin-top-2 line-height-16 driver-type-heading2"></p> </div> </md-radio-button> </md-menu-item> </md-radio-group> </md-menu-content> </md-menu> </div> </div> <h4 class="font-size-lg color-white-hue-4" ng-show=updatesDriver.driverUpdateList.length>{{\'l10n.available\' | translate | uppercase}}</h4> <nv-accordion class=common-accordion> <nv-accordion-pane ng-repeat="update in updatesDriver.driverUpdateList track by $index" nv-start-expanded={{update.isExpanded}} nv-on-expand=updatesDriver.onExpand(update) nv-on-collapse=updatesDriver.onCollapse(update) nv-telemetry=\'{"tarconID":{{updatesDriver.getAvlDriverTelemetryEventName(update.isBeta)}},"url":"{{update.version}}"}\'> <nv-accordion-pane-header layout=row layout-align="start center"> <md-content flex layout=row layout-align="space-between center"> <nv-driver-item nv-driver=update nv-md-icon=file_download></nv-driver-item> <div class=download-install-controls> <md-button class="md-raised md-accent color-white-important" ng-show=updatesDriver.isStatusPending(update.downloadStatus.status) ng-disabled="!updatesDriver.canToggleDownload(update.downloadStatus.status, update.version)" ng-click=updatesDriver.startDownload(update) translate=l10n.download nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_DOWNLOAD_DRIVER_MANUAL_START}},"url":"{{update.version}}"}\'></md-button> <div class=download-container layout=row ng-show=updatesDriver.isDownloadStarted(update.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(update.downloadStatus.status)}} nv-value={{update.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row layout-align="space-between start" class=download-details-status-container> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.getProgressString(update)}}</p> <div layout=row layout-align="start start"> <p class="font-size-xxs color-white-hue-5 download-speed margin-right-16">{{update.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-5">{{update.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.pauseDownload(update) ng-hide=updatesDriver.isStatusPaused(update.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>pause</md-icon> </md-button> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.resumeDownload(update) ng-show=updatesDriver.isStatusPaused(update.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>play_arrow</md-icon> </md-button> <md-button class="md-icon-button download-stop margin-right-zero" ng-click=updatesDriver.stopDownload(update)> <md-icon md-font-set=material-icons class=md-18>stop</md-icon> </md-button> </div> <div class=download-container layout=row ng-show=updatesDriver.isExtractionStarted(update.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(update.downloadStatus.status)}} nv-value={{0}}></nv-update-download-progress> </div> </div> <div ng-show=updatesDriver.isStatusCompleted(update.downloadStatus.status)> <md-button class="md-raised md-accent color-white-important expressInstall" ng-click="updatesDriver.startInstall(update, false)" translate=l10n.expressInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_EXPRESS}},"url":"{{update.version}}"}\' ng-disabled=updatesDriver.isInstallDisabled()></md-button> <md-button class="md-raised bg-dark-im-hue-4 color-white-important" ng-click="updatesDriver.startInstall(update, true)" translate=l10n.customInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_CUSTOM}},"url":"{{update.version}}"}\' ng-disabled=updatesDriver.isInstallDisabled()></md-button> </div> </div> </md-content> </nv-accordion-pane-header> <nv-accordion-pane-content layout=column class=bg-grey-im-hue-3> <nv-update-details nv-is-crd=update.isCRD nv-driver-version={{update.version}} nv-driver-type=updatesDriver.getAvlDriverType(update.isBeta)></nv-update-details> </nv-accordion-pane-content> </nv-accordion-pane> </nv-accordion> <div ng-if=updatesDriver.installedDriver> <h4 class="font-size-sm color-white-hue-4">{{updatesDriver.installedDriverHeaderText}}</h4> <nv-accordion class=common-accordion> <nv-accordion-pane nv-start-expanded={{updatesDriver.installedDriver.isExpanded}} nv-on-expand=updatesDriver.onExpand(updatesDriver.installedDriver) nv-on-collapse=updatesDriver.onCollapse(updatesDriver.installedDriver) nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_VIEW_CURRENT_DRIVER}},"url":"{{updatesDriver.installedDriver.version}}"}\'> <nv-accordion-pane-header flex layout=row layout-align="start center"> <nv-driver-item flex nv-driver=updatesDriver.installedDriver nv-md-icon=check></nv-driver-item> <nv-select-menu ng-if=!updatesDriver.installedDriver.reInstalledDriver nv-md-icon=more_vert nv-label="{{\'l10n.moreDots\' | translate}}"> <nv-select-menu-item ng-disabled=updatesDriver.reInstalledDriverMenuItemDisabled() nv-action=updatesDriver.performReinstalledDriver()> <div class=updates-reinstall-driver layout=row> <md-icon md-font-set=material-icons class="md-18 updates-reinstall-driver-icon">file_download</md-icon> <span translate=l10n.reInstalledDriver></span> </div> </nv-select-menu-item> </nv-select-menu> <div ng-if=updatesDriver.showReInstallButtons() class=download-install-controls> <div class=download-container layout=row ng-show=updatesDriver.isDownloadStarted(updatesDriver.installedDriver.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(updatesDriver.installedDriver.downloadStatus.status)}} nv-value={{updatesDriver.installedDriver.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row layout-align="space-between start" class=download-details-status-container> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.getProgressString(updatesDriver.installedDriver)}}</p> <div layout=row layout-align="start start"> <p class="font-size-xxs color-white-hue-5 download-speed margin-right-16">{{updatesDriver.installedDriver.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.installedDriver.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.pauseDownload(updatesDriver.installedDriver) ng-hide=updatesDriver.isStatusPaused(updatesDriver.installedDriver.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>pause</md-icon> </md-button> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.resumeDownload(updatesDriver.installedDriver) ng-show=updatesDriver.isStatusPaused(updatesDriver.installedDriver.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>play_arrow</md-icon> </md-button> <md-button class="md-icon-button download-stop margin-right-zero" ng-click="updatesDriver.stopDownload(updatesDriver.installedDriver, true)"> <md-icon md-font-set=material-icons class=md-18>stop</md-icon> </md-button> </div> <div class=download-container layout=row ng-show=updatesDriver.isExtractionStarted(updatesDriver.installedDriver.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(updatesDriver.installedDriver.downloadStatus.status)}} nv-value={{0}}></nv-update-download-progress> </div> </div> <div ng-show=updatesDriver.isStatusCompleted(updatesDriver.installedDriver.downloadStatus.status)> <md-button class="md-raised md-accent expressInstall" ng-click="updatesDriver.startInstall(updatesDriver.installedDriver, false)" translate=l10n.expressInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_EXPRESS}},"url":"{{update.version}}"}\'></md-button> <md-button class="md-raised bg-dark-im-hue-4 color-white-hue-6" ng-click="updatesDriver.startInstall(updatesDriver.installedDriver, true)" translate=l10n.customInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_CUSTOM}},"url":"{{updatesDriver.installedDriver.version}}"}\'></md-button> </div> </div> </nv-accordion-pane-header> <nv-accordion-pane-content layout=column class=bg-grey-im-hue-3> <nv-update-details ng-if=updatesDriver.installedDriver nv-is-crd=updatesDriver.installedDriver.isCRD nv-driver-type=updatesDriver.driverTypeConstant.CURRENT nv-driver-version={{updatesDriver.installedDriver.version}}></nv-update-details> </nv-accordion-pane-content> </nv-accordion-pane> </nv-accordion> </div> </div> <div layout=row layout-align="center center" class=common-nv-no-content-fallback layout-fill flex ng-if=!updatesDriver.anydriverInfoOrUpdatesFound> <div class=no-info-found-hardware-driver layout=column flex layout-align="center center"> <div class=centered> <p aria-hidden=true> <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNWE1YTVhIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4="> </p> </div> <p class=color-light-gray translate=l10n.downloadDriver flex/> <div layout-align="left left" flex> <md-button class=checkforupdate-button ng-click=updatesDriver.onCheckForUpdate() ng-disabled=updatesDriver.isCheckForUpdateDisabled() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_CHECK_DRIVER_UPDATES}}}\'>{{\'l10n.retry\' | translate | uppercase}}</md-button> </div> </div> </div> </md-content> '
+    e.exports = '<md-content flex class=updates-updates-driver-container id=toast-container> <div class=updates-updates-driver layout=column> <md-progress-circular class="md-accent left-50-percent" md-diameter=15 md-mode=indeterminate ng-if=updatesDriver.showLoadingIndicator()></md-progress-circular> <div layout=row class=checkforupdate-button layout-align="end center" ng-if=updatesDriver.anydriverInfoOrUpdatesFound> <md-button ng-click=updatesDriver.onCheckForUpdate() ng-disabled=updatesDriver.isCheckForUpdateDisabled() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_CHECK_DRIVER_UPDATES}}}\'>{{\'l10n.checkforUpdates\' | translate | uppercase}}</md-button> <div layout=row id=driver-icon ui-tour=driverTour ui-tour-on-shown=updatesDriver.onTourStepShown() layout-align="end center" ng-if=updatesDriver.CRDSupported> <img class="padding-left-16 padding-right-16" src=' + n(96) + '> <md-menu md-offset="30 60" class=driver-type-preference-menu> <md-button class=md-icon-button ng-click=$mdOpenMenu($event) div tour-step=driver-drivers tour-step-title="{{\'l10n.clickToChangeDriverPreference\' | translate}}" tour-step-placement=bottom-right tour-step-order=0> <md-icon md-font-set=material-icons class=color-white-hue-2 ng-hide={{::nvCustomIcon}}>more_vert</md-icon> </md-button> <md-menu-content class="margin-zero padding-24 driver-type-selection-container"> <p class="margin-zero margin-bottom-20 font-size-xl foreground driver-type-title" translate=l10n.showDriverRecommendationFor></p> <md-radio-group ng-model=updatesDriver.currentlySelectedDriver> <md-menu-item layout=row style=margin-bottom:15px> <md-radio-button class="padding-zero margin-zero" value={{updatesDriver.driverType.GRD}} nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.DRIVER_TYPE_GRD_SELECTED}}}\' ng-click=updatesDriver.onRecommendedDriverTypeChanged(updatesDriver.driverType.GRD)> <div layout=column> <p translate=l10n.gameReadyDriver class="font-size-lg margin-zero margin-top-2 driver-type-heading1"></p> <p translate=l10n.recommendedForGameUpdates class="font-size-sm margin-zero margin-top-2 line-height-16 driver-type-heading2"></p> </div> </md-radio-button> </md-menu-item> <md-menu-item> <md-radio-button class="padding-zero margin-zero" value={{updatesDriver.driverType.CRD}} nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.DRIVER_TYPE_CRD_SELECTED}}}\' ng-click=updatesDriver.onRecommendedDriverTypeChanged(updatesDriver.driverType.CRD) layout=column> <div layout=column> <p translate=l10n.creatorReadyDriver class="font-size-lg margin-zero margin-top-2 driver-type-heading1"></p> <p translate=l10n.recommendedForCreativeApp class="font-size-sm margin-zero margin-top-2 line-height-16 driver-type-heading2"></p> </div> </md-radio-button> </md-menu-item> </md-radio-group> </md-menu-content> </md-menu> </div> </div> <h4 class="font-size-lg color-white-hue-4" ng-show=updatesDriver.driverUpdateList.length>{{\'l10n.available\' | translate | uppercase}}</h4> <nv-accordion class=common-accordion> <nv-accordion-pane ng-repeat="update in updatesDriver.driverUpdateList track by $index" nv-start-expanded={{update.isExpanded}} nv-on-expand=updatesDriver.onExpand(update) nv-on-collapse=updatesDriver.onCollapse(update) nv-telemetry=\'{"tarconID":{{updatesDriver.getAvlDriverTelemetryEventName(update.isBeta)}},"url":"{{update.version}}"}\'> <nv-accordion-pane-header layout=row layout-align="start center"> <md-content flex layout=row layout-align="space-between center"> <nv-driver-item nv-driver=update nv-md-icon=file_download></nv-driver-item> <div class=download-install-controls> <md-button class="md-raised md-accent color-white-important" ng-show=updatesDriver.isStatusPending(update.downloadStatus.status) ng-disabled="!updatesDriver.canToggleDownload(update.downloadStatus.status, update.version)" ng-click=updatesDriver.startDownload(update) translate=l10n.download nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_DOWNLOAD_DRIVER_MANUAL_START}},"url":"{{update.version}}"}\'></md-button> <div class=download-container layout=row ng-show=updatesDriver.isDownloadStarted(update.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(update.downloadStatus.status)}} nv-value={{update.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row layout-align="space-between start" class=download-details-status-container> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.getProgressString(update)}}</p> <div layout=row layout-align="start start"> <p class="font-size-xxs color-white-hue-5 download-speed margin-right-16">{{update.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-5">{{update.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.pauseDownload(update) ng-hide=updatesDriver.isStatusPaused(update.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>pause</md-icon> </md-button> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.resumeDownload(update) ng-show=updatesDriver.isStatusPaused(update.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>play_arrow</md-icon> </md-button> <md-button class="md-icon-button download-stop margin-right-zero" ng-click=updatesDriver.stopDownload(update)> <md-icon md-font-set=material-icons class=md-18>stop</md-icon> </md-button> </div> <div class=download-container layout=row ng-show=updatesDriver.isExtractionStarted(update.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(update.downloadStatus.status)}} nv-value={{0}}></nv-update-download-progress> </div> </div> <div ng-show=updatesDriver.isStatusCompleted(update.downloadStatus.status)> <md-button class="md-raised md-accent color-white-important expressInstall" ng-click="updatesDriver.startInstall(update, false)" translate=l10n.expressInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_EXPRESS}},"url":"{{update.version}}"}\' ng-disabled=updatesDriver.isInstallDisabled()></md-button> <md-button class="md-raised bg-dark-im-hue-4 color-white-important" ng-click="updatesDriver.startInstall(update, true)" translate=l10n.customInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_CUSTOM}},"url":"{{update.version}}"}\' ng-disabled=updatesDriver.isInstallDisabled()></md-button> </div> </div> </md-content> </nv-accordion-pane-header> <nv-accordion-pane-content layout=column class=bg-grey-im-hue-3> <nv-update-details nv-is-crd=update.isCRD nv-driver-version={{update.version}} nv-driver-type=updatesDriver.getAvlDriverType(update.isBeta)></nv-update-details> </nv-accordion-pane-content> </nv-accordion-pane> </nv-accordion> <div ng-if=updatesDriver.installedDriver> <h4 class="font-size-sm color-white-hue-4">{{updatesDriver.installedDriverHeaderText}}</h4> <nv-accordion class=common-accordion> <nv-accordion-pane nv-start-expanded={{updatesDriver.installedDriver.isExpanded}} nv-on-expand=updatesDriver.onExpand(updatesDriver.installedDriver) nv-on-collapse=updatesDriver.onCollapse(updatesDriver.installedDriver) nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_VIEW_CURRENT_DRIVER}},"url":"{{updatesDriver.installedDriver.version}}"}\'> <nv-accordion-pane-header flex layout=row layout-align="start center"> <nv-driver-item flex nv-driver=updatesDriver.installedDriver nv-md-icon=check></nv-driver-item> <nv-select-menu ng-if=!updatesDriver.installedDriver.reInstalledDriver nv-md-icon=more_vert nv-label="{{\'l10n.moreDots\' | translate}}"> <nv-select-menu-item ng-disabled=updatesDriver.reInstalledDriverMenuItemDisabled() nv-action=updatesDriver.performReinstalledDriver()> <div class=updates-reinstall-driver layout=row> <md-icon md-font-set=material-icons class="md-18 updates-reinstall-driver-icon">file_download</md-icon> <span translate=l10n.reInstalledDriver></span> </div> </nv-select-menu-item> </nv-select-menu> <div ng-if=updatesDriver.showReInstallButtons() class=download-install-controls> <div class=download-container layout=row ng-show=updatesDriver.isDownloadStarted(updatesDriver.installedDriver.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(updatesDriver.installedDriver.downloadStatus.status)}} nv-value={{updatesDriver.installedDriver.downloadStatus.percentComplete}}></nv-update-download-progress> <div layout=row layout-align="space-between start" class=download-details-status-container> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.getProgressString(updatesDriver.installedDriver)}}</p> <div layout=row layout-align="start start"> <p class="font-size-xxs color-white-hue-5 download-speed margin-right-16">{{updatesDriver.installedDriver.downloadStatus.downloadSpeed | convertBytesToKBMBGB}}/Sec</p> <p class="font-size-xxs color-white-hue-5">{{updatesDriver.installedDriver.downloadStatus.timeRemaining | convertSecondsToTime:true}}</p> </div> </div> </div> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.pauseDownload(updatesDriver.installedDriver) ng-hide=updatesDriver.isStatusPaused(updatesDriver.installedDriver.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>pause</md-icon> </md-button> <md-button class="md-icon-button download-pause-resume margin-right-10" ng-click=updatesDriver.resumeDownload(updatesDriver.installedDriver) ng-show=updatesDriver.isStatusPaused(updatesDriver.installedDriver.downloadStatus.status)> <md-icon md-font-set=material-icons class=md-18>play_arrow</md-icon> </md-button> <md-button class="md-icon-button download-stop margin-right-zero" ng-click="updatesDriver.stopDownload(updatesDriver.installedDriver, true)"> <md-icon md-font-set=material-icons class=md-18>stop</md-icon> </md-button> </div> <div class=download-container layout=row ng-show=updatesDriver.isExtractionStarted(updatesDriver.installedDriver.downloadStatus.status) layout-align="center center"> <div layout=column class="download-details-container margin-right-16"> <nv-update-download-progress nv-message={{updatesDriver.getDownloadStatusMessage(updatesDriver.installedDriver.downloadStatus.status)}} nv-value={{0}}></nv-update-download-progress> </div> </div> <div ng-show=updatesDriver.isStatusCompleted(updatesDriver.installedDriver.downloadStatus.status)> <md-button class="md-raised md-accent expressInstall" ng-click="updatesDriver.startInstall(updatesDriver.installedDriver, false)" translate=l10n.expressInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_EXPRESS}},"url":"{{update.version}}"}\'></md-button> <md-button class="md-raised bg-dark-im-hue-4 color-white-hue-6" ng-click="updatesDriver.startInstall(updatesDriver.installedDriver, true)" translate=l10n.customInstall nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_INSTALL_DRIVER_CUSTOM}},"url":"{{updatesDriver.installedDriver.version}}"}\'></md-button> </div> </div> </nv-accordion-pane-header> <nv-accordion-pane-content layout=column class=bg-grey-im-hue-3> <nv-update-details ng-if=updatesDriver.installedDriver nv-is-crd=updatesDriver.installedDriver.isCRD nv-driver-type=updatesDriver.driverTypeConstant.CURRENT nv-driver-version={{updatesDriver.installedDriver.version}}></nv-update-details> </nv-accordion-pane-content> </nv-accordion-pane> </nv-accordion> </div> </div> <div layout=row layout-align="center center" class=common-nv-no-content-fallback layout-fill flex ng-if=!updatesDriver.anydriverInfoOrUpdatesFound> <div class=no-info-found-hardware-driver layout=column flex layout-align="center center"> <div class=centered> <p aria-hidden=true> <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNWE1YTVhIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4="> </p> </div> <p class=color-light-gray translate=l10n.downloadDriver flex/> <div layout-align="left left" flex> <md-button class=checkforupdate-button ng-click=updatesDriver.onCheckForUpdate() ng-disabled=updatesDriver.isCheckForUpdateDisabled() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.UPDATES_CHECK_DRIVER_UPDATES}}}\'>{{\'l10n.retry\' | translate | uppercase}}</md-button> </div> </div> </div> </md-content> ';
 }, function(e, t) {
     e.exports = '<div layout=row layout-align="center center" layout-wrap> <nv-highlight-tile ng-repeat="tile in updatesDriverHighlights.driverHighlights.tiles" nv-content=tile nv-driver-type=updatesDriverHighlights.driverType class=updates-highlight-tile nv-driver-version={{updatesDriverHighlights.driverVersion}}></nv-highlight-tile> </div> '
 }, function(e, t) {
@@ -21673,7 +21732,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div ng-if=updatesInstallationCustom.showPackageSelectionUI layout=column> <div class=package-group-table> <div layout-align="start center" layout=row class="md-primary md-hue-5 background package-group-header"> <p class="font-size-xxs color-white-hue-3" flex=50>{{\'l10n.component\' | translate | uppercase}}</p> <p class="font-size-xxs color-white-hue-3" flex=30>{{\'l10n.newVersion\' | translate | uppercase}}</p> <p class="font-size-xxs color-white-hue-3" flex>{{\'l10n.currentVersion\' | translate | uppercase}}</p> </div> <div layout-align="start center" class=package-group-header layout=row ng-class="{\'md-primary md-hue-6 background\': $odd}" ng-repeat="installablePackage in updatesInstallationCustom.packages"> <md-checkbox class="font-size-xxs color-white-hue-4 checkbox-20" flex=50 ng-disabled=installablePackage.critical ng-model=installablePackage.selectedForInstall>{{installablePackage.title}}</md-checkbox> <p class="font-size-xxs color-white-hue-4" flex=30>{{installablePackage.version}}</p> <p class="font-size-xxs color-white-hue-4" flex ng-if=installablePackage.currentVersion.length>{{installablePackage.currentVersion}}</p> <p class="font-size-xxs color-white-hue-4" flex ng-if=!installablePackage.currentVersion.length>-</p> </div> </div> <md-divider></md-divider> <div layout=column layout-align="start start"> <md-checkbox class="font-size-xxs color-white-hue-4" ng-model=updatesInstallationCustom.cleanInstall>{{ \'l10n.performCleanInstallation\' | translate }} </md-checkbox> <div layout=row layout-align="start center" class=warning-clean-install> <p class="font-size-xxs color-white-hue-5">{{\'l10n.cleanInstallMessage\' | translate}}</p> </div> </div> </div> <div ng-if=!updatesInstallationCustom.showPackageSelectionUI> <div class=package-group-table> <div layout-align="start center" layout=row class="md-primary md-hue-5 background package-group-header"> <p class="font-size-xxs color-white-hue-3" flex=50>{{\'l10n.component\' | translate | uppercase}}</p> <p class="font-size-xxs color-white-hue-3" flex=30>{{\'l10n.version\' | translate | uppercase}}</p> <p class="font-size-xxs color-white-hue-3" flex>{{\'l10n.status\' | translate | uppercase}}</p> </div> <div layout-align="start center" class=package-group-header layout=row ng-class="{\'md-primary md-hue-6 background\': $odd}" ng-repeat="installablePackage in updatesInstallationCustom.packages"> <p class="font-size-xxs color-white-hue-4" flex=50>{{installablePackage.title}}</p> <p class="font-size-xxs color-white-hue-4" flex=30>{{installablePackage.version}}</p> <p class="font-size-xxs color-white-hue-4" flex ng-if=installablePackage.resultCode>{{updatesInstallationCustom.getStatusText(installablePackage.resultText)}}</p> <p class="font-size-xxs color-white-hue-4" flex ng-if=!installablePackage.resultCode>{{ \'l10n.installed\' | translate }}</p> </div> </div> <md-divider></md-divider> </div> '
 }, function(e, t, n) {
-    e.exports = "<iframe ng-if=!updateInstallationProgress.showFallbackImage ng-src={{updateInstallationProgress.getBillboardUrl()}}></iframe> <img ng-if=updateInstallationProgress.showFallbackImage class=updates-installlation-progress-fallbackImage ng-src=" + n(710) + ' alt=default-banner /> <div layout=column layout-align="space-around start" class=progress-status-container> <h4 class="font-size-sm color-white-hue-1">{{updateInstallationProgress.model.details()}}</h4> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.isPreparingInstall flex md-mode=indeterminate></md-progress-linear> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.canShowUninstallProgress() flex md-mode=determinate value={{updateInstallationProgress.progressValue}}></md-progress-linear> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.canShowInstallProgress() flex md-mode=determinate value={{updateInstallationProgress.progressValue}}></md-progress-linear> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.canShowUninstallProgress() translate=l10n.unInstalling translate-values={{updateInstallationProgress}}></p> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.canShowInstallProgress() translate=l10n.installing translate-values={{updateInstallationProgress}}></p> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.isPreparingInstall translate=l10n.preparingForInstallation></p> </div> '
+    e.exports = "<iframe ng-if=!updateInstallationProgress.showFallbackImage ng-src={{updateInstallationProgress.getBillboardUrl()}}></iframe> <img ng-if=updateInstallationProgress.showFallbackImage class=updates-installlation-progress-fallbackImage ng-src=" + n(712) + ' alt=default-banner /> <div layout=column layout-align="space-around start" class=progress-status-container> <h4 class="font-size-sm color-white-hue-1">{{updateInstallationProgress.model.details()}}</h4> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.isPreparingInstall flex md-mode=indeterminate></md-progress-linear> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.canShowUninstallProgress() flex md-mode=determinate value={{updateInstallationProgress.progressValue}}></md-progress-linear> <md-progress-linear class=md-accent ng-if=updateInstallationProgress.canShowInstallProgress() flex md-mode=determinate value={{updateInstallationProgress.progressValue}}></md-progress-linear> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.canShowUninstallProgress() translate=l10n.unInstalling translate-values={{updateInstallationProgress}}></p> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.canShowInstallProgress() translate=l10n.installing translate-values={{updateInstallationProgress}}></p> <p class="font-size-xxs color-white-hue-4" ng-show=updateInstallationProgress.isPreparingInstall translate=l10n.preparingForInstallation></p> </div> '
 }, function(e, t) {
     e.exports = '<div layout-align="center center" layout-padding layout=column> <md-icon md-font-library=material-icons class="material-icons md-accent">track_changes</md-icon> <h4 class="font-size-sm color-white-hue-3">{{\'l10n.restartingInSecond\' | translate:{num:updatesInstallationReboot.interval} }}</h4> <p class="font-size-xxs color-white-hue-4">{{\'l10n.afterRestartInstallation\' | translate}}</p> </div> '
 }, function(e, t) {
@@ -21689,9 +21748,9 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<md-dialog class="edit-badges-dialog constants-position-relative" layout=column> <div layout=column flex layout-fill class=edit-badges-container> <span translate=l10n.achievements class="font-size-20 color-white-hue-3 font-family-roboto-light margin-bottom-16"></span> <div ng-if=!editBadgesCtrl.isOnline() class="message-banner display-block margin-bottom-16" layout=row layout-align="start center"> <md-icon md-font-set=material-icons>cloud_off</md-icon> <span flex translate=l10n.youAreOffline></span> </div> <div ng-if=editBadgesCtrl.groupedAchievements.unlocked.length layout=column class="badge-section margin-bottom-24"> <span translate=l10n.showcase class="font-size-lg color-white-hue-3 margin-bottom-8"></span> <span translate=l10n.userTitle class="font-size-lg color-white-hue-4 margin-bottom-8"></span> <div layout=row class=showcase-section> <div class="badge-tile-container showcase-badge-tile clickable-element constants-position-relative" ng-repeat="achievement in editBadgesCtrl.showcase | limitTo: 5" ng-class="{\'dragging\': achievement.isDragging, \'dropping\': achievement.isDropping}" drag-data=achievement html5-drag html5-drop on-drag-start=editBadgesCtrl.onDragStart() on-drag-end=editBadgesCtrl.onDragEnd() on-drag-enter=editBadgesCtrl.onDragEnter() on-drag-leave=editBadgesCtrl.onDragLeave() on-drag-over=editBadgesCtrl.onDragOver() on-drop=editBadgesCtrl.onDrop()> <div class="constants-position-absolute action-elements-container"> <md-button ng-hide=achievement.isDragging class="md-icon-button title-toggle-button" ng-click="editBadgesCtrl.toggleTitle($event, achievement)"> <md-icon ng-show=achievement.isFeatured md-font-set=material-icons class="color-green margin-zero md-16">star</md-icon> <md-icon ng-show=!achievement.isFeatured md-font-set=material-icons class="margin-zero md-16">star_border</md-icon> </md-button> </div> <div layout=column layout-align="start center" layout-fill class=tile-content ng-hide=editBadgesCtrl.afterDragStarted(achievement) ng-mousedown=editBadgesCtrl.mouseDown(achievement) ng-mouseup=editBadgesCtrl.mouseUp(achievement)> <div layout=column layout-align="center center" class=badge-icon-container> <md-icon ng-if=achievement.isUnlocked md-font-icon={{achievement.badgeIconTag}} class="cevo-icons ico-fw color-white margin-zero md-56"></md-icon> </div> <span class="width-100 font-size-sm margin-top-12 text-align-center nv-ellipsis-lines-3 line-height-16">{{achievement.title}}</span> </div> </div> </div> </div> <div layout=column flex class=badge-section> <span translate=l10n.badges class="font-size-lg color-white-hue-3 margin-bottom-8"></span> <span translate=l10n.uptoFiveAchievements class="font-size-lg color-white-hue-4 margin-bottom-8"></span> <md-content nv-scroll-overlay flex> <div layout=row layout-wrap> <div layout=row layout-align="start center" class="badge-tile-container badge-tile padding-16 constants-position-relative" ng-repeat="achievement in editBadgesCtrl.groupedAchievements.all"> <div ng-if=achievement.isUnlocked class="constants-position-absolute action-elements-container"> <md-checkbox ng-model=achievement.inShowcase ng-disabled=editBadgesCtrl.selectDisabled(achievement) ng-change=editBadgesCtrl.achievementSelectChanged(achievement) class=checkbox-16 aria-label=select></md-checkbox> </div> <div layout=column layout-align="center center" class=badge-icon-container> <md-icon ng-if=achievement.isUnlocked md-font-icon={{achievement.badgeIconTag}} class="cevo-icons ico-fw color-white margin-zero md-56"></md-icon> <md-icon ng-if=!achievement.isUnlocked md-font-set=material-icons class="margin-zero md-56 locked-icon">locked</md-icon> </div> <div layout=column layout-align="start center" class=tile-content> <span class="width-100 font-size-lg nv-ellipsis-lines-2 line-height-18" ng-class="{\'color-white-hue-3\': achievement.isUnlocked, \'color-white-hue-5\': !achievement.isUnlocked}">{{achievement.title}}</span> <span class="line-height-16 width-100 font-size-sm color-white-hue-4 nv-ellipsis-lines-3" ng-class="{\'color-white-hue-5\': !achievement.isUnlocked}">{{achievement.description}}</span> </div> </div> </div> </md-content> </div> </div> <div layout=row layout-align="end center"> <md-button class=margin-right-zero translate=l10n.cancel ng-click=editBadgesCtrl.cancel()></md-button> <md-button class=md-accent translate=l10n.save ng-click=editBadgesCtrl.save() ng-disabled=!editBadgesCtrl.isOnline()></md-button> </div> </md-dialog> '
 }, function(e, t) {
-    e.exports = '<div layout=column class="edit-user-description-container bg-dark-im"> <div class=padding-16> <span class="color-white-hue-1 font-uppercase font-size-lg" translate=l10n.gamersBio></span> <form name=editUserDescriptionForm layout=column layout-fill> <md-input-container class="md-block description-input-container margin-zero"> <input maxlength=250 md-maxlength=250 required md-no-asterisk name=description ng-model=editUserDescription.nvDescription> <div ng-messages=editUserDescriptionForm.description.$error> <div ng-message=required translate=l10n.descriptionRequired></div> <div ng-message=md-maxlength translate=l10n.descriptionLimitReached></div> </div> </md-input-container> </form> </div> <div layout=row layout-align="end center" class=buttons-container> <md-button ng-click=editUserDescription.cancelUpdate() translate=l10n.cancel></md-button> <md-button type=submit ng-disabled=!editUserDescription.isValidDescription() ng-click=editUserDescription.commitUpdate() translate=l10n.apply></md-button> </div> </div> ';
+    e.exports = '<div layout=column class="edit-user-description-container bg-dark-im"> <div class=padding-16> <span class="color-white-hue-1 font-uppercase font-size-lg" translate=l10n.gamersBio></span> <form name=editUserDescriptionForm layout=column layout-fill> <md-input-container class="md-block description-input-container margin-zero"> <input maxlength=250 md-maxlength=250 required md-no-asterisk name=description ng-model=editUserDescription.nvDescription> <div ng-messages=editUserDescriptionForm.description.$error> <div ng-message=required translate=l10n.descriptionRequired></div> <div ng-message=md-maxlength translate=l10n.descriptionLimitReached></div> </div> </md-input-container> </form> </div> <div layout=row layout-align="end center" class=buttons-container> <md-button ng-click=editUserDescription.cancelUpdate() translate=l10n.cancel></md-button> <md-button type=submit ng-disabled=!editUserDescription.isValidDescription() ng-click=editUserDescription.commitUpdate() translate=l10n.apply></md-button> </div> </div> '
 }, function(e, t) {
-    e.exports = '<div layout=column class="user-profile-widget featured-reward padding-24"> <div layout=column class="user-profile-widget-title font-uppercase"> <span translate=l10n.enterTokensToWin class="font-size-lg color-white-hue-3"></span> <nv-countdown-timer ng-if=featuredRewardCtrl.giveaway.endStampAdjusted class="font-size-sm color-white-hue-5" nv-translate=l10n.expiresIn nv-end-timestamp="{{ featuredRewardCtrl.giveaway.endStampAdjusted }}" nv-format=shortTime nv-callback=featuredRewardCtrl.refreshGiveaway(state)></nv-countdown-timer> </div> <div ng-if=!featuredRewardCtrl.emptyState() layout=column layout-align="space-between start" layout-fill> <div layout=column layout-fill flex> <div layout=row layout-align="start center" class=title-container> <span class="color-white-hue-3 font-size-xl nv-ellipsis-lines-2">{{ featuredRewardCtrl.giveaway.title }}</span> </div> <div class="artwork-container image-cover-container"> <img ng-src="{{ featuredRewardCtrl.previewArtwork }}" nv-image-fallback=nv-no-loading-indicator alt=""/> </div> <div class=margin-bottom-16> <span class="color-white-hue-2 font-size-sm nv-ellipsis-lines-3">{{ featuredRewardCtrl.giveaway.shortDescription }}</span> </div> </div> <div layout=row layout-fill layout-align=end ng-if=featuredRewardCtrl.tokensNotEntered()> <md-button class="margin-zero md-raised md-accent color-white-important" translate=l10n.enterNow ng-click=featuredRewardCtrl.openSweepstakesDialog()></md-button> </div> <div ng-if=featuredRewardCtrl.tokensAlreadyEntered() layout=row layout-align="start center"> <md-icon class="nv-custom-icons margin-zero md-24 cursor-default" md-font-icon=icon-ranking-token></md-icon> <span class="margin-zero font-family-roboto-light font-size-32 margin-left-6">{{ featuredRewardCtrl.tokensEntered }}</span> <div layout=column class=margin-left-6> <span translate="{{ featuredRewardCtrl.tokensEnteredStr() }}" class="font-size-lg font-uppercase color-white-hue-1"></span> <div layout=row class="font-size-xxs color-white-hue-4"> <span>{{ featuredRewardCtrl.updatedMoment() }}</span> <div layout=row> <span>&nbsp;|&nbsp;</span> <a ng-click=featuredRewardCtrl.openSweepstakesDialog() class="md-accent nv-anchor-button color-green" translate=l10n.addMore></a> </div> </div> </div> </div> </div> <div ng-if=featuredRewardCtrl.emptyState() layout=column layout-align="center center" flex class=color-light-gray> <md-icon md-font-set=material-icons class="md-24 margin-zero">info</md-icon> <span class=margin-top-8 translate=l10n.noInformationAvailable></span> </div> </div> '
+    e.exports = '<div layout=column class="user-profile-widget featured-reward padding-24"> <div layout=column class="user-profile-widget-title font-uppercase"> <span translate=l10n.enterTokensToWin class="font-size-lg color-white-hue-3"></span> <nv-countdown-timer ng-if=featuredRewardCtrl.giveaway.endStampAdjusted class="font-size-sm color-white-hue-5" nv-translate=l10n.expiresIn nv-end-timestamp="{{ featuredRewardCtrl.giveaway.endStampAdjusted }}" nv-format=shortTime nv-callback=featuredRewardCtrl.refreshGiveaway(state)></nv-countdown-timer> </div> <div ng-switch=featuredRewardCtrl.getCurrentState() layout=column layout-fill flex> <div ng-switch-when=normal layout=column layout-align="space-between start" layout-fill> <div layout=column layout-fill flex> <div layout=row layout-align="start center" class=title-container> <span class="color-white-hue-3 font-size-xl nv-ellipsis-lines-2">{{ featuredRewardCtrl.giveaway.title }}</span> </div> <div class="artwork-container image-cover-container"> <img ng-src="{{ featuredRewardCtrl.previewArtwork }}" nv-image-fallback=nv-no-loading-indicator alt=""/> </div> <div class=margin-bottom-16> <span class="color-white-hue-2 font-size-sm nv-ellipsis-lines-3">{{ featuredRewardCtrl.giveaway.shortDescription }}</span> </div> </div> <div layout=row layout-fill layout-align=end ng-if=featuredRewardCtrl.tokensNotEntered()> <md-button class="margin-zero md-raised md-accent color-white-important" translate=l10n.enterNow ng-click=featuredRewardCtrl.openSweepstakesDialog()></md-button> </div> <div ng-if=featuredRewardCtrl.tokensAlreadyEntered() layout=row layout-align="start center"> <md-icon class="nv-custom-icons margin-zero md-24 cursor-default" md-font-icon=icon-ranking-token></md-icon> <span class="margin-zero font-family-roboto-light font-size-32 margin-left-6">{{ featuredRewardCtrl.tokensEntered }}</span> <div layout=column class=margin-left-6> <span translate="{{ featuredRewardCtrl.tokensEnteredStr() }}" class="font-size-lg font-uppercase color-white-hue-1"></span> <div layout=row class="font-size-xxs color-white-hue-4"> <span>{{ featuredRewardCtrl.updatedMoment() }}</span> <div layout=row> <span>&nbsp;|&nbsp;</span> <a ng-click=featuredRewardCtrl.openSweepstakesDialog() class="md-accent nv-anchor-button color-green" translate=l10n.addMore></a> </div> </div> </div> </div> </div> <div ng-switch-when=error layout=column layout-align="center center" flex class=color-light-gray> <md-icon md-font-set=material-icons class="md-24 margin-zero">info</md-icon> <span class=margin-top-8 translate=l10n.noInformationAvailable></span> </div> <div ng-switch-when=expired layout=column layout-align="center center" flex class=color-light-gray> <md-icon class="nv-custom-icons md-24 margin-zero" md-font-icon=icon-game-controller></md-icon> <span class=margin-top-8 translate=l10n.newRewardsComingSoon></span> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<div layout=column> <div layout=row layout-align="start center"> <md-icon class="margin-zero margin-right-15 nv-custom-icons level-icon-gradient md-42" md-font-icon={{levelDetails.nvLevel.icon}}></md-icon> <div layout=column class=width-200> <span class="font-uppercase color-white font-size-18">{{ levelDetails.nvLevel.name | translate }}</span> <span class="font-size-sm font-family-roboto-light color-white-hue-4"> {{ levelDetails.xpRangeString }}</span> </div> </div> <div class=margin-top-24 flex> <div layout=row ng-repeat="perk in levelDetails.nvLevel.perks" class="perk-item margin-bottom-16 font-size-lg color-white-hue-4 line-height-20"> <md-icon md-font-set=material-icons class="color-white-hue-4 margin-zero md-8 margin-right-15">brightness_1</md-icon> <span class=width-200 translate={{perk}}></span> </div> </div> </div> '
 }, function(e, t) {
@@ -21703,7 +21762,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div layout=row flex class="mission-tile clickable-element no-focus-outline" ng-click=missionTileCtrl.showDetails($event)> <div ng-if=missionTileCtrl.isFeatured class="artwork-container image-cover-container"> <img ng-src="{{ missionTileCtrl.nvMission.assets.thumb.file.url }}" alt="" nv-image-fallback=nv-no-loading-indicator> </div> <div layout=column flex class=details-container> <div class=mission-title> <span class="font-size-lg color-white-hue-2">{{ missionTileCtrl.nvMission.name }}</span> </div> <span class="font-size-lg color-white-hue-6 margin-bottom-16 nv-ellipsis-lines-3">{{ missionTileCtrl.nvMission.tasks[0].name }}</span> </div> <nv-mission-progress nv-mission=missionTileCtrl.nvMission></nv-mission-progress> </div> '
 }, function(e, t) {
-    e.exports = '<md-dialog class="sweepstakes-dialog constants-position-relative" ng-switch=sweepstakeCtrl.dialogState> <md-dialog-content ng-switch-when=GIVEAWAY_DETAILS layout=column layout-fill flex class=constants-position-relative> <md-button ng-hide=sweepstakeCtrl.messageOverlayVisible class="md-icon-button animate-show-hide close-button" ng-click=sweepstakeCtrl.closeDialog()> <md-icon md-font-set=material-icons>close</md-icon> </md-button> <div ng-show=sweepstakeCtrl.messageOverlayVisible ng-switch=sweepstakeCtrl.overlayState layout=column layout-align="center center" layout-fill class="message-overlay animate-show-hide"> <div ng-switch-when=OVERLAY_LOADING> <md-progress-circular class=md-accent md-mode=indeterminate md-diameter=30></md-progress-circular> </div> <div ng-switch-when=OVERLAY_SUCCESS layout=column layout-align="center center" class=color-white> <div layout=row layout-align="center center"> <md-icon layout=row layout-align="center center" class="nv-custom-icons md-62 cursor-default margin-zero margin-right-16" md-font-icon=icon-ranking-token></md-icon> <md-icon md-font-set=material-icons class="md-32 margin-zero">close</md-icon> <span class="margin-left-16 font-family-roboto-light font-size-xxxl">{{ sweepstakeCtrl.tokensEntered }}</span> </div> <span class="font-size-20 margin-top-16" translate="{{ sweepstakeCtrl.tokensEnteredSuccessStr() }}"></span> </div> <div ng-switch-when=OVERLAY_ERROR layout=column layout-align="center center"> <md-icon md-font-set=material-icons class="md-62 margin-zero">error</md-icon> <span class="font-size-20 margin-top-16 color-white">{{ sweepstakeCtrl.errorMessage }}</span> </div> </div> <div layout=row layout-fill flex class=giveaway-details-container> <div layout=column class="giveaway-box-art image-cover-container"> <img ng-src="{{ sweepstakeCtrl.boxArt }}" nv-image-fallback=nv-no-loading-indicator alt=""/> </div> <div layout=column layout-align="space-between start" flex class="giveaway-details constants-position-relative padding-24 font-size-lg line-height-18 color-white-hue-4"> <div layout=column class=width-100> <div layout=column class=giveaway-info-section> <nv-countdown-timer nv-translate=l10n.timeLeftToEnter nv-end-timestamp={{sweepstakeCtrl.giveaway.endStampMicro}} nv-format=shortTime></nv-countdown-timer> <span class="font-size-20 color-white single-line-ellipsis line-height-26">{{ sweepstakeCtrl.giveaway.title }}</span> <div ng-if=!sweepstakeCtrl.isOnline() class=message-banner-container> <div class=message-banner layout=row layout-align="start center"> <md-icon md-font-set=material-icons>cloud_off</md-icon> <span flex translate=l10n.youAreOffline></span> </div> </div> <span class="giveaway-details-description nv-ellipsis-lines-5"> <span ng-bind-html=sweepstakeCtrl.giveaway.longDescription></span> <span>&nbsp;</span> <a ng-if=sweepstakeCtrl.giveaway.properties.learnMoreUrl href="{{ sweepstakeCtrl.giveaway.properties.learnMoreUrl }}" translate=l10n.learnMore></a> </span> </div> <div layout=column ng-switch=sweepstakeCtrl.tokensEnteredViewState class="giveaway-tokens-section margin-bottom-20 constants-position-relative"> <div layout=row layout-align="start center" layout-fill flex> <div layout=column layout-align="center center" class=margin-right-16> <md-icon class="nv-custom-icons md-62 margin-zero cursor-default" md-font-icon=icon-ranking-token></md-icon> </div> <div layout=column ng-switch-when=EDIT_STAKES class=giveaway-edit-stakes> <span ng-if=sweepstakeCtrl.termsAlreadyAgreed translate=l10n.addMoreTokens></span> <span ng-if=!sweepstakeCtrl.termsAlreadyAgreed translate=l10n.enterTokens></span> <form name=sweepstakeCtrl.sweepstakeForm layout=row layout-align="start center" class="giveaway-form margin-top-8"> <md-button class="md-fab-24 md-accent md-raised margin-zero margin-right-8" ng-click=sweepstakeCtrl.decreaseTokens() ng-disabled=sweepstakeCtrl.decreaseButtonDisabled()> <md-icon md-font-set=material-icons>remove</md-icon> </md-button> <md-input-container md-no-float class="tokens-input-container margin-zero"> <input required type=number name=tokens class="text-align-center margin-zero-important" min="{{ sweepstakeCtrl.tokensInputMin }}" max="{{ sweepstakeCtrl.tokensInputMax }}" ng-model=sweepstakeCtrl.tokensEntered ng-keypress=sweepstakeCtrl.tokensInputKeypress($event) ng-blur=sweepstakeCtrl.tokensInputBlur() ng-disabled=sweepstakeCtrl.tokensInputDisabled()> </md-input-container> <md-button class="md-fab-24 md-accent md-raised margin-zero margin-left-8" ng-click=sweepstakeCtrl.increaseTokens() ng-disabled=sweepstakeCtrl.increaseButtonDisabled()> <md-icon md-font-set=material-icons>add</md-icon> </md-button> <span ng-if=sweepstakeCtrl.showRemainingTokens() class=margin-left-16 translate="{{ sweepstakeCtrl.tokensRemainingStr() }}" translate-value-number="{{ sweepstakeCtrl.remainingTokens }}"></span> </form> </div> <div layout=column ng-switch-when=REVIEW_STAKES> <span translate=l10n.tokensEntered></span> <span class="font-family-roboto-light font-size-32 color-white line-height-sm1">{{ sweepstakeCtrl.tokensEntered }}</span> <span class=color-white-hue-5>{{ sweepstakeCtrl.tokensSubmitMoment() }}</span> </div> </div> <span ng-if=sweepstakeCtrl.showInvalidTokensError() class="input-error-container font-size-xxs color-red-hue-1 margin-top-8 nv-ellipsis-lines-2" translate="{{ sweepstakeCtrl.inputErrorStr() }}"></span> </div> <div layout=column class="margin-bottom-20 color-white-hue-5"> <span ng-if=sweepstakeCtrl.giveaway.quantity translate=l10n.numberOfWinners translate-value-number={{sweepstakeCtrl.giveaway.quantity}}></span> <span ng-if=sweepstakeCtrl.giveaway.tokensEntered translate=l10n.entriesSoFar translate-values="{{ {\'entries\': sweepstakeCtrl.giveaway.tokensEntered} }}"></span> </div> </div> <div layout=row layout-align="space-between center" class=width-100> <div ng-if=!sweepstakeCtrl.termsAlreadyAgreed layout=column> <md-checkbox class=checkbox-20 ng-model=sweepstakeCtrl.tncAgreed ng-disabled=sweepstakeCtrl.tncCheckboxDisabled()> <div nv-bind-html-compile="{{ sweepstakeCtrl.agreeToElementHtml }}"></div> </md-checkbox> </div> <div ng-if=sweepstakeCtrl.termsAlreadyAgreed layout=column> <div> <a ng-if=sweepstakeCtrl.giveaway.officialRules ng-click=sweepstakeCtrl.showRules($event) translate=l10n.officialRules></a> </div> </div> <div ng-switch=sweepstakeCtrl.tokensEnteredViewState> <div ng-switch-when=EDIT_STAKES layout=column> <md-button class="md-accent md-raised margin-zero font-uppercase" translate=l10n.submit ng-disabled=sweepstakeCtrl.submitDisabled() ng-click=sweepstakeCtrl.submitTokens()></md-button> </div> <div ng-switch-when=REVIEW_STAKES layout=row> <md-button ng-if=sweepstakeCtrl.availableTokens class="md-raised md-secondary margin-zero margin-right-16 font-uppercase" translate=l10n.addMore ng-click=sweepstakeCtrl.addMoreTokens()></md-button> <md-button class="md-accent md-raised margin-zero font-uppercase" translate=l10n.done ng-click=sweepstakeCtrl.reviewDone()></md-button> </div> </div> </div> </div> </div> </md-dialog-content> <md-dialog-content layout=column layout-fill flex ng-switch-when=OFFICIAL_RULES class="giveaway-rules-container giveaway-subview"> <div layout=row layout-align="start center" class="giveaway-subview-header font-size-xl color-white"> <md-button class=md-icon-button ng-click=sweepstakeCtrl.goBack($event)> <md-icon md-font-set=material-icons>arrow_back</md-icon> </md-button> <span class=margin-left-16 translate=l10n.officialRules></span> </div> <md-content ng-if=sweepstakeCtrl.giveaway.officialRules layout-fill flex class="font-size-sm color-white-hue-4 giveaway-subview-content"> <div ng-bind-html=sweepstakeCtrl.giveaway.officialRules></div> </md-content> <nv-overlay ng-if=sweepstakeCtrl.giveaway.officialRules class="common-overlay giveaway-subview-content-overlay" nv-position=bottom></nv-overlay> <div ng-if=!sweepstakeCtrl.giveaway.officialRules layout=column layout-align="center center" flex layout-fill class=color-light-gray> <md-icon md-font-set=material-icons class="md-32 margin-zero">info</md-icon> <span class="font-size-lg margin-top-16" translate=l10n.noInformationAvailable></span> </div> </md-dialog-content> </md-dialog> '
+    e.exports = '<md-dialog class="sweepstakes-dialog constants-position-relative" ng-switch=sweepstakeCtrl.dialogState> <md-dialog-content ng-switch-when=GIVEAWAY_DETAILS layout=column layout-fill flex class=constants-position-relative> <md-button ng-hide=sweepstakeCtrl.messageOverlayVisible class="md-icon-button animate-show-hide close-button" ng-click=sweepstakeCtrl.closeDialog()> <md-icon md-font-set=material-icons>close</md-icon> </md-button> <div ng-show=sweepstakeCtrl.messageOverlayVisible ng-switch=sweepstakeCtrl.overlayState layout=column layout-align="center center" layout-fill class="message-overlay animate-show-hide"> <div ng-switch-when=OVERLAY_LOADING> <md-progress-circular class=md-accent md-mode=indeterminate md-diameter=30></md-progress-circular> </div> <div ng-switch-when=OVERLAY_SUCCESS layout=column layout-align="center center" class=color-white> <div layout=row layout-align="center center"> <md-icon layout=row layout-align="center center" class="nv-custom-icons md-62 cursor-default margin-zero margin-right-16" md-font-icon=icon-ranking-token></md-icon> <md-icon md-font-set=material-icons class="md-32 margin-zero">close</md-icon> <span class="margin-left-16 font-family-roboto-light font-size-xxxl">{{ sweepstakeCtrl.tokensEntered }}</span> </div> <span class="font-size-20 margin-top-16" translate="{{ sweepstakeCtrl.tokensEnteredSuccessStr() }}"></span> </div> <div ng-switch-when=OVERLAY_ERROR layout=column layout-align="center center"> <md-icon md-font-set=material-icons class="md-62 margin-zero">error</md-icon> <span class="font-size-20 margin-16 color-white">{{ sweepstakeCtrl.errorMessage }}</span> </div> </div> <div layout=row layout-fill flex class=giveaway-details-container> <div layout=column class="giveaway-box-art image-cover-container"> <img ng-src="{{ sweepstakeCtrl.boxArt }}" nv-image-fallback=nv-no-loading-indicator alt=""/> </div> <div layout=column layout-align="space-between start" flex class="giveaway-details constants-position-relative padding-24 font-size-lg line-height-18 color-white-hue-4"> <div layout=column class=width-100> <div layout=column class=giveaway-info-section> <nv-countdown-timer nv-translate=l10n.timeLeftToEnter nv-end-timestamp={{sweepstakeCtrl.giveaway.endStampMicro}} nv-format=shortTime></nv-countdown-timer> <span class="font-size-20 color-white single-line-ellipsis line-height-26">{{ sweepstakeCtrl.giveaway.title }}</span> <div ng-if=!sweepstakeCtrl.isOnline() class=message-banner-container> <div class=message-banner layout=row layout-align="start center"> <md-icon md-font-set=material-icons>cloud_off</md-icon> <span flex translate=l10n.youAreOffline></span> </div> </div> <span class="giveaway-details-description nv-ellipsis-lines-5"> <span ng-bind-html=sweepstakeCtrl.giveaway.longDescription></span> <span>&nbsp;</span> <a ng-if=sweepstakeCtrl.giveaway.properties.learnMoreUrl href="{{ sweepstakeCtrl.giveaway.properties.learnMoreUrl }}" translate=l10n.learnMore></a> </span> </div> <div layout=column ng-switch=sweepstakeCtrl.tokensEnteredViewState class="giveaway-tokens-section margin-bottom-20 constants-position-relative"> <div layout=row layout-align="start center" layout-fill flex> <div layout=column layout-align="center center" class=margin-right-16> <md-icon class="nv-custom-icons md-62 margin-zero cursor-default" md-font-icon=icon-ranking-token></md-icon> </div> <div layout=column ng-switch-when=EDIT_STAKES class=giveaway-edit-stakes> <span ng-if=sweepstakeCtrl.termsAlreadyAgreed translate=l10n.addMoreTokens></span> <span ng-if=!sweepstakeCtrl.termsAlreadyAgreed translate=l10n.enterTokens></span> <form name=sweepstakeCtrl.sweepstakeForm layout=row layout-align="start center" class="giveaway-form margin-top-8"> <md-button class="md-fab-24 md-accent md-raised margin-zero margin-right-8" ng-click=sweepstakeCtrl.decreaseTokens() ng-disabled=sweepstakeCtrl.decreaseButtonDisabled()> <md-icon md-font-set=material-icons>remove</md-icon> </md-button> <md-input-container md-no-float class="tokens-input-container margin-zero"> <input required type=number name=tokens class="text-align-center margin-zero-important" min="{{ sweepstakeCtrl.tokensInputMin }}" max="{{ sweepstakeCtrl.tokensInputMax }}" ng-model=sweepstakeCtrl.tokensEntered ng-keypress=sweepstakeCtrl.tokensInputKeypress($event) ng-blur=sweepstakeCtrl.tokensInputBlur() ng-disabled=sweepstakeCtrl.tokensInputDisabled()> </md-input-container> <md-button class="md-fab-24 md-accent md-raised margin-zero margin-left-8" ng-click=sweepstakeCtrl.increaseTokens() ng-disabled=sweepstakeCtrl.increaseButtonDisabled()> <md-icon md-font-set=material-icons>add</md-icon> </md-button> <span ng-if=sweepstakeCtrl.showRemainingTokens() class=margin-left-16 translate="{{ sweepstakeCtrl.tokensRemainingStr() }}" translate-value-number="{{ sweepstakeCtrl.remainingTokens }}"></span> </form> </div> <div layout=column ng-switch-when=REVIEW_STAKES> <span translate=l10n.tokensEntered></span> <span class="font-family-roboto-light font-size-32 color-white line-height-sm1">{{ sweepstakeCtrl.tokensEntered }}</span> <span class=color-white-hue-5>{{ sweepstakeCtrl.tokensSubmitMoment() }}</span> </div> </div> <span ng-if=sweepstakeCtrl.showInvalidTokensError() class="input-error-container font-size-xxs color-red-hue-1 margin-top-8 nv-ellipsis-lines-2" translate="{{ sweepstakeCtrl.inputErrorStr() }}"></span> </div> <div layout=column class="margin-bottom-20 color-white-hue-5"> <span ng-if=sweepstakeCtrl.giveaway.quantity translate=l10n.numberOfWinners translate-value-number={{sweepstakeCtrl.giveaway.quantity}}></span> <span ng-if=sweepstakeCtrl.giveaway.tokensEntered translate=l10n.entriesSoFar translate-values="{{ {\'entries\': sweepstakeCtrl.giveaway.tokensEntered} }}"></span> </div> </div> <div layout=row layout-align="space-between center" class=width-100> <div ng-if=!sweepstakeCtrl.termsAlreadyAgreed layout=column> <md-checkbox class=checkbox-20 ng-model=sweepstakeCtrl.tncAgreed ng-disabled=sweepstakeCtrl.tncCheckboxDisabled()> <div nv-bind-html-compile="{{ sweepstakeCtrl.agreeToElementHtml }}"></div> </md-checkbox> </div> <div ng-if=sweepstakeCtrl.termsAlreadyAgreed layout=column> <div> <a ng-if=sweepstakeCtrl.giveaway.officialRules ng-click=sweepstakeCtrl.showRules($event) translate=l10n.officialRules></a> </div> </div> <div ng-switch=sweepstakeCtrl.tokensEnteredViewState> <div ng-switch-when=EDIT_STAKES layout=column> <md-button class="md-accent md-raised margin-zero font-uppercase" translate=l10n.submit ng-disabled=sweepstakeCtrl.submitDisabled() ng-click=sweepstakeCtrl.submitTokens()></md-button> </div> <div ng-switch-when=REVIEW_STAKES layout=row> <md-button ng-if=sweepstakeCtrl.availableTokens class="md-raised md-secondary margin-zero margin-right-16 font-uppercase" translate=l10n.addMore ng-click=sweepstakeCtrl.addMoreTokens()></md-button> <md-button class="md-accent md-raised margin-zero font-uppercase" translate=l10n.done ng-click=sweepstakeCtrl.reviewDone()></md-button> </div> </div> </div> </div> </div> </md-dialog-content> <md-dialog-content layout=column layout-fill flex ng-switch-when=OFFICIAL_RULES class="giveaway-rules-container giveaway-subview"> <div layout=row layout-align="start center" class="giveaway-subview-header font-size-xl color-white"> <md-button class=md-icon-button ng-click=sweepstakeCtrl.goBack($event)> <md-icon md-font-set=material-icons>arrow_back</md-icon> </md-button> <span class=margin-left-16 translate=l10n.officialRules></span> </div> <md-content ng-if=sweepstakeCtrl.giveaway.officialRules layout-fill flex class="font-size-sm color-white-hue-4 giveaway-subview-content"> <div ng-bind-html=sweepstakeCtrl.giveaway.officialRules></div> </md-content> <nv-overlay ng-if=sweepstakeCtrl.giveaway.officialRules class="common-overlay giveaway-subview-content-overlay" nv-position=bottom></nv-overlay> <div ng-if=!sweepstakeCtrl.giveaway.officialRules layout=column layout-align="center center" flex layout-fill class=color-light-gray> <md-icon md-font-set=material-icons class="md-32 margin-zero">info</md-icon> <span class="font-size-lg margin-top-16" translate=l10n.noInformationAvailable></span> </div> </md-dialog-content> </md-dialog> ';
 }, function(e, t) {
     e.exports = '<span ng-if=userAchievements.titleBadge.title class="font-size-xxs color-white-hue-2 font-size-sm">{{userAchievements.titleBadge.title}}</span> <div ng-if=userAchievements.achievements layout=row layout-align="start center" class="margin-top-16 achievements-container"> <div ng-if="userAchievements.unlocked.length > 0 && userAchievements.showcase.length > 0"> <md-icon ng-repeat="badge in userAchievements.showcase" md-font-icon={{badge.badgeIconTag}} class="cevo-icons ico-fw margin-zero md-24 margin-right-16"></md-icon> </div> <span ng-if="userAchievements.unlocked.length > 0 && userAchievements.showcase.length === 0" class="margin-right-8 color-white-hue-3 font-size-lg font-style-italic" translate=l10n.showcaseAchievements></span> <div ng-if="userAchievements.unlocked.length === 0"> <md-icon ng-repeat="_ in userAchievements.placeholderList" md-font-set=material-icons class="md-24 margin-right-16">lock</md-icon> </div> <a ng-click=userAchievements.viewAll() translate=l10n.viewAll ng-class="{\'link-disabled\': userAchievements.viewAllDisabled}"></a> </div> <div ng-if=userAchievements.loading() layout=row layout-align="start center" class="margin-top-16 achievements-loading-container"> <div class="margin-right-8 loading-icon" ng-repeat="_ in userAchievements.placeholderList"></div> </div> '
 }, function(e, t) {
@@ -21717,7 +21776,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div layout=column class="user-missions margin-24"> <div ng-if=!userMissionsCtrl.emptyState() layout-gt-md=row layout-sm=column layout-xs=column> <div layout=column flex-gt-md=65> <div ng-if=userMissionsCtrl.featuredMissions.length layout=column class=margin-bottom-24> <div layout=row class="profile-section-header font-size-lg color-white-hue-4 font-uppercase"> <nv-countdown-timer ng-if=!userMissionsCtrl.isFeaturedCtaMission nv-translate=l10n.featuredMissionCountdown nv-end-timestamp="{{ userMissionsCtrl.featuredMissionEndTs }}" nv-format=shortTime nv-callback=userMissionsCtrl.refreshMission(state)></nv-countdown-timer> <nv-countdown-timer ng-if=userMissionsCtrl.featuredCtaMissionActive() nv-translate="{{ userMissionsCtrl.featuredCtaHeader}}" nv-end-timestamp="{{ userMissionsCtrl.featuredCtaTs }}" nv-format=shortTime nv-callback=userMissionsCtrl.ctaStateChanged(state)></nv-countdown-timer> <span ng-if=userMissionsCtrl.featuredCtaMissionEnded() translate=l10n.featuredMissionEnded></span> </div> <div ng-repeat="mission in userMissionsCtrl.featuredMissions" flex class=mission-tile-margin> <nv-mission-tile nv-mission=mission></nv-mission-tile> </div> </div> <div ng-if=userMissionsCtrl.repeatableMissions.length layout=column> <div layout=row class="profile-section-header font-size-lg color-white-hue-4 font-uppercase"> <nv-countdown-timer nv-translate=l10n.weeklyMissionsCountdown nv-end-timestamp="{{ userMissionsCtrl.weeklyMissionEndTs }}" nv-format=shortTime nv-callback=userMissionsCtrl.refreshMission(state)></nv-countdown-timer> </div> <div ng-repeat="mission in userMissionsCtrl.repeatableMissions" flex class=mission-tile-margin> <nv-mission-tile nv-mission=mission></nv-mission-tile> </div> </div> </div> <div hide show-gt-md class=padding-right-24></div> <div hide show-md show-xs show-sm class=margin-top-24></div> <div layout=column flex-gt-md=35> <div ng-if=userMissionsCtrl.timelessMissions.length layout=column> <span class="profile-section-header font-size-lg color-white-hue-4 font-uppercase" translate=l10n.timelessMissions></span> <div ng-repeat="mission in userMissionsCtrl.timelessMissions" flex class=mission-tile-margin> <nv-mission-tile nv-mission=mission></nv-mission-tile> </div> </div> </div> </div> <div ng-if=userMissionsCtrl.emptyState() layout=column layout-align="center center" flex class=color-light-gray> <md-icon md-font-set=material-icons class="md-24 margin-zero">info</md-icon> <span class=margin-top-8 translate=l10n.noInformationAvailable></span> </div> </div> '
 }, function(e, t) {
-    e.exports = '<md-content id=panel-container flex ui-tour=profileTour ui-tour-placement=bottom-left> <div layout=column layout-fill flex class="user-profile-container constants-position-relative"> <div layout=row class=user-profile-cover-container flex> <div layout-fill flex class=cover-gradient></div> <img ng-if=userProfile.profileDetail.coverImageUrl.url ng-src={{userProfile.profileDetail.coverImageUrl.url}} /> <nv-overlay class="common-overlay cover-dark-overlay"></nv-overlay> </div> <div layout=column flex class=user-profile> <div class="user-profile-bio-container constants-position-relative"> <div layout=row layout-align="start end" layout-fill flex class="constants-position-absolute user-profile-bio" ng-mouseenter=userProfile.coverMouseHover(true) ng-mouseleave=userProfile.coverMouseHover(false)> <md-button class="md-icon-button constants-position-absolute cover-edit-button" ng-click=userProfile.updateCover() ng-show=userProfile.isEditCoverButtonVisible() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_COVER_IMAGE}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <nv-select-menu nv-md-icon=more_vert nv-label=l10n.moreDots class="constants-position-absolute more-options"> <nv-select-menu-item nv-action=userProfile.refreshProfile() nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.USER_REFRESH_PROFILE}}}\'> <span translate=l10n.refreshProfile></span> </nv-select-menu-item> </nv-select-menu> <div layout=column layout-align="center center" class=user-profile-avatar-container> <div layout=column class="profile-avatar-overlay constants-position-relative" ng-mouseenter=userProfile.avatarMouseHover(true) ng-mouseleave=userProfile.avatarMouseHover(false)> <md-button class="md-icon-button constants-position-absolute avatar-edit-button" ng-show=userProfile.isAvatarMouseHover ng-click=userProfile.updateAvatar() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_AVATAR}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <img ng-src={{userProfile.profileDetail.avatar.url}} class=md-avatar alt=avatar nv-fallback-src=avatar_generic_118.png /> </div> </div> <div layout=column layout-align="end start" flex> <div class=user-profile-details layout=column> <div layout=row tour-step=profile tour-step-title="{{\'l10n.userProfileTourString\' | translate}}" tour-step-placement=top-left tour-step-order=0> <h1 class="color-white-hue-1 margin-zero margin-bottom-4 font-style-normal">{{ userProfile.profileDetail.displayName }}</h1> </div> <div layout=row ng-if="userProfile.getFeatureEnabled(\'achievements\')"> <nv-user-achievements></nv-user-achievements> </div> <div layout=column class="constants-position-relative margin-bottom-24 padding-right-32" ng-mouseenter=userProfile.descriptionMouseHover(true) ng-mouseleave=userProfile.descriptionMouseHover(false)> <md-button class="md-icon-button constants-position-absolute desc-edit-button" ng-show=userProfile.isDescriptionMouseHover ng-click=userProfile.editUserDescription($event) nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_BIO_DESCRIPTION}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <div class="font-size-sm1 color-white-hue-2 margin-top-16"> <span ng-if=userProfile.profileDetail.description.bio.value class="font-size-sm1 nv-ellipsis-lines-2">{{ userProfile.profileDetail.description.bio.value }}</span> <span ng-if=!userProfile.profileDetail.description.bio.value class="font-size-sm1 nv-ellipsis-lines-2" translate=l10n.userDefaultBioString></span> </div> </div> </div> </div> </div> </div> <div layout=row class=user-profile-content flex> <div layout=column class=user-profile-widgets-container> <div ng-if="userProfile.getFeatureEnabled(\'profileStatus\')" tour-step=profile tour-step-title="{{\'l10n.userTokenTourString\' | translate}}" tour-step-placement=right-top tour-step-order=2> <nv-user-profile-status></nv-user-profile-status> </div> <div ng-if="!userProfile.getFeatureEnabled(\'profileStatus\')" class=profile-status-placeholder></div> <div ng-if="userProfile.getFeatureEnabled(\'featuredReward\')"> <nv-featured-reward></nv-featured-reward> <nv-winners></nv-winners> </div> </div> <div layout=column flex> <md-tabs md-dynamic-height md-selected=userProfile.selectedTab class=margin-bottom-36> <md-tab ng-if=tab.isVisible() md-active=tab.active ng-repeat="tab in userProfile.profileTabs" md-on-select=userProfile.onTabChanged(tab)> <md-tab-label> <span class=font-uppercase translate="{{ tab.header }}"></span> </md-tab-label> <md-tab-body> <div layout=column layout-fill nv-bind-html-compile="{{ tab.directive }}"></div> </md-tab-body> </md-tab> </md-tabs> </div> </div> </div> </div> </md-content> ';
+    e.exports = '<md-content id=panel-container flex ui-tour=profileTour ui-tour-placement=bottom-left> <div layout=column layout-fill flex class="user-profile-container constants-position-relative"> <div layout=row class=user-profile-cover-container flex> <div layout-fill flex class=cover-gradient></div> <img ng-if=userProfile.profileDetail.coverImageUrl.url ng-src={{userProfile.profileDetail.coverImageUrl.url}} /> <nv-overlay class="common-overlay cover-dark-overlay"></nv-overlay> </div> <div layout=column flex class=user-profile> <div class="user-profile-bio-container constants-position-relative"> <div layout=row layout-align="start end" layout-fill flex class="constants-position-absolute user-profile-bio" ng-mouseenter=userProfile.coverMouseHover(true) ng-mouseleave=userProfile.coverMouseHover(false)> <md-button class="md-icon-button constants-position-absolute cover-edit-button" ng-click=userProfile.updateCover() ng-show=userProfile.isEditCoverButtonVisible() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_COVER_IMAGE}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <nv-select-menu nv-md-icon=more_vert nv-label=l10n.moreDots class="constants-position-absolute more-options"> <nv-select-menu-item nv-action=userProfile.refreshProfile() nv-telemetry=\'{"tarconID":{{::$root.telemetryEventNames.USER_REFRESH_PROFILE}}}\'> <span translate=l10n.refreshProfile></span> </nv-select-menu-item> </nv-select-menu> <div layout=column layout-align="center center" class=user-profile-avatar-container> <div layout=column class="profile-avatar-overlay constants-position-relative" ng-mouseenter=userProfile.avatarMouseHover(true) ng-mouseleave=userProfile.avatarMouseHover(false)> <md-button class="md-icon-button constants-position-absolute avatar-edit-button" ng-show=userProfile.isAvatarMouseHover ng-click=userProfile.updateAvatar() nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_AVATAR}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <img ng-src={{userProfile.profileDetail.avatar.url}} class=md-avatar alt=avatar nv-fallback-src=avatar_generic_118.png /> </div> </div> <div layout=column layout-align="end start" flex> <div class=user-profile-details layout=column> <div layout=row tour-step=profile tour-step-title="{{\'l10n.userProfileTourString\' | translate}}" tour-step-placement=top-left tour-step-order=0> <h1 class="color-white-hue-1 margin-zero margin-bottom-4 font-style-normal">{{ userProfile.profileDetail.displayName }}</h1> </div> <div layout=row ng-if="userProfile.getFeatureEnabled(\'achievements\')"> <nv-user-achievements></nv-user-achievements> </div> <div layout=column class="constants-position-relative margin-bottom-24 padding-right-32" ng-mouseenter=userProfile.descriptionMouseHover(true) ng-mouseleave=userProfile.descriptionMouseHover(false)> <md-button class="md-icon-button constants-position-absolute desc-edit-button" ng-show=userProfile.isDescriptionMouseHover ng-click=userProfile.editUserDescription($event) nv-telemetry=\'{"tarconID":{{$root.telemetryEventNames.USER_EDIT_BIO_DESCRIPTION}}}\'> <md-icon md-font-set=material-icons class="color-white-hue-1 md-16 foreground">edit</md-icon> </md-button> <div class="font-size-sm1 color-white-hue-2 margin-top-16"> <span ng-if=userProfile.profileDetail.description.bio.value class="font-size-sm1 nv-ellipsis-lines-2">{{ userProfile.profileDetail.description.bio.value }}</span> <span ng-if=!userProfile.profileDetail.description.bio.value class="font-size-sm1 nv-ellipsis-lines-2" translate=l10n.userDefaultBioString></span> </div> </div> </div> </div> </div> </div> <div layout=row class=user-profile-content flex> <div layout=column class=user-profile-widgets-container> <div ng-if="userProfile.getFeatureEnabled(\'profileStatus\')" tour-step=profile tour-step-title="{{\'l10n.userTokenTourString\' | translate}}" tour-step-placement=right-top tour-step-order=2> <nv-user-profile-status></nv-user-profile-status> </div> <div ng-if="!userProfile.getFeatureEnabled(\'profileStatus\')" class=profile-status-placeholder></div> <div ng-if="userProfile.getFeatureEnabled(\'featuredReward\')"> <nv-featured-reward></nv-featured-reward> <nv-winners></nv-winners> </div> </div> <div layout=column flex> <md-tabs md-dynamic-height md-selected=userProfile.selectedTab class=margin-bottom-36> <md-tab ng-if=tab.isVisible() md-active=tab.active ng-repeat="tab in userProfile.profileTabs" md-on-select=userProfile.onTabChanged(tab)> <md-tab-label> <span class=font-uppercase translate="{{ tab.header }}"></span> </md-tab-label> <md-tab-body> <div layout=column layout-fill nv-bind-html-compile="{{ tab.directive }}"></div> </md-tab-body> </md-tab> </md-tabs> </div> </div> </div> </div> </md-content> '
 }, function(e, t) {
     e.exports = '<div layout=column class="constants-position-relative user-profile-widget user-profile-status" flex> <div ng-if=!ctrl.emptyState() layout=column layout-align="center center" class="constants-position-absolute level-badge no-focus-outline clickable-element" ng-click=ctrl.openLevelsDialog()> <md-icon ng-if=ctrl.profileStatus.levelIcon class="nv-custom-icons md-36 margin-zero constants-position-absolute" md-font-icon=icon-level-bg></md-icon> <md-icon class="nv-custom-icons level-icon-gradient md-36 margin-zero" md-font-icon={{ctrl.profileStatus.levelIcon}}></md-icon> <span class="margin-top-8 margin-bottom-8 font-size-lg font-uppercase color-white-hue-3" translate="{{ ctrl.profileStatus.levelName }}"></span> </div> <div ng-if=!ctrl.emptyState() layout=row class=padding-24> <div layout=row flex layout-align="start start" class="xp-container margin-right-24 no-focus-outline clickable-element" ng-click=ctrl.openLevelsDialog()> <md-icon class="nv-custom-icons color-green md-24 margin-zero clickable-element margin-right-10" md-font-icon=icon-ranking-XP></md-icon> <div layout=column flex class="xp-info-container margin-top-7"> <div layout=row layout-align="start center" class="font-size-lg line-height-sm1 color-white-hue-4"> <span ng-if="ctrl.profileStatus.xplevel.level !== ctrl.maxLevel" translate=l10n.xpStatus translate-values="{\'current\': ctrl.profileStatus.xp , \'upper\': ctrl.profileStatus.xplevel.ubound }"></span> <span ng-if="ctrl.profileStatus.xplevel.level === ctrl.maxLevel" class=color-white-hue-3 translate=l10n.totalXP translate-values="{\'value\': ctrl.profileStatus.xp}"></span> </div> <md-progress-linear ng-if="ctrl.profileStatus.xplevel.level < ctrl.maxLevel" class="xp-progress md-accent" md-mode=determinate value="{{ ctrl.profileStatus.progress }}"></md-progress-linear> </div> </div> <div layout=row flex layout-align="start start" class="tokens-container no-focus-outline clickable-element" ng-click=ctrl.openLevelsDialog()> <md-icon class="nv-custom-icons color-green md-24 margin-zero clickable-element margin-right-10" md-font-icon=icon-ranking-token></md-icon> <div layout=column class="font-size-lg margin-top-7"> <span class="color-white-hue-3 line-height-sm1" nv-ellipsis-lines=1>{{ctrl.profileStatus.rewardTokens}}</span> <span class=color-white-hue-4 translate={{ctrl.tokenString}}></span> </div> </div> </div> <div ng-if=ctrl.emptyState() layout=column layout-align="center center" flex class="color-light-gray empty-state"> <md-icon md-font-set=material-icons class="md-24 margin-zero">info</md-icon> <span class=margin-top-8 translate=l10n.noInformationAvailable></span> </div> </div> '
 }, function(e, t) {
@@ -21740,9 +21799,9 @@ webpackJsonp([4], [function(e, t, n) {
         rawName: "nvHighlightTile",
         group: "main.auth.updates#Highlight Tile"
     }, {
-        bodyTags: ["l10n.checkforUpdates", "l10n.showDriverRecommendationFor", "l10n.fallbackGeforceDriverName", "l10n.recommendedForGameUpdates", "l10n.creatorReadyDriver", "l10n.recommendedForCreativeApp", "l10n.available", "l10n.download", "l10n.expressInstall", "l10n.customInstall", "l10n.reInstalledDriver", "l10n.downloadDriver", "l10n.drivers"],
+        bodyTags: ["l10n.checkforUpdates", "l10n.clickToChangeDriverPreference", "l10n.showDriverRecommendationFor", "l10n.gameReadyDriver", "l10n.recommendedForGameUpdates", "l10n.creatorReadyDriver", "l10n.recommendedForCreativeApp", "l10n.available", "l10n.download", "l10n.expressInstall", "l10n.customInstall", "l10n.reInstalledDriver", "l10n.downloadDriver", "l10n.drivers"],
         title: "Updates Driver",
-        extraTags: ["l10n.currentlyInstalled", "l10n.latestGeforceUpdate", "l10n.newDriverAvailable", "l10n.driverDownloadFailed", "l10n.checkingforUpdates", "l10n.preparingPackage", "l10n.downloading", "l10n.paused", "l10n.retrying", "l10n.unableToConnectToNvidia", "l10n.downloadPausedUnableToReachNvidia", "l10n.downloadDiskSpace"],
+        extraTags: ["l10n.currentlyInstalled", "l10n.latestGeforceUpdate", "l10n.latestGeforceCRDUpdate", "l10n.newGRDDriverAvailable", "l10n.newCRDDriverAvailable", "l10n.driverDownloadFailed", "l10n.checkingforUpdates", "l10n.preparingPackage", "l10n.downloading", "l10n.paused", "l10n.retrying", "l10n.unableToConnectToNvidia", "l10n.downloadPausedUnableToReachNvidia", "l10n.downloadDiskSpace"],
         rawName: "nvUpdatesDriver",
         group: "main.auth.updates#Updates Driver"
     }, {
@@ -22360,7 +22419,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function Se(e) {
-            return Math.round(255 * (e <= .00304 ? 12.92 * e : 1.055 * Math.pow(e, 1 / 2.4) - .055))
+            return Math.round(255 * (e <= .00304 ? 12.92 * e : 1.055 * Math.pow(e, 1 / 2.4) - .055));
         }
 
         function _e(e, t, n) {
@@ -23240,8 +23299,7 @@ webpackJsonp([4], [function(e, t, n) {
                                 for (S || (i.polygonStart(), S = !0), i.lineStart(); ++a < r;) i.point((o = e[a])[0], o[1]);
                                 i.lineEnd()
                             }
-                        } else r > 1 && 2 & t && n.push(n.pop().concat(n.shift())),
-                            m.push(n.filter(Ft))
+                        } else r > 1 && 2 & t && n.push(n.pop().concat(n.shift())), m.push(n.filter(Ft))
                 }
                 var m, p, g, v = t(i),
                     h = o.invert(r[0], r[1]),
@@ -24325,7 +24383,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function Zn() {
-            sr(this), this.x = this.y = this.arc = this.site = this.cy = null
+            sr(this), this.x = this.y = this.arc = this.site = this.cy = null;
         }
 
         function Qn(e) {
@@ -29099,7 +29157,7 @@ webpackJsonp([4], [function(e, t, n) {
             diamond: function(e) {
                 var t = Math.sqrt(e / (2 * Pl)),
                     n = t * Pl;
-                return "M0," + -t + "L" + n + ",0 0," + t + " " + -n + ",0Z"
+                return "M0," + -t + "L" + n + ",0 0," + t + " " + -n + ",0Z";
             },
             square: function(e) {
                 var t = Math.sqrt(e) / 2;
@@ -30372,9 +30430,10 @@ webpackJsonp([4], [function(e, t, n) {
                     u = o.top + s / 2;
                 n.selectAll("g").remove();
                 var d = n.selectAll(".nv-noData").data(a);
-                d.enter().append("text").attr("class", "nvd3 nv-noData").attr("dy", "-.7em").style("text-anchor", "middle"), d.attr("x", c).attr("y", u).text(function(e) {
-                    return e
-                })
+                d.enter().append("text").attr("class", "nvd3 nv-noData").attr("dy", "-.7em").style("text-anchor", "middle"),
+                    d.attr("x", c).attr("y", u).text(function(e) {
+                        return e
+                    })
             }, t.models.axis = function() {
                 "use strict";
 
@@ -30947,8 +31006,7 @@ webpackJsonp([4], [function(e, t, n) {
                             w = _.enter().append("g").attr("class", "nvd3 nv-wrap nv-boxPlotWithAxes").append("g"),
                             A = w.append("defs"),
                             T = _.select("g");
-                        w.append("g").attr("class", "nv-x nv-axis"), w.append("g").attr("class", "nv-y nv-axis").append("g").attr("class", "nv-zeroLine").append("line"), w.append("g").attr("class", "nv-barsWrap"),
-                            T.attr("transform", "translate(" + s.left + "," + s.top + ")"), m && T.select(".nv-y.nv-axis").attr("transform", "translate(" + b + ",0)"), o.width(b).height(E);
+                        w.append("g").attr("class", "nv-x nv-axis"), w.append("g").attr("class", "nv-y nv-axis").append("g").attr("class", "nv-zeroLine").append("line"), w.append("g").attr("class", "nv-barsWrap"), T.attr("transform", "translate(" + s.left + "," + s.top + ")"), m && T.select(".nv-y.nv-axis").attr("transform", "translate(" + b + ",0)"), o.width(b).height(E);
                         var C = T.select(".nv-barsWrap").datum(u.filter(function(e) {
                             return !e.disabled
                         }));
@@ -31808,7 +31866,7 @@ webpackJsonp([4], [function(e, t, n) {
                         }
                         var B = d3.behavior.drag().on("dragstart", C).on("drag", M).on("dragend", N);
                         if (!(d && d.length && d.filter(function(e) {
-                                return e.values.length
+                                return e.values.length;
                             }).length)) return t.utils.noData(e, G), e;
                         if (G.selectAll(".nv-noData").remove(), r = i.xScale(), o = i.yScale(), _) i.yDomain(null);
                         else {
@@ -33232,12 +33290,13 @@ webpackJsonp([4], [function(e, t, n) {
                             }).forEach(function(a, s) {
                                 o = t.interactiveBisect(a.values, e.pointXValue, n.x()), i.highlightPoint(o, !0);
                                 var c = a.values[o];
-                                void 0 !== c && (void 0 === r && (r = c), void 0 === l && (l = n.xScale()(n.x()(c, o))), m.push({
-                                    key: a.key,
-                                    value: n.y()(c, o),
-                                    color: f(a, a.seriesIndex),
-                                    data: a.values[o]
-                                }))
+                                void 0 !== c && (void 0 === r && (r = c),
+                                    void 0 === l && (l = n.xScale()(n.x()(c, o))), m.push({
+                                        key: a.key,
+                                        value: n.y()(c, o),
+                                        color: f(a, a.seriesIndex),
+                                        data: a.values[o]
+                                    }))
                             });
                             var p = a.tickFormat()(n.x()(r, o));
                             c.tooltip.position({
@@ -33913,7 +33972,7 @@ webpackJsonp([4], [function(e, t, n) {
                         if (e.update = function() {
                                 0 === w ? S.call(e) : S.transition().duration(w).call(e)
                             }, e.container = this, b.setter(C(c), e.update).getter(T(c)).update(), b.disabled = c.map(function(e) {
-                                return !!e.disabled;
+                                return !!e.disabled
                             }), !E) {
                             var D;
                             E = {};
@@ -34598,7 +34657,8 @@ webpackJsonp([4], [function(e, t, n) {
                             F = S - h.top - h.bottom;
                         if (e.update = function() {
                                 L.transition().duration(I).call(e)
-                            }, e.container = this, x.setter(O(p), e.update).getter(M(p)).update(), x.disabled = p.map(function(e) {
+                            }, e.container = this,
+                            x.setter(O(p), e.update).getter(M(p)).update(), x.disabled = p.map(function(e) {
                                 return !!e.disabled
                             }), !D) {
                             var U;
@@ -35298,7 +35358,7 @@ webpackJsonp([4], [function(e, t, n) {
                             }), !A) {
                             var L;
                             A = {};
-                            for (L in w) w[L] instanceof Array ? A[L] = w[L].slice(0) : A[L] = w[L];
+                            for (L in w) w[L] instanceof Array ? A[L] = w[L].slice(0) : A[L] = w[L]
                         }
                         if (!(c && c.length && c.filter(function(e) {
                                 return e.values.length
@@ -36080,13 +36140,14 @@ webpackJsonp([4], [function(e, t, n) {
                         return p ? 180 : 0
                     },
                     T = 250;
-                E.stacked = !1, o.stacked(b), i.orient("left").tickPadding(5).showMaxMin(!1).tickFormat(function(e) {
-                    return e
-                }), a.orient("bottom").tickFormat(d3.format(",.1f")), c.duration(0).valueFormatter(function(e, t) {
-                    return a.tickFormat()(e, t)
-                }).headerFormatter(function(e, t) {
-                    return i.tickFormat()(e, t)
-                }), l.updateState(!1);
+                E.stacked = !1, o.stacked(b),
+                    i.orient("left").tickPadding(5).showMaxMin(!1).tickFormat(function(e) {
+                        return e
+                    }), a.orient("bottom").tickFormat(d3.format(",.1f")), c.duration(0).valueFormatter(function(e, t) {
+                        return a.tickFormat()(e, t)
+                    }).headerFormatter(function(e, t) {
+                        return i.tickFormat()(e, t)
+                    }), l.updateState(!1);
                 var C = function(e) {
                         return function() {
                             return {
@@ -39114,7 +39175,7 @@ webpackJsonp([4], [function(e, t, n) {
                                     f = Math.abs(f);
                                     var n = Math.abs(e.stackedValue.y0),
                                         r = Math.abs(e.stackedValue.y);
-                                    if (f >= n && f <= r + n) return void(m = t)
+                                    if (f >= n && f <= r + n) return void(m = t);
                                 }), null != m && (l[m].highlight = !0)
                             }
                             var g = i.tickFormat()(e.x()(r, a)),
@@ -39875,7 +39936,7 @@ webpackJsonp([4], [function(e, t, n) {
             }
             return o
         }, _.union = function() {
-            return _.uniq(R(arguments, !0, !0));
+            return _.uniq(R(arguments, !0, !0))
         }, _.intersection = function(e) {
             for (var t = [], n = arguments.length, r = 0, o = D(e); r < o; r++) {
                 var i = e[r];
@@ -40265,20 +40326,6 @@ webpackJsonp([4], [function(e, t, n) {
         }.apply(t, r), !(void 0 !== o && (e.exports = o))
     }).call(this)
 }, function(e, t, n) {
-    var r = n(657);
-    "string" == typeof r && (r = [
-        [e.id, r, ""]
-    ]);
-    n(7)(r, {});
-    r.locals && (e.exports = r.locals)
-}, function(e, t, n) {
-    var r = n(658);
-    "string" == typeof r && (r = [
-        [e.id, r, ""]
-    ]);
-    n(7)(r, {});
-    r.locals && (e.exports = r.locals)
-}, function(e, t, n) {
     var r = n(659);
     "string" == typeof r && (r = [
         [e.id, r, ""]
@@ -40320,21 +40367,21 @@ webpackJsonp([4], [function(e, t, n) {
     ]);
     n(7)(r, {});
     r.locals && (e.exports = r.locals)
+}, function(e, t, n) {
+    var r = n(665);
+    "string" == typeof r && (r = [
+        [e.id, r, ""]
+    ]);
+    n(7)(r, {});
+    r.locals && (e.exports = r.locals)
+}, function(e, t, n) {
+    var r = n(666);
+    "string" == typeof r && (r = [
+        [e.id, r, ""]
+    ]);
+    n(7)(r, {});
+    r.locals && (e.exports = r.locals)
 }, , , , function(e, t, n) {
-    var r = n(669);
-    "string" == typeof r && (r = [
-        [e.id, r, ""]
-    ]);
-    n(7)(r, {});
-    r.locals && (e.exports = r.locals)
-}, function(e, t, n) {
-    var r = n(670);
-    "string" == typeof r && (r = [
-        [e.id, r, ""]
-    ]);
-    n(7)(r, {});
-    r.locals && (e.exports = r.locals)
-}, function(e, t, n) {
     var r = n(671);
     "string" == typeof r && (r = [
         [e.id, r, ""]
@@ -40369,6 +40416,20 @@ webpackJsonp([4], [function(e, t, n) {
     ]);
     n(7)(r, {});
     r.locals && (e.exports = r.locals)
+}, function(e, t, n) {
+    var r = n(676);
+    "string" == typeof r && (r = [
+        [e.id, r, ""]
+    ]);
+    n(7)(r, {});
+    r.locals && (e.exports = r.locals)
+}, function(e, t, n) {
+    var r = n(677);
+    "string" == typeof r && (r = [
+        [e.id, r, ""]
+    ]);
+    n(7)(r, {});
+    r.locals && (e.exports = r.locals)
 }, function(module, exports, __webpack_require__) {
     var _ = __webpack_require__(922);
     module.exports = function(obj) {
@@ -40397,20 +40458,20 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t, n) {
     e.exports = n(2)(372)
 }, function(e, t, n) {
-    e.exports = n(2)(378)
+    e.exports = n(2)(377)
+}, function(e, t, n) {
+    e.exports = n(2)(388)
 }, function(e, t, n) {
     e.exports = n(2)(390)
 }, function(e, t, n) {
-    e.exports = n(2)(392)
+    e.exports = n(2)(393)
 }, function(e, t, n) {
-    e.exports = n(2)(395)
-}, function(e, t, n) {
-    e.exports = n(2)(397)
+    e.exports = n(2)(396)
 }, function(e, t, n) {
     e.exports = n(2)(399)
 }, function(e, t, n) {
     e.exports = n(2)(401)
 }, function(e, t, n) {
-    e.exports = n(2)(423)
+    e.exports = n(2)(421)
 }]);
 //# sourceMappingURL=app.js.map
