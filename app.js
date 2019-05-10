@@ -1472,22 +1472,26 @@ webpackJsonp([4], [function(e, t, n) {
                     case n.TASK_CHECK_SUM_ERROR:
                     case n.TASK_DISK_WRITE_FAIL:
                     case n.TASK_SIGNATURE_VERIFICATION_FAILS:
-                    case n.TASK_COMPLETED:
                     case n.TASK_DOWNLOAD_ERROR:
+                    case n.TASK_COMPLETED:
                         R.taskbarProgress("complete")
                 }
             }
 
             function V() {
-                var e;
-                for (e in Ae) Ae[e]()
+                Le.info("onSocketConnect has been called"), Ee && Ee[0] && Ee[0].downloadStatus && Ee[0].downloadStatus.status === n.TASK_RUNNING ? (Le.info("get download status after re-connect for Updates List"), X(Ee[0])) : _e && _e.downloadStatus && _e.downloadStatus.status === n.TASK_RUNNING && (Le.info("get download status after re-connect for installed Driver"), X(_e))
             }
 
             function z() {
-                he.scanCompleted = !0, se(), V()
+                var e;
+                for (e in Te) Te[e]()
             }
 
-            function B(e) {
+            function B() {
+                ye.scanCompleted = !0, le(), z()
+            }
+
+            function $(e) {
                 if (e === T.NV_INSTALLER_UAC_CANCELED || e === T.NV_PACKAGE_EXTRACTION_UAC_CANCELED) r.cancel();
                 else {
                     var n = {
@@ -1513,102 +1517,102 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function $() {
-                Ne.info("query installer about last state "), b.start({}, {
+            function W() {
+                Le.info("query installer about last state "), b.start({}, {
                     driverLocation: "",
                     isCustom: !1,
                     resumeInstall: !1,
                     fromLastState: !0
                 }).then(function() {
-                    Ne.info("got response about about last state ")
+                    Le.info("got response about about last state ")
                 }).catch(function(e) {
-                    Ne.error("failed to query last installation state error code:", e.data, " status:", e.status, " params:", e.config.data, e)
+                    Le.error("failed to query last installation state error code:", e.data, " status:", e.status, " params:", e.config.data, e)
                 })
-            }
-
-            function W() {
-                Ne.info("installer and UI are now disconnected")
             }
 
             function H() {
-                Ne.info("Connection error during installation.")
+                Le.info("installer and UI are now disconnected")
             }
 
             function j() {
-                Ne.info("unsubScribeDriverInstallationNotification() called"), i.off(s.INSTALL_FORM, me), i.off(s.INSTALL_CANCEL, j), i.off(s.INSTALL_DONE, q), i.off(x.CONNECT, $), i.off(x.DISCONNECT, W), i.off(x.ERROR, H), I.setReconnectionToDefault()
+                Le.info("Connection error during installation.")
             }
 
             function Y() {
-                Ne.info("subScribeDriverInstallationNotification() called"), i.on(s.INSTALL_FORM, me), i.on(s.INSTALL_CANCEL, j), i.on(s.INSTALL_DONE, q), i.on(x.CONNECT, $), i.on(x.DISCONNECT, W), i.on(x.ERROR, H), I.setReconnectionToInfinity()
+                Le.info("unsubScribeDriverInstallationNotification() called"), i.off(s.INSTALL_FORM, pe), i.off(s.INSTALL_CANCEL, Y), i.off(s.INSTALL_DONE, K), i.off(x.CONNECT, W), i.off(x.DISCONNECT, H), i.off(x.ERROR, j), I.setReconnectionToDefault()
             }
 
             function q() {
-                oe(), j()
+                Le.info("subScribeDriverInstallationNotification() called"), i.on(s.INSTALL_FORM, pe), i.on(s.INSTALL_CANCEL, Y), i.on(s.INSTALL_DONE, K), i.on(x.CONNECT, W), i.on(x.DISCONNECT, H), i.on(x.ERROR, j), I.setReconnectionToInfinity()
             }
 
-            function K(e, t, n) {
-                Y(), r.showInstallationForm(e, t, n), he.invokeInstallation(e, t, n)
+            function K() {
+                ie(), Y()
             }
 
-            function Z(e) {
-                return e.releaseDateTime = "", e.downloadURL = "", e.name = e.isCRD === F.CRD ? t("translate")("l10n.fallbackGeforeceCrdDriverName") : t("translate")("l10n.fallbackGeforceDriverName"), A.getDriverInformation(e.version, e.isCRD).then(function(t) {
-                    return t && t.DriverAttributes && (e.name = t.DriverAttributes.Name, e.releaseDateTime = t.DriverAttributes.ReleaseDateTime, e.downloadURL = t.DriverAttributes.DownloadURL), e
-                }).catch(function(t) {
-                    return Ne.error("getDriverInformation failed with error: ", t + " for driver version:" + e.version), e
-                })
+            function Z(e, t, n) {
+                q(), r.showInstallationForm(e, t, n), ye.invokeInstallation(e, t, n)
             }
 
             function Q(e) {
-                return v.getStatus({
-                    version: e.version,
-                    url: e.downloadURL
-                }).then(function(t) {
-                    return e.downloadStatus = t.data, Ne.info("download getStatus for version: ", e.version, " ", t), U(t.data), e
+                return e.releaseDateTime = "", e.downloadURL = "", e.name = e.isCRD === F.CRD ? t("translate")("l10n.fallbackGeforeceCrdDriverName") : t("translate")("l10n.fallbackGeforceDriverName"), A.getDriverInformation(e.version, e.isCRD).then(function(t) {
+                    return t && t.DriverAttributes && (e.name = t.DriverAttributes.Name, e.releaseDateTime = t.DriverAttributes.ReleaseDateTime, e.downloadURL = t.DriverAttributes.DownloadURL), e
                 }).catch(function(t) {
-                    return Ne.error("download getStatus failed: ", t.data, " status: ", t.status), e
+                    return Le.error("getDriverInformation failed with error: ", t + " for driver version:" + e.version), e
                 })
             }
 
             function X(e) {
+                return v.getStatus({
+                    version: e.version,
+                    url: e.downloadURL
+                }).then(function(t) {
+                    return e.downloadStatus = t.data, Le.info("download getStatus for version: ", e.version, " ", t), U(t.data), e
+                }).catch(function(t) {
+                    return Le.error("download getStatus failed: ", t.data, " status: ", t.status), e
+                })
+            }
+
+            function J(e) {
                 try {
                     return JSON.parse(e)
                 } catch (t) {
-                    return Ne.error("Json parsing exception for ", e), null
+                    return Le.error("Json parsing exception for ", e), null
                 }
             }
 
-            function J() {
-                if (Ie && Ie.content.gfeLoadUrl) {
-                    var e = Ie.content.gfeLoadUrl;
+            function ee() {
+                if (xe && xe.content.gfeLoadUrl) {
+                    var e = xe.content.gfeLoadUrl;
                     e = e.replace(/\\/g, "");
                     var t = e.split("{");
-                    if (2 !== t.length) return Ne.error("Cannot request for article as gfeloadUrl is incorrect ", Ie.content.gfeLoadUrl), l.reject();
+                    if (2 !== t.length) return Le.error("Cannot request for article as gfeloadUrl is incorrect ", xe.content.gfeLoadUrl), l.reject();
                     t[1] = "{" + t[1];
-                    var n = X(t[1]);
-                    return n ? he.getDriverArticle(t[0], n, Ie.content.driverVersion).then(function(e) {
+                    var n = J(t[1]);
+                    return n ? ye.getDriverArticle(t[0], n, xe.content.driverVersion).then(function(e) {
                         if (_.push(w.UPDATES_GRD_ARTICLE_SUCCESS), e && e.data && e.data.gfcontent) {
-                            Ne.debug("get driver article returns content");
+                            Le.debug("get driver article returns content");
                             var t = {},
                                 n = e.data.gfcontent;
                             return t.title = n.title, t.subTitle = n.author_date ? n.author_date.by_on_date : null, t.body = n.body, t.style = "article-content", t
                         }
-                        return Ne.debug("get driver article returns null content"), null
+                        return Le.debug("get driver article returns null content"), null
                     }).catch(function(e) {
                         return _.push(w.UPDATES_GRD_ARTICLE_FAILURE, e && e.status && e.status.toString() || ""), l.reject(e)
-                    }) : (Ne.error("Cannot request for article as gfeloadUrl has incorrect json ", Ie.content.gfeLoadUrl), l.reject())
+                    }) : (Le.error("Cannot request for article as gfeloadUrl has incorrect json ", xe.content.gfeLoadUrl), l.reject())
                 }
-                return Ne.error("article url empty for ", Ie.content.gfeLoadUrl), l.reject("no article url")
+                return Le.error("article url empty for ", xe.content.gfeLoadUrl), l.reject("no article url")
             }
 
-            function ee(e, t) {
+            function te(e, t) {
                 if (e && e.gfeLoadUrl) {
                     var n = e.gfeLoadUrl;
                     n = n.replace(/\\/g, "");
                     var r = n.split("{");
-                    if (2 !== r.length) return Ne.error("Cannot request for article as gfeloadUrl is incorrect ", e.gfeLoadUrl), l.reject();
+                    if (2 !== r.length) return Le.error("Cannot request for article as gfeloadUrl is incorrect ", e.gfeLoadUrl), l.reject();
                     r[1] = "{" + r[1];
-                    var o = X(r[1]);
-                    o && he.getDriverArticle(r[0], o, t).then(function(e) {
+                    var o = J(r[1]);
+                    o && ye.getDriverArticle(r[0], o, t).then(function(e) {
                         if (e.data && e.data.gfcontent) {
                             var t, n = e.data.gfcontent.body,
                                 r = M.$new(),
@@ -1625,20 +1629,20 @@ webpackJsonp([4], [function(e, t, n) {
                 }
             }
 
-            function te(e, t) {
-                he.getDriverInformation(e, t).then(function(t) {
+            function ne(e, t) {
+                ye.getDriverInformation(e, t).then(function(t) {
                     var n, r, o = [];
                     t && t.DriverAttributes && (n = t.DriverAttributes.highlightGfeNg, r = t.DriverAttributes.bannerGfeNg), r && r.forEach(function(e) {
                         o.push(e.image)
                     }), n && n.tiles && n.tiles.forEach(function(t) {
-                        o.push(t.coverImage), ee(t, e)
+                        o.push(t.coverImage), te(t, e)
                     }), o.length && i.trigger(D.PREFETCH_RESOURCES, o)
                 })
             }
 
-            function ne() {
-                return Ee = S.getSystemInfo().then(function(e) {
-                    if (Ne.info("getSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getSystemInfo() return empty installed driver version");
+            function re() {
+                return Se = S.getSystemInfo().then(function(e) {
+                    if (Le.info("getSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getSystemInfo() return empty installed driver version");
                     var t = {
                         taskId: 0,
                         bytesDone: 0,
@@ -1648,21 +1652,21 @@ webpackJsonp([4], [function(e, t, n) {
                         downloadSpeed: 0,
                         downloadedLocation: ""
                     };
-                    return Se = {
+                    return _e = {
                         version: e.DriverVersion,
                         downloadStatus: t,
                         isCRD: e.DriverType ? JSON.parse(e.DriverType) : F.GRD
                     }
                 }).catch(function(e) {
-                    return Ne.error("error getting installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
-                }).then(Z).then(Q).finally(function() {
-                    Ee = void 0
-                }), Ee.then(function(e) {
-                    te(e.version, e.isCRD)
-                }), Ee
+                    return Le.error("error getting installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
+                }).then(Q).then(X).finally(function() {
+                    Se = void 0
+                }), Se.then(function(e) {
+                    ne(e.version, e.isCRD)
+                }), Se
             }
 
-            function re(e) {
+            function oe(e) {
                 var t, n = [];
                 return angular.forEach(e, function(e) {
                     var r = {},
@@ -1676,30 +1680,30 @@ webpackJsonp([4], [function(e, t, n) {
                             downloadedLocation: "",
                             failureCount: 0
                         };
-                    r.name = e.name, r.version = e.version, r.releaseDateTime = e.releaseDateTime, r.isBeta = e.isBeta, r.downloadStatus = o, r.downloadURL = e.downloadURL, r.isCRD = e.driverType, n.push(r), be = n, t = v.getStatus({
+                    r.name = e.name, r.version = e.version, r.releaseDateTime = e.releaseDateTime, r.isBeta = e.isBeta, r.downloadStatus = o, r.downloadURL = e.downloadURL, r.isCRD = e.driverType, n.push(r), Ee = n, t = v.getStatus({
                         version: e.version,
                         url: r.downloadURL
                     }).then(function(e) {
-                        return r.downloadStatus = e.data, U(r.downloadStatus), be
+                        return r.downloadStatus = e.data, U(r.downloadStatus), Ee
                     }).catch(function(e) {
-                        return Ne.error("download getStatus failed: ", e.data, " status: ", e.status), be
+                        return Le.error("download getStatus failed: ", e.data, " status: ", e.status), Ee
                     })
                 }), t
             }
 
-            function oe() {
-                be = void 0, _e = null, Ee = null, he.driverInstalled = !0, Se = null, ye = null, se()
+            function ie() {
+                Ee = void 0, we = null, Se = null, ye.driverInstalled = !0, _e = null, be = null, le()
             }
 
-            function ie(e) {
-                Ne.info("sysinfo updated", e.DriverVersion), (Se && e.DriverVersion !== Se.version || !Se && e.DriverVersion) && (Ee = null, Se = null, ye = null, be = void 0, _e = null, pe().finally(function() {
-                    he.getInstalledDriver(), he.getUpdateDetails(), i.trigger(d.INSTALLED_DRIVER_UPDATE)
+            function ae(e) {
+                Le.info("sysinfo updated", e.DriverVersion), (_e && e.DriverVersion !== _e.version || !_e && e.DriverVersion) && (Se = null, _e = null, be = null, Ee = void 0, we = null, ge().finally(function() {
+                    ye.getInstalledDriver(), ye.getUpdateDetails(), i.trigger(d.INSTALLED_DRIVER_UPDATE)
                 }))
             }
 
-            function ae() {
+            function se() {
                 var e = S.getLaunchTimeSystemInfo().then(function(e) {
-                    if (Ne.info("getLaunchTimeSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getLaunchTimeSystemInfo() return empty installed driver version");
+                    if (Le.info("getLaunchTimeSystemInfo() returns installedDriver version ", e.DriverVersion), a.isNull(e) || a.isEmpty(e.DriverVersion)) return l.reject("getLaunchTimeSystemInfo() return empty installed driver version");
                     var t = {
                         taskId: 0,
                         bytesDone: 0,
@@ -1709,20 +1713,20 @@ webpackJsonp([4], [function(e, t, n) {
                         downloadSpeed: 0,
                         downloadedLocation: ""
                     };
-                    return Se = {
+                    return _e = {
                         version: e.DriverVersion,
                         downloadStatus: t,
                         isCRD: e.DriverType ? JSON.parse(e.DriverType) : F.GRD
                     }
                 }).catch(function(e) {
-                    return Ne.error("error init installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
-                }).then(Z).then(Q);
+                    return Le.error("error init installed driver version:data", e.data, " status:", e.status), l.reject(e.data)
+                }).then(Q).then(X);
                 e.then(function(e) {
-                    te(e.version, e.isCRD)
+                    ne(e.version, e.isCRD)
                 })
             }
 
-            function se() {
+            function le() {
                 L.checkSearchAvailability().then(function(e) {
                     if (e) {
                         var t = {},
@@ -1734,45 +1738,45 @@ webpackJsonp([4], [function(e, t, n) {
                             c = {};
                         a.forEach(L.getDirectivel10nTags("nvDriverItem"), function(e) {
                             o.push(e)
-                        }), r.push(he.getUpdateDetails().then(function(e) {
+                        }), r.push(ye.getUpdateDetails().then(function(e) {
                             c[0] = !0, s[0] = e
                         }).catch(function() {
                             c[0] = !1
-                        })), r.push(he.getInstalledDriver().then(function(e) {
+                        })), r.push(ye.getInstalledDriver().then(function(e) {
                             c[1] = !0, s[1] = e
                         }).catch(function() {
                             c[1] = !1
                         })), l.all(r).then(function(e) {
                             if (c[0] && a.forEach(s[0], function(e) {
                                     if (e && e.version && e.name) {
-                                        Ne.info("Adding docs for driver version " + e.version);
+                                        Le.info("Adding docs for driver version " + e.version);
                                         var r = e.name,
                                             i = a.clone(o);
                                         i.push(e.version), t[r] = {
                                             description: i
                                         }, n.push(e)
-                                    } else Ne.error("getUpdateDetails returned empty data or version")
+                                    } else Le.error("getUpdateDetails returned empty data or version")
                                 }), c[1]) {
                                 i.push("l10n.currentlyInstalled");
                                 var r = s[1];
                                 if (r && r.version && r.name) {
-                                    Ne.info("Adding docs for driver version " + r.version);
+                                    Le.info("Adding docs for driver version " + r.version);
                                     var l = r.name,
                                         u = a.clone(o);
                                     u.push(r.version), t[l] = {
                                         description: u
                                     }, n.push(r)
-                                } else Ne.error("getInstalledDriver returned empty data or version")
+                                } else Le.error("getInstalledDriver returned empty data or version")
                             }
                             t["l10n.updates"] = {
                                 description: i
-                            }, le(t, n)
+                            }, ce(t, n)
                         })
                     }
                 })
             }
 
-            function le(e, t) {
+            function ce(e, t) {
                 var n = ["l10n.highlights"];
                 a.forEach(L.getDirectivel10nTags("nvHighlightTile"), function(e) {
                     n.push(e)
@@ -1780,13 +1784,13 @@ webpackJsonp([4], [function(e, t, n) {
                 var r = [],
                     o = [];
                 a.each(t, function(e) {
-                    r.push(he.getDriverInformation(e.version, e.isCRD).then(function(t) {
+                    r.push(ye.getDriverInformation(e.version, e.isCRD).then(function(t) {
                         o.push({
                             name: e.name,
                             data: t
                         })
                     }).catch(function() {
-                        Ne.error("getDriverInformation failed on ", e.version)
+                        Le.error("getDriverInformation failed on ", e.version)
                     }))
                 }), l.all(r).then(function(t) {
                     var r = ["nvDriverItem", "nvHighlightTile", "nvUpdatesDriver"];
@@ -1806,116 +1810,116 @@ webpackJsonp([4], [function(e, t, n) {
                 })
             }
 
-            function ce() {
-                Re = !0
-            }
-
             function ue() {
-                Re = !1
+                Ne = !0
             }
 
             function de() {
-                return k.hasHardwareInfo() ? l.when(!0) : S.getSystemInfo().then(function(e) {
-                    return Ne.info("update hardware info"), k.updateHardwareInfo(e), !0
-                })
+                Ne = !1
             }
 
             function fe() {
-                Re === !0 && de().then(function(e) {
-                    k.getParams().dIDa && k.getParams().go ? (Ne.info("refresh CRD feature capability"), ve()) : Ne.info("no dIDa or GO params found in hardware info")
+                return k.hasHardwareInfo() ? l.when(!0) : S.getSystemInfo().then(function(e) {
+                    return Le.info("update hardware info"), k.updateHardwareInfo(e), !0
                 })
             }
 
-            function me(e) {
-                e.method !== g.SHOW_PROGRESS && Ne.info("UpdatesService - received event from installer", e), he.showNextInstallerForm(e)
+            function me() {
+                Ne === !0 && fe().then(function(e) {
+                    k.getParams().dIDa && k.getParams().go ? (Le.info("refresh CRD feature capability"), he()) : Le.info("no dIDa or GO params found in hardware info")
+                })
             }
 
-            function pe() {
-                return a.isNull(xe) && (xe = u.getDriverTypePreference().then(function(e) {
-                    return e && e.data ? (Ne.info("getDriverType status:", e), xe = null, Me = e.data.driverType, e.data.driverType) : l.reject("getDriverType response is null")
+            function pe(e) {
+                e.method !== g.SHOW_PROGRESS && Le.info("UpdatesService - received event from installer", e), ye.showNextInstallerForm(e)
+            }
+
+            function ge() {
+                return a.isNull(De) && (De = u.getDriverTypePreference().then(function(e) {
+                    return e && e.data ? (Le.info("getDriverType status:", e), De = null, Oe = e.data.driverType, e.data.driverType) : l.reject("getDriverType response is null")
                 }).catch(function(e) {
-                    return Ne.error("failed to getDriverType", e), xe = null, l.reject(e)
-                })), xe
+                    return Le.error("failed to getDriverType", e), De = null, l.reject(e)
+                })), De
             }
 
-            function ge(e) {
+            function ve(e) {
                 return e && e.data && e.data.html && e.data.html.body
             }
 
-            function ve() {
-                if (we) return we.promise;
-                we = l.defer();
+            function he() {
+                if (Ae) return Ae.promise;
+                Ae = l.defer();
                 var e = {};
                 return e.GFPV = k.getParams().GFPV || "0.00", e.isSLI = k.getParams().isSLI || "0", e.cmID = P.CRD, k.profile.targetGfeAchievements({
                     gfwslParams: e
                 }).then(function(e) {
                     var t = "",
                         n = !1;
-                    if (ge(e) && Array.isArray(e.data.html.body.Achievements)) {
+                    if (ve(e) && Array.isArray(e.data.html.body.Achievements)) {
                         var r = a.findWhere(e.data.html.body.Achievements, {
                             ID: P.CRD
                         });
                         if (r) {
                             var o = JSON.parse(r.overallState);
-                            n = !0, Oe = o, we.resolve(o), Ne.info("CRD feature state ", o)
+                            n = !0, Re = o, Ae.resolve(o), Le.info("CRD feature state ", o)
                         } else t = "CRD id not found in Achievements"
                     } else t = "Invalid response for GFWSL targetGfeAchievements";
-                    n || (Ne.error(t), we.reject(t), Oe = void 0)
+                    n || (Le.error(t), Ae.reject(t), Re = void 0)
                 }).catch(function(e) {
-                    Oe = void 0, we.reject(e)
+                    Re = void 0, Ae.reject(e)
                 }).finally(function() {
-                    we = void 0
-                }), we.promise
+                    Ae = void 0
+                }), Ae.promise
             }
-            var he = this;
-            he.timer = void 0, he.scanCompleted = !0, he.manualCheckForUpdate = !1;
-            var ye, be, Ee, Se, _e, we, Ae = [],
-                Te = null,
+            var ye = this;
+            ye.timer = void 0, ye.scanCompleted = !0, ye.manualCheckForUpdate = !1;
+            var be, Ee, Se, _e, we, Ae, Te = [],
                 Ce = null,
-                Ie = {},
-                xe = null,
+                Ie = null,
+                xe = {},
                 De = null,
-                Me = void 0,
+                Me = null,
                 Oe = void 0,
-                Re = !0,
-                Ne = e.getInstance("main.updates/updatesService");
-            he.startDownload = function(e, t, n) {
-                return Ne.info("start download for version", e, " url ", t, "downloadType", n), v.start({
+                Re = void 0,
+                Ne = !0,
+                Le = e.getInstance("main.updates/updatesService");
+            ye.startDownload = function(e, t, n) {
+                return Le.info("start download for version", e, " url ", t, "downloadType", n), v.start({
                     version: e,
                     url: t,
                     downloadType: n
                 })
-            }, he.pauseDownload = function(e) {
-                return Ne.info("pause download for taskid", e), v.pause({
+            }, ye.pauseDownload = function(e) {
+                return Le.info("pause download for taskid", e), v.pause({
                     taskId: e
                 })
-            }, he.resumeDownload = function(e) {
-                return Ne.info("resume download for taskid", e), v.resume({
+            }, ye.resumeDownload = function(e) {
+                return Le.info("resume download for taskid", e), v.resume({
                     taskId: e
                 }).then(function(e) {
                     return U(e.data), e
                 })
-            }, he.stopDownload = function(e) {
-                return Ne.info("stop download for taskid", e), v.stop({
+            }, ye.stopDownload = function(e) {
+                return Le.info("stop download for taskid", e), v.stop({
                     taskId: e
                 }).then(function(e) {
                     return R.taskbarProgress("complete"), e
                 })
-            }, he.setUpdatesListener = function(e) {
-                Ae.push(e)
-            }, he.removeUpdatesListener = function(e) {
-                var t = Ae.indexOf(e);
-                t > -1 && Ae.splice(t, 1)
-            }, he.canCheckForUpdate = function() {
+            }, ye.setUpdatesListener = function(e) {
+                Te.push(e)
+            }, ye.removeUpdatesListener = function(e) {
+                var t = Te.indexOf(e);
+                t > -1 && Te.splice(t, 1)
+            }, ye.canCheckForUpdate = function() {
                 var e = !0;
-                return he.scanCompleted && be && be.forEach(function(t) {
+                return ye.scanCompleted && Ee && Ee.forEach(function(t) {
                     t.downloadStatus.status !== n.TASK_PAUSED && t.downloadStatus.status !== n.TASK_RUNNING && t.downloadStatus.status !== n.TASK_RETRY || (e = !1)
                 }), e
-            }, he.checkForUpdates = function(e) {
-                !e || he.canCheckForUpdate() ? (he.manualCheckForUpdate = e, Ne.info("driver update scan starting.."), u.refresh().then(function() {}).catch(function(e) {
-                    Ne.error("UpdateService - start scan failed", e), i.trigger(d.SCAN_FAILED, {})
-                })) : Ne.info("driver download is initiated or scan is already in progress..")
-            }, he.showNextInstallerForm = function(e) {
+            }, ye.checkForUpdates = function(e) {
+                !e || ye.canCheckForUpdate() ? (ye.manualCheckForUpdate = e, Le.info("driver update scan starting.."), u.refresh().then(function() {}).catch(function(e) {
+                    Le.error("UpdateService - start scan failed", e), i.trigger(d.SCAN_FAILED, {})
+                })) : Le.info("driver download is initiated or scan is already in progress..")
+            }, ye.showNextInstallerForm = function(e) {
                 if (e.method === g.SHOW_FORM) switch (e.form) {
                     case o.NVIFORM_INSTALL_INITIAL:
                     case o.NVIFORM_INSTALL_CHECKING:
@@ -1941,7 +1945,7 @@ webpackJsonp([4], [function(e, t, n) {
                         r.showInstallerForm(e);
                         break;
                     case o.NVIFORM_INSTALL_START_FAILED:
-                        B(e.errorCode);
+                        $(e.errorCode);
                         break;
                     case o.NVIFORM_INSTALL_CHECK_WAIT:
                         r.showInstallerForm(e);
@@ -1959,8 +1963,8 @@ webpackJsonp([4], [function(e, t, n) {
                         r.showInstallerForm(e)
                 } else r.showInstallerForm(e);
                 return !0
-            }, he.invokeInstallation = function(e, t, n) {
-                Ne.info("start installation", e.version, e.name, t, n);
+            }, ye.invokeInstallation = function(e, t, n) {
+                Le.info("start installation", e.version, e.name, t, n);
                 var r = n ? "" : e.downloadStatus.extractedPath ? e.downloadStatus.extractedPath : e.downloadStatus.downloadedLocation;
                 b.start({}, {
                     driverLocation: r,
@@ -1969,16 +1973,16 @@ webpackJsonp([4], [function(e, t, n) {
                     isPfw: !e.downloadStatus.extractedPath,
                     pfwLocation: e.downloadStatus.downloadedLocation
                 }).then(function() {
-                    Ne.info("successfully start installation ", e.name)
+                    Le.info("successfully start installation ", e.name)
                 }).catch(function(e) {
-                    Ne.error("failed to start installation error code:", e.data, " status:", e.status, " params:", e.config.data, e)
+                    Le.error("failed to start installation error code:", e.data, " status:", e.status, " params:", e.config.data, e)
                 })
-            }, he.beginInstallation = function(e, t, n) {
-                Q(e).finally(function() {
-                    K(e, t, n)
+            }, ye.beginInstallation = function(e, t, n) {
+                X(e).finally(function() {
+                    Z(e, t, n)
                 })
-            }, he.showArticle = function(e, t) {
-                Ie = {
+            }, ye.showArticle = function(e, t) {
+                xe = {
                     content: e,
                     driverVersion: t
                 }, N.show({
@@ -1987,64 +1991,64 @@ webpackJsonp([4], [function(e, t, n) {
                     template: c.default,
                     disableParentScroll: !1,
                     locals: {
-                        getArticleCallback: J
+                        getArticleCallback: ee
                     },
                     bindToController: !0
                 })
-            }, he.getUpdates = function() {
-                return Ne.info("getUpdates called"), ye = u.get().then(function(e) {
-                    return _e = e.data, Ne.info("UpdatesService - got update response", _e), _e.updates ? re(_e.updates) : l.reject("no updates available")
+            }, ye.getUpdates = function() {
+                return Le.info("getUpdates called"), be = u.get().then(function(e) {
+                    return we = e.data, Le.info("UpdatesService - got update response", we), we.updates ? oe(we.updates) : l.reject("no updates available")
                 }).catch(function(e) {
-                    return Ne.error("error getting driver updates:data ", e.data, " status:", e.status), l.reject(e.data)
+                    return Le.error("error getting driver updates:data ", e.data, " status:", e.status), l.reject(e.data)
                 }).finally(function() {
-                    ye = void 0
-                }), ye.then(function(e) {
+                    be = void 0
+                }), be.then(function(e) {
                     e && e.forEach(function(e) {
-                        te(e.version, e.isCRD)
+                        ne(e.version, e.isCRD)
                     })
-                }), ye
-            }, he.getUpdateDetails = function() {
-                return ye ? ye : be ? l.when(be) : _e ? l.reject("no updates available") : (Ne.info("getUpdates called in updatedetails"), he.getUpdates())
-            }, he.getInstalledDriver = function() {
-                return Ee ? Ee : Se ? l.when(Se) : (Ne.info("getInstalledDriver called"), ne())
-            }, he.initialize = function() {
-                Ne.info("updatesService.intiialize called"), G.onlineState && (Re = G.onlineState.online), i.on(C.ONLINE, ce), i.on(C.OFFLINE, ue), i.on(C.GFWSL_LOCALE_PARAMS_UPDATED, fe), i.on(C.GFWSL_GEOLOCAL_PARAMS_UPDATED, fe), i.on(C.GFWSL_SYS_PARAMS_UPDATED, fe), pe().finally(function() {
-                    ae(), he.getUpdateDetails(), A.initialize(), i.on(C.SYSTEMINFO_UPDATED, ie), m.register(f.UPDATESCAN_UPDATE, d.SCAN_UPDATE), m.register(y.DOWNLOAD_PROGRESS_STATUS, h.PROGRESS), m.register(E.INSTALLER_SHOW_FORM, s.INSTALL_FORM), m.register(E.INSTALLER_PROGRESS_UPDATE, s.INSTALL_FORM), i.on(C.LOCALE_CHANGED, oe), r.unsubScribeDriverInstallationNotificationRegister(j)
+                }), be
+            }, ye.getUpdateDetails = function() {
+                return be ? be : Ee ? l.when(Ee) : we ? l.reject("no updates available") : (Le.info("getUpdates called in updatedetails"), ye.getUpdates())
+            }, ye.getInstalledDriver = function() {
+                return Se ? Se : _e ? l.when(_e) : (Le.info("getInstalledDriver called"), re())
+            }, ye.initialize = function() {
+                Le.info("updatesService.intiialize called"), G.onlineState && (Ne = G.onlineState.online), i.on(C.ONLINE, ue), i.on(C.OFFLINE, de), i.on(C.GFWSL_LOCALE_PARAMS_UPDATED, me), i.on(C.GFWSL_GEOLOCAL_PARAMS_UPDATED, me), i.on(C.GFWSL_SYS_PARAMS_UPDATED, me), i.on(x.CONNECT, V), ge().finally(function() {
+                    se(), ye.getUpdateDetails(), A.initialize(), i.on(C.SYSTEMINFO_UPDATED, ae), m.register(f.UPDATESCAN_UPDATE, d.SCAN_UPDATE), m.register(y.DOWNLOAD_PROGRESS_STATUS, h.PROGRESS), m.register(E.INSTALLER_SHOW_FORM, s.INSTALL_FORM), m.register(E.INSTALLER_PROGRESS_UPDATE, s.INSTALL_FORM), i.on(C.LOCALE_CHANGED, ie), r.unsubScribeDriverInstallationNotificationRegister(Y)
                 })
-            }, i.on(s.INSTALL_DONE, oe), i.on(d.SCAN_UPDATE, function(e) {
-                Ne.info("UpdatesService - got socket event  SCAN_UPDATE - ", e), e === p.STARTED ? i.trigger(d.SCAN_STARTED) : e === p.FINISHED ? (i.trigger(d.SCAN_FINISHED), he.manualCheckForUpdate = !1) : e === p.FAILED && (i.trigger(d.SCAN_FAILED), he.manualCheckForUpdate = !1)
+            }, i.on(s.INSTALL_DONE, ie), i.on(d.SCAN_UPDATE, function(e) {
+                Le.info("UpdatesService - got socket event  SCAN_UPDATE - ", e), e === p.STARTED ? i.trigger(d.SCAN_STARTED) : e === p.FINISHED ? (i.trigger(d.SCAN_FINISHED), ye.manualCheckForUpdate = !1) : e === p.FAILED && (i.trigger(d.SCAN_FAILED), ye.manualCheckForUpdate = !1)
             }), i.on(d.SCAN_STARTED, function(e) {
-                Ne.info("UpdatesService - SCAN_STARTED"), Te = Date.now(), he.scanCompleted = !1
+                Le.info("UpdatesService - SCAN_STARTED"), Ce = Date.now(), ye.scanCompleted = !1
             }), i.on(d.SCAN_FINISHED, function(e) {
-                Ce = Date.now(), Ne.info("Time taken to scan updates(ms):", Ce - Te), Ne.info("UpdatesService - SCAN_FINISHED"), be = void 0, _e = null, he.getUpdates(), z()
+                Ie = Date.now(), Le.info("Time taken to scan updates(ms):", Ie - Ce), Le.info("UpdatesService - SCAN_FINISHED"), Ee = void 0, we = null, ye.getUpdates(), B()
             }), i.on(d.SCAN_FAILED, function(e) {
-                Ne.error("UpdatesService - SCAN_FAILED"), he.manualCheckForUpdate = !1, be = void 0, _e = null, _.push(w.UPDATES_CHECK_FOR_DRIVER_UPDATES_FAILED), he.getUpdates(), z()
+                Le.error("UpdatesService - SCAN_FAILED"), ye.manualCheckForUpdate = !1, Ee = void 0, we = null, _.push(w.UPDATES_CHECK_FOR_DRIVER_UPDATES_FAILED), ye.getUpdates(), B()
             }), i.on(h.PROGRESS, function(e) {
                 var t = !1;
-                a.isUndefined(be) || be.forEach(function(n) {
+                a.isUndefined(Ee) || Ee.forEach(function(n) {
                     n.downloadStatus.taskId === e.taskId && (n.downloadStatus = e, t = !0)
-                }), !t && Se && Se.downloadStatus && Se.downloadStatus.taskId === e.taskId && (Se.downloadStatus = e, t = !0), t && (U(e), e.status === n.TASK_RUNNING ? Ne.info("DOWNLOAD_PROGRESS_STATUS - ", e.status, "%Complete", e.percentComplete, " tmRem", e.timeRemaining, " dwndSpd", e.downloadSpeed, " taskId ", e.taskId, "byteDn", e.bytesDone) : Ne.info("DOWNLOAD_PROGRESS_STATUS - ", e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_DISK_WRITE_FAIL || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS ? (i.trigger(h.FAILED, e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER ? _.push(w.UPDATES_DOWNLOAD_DRIVER_UNABLE_TO_REACH_SERVER) : _.push(w.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)) : e.status === n.TASK_COMPLETED && _.push(w.UPDATES_DOWNLOAD_DRIVER_SUCCESS))
-            }), he.sendResponseToInstaller = function(e) {
-                Ne.debug("UpdateService:sendResponseToInstaller - send response to installer ", e), b.changeState({}, e).then(function() {
-                    Ne.info("UpdateService - successfully sent response to installer")
+                }), !t && _e && _e.downloadStatus && _e.downloadStatus.taskId === e.taskId && (_e.downloadStatus = e, t = !0), t && (U(e), e.status === n.TASK_RUNNING ? Le.info("DOWNLOAD_PROGRESS_STATUS - ", e.status, "%Complete", e.percentComplete, " tmRem", e.timeRemaining, " dwndSpd", e.downloadSpeed, " taskId ", e.taskId, "byteDn", e.bytesDone) : Le.info("DOWNLOAD_PROGRESS_STATUS - ", e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_DISK_WRITE_FAIL || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS ? (i.trigger(h.FAILED, e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER ? _.push(w.UPDATES_DOWNLOAD_DRIVER_UNABLE_TO_REACH_SERVER) : _.push(w.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)) : e.status === n.TASK_COMPLETED && _.push(w.UPDATES_DOWNLOAD_DRIVER_SUCCESS))
+            }), ye.sendResponseToInstaller = function(e) {
+                Le.debug("UpdateService:sendResponseToInstaller - send response to installer ", e), b.changeState({}, e).then(function() {
+                    Le.info("UpdateService - successfully sent response to installer")
                 }).catch(function(e) {
-                    Ne.error("UpdateService - installersEndpoints.changeStatus failed", e)
+                    Le.error("UpdateService - installersEndpoints.changeStatus failed", e)
                 })
-            }, he.setDriverTypePreference = function(e) {
-                return a.isNull(De) || u.setDriverTypePreference.cancel(De), De = u.setDriverTypePreference({}, {
+            }, ye.setDriverTypePreference = function(e) {
+                return a.isNull(Me) || u.setDriverTypePreference.cancel(Me), Me = u.setDriverTypePreference({}, {
                     driverType: e
                 }).then(function(t) {
-                    return De = null, Ne.info("setDriverType status:", t), Me = e, _e = null, be = void 0, t.status
+                    return Me = null, Le.info("setDriverType status:", t), Oe = e, we = null, Ee = void 0, t.status
                 }).catch(function(e) {
-                    return De = null, Ne.error("failed to setDriverType", e), l.reject(e)
+                    return Me = null, Le.error("failed to setDriverType", e), l.reject(e)
                 })
-            }, he.getDriverTypePreference = function() {
-                return Me ? l.when(Me) : xe ? xe : pe()
-            }, he.isCRDFeatureSupported = function() {
-                return angular.isDefined(Oe) ? l.when(Oe) : ve()
-            }, he.getDriverInformation = function(e, t) {
+            }, ye.getDriverTypePreference = function() {
+                return Oe ? l.when(Oe) : De ? De : ge()
+            }, ye.isCRDFeatureSupported = function() {
+                return angular.isDefined(Re) ? l.when(Re) : he()
+            }, ye.getDriverInformation = function(e, t) {
                 return A.getDriverInformation(e, t)
-            }, r.setSendResponseToInstallerRegister(he.sendResponseToInstaller), r.setInvokeInstallationCallbackRegister(he.invokeInstallation), he.getInstallationDriverData = A.getInstallationDriverData, he.getDriverArticle = A.getArticleInformation
+            }, r.setSendResponseToInstallerRegister(ye.sendResponseToInstaller), r.setInvokeInstallationCallbackRegister(ye.invokeInstallation), ye.getInstallationDriverData = A.getInstallationDriverData, ye.getDriverArticle = A.getArticleInformation
         }]);
     t.updatesService = u
 }, , function(e, t, n) {
@@ -3324,11 +3328,11 @@ webpackJsonp([4], [function(e, t, n) {
     }), t.nodeService = void 0;
     var r = n(43);
     n(18), n(30), n(16);
-    var o = r.ngMainUtilsModule.service("nodeService", ["$log", "cefService", "dialogService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "eventAggregator", "SOCKETIO_EVENTS", "socketService", "GFECLIENT_CONFIG", "FATAL_ERRORS", "COMMON_DYNAMIC_REDIRECT", "localeService", "$window", function(e, t, n, r, o, i, a, s, l, c, u, d, f) {
-        function m(e, i) {
+    var o = r.ngMainUtilsModule.service("nodeService", ["$log", "cefService", "dialogService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "eventAggregator", "SOCKETIO_EVENTS", "socketService", "GFECLIENT_CONFIG", "FATAL_ERRORS", function(e, t, n, r, o, i, a, s, l, c) {
+        function u(e, i) {
             t.enableCloseButton(!0), r.push(o.GFE_NODE_FAILURE, e, {
                 anonymize: !0
-            }), E.info("display oops message with error:", e);
+            }), h.info("display oops message with error:", e);
             var a = i === c.socketReconnnectFail ? "l10n.errorRestartApplication" : "l10n.errorRestartPC";
             n.show("nv-dialog-message", {
                 title: "l10n.nvidiaGfeTitle",
@@ -3342,44 +3346,40 @@ webpackJsonp([4], [function(e, t, n) {
                     action: function() {
                         t.windowClose()
                     }
-                },
-                onLaunchFaq: function() {
-                    var e = u.BASE_URL + d.getCurrentLocaleWithUnderscore() + "&page=" + u.FAQ_DATA_POLICY;
-                    E.info("FAQs redirects to url:: ", e), f.open(e)
                 }
             })
         }
 
-        function p() {
+        function d() {
             s.setReconnectionAttempts(1 / 0)
         }
 
+        function f() {
+            s.setReconnectionAttempts(y.reconnectionAttempts)
+        }
+
+        function m(e) {
+            h.info("Successful reconnection attempt number: ", e), s.setReconnectionAttempts(y.reconnectionAttempts)
+        }
+
+        function p(e) {
+            h.info("socket event reconnecting attempt number: ", e)
+        }
+
         function g() {
-            s.setReconnectionAttempts(S.reconnectionAttempts)
+            h.info("socket event reconnect_failed"), u("socket event reconnect_failed", c.socketReconnnectFail)
         }
 
-        function v(e) {
-            E.info("Successful reconnection attempt number: ", e), s.setReconnectionAttempts(S.reconnectionAttempts)
+        function v() {
+            h.info("registering event listeners"), i.on(a.RECONNECT, m), i.on(a.RECONNECTING, p), i.on(a.RECONNECT_FAILED, g)
         }
-
-        function h(e) {
-            E.info("socket event reconnecting attempt number: ", e)
-        }
-
-        function y() {
-            E.info("socket event reconnect_failed"), m("socket event reconnect_failed", c.socketReconnnectFail)
-        }
-
-        function b() {
-            E.info("registering event listeners"), i.on(a.RECONNECT, v), i.on(a.RECONNECTING, h), i.on(a.RECONNECT_FAILED, y)
-        }
-        var E = e.getInstance("main.utils/nodeService"),
-            S = angular.merge({}, l.nodeService);
+        var h = e.getInstance("main.utils/nodeService"),
+            y = angular.merge({}, l.nodeService);
         return {
-            initialize: b,
-            showErrorMessage: m,
-            setReconnectionToInfinity: p,
-            setReconnectionToDefault: g
+            initialize: v,
+            showErrorMessage: u,
+            setReconnectionToInfinity: d,
+            setReconnectionToDefault: f
         }
     }]);
     t.nodeService = o
@@ -4089,13 +4089,15 @@ webpackJsonp([4], [function(e, t, n) {
             }
 
             function w(e, t) {
-                var r = n.getTourByName(e),
-                    o = r._getSteps();
-                t >= o.length && (t = o.length - 1), r.startAt(t).then(function(n) {
-                    P.info("tour launched", e, "step", t), A(e, t), C(r), O(e, t)
-                }).catch(function(n) {
-                    P.error("tour failed to launch", e, " stepOrder:", t, " error:", n, " steps count:", o.length)
-                })
+                var r = n.getTourByName(e);
+                if (r) {
+                    var o = r._getSteps();
+                    t >= o.length && (t = o.length - 1), r.startAt(t).then(function(n) {
+                        P.info("tour launched", e, "step", t), A(e, t), C(r), O(e, t)
+                    }).catch(function(n) {
+                        P.error("tour failed to launch", e, " stepOrder:", t, " error:", n, " steps count:", o.length)
+                    })
+                } else P.error("tour not found to launch", e, " stepOrder:", t)
             }
 
             function A(e, t) {
@@ -13329,7 +13331,7 @@ webpackJsonp([4], [function(e, t, n) {
                     core: {
                         displayName: "Anonymous",
                         primaryEmailVerified: true
-                    }
+            }
                 }
             });
         }]);
@@ -18496,92 +18498,92 @@ webpackJsonp([4], [function(e, t, n) {
         c = r(l),
         u = n(304),
         d = r(u),
-        f = s.ngUpdatesModule.controller("UpdatesDriverController", ["$scope", "$log", "TASK_STATUS", "$filter", "$timeout", "updatesService", "$state", "CHECK_FOR_UPDATE", "COMMON_EVENTS", "eventAggregator", "UPDATE_EVENTS", "DOWNLOAD_PROGRESS_STATUS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "DRIVER_TYPE", "dbService", "DB_NAMES", "INSTALLER_EVENTS", "toastService", "gfeService", "dbCacheService", "jarvisService", "SOCKETIO_EVENTS", "DOWNLOAD_TYPE", "DRIVERTYPE", "$templateCache", "productTourService", "PRODUCT_TOUR_NAMES", "PRODUCT_TOUR_EVENTS", "uiTourService", function(e, t, n, r, o, i, s, l, u, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R) {
-            function N(e, t) {
+        f = s.ngUpdatesModule.controller("UpdatesDriverController", ["$scope", "$log", "TASK_STATUS", "$filter", "$timeout", "updatesService", "$state", "CHECK_FOR_UPDATE", "COMMON_EVENTS", "eventAggregator", "UPDATE_EVENTS", "DOWNLOAD_PROGRESS_STATUS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "DRIVER_TYPE", "dbService", "DB_NAMES", "INSTALLER_EVENTS", "toastService", "gfeService", "dbCacheService", "jarvisService", "SOCKETIO_EVENTS", "DOWNLOAD_TYPE", "DRIVERTYPE", "$templateCache", "productTourService", "PRODUCT_TOUR_NAMES", "PRODUCT_TOUR_EVENTS", "uiTourService", "$document", "$interval", function(e, t, n, r, o, i, s, l, u, f, m, p, g, v, h, y, b, E, S, _, w, A, T, C, I, x, D, M, O, R, N, L) {
+            function k(e, t) {
                 var n = {
                     state: t,
                     version: e
                 };
-                oe.setItem(b.DRIVER_DOWNLOAD_STATE, n)
+                ae.setItem(b.DRIVER_DOWNLOAD_STATE, n)
             }
 
-            function L() {
-                if (!a.isNull(fe) && !a.isUndefined(fe) && !a.isUndefined(fe.version)) {
-                    var e = r("filter")(re.driverUpdateList, {
-                        version: fe.version
+            function P() {
+                if (!a.isNull(pe) && !a.isUndefined(pe) && !a.isUndefined(pe.version)) {
+                    var e = r("filter")(ie.driverUpdateList, {
+                        version: pe.version
                     });
-                    e && e.length > 0 ? (le.info("resume installation for recommended driver", fe.version), i.beginInstallation(e[0], fe.isCustomInstall, !0)) : (le.info("resume installation for installed driver", fe.version), i.beginInstallation(fe, fe.isCustomInstall, !0))
+                    e && e.length > 0 ? (ue.info("resume installation for recommended driver", pe.version), i.beginInstallation(e[0], pe.isCustomInstall, !0)) : (ue.info("resume installation for installed driver", pe.version), i.beginInstallation(pe, pe.isCustomInstall, !0))
                 }
-                fe = null
+                pe = null
             }
 
-            function k() {
-                if (le.info("check for auto download Driver"), P()) {
-                    var e = re.driverUpdateList;
-                    if (re.driverUpdateList.length > 1 && (e = r("filter")(re.driverUpdateList, {
+            function G() {
+                if (ue.info("check for auto download Driver"), F()) {
+                    var e = ie.driverUpdateList;
+                    if (ie.driverUpdateList.length > 1 && (e = r("filter")(ie.driverUpdateList, {
                             isBeta: !1
-                        })), e && e[0] && (re.isStatusPending(e[0].downloadStatus.status) || re.isStatusPaused(e[0].downloadStatus.status)) && e[0].downloadStatus.failureCount < 3) {
-                        le.info("autodownloadDriver for driver updates", e);
+                        })), e && e[0] && (ie.isStatusPending(e[0].downloadStatus.status) || ie.isStatusPaused(e[0].downloadStatus.status)) && e[0].downloadStatus.failureCount < 3) {
+                        ue.info("autodownloadDriver for driver updates", e);
                         var t;
-                        oe.getItem(b.DRIVER_DOWNLOAD_STATE).then(function(e) {
+                        ae.getItem(b.DRIVER_DOWNLOAD_STATE).then(function(e) {
                             t = e
                         }, function(e) {
-                            le.error("failed to read driverDownloadState key in database: ", e)
+                            ue.error("failed to read driverDownloadState key in database: ", e)
                         }).finally(function() {
                             var n = !0;
-                            !t || t.version !== e[0].version || "paused" !== t.state && "stop" !== t.state || (n = !1), n && re.startDownload(e[0])
+                            !t || t.version !== e[0].version || "paused" !== t.state && "stop" !== t.state || (n = !1), n && ie.startDownload(e[0])
                         })
                     }
                 }
             }
 
-            function P() {
-                return re.driverUpdateList && (!ne && a.isNull(fe) && !pe || me)
+            function F() {
+                return ie.driverUpdateList && (!oe && a.isNull(pe) && !ve || ge)
             }
 
-            function G() {
-                if (ne) {
-                    if (ve === ge.FAILED || re.driverUpdateList && re.driverUpdateList.length > 0) re.installedDriverHeaderText = se("l10n.currentlyInstalled");
+            function U() {
+                if (oe) {
+                    if (Ee === he.FAILED || ie.driverUpdateList && ie.driverUpdateList.length > 0) ie.installedDriverHeaderText = ce("l10n.currentlyInstalled");
                     else {
-                        var e = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
-                        re.installedDriverHeaderText = se(e)
+                        var e = JSON.parse(ie.currentlySelectedDriver) === ie.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
+                        ie.installedDriverHeaderText = ce(e)
                     }
-                    re.installedDriverHeaderText = re.installedDriverHeaderText.toUpperCase()
-                } else re.installedDriverHeaderText = ""
+                    ie.installedDriverHeaderText = ie.installedDriverHeaderText.toUpperCase()
+                } else ie.installedDriverHeaderText = ""
             }
 
-            function F(e) {
+            function V(e) {
                 i.getUpdateDetails().then(function(e) {
-                    if (he && (!re.driverUpdateList || e && e[0] && re.driverUpdateList[0] && (re.driverUpdateList[0].isCRD !== e[0].isCRD || re.driverUpdateList[0].version !== e[0].version))) {
-                        var t = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.newGRDDriverAvailable" : "l10n.newCRDDriverAvailable";
+                    if (Se && (!ie.driverUpdateList || e && e[0] && ie.driverUpdateList[0] && (ie.driverUpdateList[0].isCRD !== e[0].isCRD || ie.driverUpdateList[0].version !== e[0].version))) {
+                        var t = JSON.parse(ie.currentlySelectedDriver) === ie.driverType.GRD ? "l10n.newGRDDriverAvailable" : "l10n.newCRDDriverAvailable";
                         S.show({
                             textContent: r("translate")(t),
                             icon: "file_download"
                         })
                     } else S.isOpen() && S.cancel();
-                    le.debug("driver updates list is: ", e, re.driverUpdateList), re.driverUpdateList = e, k()
+                    ue.debug("driver updates list is: ", e, ie.driverUpdateList), ie.driverUpdateList = e, G()
                 }).catch(function(e) {
-                    if (re.installedDriver && he) {
-                        var t = JSON.parse(re.currentlySelectedDriver) === re.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
+                    if (ie.installedDriver && Se) {
+                        var t = JSON.parse(ie.currentlySelectedDriver) === ie.driverType.GRD ? "l10n.latestGeforceUpdate" : "l10n.latestGeforceCRDUpdate";
                         S.show({
                             textContent: r("translate")(t),
                             icon: "check"
                         })
                     } else S.isOpen() && S.cancel();
-                    re.driverUpdateList = null, le.error("getUpdates failed with error: ", e)
+                    ie.driverUpdateList = null, ue.error("getUpdates failed with error: ", e)
                 }).finally(function() {
-                    le.info("refreshAvailableUpdates finally IN"), L(), re.installedDriver = ne, e && (le.info("call cb", e), e()), re.anydriverInfoOrUpdatesFound = !(!re.driverUpdateList && !re.installedDriver), G(), ae = !0, he = !1, le.info("refreshAvailableUpdates finally OUT")
+                    ue.info("refreshAvailableUpdates finally IN"), P(), ie.installedDriver = oe, e && (ue.info("call cb", e), e()), ie.anydriverInfoOrUpdatesFound = !(!ie.driverUpdateList && !ie.installedDriver), U(), le = !0, Se = !1, ue.info("refreshAvailableUpdates finally OUT")
                 })
             }
 
-            function U(e) {
+            function z(e) {
                 S.show({
                     textContent: e,
                     icon: "error_outline"
                 })
             }
 
-            function V(e) {
+            function B(e) {
                 if (e) switch (e.status) {
                     case n.TASK_FAILED_UNABLE_TO_REACH_SERVER:
                     case n.TASK_CHECK_SUM_ERROR:
@@ -18589,129 +18591,135 @@ webpackJsonp([4], [function(e, t, n) {
                     case n.TASK_SIGNATURE_VERIFICATION_FAILS:
                     case n.TASK_COMPLETED:
                     case n.TASK_DOWNLOAD_ERROR:
-                        f.off(T.CONNECT, z), f.off(p.PROGRESS, V)
+                        f.off(T.CONNECT, $), f.off(p.PROGRESS, B)
                 }
             }
 
-            function z() {
-                le.info("downloader update last state on reconnect"), re.refreshUI()
-            }
-
-            function B() {
-                re.updateState === l && i.canCheckForUpdate() && a.isNull(fe) ? i.checkForUpdates() : i.scanCompleted && a.isNull(fe) ? (le.info("scan completed, refreshing state"), F()) : i.manualCheckForUpdate && !i.scanCompleted && a.isNull(fe) && (S.showProgress({
-                    textContent: r("translate")("l10n.checkingforUpdates")
-                }), he = !0)
-            }
-
             function $() {
-                o.cancel(ye), ye = o(function() {
-                    D.startDriverTour(), o.cancel(ye)
-                })
+                ue.info("downloader update last state on reconnect"), ie.refreshUI()
             }
 
-            function W(e) {
-                e !== M.DRIVER && (H(), $())
+            function W() {
+                ie.updateState === l && i.canCheckForUpdate() && a.isNull(pe) ? i.checkForUpdates() : i.scanCompleted && a.isNull(pe) ? (ue.info("scan completed, refreshing state"), V()) : i.manualCheckForUpdate && !i.scanCompleted && a.isNull(pe) && (S.showProgress({
+                    textContent: r("translate")("l10n.checkingforUpdates")
+                }), Se = !0)
             }
 
             function H() {
-                f.off(O.PAUSED, W), f.off(O.END, W)
+                L.cancel(_e);
+                var e = 0;
+                _e = L(function() {
+                    var t = angular.element(N[0].getElementById("driver-icon"));
+                    t[0] ? (D.startDriverTour(), L.cancel(_e)) : (ue.info("check for Driver product tour html element", e), e++), e >= ye && (L.cancel(_e), ue.info("Driver product tour id not found"))
+                }, be)
             }
 
-            function j() {
-                f.on(O.PAUSED, W), f.on(O.END, W)
+            function j(e) {
+                e !== M.DRIVER && (Y(), H())
             }
 
             function Y() {
-                re.installedDriver = null, ne = null, i.getInstalledDriver().then(function(e) {
-                    ne = e, ne.isExpanded = !1, ne.reInstalledDriver = ne.downloadStatus && re.isDownloadStarted(ne.downloadStatus.status) || ne.reInstalledDriver || !1, le.info("getInstalledDriver get called", e)
+                f.off(O.PAUSED, j), f.off(O.END, j)
+            }
+
+            function q() {
+                f.on(O.PAUSED, j), f.on(O.END, j)
+            }
+
+            function K() {
+                ie.installedDriver = null, oe = null, i.getInstalledDriver().then(function(e) {
+                    oe = e, oe.isExpanded = !1, oe.reInstalledDriver = oe.downloadStatus && ie.isDownloadStarted(oe.downloadStatus.status) || oe.reInstalledDriver || !1, ue.info("getInstalledDriver get called", e)
                 }).catch(function(e) {
-                    le.error("getInstalledDriver failed with error: ", e)
+                    ue.error("getInstalledDriver failed with error: ", e)
                 }).finally(function() {
-                    re.refreshUI(), o.cancel(de), de = o(function() {
-                        B()
+                    ie.refreshUI(), o.cancel(me), me = o(function() {
+                        W()
                     })
                 })
             }
 
-            function q() {
+            function Z() {
                 i.isCRDFeatureSupported().then(function(e) {
-                    e && (re.CRDSupported = e, D.isTourRunning() ? j() : $())
+                    e && (ie.CRDSupported = e, D.isTourRunning() ? q() : H())
                 }).catch(function(e) {
-                    re.CRDSupported = !1
+                    ie.CRDSupported = !1
                 })
             }
 
-            function K() {
-                te(), Y(), i.setUpdatesListener(re.refreshUI), q()
-            }
-
-            function Z() {
-                ve = ge.SCANNING
-            }
-
             function Q() {
-                he = !1, U(se("l10n.unableToConnectToNvidia")), ve = ge.FAILED
+                re(), K(), i.setUpdatesListener(ie.refreshUI), Z()
             }
 
             function X() {
-                ve = ge.FINISHED
+                Ee = he.SCANNING
             }
 
-            function J(e) {
-                var t = re.installedDriver && re.installedDriver.downloadStatus.taskId == e.taskId;
-                if (t && (re.installedDriver.reInstalledDriver = !1), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER) U(se("l10n.downloadPausedUnableToReachNvidia")), t && (re.installedDriver.reInstalledDriver = !0);
-                else if (e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS) U(se("l10n.driverDownloadFailed"));
-                else if (e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER) U(se("l10n.unableToConnectToNvidia"));
+            function J() {
+                Se = !1, z(ce("l10n.unableToConnectToNvidia")), Ee = he.FAILED
+            }
+
+            function ee() {
+                Ee = he.FINISHED
+            }
+
+            function te(e) {
+                var t = ie.installedDriver && ie.installedDriver.downloadStatus.taskId == e.taskId;
+                if (t && (ie.installedDriver.reInstalledDriver = !1), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER) z(ce("l10n.downloadPausedUnableToReachNvidia")), t && (ie.installedDriver.reInstalledDriver = !0);
+                else if (e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS) z(ce("l10n.driverDownloadFailed"));
+                else if (e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER) z(ce("l10n.unableToConnectToNvidia"));
                 else if (e.status === n.TASK_DISK_WRITE_FAIL) {
                     var o = r("convertBytesToKBMBGB")(e.totalBytes);
                     if (e.downloadedLocation.length > 0) {
                         var i = e.downloadedLocation.split(":")[0];
                         i = i.toUpperCase();
-                        var a = se("l10n.downloadDiskSpace", {
+                        var a = ce("l10n.downloadDiskSpace", {
                             value: o,
                             drive: i
                         });
-                        U(a)
+                        z(a)
                     }
                 }
             }
 
-            function ee() {
-                le.info("got online event"), Y()
+            function ne() {
+                ue.info("got online event"), K()
             }
 
-            function te() {
+            function re() {
                 i.getDriverTypePreference().then(function(e) {
-                    le.info("getDriverTypePreference is", e), re.currentlySelectedDriver = e
+                    ue.info("getDriverTypePreference is", e), ie.currentlySelectedDriver = e
                 }).catch(function(e) {
-                    le.error("getDriverTypePreference failed with error: ", e), re.currentlySelectedDriver = re.driverType.GRD
+                    ue.error("getDriverTypePreference failed with error: ", e), ie.currentlySelectedDriver = ie.driverType.GRD
                 })
             }
-            var ne, re = this,
-                oe = y.getGlobalStore(b.GLOBAL_STORE),
-                ie = Date.now(),
-                ae = !1;
-            re.driverUpdateList = null, re.installedDriver = null, re.taskStatus = n;
-            var se = r("translate"),
-                le = t.getInstance("main.updates/updatesdrivercontroller");
-            re.driverTypeConstant = h;
-            var ce, ue, de, fe = null,
-                me = !1,
-                pe = !1;
-            le.info("controller created"), re.installedDriverHeaderText = "";
-            var ge = {
+            var oe, ie = this,
+                ae = y.getGlobalStore(b.GLOBAL_STORE),
+                se = Date.now(),
+                le = !1;
+            ie.driverUpdateList = null, ie.installedDriver = null, ie.taskStatus = n;
+            var ce = r("translate"),
+                ue = t.getInstance("main.updates/updatesdrivercontroller");
+            ie.driverTypeConstant = h;
+            var de, fe, me, pe = null,
+                ge = !1,
+                ve = !1;
+            ue.info("controller created"), ie.installedDriverHeaderText = "";
+            var he = {
                 NOT_STARTED: "NOT_STARTED",
                 FAILED: "FAILED",
                 FINISHED: "FINISHED",
                 SCANNING: "SCANNING"
             };
-            re.driverType = I, x.put("tour-step-popup.html", c.default), x.put("tour-step-template.html", d.default);
-            var ve = ge.NOT_STARTED;
-            re.user = A.getLoggedInUser(), re.viewState = w.getCachedUserItem(re.user.userId, b.VIEW_STORE, b.VIEW_STATE), re.anydriverInfoOrUpdatesFound = !0;
-            var he = !1;
-            re.CRDSupported = !1;
-            var ye;
-            re.currentlySelectedDriver = re.driverType.GRD, re.getProgressString = function(e) {
+            ie.driverType = I;
+            var ye = 3,
+                be = 1e3;
+            x.put("tour-step-popup.html", c.default), x.put("tour-step-template.html", d.default);
+            var Ee = he.NOT_STARTED;
+            ie.user = A.getLoggedInUser(), ie.viewState = w.getCachedUserItem(ie.user.userId, b.VIEW_STORE, b.VIEW_STATE), ie.anydriverInfoOrUpdatesFound = !0;
+            var Se = !1;
+            ie.CRDSupported = !1;
+            var _e;
+            ie.currentlySelectedDriver = ie.driverType.GRD, ie.getProgressString = function(e) {
                 var t = "";
                 if (e && e.downloadStatus) {
                     var n = r("convertBytesToKBMBGB")(e.downloadStatus.totalBytes),
@@ -18719,106 +18727,106 @@ webpackJsonp([4], [function(e, t, n) {
                     t = o + "/" + n
                 }
                 return t
-            }, re.startDownload = function(e) {
+            }, ie.startDownload = function(e) {
                 if (_.onlineState && _.onlineState.online === !1) S.showOffline();
                 else {
-                    var t = e.isCRD === re.driverType.CRD ? C.CRD_DRIVER_DOWNLOAD : C.GRD_DRIVER_DOWNLOAD;
+                    var t = e.isCRD === ie.driverType.CRD ? C.CRD_DRIVER_DOWNLOAD : C.GRD_DRIVER_DOWNLOAD;
                     i.startDownload(e.version, e.downloadURL, t).then(function(t) {
-                        le.info("download started", t.data), f.on(T.CONNECT, z), f.on(p.PROGRESS, V), N(e.version, "start"), e.downloadStatus = t.data
+                        ue.info("download started", t.data), f.on(T.CONNECT, $), f.on(p.PROGRESS, B), k(e.version, "start"), e.downloadStatus = t.data
                     }).catch(function(t) {
-                        le.error("download failed to start", t), U(se("l10n.driverDownloadFailed")), re.installedDriver && re.installedDriver.version === e.version && (re.installedDriver.reInstalledDriver = !1), g.push(v.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)
+                        ue.error("download failed to start", t), z(ce("l10n.driverDownloadFailed")), ie.installedDriver && ie.installedDriver.version === e.version && (ie.installedDriver.reInstalledDriver = !1), g.push(v.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)
                     })
                 }
-            }, re.pauseDownload = function(e) {
+            }, ie.pauseDownload = function(e) {
                 i.pauseDownload(e.downloadStatus.taskId).then(function(t) {
-                    N(e.version, "paused"), e.downloadStatus = t.data, le.info("download paused", e.downloadStatus)
+                    k(e.version, "paused"), e.downloadStatus = t.data, ue.info("download paused", e.downloadStatus)
                 }).catch(function(e) {
-                    le.error("download failed to pause with error", e)
+                    ue.error("download failed to pause with error", e)
                 })
-            }, re.resumeDownload = function(e) {
+            }, ie.resumeDownload = function(e) {
                 i.resumeDownload(e.downloadStatus.taskId).then(function(t) {
-                    e.downloadStatus = t.data, N(e.version, "resume"), le.info("download resume", e.downloadStatus)
+                    e.downloadStatus = t.data, k(e.version, "resume"), ue.info("download resume", e.downloadStatus)
                 }).catch(function(e) {
-                    le.error("download failed to resume with error", e)
+                    ue.error("download failed to resume with error", e)
                 })
-            }, re.stopDownload = function(e, t) {
-                t && (re.installedDriver.reInstalledDriver = !1), i.stopDownload(e.downloadStatus.taskId).then(function(t) {
-                    f.off(T.CONNECT, z), f.off(p.PROGRESS, V), e.downloadStatus = t.data, N(e.version, "stop"), le.info("download stoped", e.downloadStatus)
+            }, ie.stopDownload = function(e, t) {
+                t && (ie.installedDriver.reInstalledDriver = !1), i.stopDownload(e.downloadStatus.taskId).then(function(t) {
+                    f.off(T.CONNECT, $), f.off(p.PROGRESS, B), e.downloadStatus = t.data, k(e.version, "stop"), ue.info("download stoped", e.downloadStatus)
                 }).catch(function(e) {
-                    le.error("download failed to stop with error", e)
+                    ue.error("download failed to stop with error", e)
                 })
-            }, re.startInstall = function(e, t) {
+            }, ie.startInstall = function(e, t) {
                 i.beginInstallation(e, t, !1)
-            }, re.isDownloadStarted = function(e) {
+            }, ie.isDownloadStarted = function(e) {
                 return e === n.TASK_PAUSED || e === n.TASK_RUNNING || e === n.TASK_RETRY || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
-            }, re.isExtractionStarted = function(e) {
+            }, ie.isExtractionStarted = function(e) {
                 return e === n.TASK_EXTRACTING
-            }, re.isStatusPaused = function(e) {
+            }, ie.isStatusPaused = function(e) {
                 return e === n.TASK_PAUSED || e === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER
-            }, re.isStatusCompleted = function(e) {
+            }, ie.isStatusCompleted = function(e) {
                 return e === n.TASK_COMPLETED
-            }, re.isStatusPending = function(e) {
+            }, ie.isStatusPending = function(e) {
                 return e === n.TASK_NOT_STARTED || e === n.TASK_CHECK_SUM_ERROR || e === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e === n.TASK_SIGNATURE_VERIFICATION_FAILS || e === n.TASK_DISK_WRITE_FAIL
-            }, re.updateDriverExpandedState = function() {
-                var e = re.viewState.driverExpandState || {};
-                le.debug("driverExpandState IN", e), ne && (angular.isDefined(e[re.installedDriver.version]) ? ne.isExpanded = e[re.installedDriver.version] : re.driverUpdateList || (re.installedDriver.isExpanded = ne.isExpanded = !0), e[re.installedDriver.version] = ne.isExpanded), re.driverUpdateList && 1 === re.driverUpdateList.length && (re.driverUpdateList[0].isExpanded = e[re.driverUpdateList[0].version] !== !1, e[re.driverUpdateList[0].version] = re.driverUpdateList[0].isExpanded), re.viewState.driverExpandState = e, re.viewState.persist_(), le.debug("driverExpandState OUT", e)
-            }, re.isScanCompleted = function() {
+            }, ie.updateDriverExpandedState = function() {
+                var e = ie.viewState.driverExpandState || {};
+                ue.debug("driverExpandState IN", e), oe && (angular.isDefined(e[ie.installedDriver.version]) ? oe.isExpanded = e[ie.installedDriver.version] : ie.driverUpdateList || (ie.installedDriver.isExpanded = oe.isExpanded = !0), e[ie.installedDriver.version] = oe.isExpanded), ie.driverUpdateList && 1 === ie.driverUpdateList.length && (ie.driverUpdateList[0].isExpanded = e[ie.driverUpdateList[0].version] !== !1, e[ie.driverUpdateList[0].version] = ie.driverUpdateList[0].isExpanded), ie.viewState.driverExpandState = e, ie.viewState.persist_(), ue.debug("driverExpandState OUT", e)
+            }, ie.isScanCompleted = function() {
                 return i.scanCompleted
-            }, re.onExpand = function(e) {
-                o.cancel(ce), ce = o(function() {
-                    e.isExpanded = !0, re.viewState.driverExpandState && (re.viewState.driverExpandState[e.version] = !0, re.viewState.persist_())
+            }, ie.onExpand = function(e) {
+                o.cancel(de), de = o(function() {
+                    e.isExpanded = !0, ie.viewState.driverExpandState && (ie.viewState.driverExpandState[e.version] = !0, ie.viewState.persist_())
                 })
-            }, re.onCollapse = function(e) {
-                o.cancel(ue), ue = o(function() {
-                    e.isExpanded = !1, re.viewState.driverExpandState && (re.viewState.driverExpandState[e.version] = !1, re.viewState.persist_())
+            }, ie.onCollapse = function(e) {
+                o.cancel(fe), fe = o(function() {
+                    e.isExpanded = !1, ie.viewState.driverExpandState && (ie.viewState.driverExpandState[e.version] = !1, ie.viewState.persist_())
                 })
-            }, re.refreshUI = function() {
-                F(re.updateDriverExpandedState)
-            }, re.updateState = s.params.updateState, fe = s.params.resumeDriverInstallation, me = s.params.startDriverDownload, fe && oe.setItem(b.DRIVER_INSTALL_STATE, null), re.isCheckForUpdateDisabled = function() {
-                return !i.canCheckForUpdate() || ve === ge.SCANNING
-            }, re.isInstallDisabled = function() {
-                return he
-            }, re.onCheckForUpdate = function() {
+            }, ie.refreshUI = function() {
+                V(ie.updateDriverExpandedState)
+            }, ie.updateState = s.params.updateState, pe = s.params.resumeDriverInstallation, ge = s.params.startDriverDownload, pe && ae.setItem(b.DRIVER_INSTALL_STATE, null), ie.isCheckForUpdateDisabled = function() {
+                return !i.canCheckForUpdate() || Ee === he.SCANNING
+            }, ie.isInstallDisabled = function() {
+                return Se
+            }, ie.onCheckForUpdate = function() {
                 _.onlineState && _.onlineState.online === !1 ? S.showOffline() : i.canCheckForUpdate() && (S.showProgress({
                     textContent: r("translate")("l10n.checkingforUpdates")
-                }), i.checkForUpdates(!0), he = !0)
-            }, K(), re.getDownloadStatusMessage = function(e) {
+                }), i.checkForUpdates(!0), Se = !0)
+            }, Q(), ie.getDownloadStatusMessage = function(e) {
                 var t = "";
-                return e === n.TASK_EXTRACTING ? t = r("translate")("l10n.preparingPackage") : e === n.TASK_RUNNING ? t = se("l10n.downloading") : re.isStatusPaused(e) ? t = se("l10n.paused") : e === n.TASK_RETRY && (t = se("l10n.retrying")), t
-            }, re.getAvlDriverTelemetryEventName = function(t) {
+                return e === n.TASK_EXTRACTING ? t = r("translate")("l10n.preparingPackage") : e === n.TASK_RUNNING ? t = ce("l10n.downloading") : ie.isStatusPaused(e) ? t = ce("l10n.paused") : e === n.TASK_RETRY && (t = ce("l10n.retrying")), t
+            }, ie.getAvlDriverTelemetryEventName = function(t) {
                 return t ? e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_BETA_DRIVER : e.$root.telemetryEventNames.UPDATES_VIEW_AVAILABLE_DRIVER
-            }, re.getAvlDriverType = function(e) {
+            }, ie.getAvlDriverType = function(e) {
                 return e ? h.AVAILABLE_BETA : h.AVAILABLE
-            }, re.canToggleDownload = function(e, t) {
+            }, ie.canToggleDownload = function(e, t) {
                 var n = [],
-                    r = re.isStatusPending(e);
+                    r = ie.isStatusPending(e);
                 if (r) {
-                    if (ne && ne.downloadStatus && ne.version !== t && re.isDownloadStarted(ne.downloadStatus.status)) return !1;
-                    re.driverUpdateList && (n = a.filter(re.driverUpdateList, function(e) {
-                        return !(e.version === t || !re.isDownloadStarted(e.downloadStatus.status))
+                    if (oe && oe.downloadStatus && oe.version !== t && ie.isDownloadStarted(oe.downloadStatus.status)) return !1;
+                    ie.driverUpdateList && (n = a.filter(ie.driverUpdateList, function(e) {
+                        return !(e.version === t || !ie.isDownloadStarted(e.downloadStatus.status))
                     }))
                 }
-                return 0 === n.length && r && !he
-            }, re.reInstalledDriverMenuItemDisabled = function() {
-                return ne && ne.downloadStatus && re.isStatusPending(ne.downloadStatus.status) && !re.canToggleDownload(ne.downloadStatus.status, ne.version)
-            }, re.performReinstalledDriver = function() {
-                re.installedDriver && (re.installedDriver.reInstalledDriver = !0, re.isStatusPending(ne.downloadStatus.status) && re.startDownload(ne))
-            }, re.showReInstallButtons = function() {
-                return re.installedDriver.reInstalledDriver
-            }, re.showLoadingIndicator = function() {
-                return ae === !1 && Date.now() - ie > 500
-            }, re.onRecommendedDriverTypeChanged = function(e) {
-                re.currentlySelectedDriver != e && (re.currentlySelectedDriver = e, pe = !0, le.info("onRecommendedDriverTypeChanged ", re.currentlySelectedDriver), i.setDriverTypePreference(e).then(function() {
-                    re.onCheckForUpdate()
+                return 0 === n.length && r && !Se
+            }, ie.reInstalledDriverMenuItemDisabled = function() {
+                return oe && oe.downloadStatus && ie.isStatusPending(oe.downloadStatus.status) && !ie.canToggleDownload(oe.downloadStatus.status, oe.version)
+            }, ie.performReinstalledDriver = function() {
+                ie.installedDriver && (ie.installedDriver.reInstalledDriver = !0, ie.isStatusPending(oe.downloadStatus.status) && ie.startDownload(oe))
+            }, ie.showReInstallButtons = function() {
+                return ie.installedDriver.reInstalledDriver
+            }, ie.showLoadingIndicator = function() {
+                return le === !1 && Date.now() - se > 500
+            }, ie.onRecommendedDriverTypeChanged = function(e) {
+                ie.currentlySelectedDriver != e && (ie.currentlySelectedDriver = e, ve = !0, ue.info("onRecommendedDriverTypeChanged ", ie.currentlySelectedDriver), i.setDriverTypePreference(e).then(function() {
+                    ie.onCheckForUpdate()
                 }))
-            }, re.onTourStepShown = function() {
+            }, ie.onTourStepShown = function() {
                 D.onStepShown()
-            }, f.on(E.INSTALL_DONE, Y), f.on(p.FAILED, J), f.on(m.SCAN_STARTED, Z), f.on(m.SCAN_FAILED, Q), f.on(u.ONLINE, ee), f.on(m.SCAN_FINISHED, X), f.on(m.INSTALLED_DRIVER_UPDATE, Y), e.$on("$destroy", function() {
+            }, f.on(E.INSTALL_DONE, K), f.on(p.FAILED, te), f.on(m.SCAN_STARTED, X), f.on(m.SCAN_FAILED, J), f.on(u.ONLINE, ne), f.on(m.SCAN_FINISHED, ee), f.on(m.INSTALLED_DRIVER_UPDATE, K), e.$on("$destroy", function() {
                 if (D.isTourRunning(M.DRIVER)) {
                     var e = R.getTourByName(M.DRIVER);
                     e.end()
                 }
-                H(), f.off(E.INSTALL_DONE, Y), f.off(m.SCAN_STARTED, Z), f.off(m.SCAN_FAILED, Q), f.off(m.SCAN_FINISHED, X), f.off(p.FAILED, J), f.off(u.ONLINE, ee), f.off(m.INSTALLED_DRIVER_UPDATE, Y), o.cancel(ue), o.cancel(ce), o.cancel(de), ue = null, ce = null, i.removeUpdatesListener(re.refreshUI)
+                Y(), f.off(E.INSTALL_DONE, K), f.off(m.SCAN_STARTED, X), f.off(m.SCAN_FAILED, J), f.off(m.SCAN_FINISHED, ee), f.off(p.FAILED, te), f.off(u.ONLINE, ne), f.off(m.INSTALLED_DRIVER_UPDATE, K), o.cancel(fe), o.cancel(de), o.cancel(me), fe = null, de = null, i.removeUpdatesListener(ie.refreshUI)
             })
         }]);
     t.updatesDriverController = f
@@ -20485,7 +20493,8 @@ webpackJsonp([4], [function(e, t, n) {
             C.activityItemLimitTo = 7, C.activityLog = null, C.headerDate = function(e) {
                 return I[e]
             }, C.openOSCGallery = function() {
-                s.push(u.ACTIVITY_LOG_VIEW_GALLERY), o.openOscGallery()
+                s.push(u.ACTIVITY_LOG_VIEW_GALLERY),
+                    o.openOscGallery()
             }, C.shareDisabledFallback = function() {
                 return !w() && !O
             }, C.shareReady = function() {
@@ -21476,7 +21485,7 @@ webpackJsonp([4], [function(e, t, n) {
 }, function(e, t) {
     e.exports = '<div class="md-primary md-hue-2 foreground" ng-bind-html=dialogHtmlCtrl.nvDialogModel.html></div> '
 }, function(e, t) {
-    e.exports = '<div class=dialog-message layout-align="start start" layout=column> <div layout=row> <md-icon material-icons class="md-32 font-size-32 margin-top-zero" color-white-hue-4>error</md-icon> <div layout=column class=margin-left-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.somethingWrong></span> <span class="md-primary foreground" color-white-hue-4 translate={{dialogMessageCtrl.nvDialogModel.text}}></span> <div layout=row class=margin-top-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.errorCode></span> <span>&nbsp;</span> <span class="md-primary foreground" color-white-hue-4>{{dialogMessageCtrl.nvDialogModel.errorCode}}</span> <a class="md-default-theme margin-left-16" ng-click=dialogMessageCtrl.nvDialogModel.onLaunchFaq() translate=l10n.learnMore> </a> </div> </div> </div> </div> '
+    e.exports = '<div class=dialog-message layout-align="start start" layout=column> <div layout=row> <md-icon material-icons class="md-32 font-size-32 margin-top-zero" color-white-hue-4>error</md-icon> <div layout=column class=margin-left-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.somethingWrong></span> <span class="md-primary foreground" color-white-hue-4 translate={{dialogMessageCtrl.nvDialogModel.text}}></span> <div layout=row class=margin-top-20> <span class="md-primary foreground" color-white-hue-4 translate=l10n.errorCode></span> <span>&nbsp;</span> <span class="md-primary foreground" color-white-hue-4>{{dialogMessageCtrl.nvDialogModel.errorCode}}</span> </div> </div> </div> </div> '
 }, function(e, t) {
     e.exports = '<p class="md-primary md-hue-2 foreground" translate={{dialogTextCtrl.nvDialogModel.text}} translate-values={{dialogTextCtrl.nvDialogModel.translateValues}}></p> '
 }, function(e, t) {
