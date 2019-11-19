@@ -5895,9 +5895,8 @@ webpackJsonp([4], [function(e, t, n) {
                 localNodeInfo: ["$log", "$q", "cefService", "localSdk", "nvAccountEndpoints", "ugcLib", function(e, t, n, r, o, i) {
                     var a = e.getInstance("/main/uiRouter/main/resolve/localNodeInfo");
                     return a.info("Requested"), n.localNodeInfo().then(function(e) {
-                        a.info("local nodeinfo Resolved", e);
                         var t = JSON.parse(e);
-                        return r.updateNodeInfo(t), o.updateNodeInfo(t), i.updateNodeInfo(t), t
+                        return a.info("local nodeinfo Resolved", t.active, t.errorCode), r.updateNodeInfo(t), o.updateNodeInfo(t), i.updateNodeInfo(t), t
                     }).catch(function(e) {
                         return a.info("local nodeinfo Rejected error:", e), e
                     })
@@ -9052,7 +9051,7 @@ webpackJsonp([4], [function(e, t, n) {
                                         if (i) {
                                             T(i, L), f = new URL(e.url), m = f.searchParams;
                                             var k = (0, s.default)(_.extend({}, L));
-                                            e.url = f.origin + f.pathname + "?tracer=" + l(k), m.toString().length > 0 && (e.url = e.url + ";" + m.toString()), e.spanId = i
+                                            e.url = f.origin + f.pathname + "?tracer=" + l(k), m.toString().length > 0 && (e.url = e.url + "&" + m.toString()), e.spanId = i
                                         }
                                     } else i && e.headers && (e.headers[r.X_REQUEST_ID] ? h = e.headers[r.X_REQUEST_ID] : (h = n.generateUUID(), e.headers[r.X_REQUEST_ID] = h), p[h] = i, T(i, e.headers))
                                 }
@@ -9467,15 +9466,9 @@ webpackJsonp([4], [function(e, t, n) {
                 })
             }
 
-            function i(t, n, r, o) {
-                for (var i = e[0].styleSheets, a = n.attr("nv-repeat-item-class"), c = 0, u = i.length; c < u; c++) {
-                    var d = i[c];
-                    if (!(!1 in d))
-                        for (var f = 0, m = d.cssRules.length; f < m; f++) {
-                            var p = d.cssRules[f];
-                            if (p.selectorText && p.selectorText.split(",").indexOf("." + a) !== -1) return s = p.style["max-width"], void(l = p.style["margin-right"])
-                        }
-                }
+            function i(e, t, n, r) {
+                var o = getComputedStyle(t[0]);
+                s = o["max-width"], l = o["margin-right"], t.removeAttr("style"), t.removeAttr("class")
             }
 
             function a(e) {
@@ -9496,7 +9489,7 @@ webpackJsonp([4], [function(e, t, n) {
                 replace: !0,
                 template: a,
                 compile: function(e, t) {
-                    return e.removeAttr("style"), e.removeAttr("class"), {
+                    return {
                         pre: i,
                         post: o
                     }
@@ -11212,7 +11205,7 @@ webpackJsonp([4], [function(e, t, n) {
                 t = angular.element(r[0].querySelector(".games-classic-game-list-container")),
                 n = angular.element(r[0].querySelector(".game-details-toolbar")),
                 o = angular.element(r.find("nv-feedback-float"));
-            e.addClass("constants-z-layers-modal-plus-three"), t.addClass("constants-z-layers-modal-plus-three"), n.addClass("constants-z-layers-modal-plus-three"), o.addClass("constants-z-layers-modal-plus-three");
+            e.addClass("constants-z-layers-modal-plus-three"), t.addClass("constants-z-layers-modal-plus-three"), n.addClass("constants-z-layers-modal-plus-three"), o.addClass("constants-z-layers-modal-plus-three")
         }
 
         function M(e, t, n, r) {
@@ -11233,7 +11226,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function R(e, t, n) {
-            return n ? c.HYPERSAMPLE : O(e, t, 16, 10) ? c.WIDE_16_10 : O(e, t, 16, 9) ? c.WIDE_16_9 : O(e, t, 4, 3) ? c.STANDARD_4_3 : O(e, t, 5, 4) ? c.STANDARD_5_4 : M(e, t, 16, 9) ? c.WIDE_16_9 : M(e, t, 16, 10) ? c.WIDE_16_10 : c.CUSTOM
+            return n ? c.HYPERSAMPLE : O(e, t, 16, 10) ? c.WIDE_16_10 : O(e, t, 16, 9) ? c.WIDE_16_9 : O(e, t, 4, 3) ? c.STANDARD_4_3 : O(e, t, 5, 4) ? c.STANDARD_5_4 : M(e, t, 16, 9) ? c.WIDE_16_9 : M(e, t, 16, 10) ? c.WIDE_16_10 : c.CUSTOM;
         }
 
         function N(e) {
@@ -12040,8 +12033,7 @@ webpackJsonp([4], [function(e, t, n) {
                 }
 
                 function s() {
-                    c && d && u && (t.on(n.WINDOW_RESIZE, a),
-                        d.addEventListener("scroll", a), i(!0))
+                    c && d && u && (t.on(n.WINDOW_RESIZE, a), d.addEventListener("scroll", a), i(!0))
                 }
 
                 function l() {
@@ -14178,8 +14170,7 @@ webpackJsonp([4], [function(e, t, n) {
         function f() {
             E ? (g.hitApply = !0, g.output.then(function(e) {
                 g.avatarObject.url = e, angular.merge(p, g.avatarObject), p.persist_()
-            })) : (angular.merge(p, g.avatarObject),
-                p.persist_()), h.debug("successfully updated avatar image"), n.cancel()
+            })) : (angular.merge(p, g.avatarObject), p.persist_()), h.debug("successfully updated avatar image"), n.cancel()
         }
 
         function m() {
@@ -15393,7 +15384,7 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function d() {
-            p && (y.info("pending scroll to timeout cancelled"), s.cancel(p)), v && (y.info("cancelling pending add promise"), t.searchPathsAddCancel(v)), h && (y.info("cancelling pending remove promise"), t.searchPathsRemoveCancel(h)), g && (y.info("cancelling pending get search path promise"), t.getSearchPathsCancel(g))
+            p && (y.info("pending scroll to timeout cancelled"), s.cancel(p)), v && (y.info("cancelling pending add promise"), t.searchPathsAddCancel(v)), h && (y.info("cancelling pending remove promise"), t.searchPathsRemoveCancel(h)), g && (y.info("cancelling pending get search path promise"), t.getSearchPathsCancel(g));
         }
         var f = this,
             m = null,
@@ -16412,8 +16403,7 @@ webpackJsonp([4], [function(e, t, n) {
             x(!0), i.trigger(a.SHARE_STATUS_CHANGE_IN_PROGRESS, k.toggleState), t.toggleShareState(k.enabledShare).then(function(e) {
                 P.info("toggleShareState status: ", e), k.enabledShare ? y() : (x(!1), i.trigger(a.SHARE_STATUS_CHANGE_IN_PROGRESS, k.toggleState)), p.changeSetting(g.APPLICATION_SETTING_ENABLE_SHARE, !!k.enabledShare)
             }).catch(function(e) {
-                P.error("toggleShareState failed."), i.trigger(a.SHARE_STATUS_CHANGE_IN_PROGRESS, k.toggleState),
-                    k.enabledShare && !k.shareLoaded && e.status === d.NOT_FOUND ? h.handleShareNotReady() : b(), k.enabledShare = !1, x(!1), p.changeSettingFail(g.APPLICATION_SETTING_ENABLE_SHARE_FAILED, !!k.enabledShare, e.data && e.data.code || e.status)
+                P.error("toggleShareState failed."), i.trigger(a.SHARE_STATUS_CHANGE_IN_PROGRESS, k.toggleState), k.enabledShare && !k.shareLoaded && e.status === d.NOT_FOUND ? h.handleShareNotReady() : b(), k.enabledShare = !1, x(!1), p.changeSettingFail(g.APPLICATION_SETTING_ENABLE_SHARE_FAILED, !!k.enabledShare, e.data && e.data.code || e.status)
             })
         }, _(), C(), k.showHotkeyInfoAndIcon = function() {
             return k.shareHotkeyFetched && k.enabledShare && !k.toggleState
@@ -16423,7 +16413,7 @@ webpackJsonp([4], [function(e, t, n) {
             }).catch(function(e) {
                 P.error("Error in opening OSC Settings page:", e), S()
             })
-        }, N(), e.$on("$destroy", L)
+        }, N(), e.$on("$destroy", L);
     }]);
     t.preferencesGeneralShareController = o
 }, function(e, t, n) {
@@ -17341,8 +17331,7 @@ webpackJsonp([4], [function(e, t, n) {
             }
 
             function a() {
-                l.codeInvalid = !0,
-                    l.actionButtonDisabled = !0
+                l.codeInvalid = !0, l.actionButtonDisabled = !0
             }
 
             function s() {
@@ -17354,7 +17343,8 @@ webpackJsonp([4], [function(e, t, n) {
                 if (l.codeInvalid = !1, l.couponCode) {
                     l.couponCode = l.couponCode.replace(/\s+/g, "");
                     var e = new RegExp(/^[a-zA-Z0-9]*$/);
-                    if (l.codeInvalid = !e.test(l.couponCode), l.couponCode.length > t.REWARDS_COUPONS.CODE_LENGTH_NO_DASHES - 1 ? (l.couponCode = l.couponCode.slice(0, t.REWARDS_COUPONS.CODE_LENGTH_NO_DASHES), l.codeInvalid = !e.test(l.couponCode), l.actionButtonDisabled = l.codeInvalid) : l.actionButtonDisabled = !0, l.couponCode.length > c.length) {
+                    if (l.codeInvalid = !e.test(l.couponCode), l.couponCode.length > t.REWARDS_COUPONS.CODE_LENGTH_NO_DASHES - 1 ? (l.couponCode = l.couponCode.slice(0, t.REWARDS_COUPONS.CODE_LENGTH_NO_DASHES), l.codeInvalid = !e.test(l.couponCode),
+                            l.actionButtonDisabled = l.codeInvalid) : l.actionButtonDisabled = !0, l.couponCode.length > c.length) {
                         if (l.couponCode.replace(/-/g, "").length - c.replace(/-/g, "").length > 1 || 0 === l.couponCode.indexOf(c)) n.trigger(o.COUPON_INPUT.RESTORE_CARET);
                         else
                             for (var r = 0; r < l.couponCode.length; r++)
@@ -19359,27 +19349,26 @@ webpackJsonp([4], [function(e, t, n) {
         o.model = r.getDialogModel(), o.isPreparingInstall = o.model.isExpressInstall();
         var a = o.model.driverType(),
             s = o.model.driverVersion();
-        o.isInstalling = !1, o.progressTitle = "", o.installationDriverData = null,
-            t.getInstallationDriverData(a, s).then(function(e) {
-                o.installationDriverData = e
-            }).catch(function(e) {
-                i.error("getInstallationDriverData failed: " + e + ". Returning static content."), o.showFallbackImage = !0
-            }), o.refreshInstallingCallback = function(e) {
-                o.isPreparingInstall = e
-            }, o.progressTitleCallback = function(e) {
-                o.progressTitle = e
-            }, o.progressSetTotalCallback = function(e, t) {
-                o.progressValue = e / t * 100
-            }, o.updateIsInstallingCallback = function(e) {
-                o.progressValue = 0, o.isInstalling = e
-            }, o.getBillboardUrl = function() {
-                var e = "";
-                return o.installationDriverData && (e = n.trustAsResourceUrl(o.installationDriverData.billboardURL)), e
-            }, o.canShowUninstallProgress = function() {
-                return !o.isPreparingInstall && !o.isInstalling
-            }, o.canShowInstallProgress = function() {
-                return !o.isPreparingInstall && o.isInstalling
-            }, r.updateRefreshInstallingRegister(o.refreshInstallingCallback), r.updateProgressTitleRegister(o.progressTitleCallback), r.updateProgressSetTotalRegister(o.progressSetTotalCallback), r.updateIsInstallingRegister(o.updateIsInstallingCallback)
+        o.isInstalling = !1, o.progressTitle = "", o.installationDriverData = null, t.getInstallationDriverData(a, s).then(function(e) {
+            o.installationDriverData = e
+        }).catch(function(e) {
+            i.error("getInstallationDriverData failed: " + e + ". Returning static content."), o.showFallbackImage = !0
+        }), o.refreshInstallingCallback = function(e) {
+            o.isPreparingInstall = e
+        }, o.progressTitleCallback = function(e) {
+            o.progressTitle = e
+        }, o.progressSetTotalCallback = function(e, t) {
+            o.progressValue = e / t * 100
+        }, o.updateIsInstallingCallback = function(e) {
+            o.progressValue = 0, o.isInstalling = e
+        }, o.getBillboardUrl = function() {
+            var e = "";
+            return o.installationDriverData && (e = n.trustAsResourceUrl(o.installationDriverData.billboardURL)), e
+        }, o.canShowUninstallProgress = function() {
+            return !o.isPreparingInstall && !o.isInstalling;
+        }, o.canShowInstallProgress = function() {
+            return !o.isPreparingInstall && o.isInstalling
+        }, r.updateRefreshInstallingRegister(o.refreshInstallingCallback), r.updateProgressTitleRegister(o.progressTitleCallback), r.updateProgressSetTotalRegister(o.progressSetTotalCallback), r.updateIsInstallingRegister(o.updateIsInstallingCallback)
     }]);
     t.updateInstallationProgressController = o
 }, function(e, t, n) {
@@ -20451,12 +20440,11 @@ webpackJsonp([4], [function(e, t, n) {
         }
 
         function _(e) {
-            E(u.OVERLAY_SUCCESS, !0), D = +e.updatedStampMicro, C.tokensEntered = +e.tokens, C.availableTokens = +e.tokenBalance, C.giveaway.tokensEntered = e.giveawayTokens, C.termsAlreadyAgreed = !0, C.tokensEnteredViewState = u.REVIEW_STAKES,
-                s.trigger(c.TOKENS_ENTERED_CHANGED, {
-                    tokensEntered: C.tokensEntered,
-                    availableTokens: C.availableTokens,
-                    timestamp: +e.enteredStampMicro
-                })
+            E(u.OVERLAY_SUCCESS, !0), D = +e.updatedStampMicro, C.tokensEntered = +e.tokens, C.availableTokens = +e.tokenBalance, C.giveaway.tokensEntered = e.giveawayTokens, C.termsAlreadyAgreed = !0, C.tokensEnteredViewState = u.REVIEW_STAKES, s.trigger(c.TOKENS_ENTERED_CHANGED, {
+                tokensEntered: C.tokensEntered,
+                availableTokens: C.availableTokens,
+                timestamp: +e.enteredStampMicro
+            })
         }
 
         function w(e) {
@@ -20475,7 +20463,8 @@ webpackJsonp([4], [function(e, t, n) {
             } catch (e) {
                 C.boxArt = "#", R.error("exception while getting image", e.message, C.giveaway)
             }
-            C.agreeToElementHtml = "<span>" + o("translate")("l10n.agreeToRules") + "</span>", C.availableTokens = C.tokens.available, C.tokens.entered > 0 && (C.tncAgreed = !0, C.termsAlreadyAgreed = !0, I = C.tokens.entered, C.minRequiredTokens = C.tokens.entered, C.tokensEntered = C.minRequiredTokens), h()
+            C.agreeToElementHtml = "<span>" + o("translate")("l10n.agreeToRules") + "</span>", C.availableTokens = C.tokens.available,
+                C.tokens.entered > 0 && (C.tncAgreed = !0, C.termsAlreadyAgreed = !0, I = C.tokens.entered, C.minRequiredTokens = C.tokens.entered, C.tokensEntered = C.minRequiredTokens), h()
         }
 
         function T() {
