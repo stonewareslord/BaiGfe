@@ -33,6 +33,8 @@ Set-ExecutionPolicy RemoteSigned
 &#x200B;
 
 # Manual way :  
+If you prefer patch output, please check the app-*.patch files, which will be easier to read.
+
 NOTE: some of the code below might change (function letters), just compare with one of the previously uploaded app.js ;)  
 
 use [http://jsbeautifier.org/](http://jsbeautifier.org/) on app.js found in :  
