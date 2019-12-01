@@ -2,7 +2,9 @@
 Remove Mandatory Login of Geforce Experience - [support: v3.14.x to v3.19.x(current)]
 # How to Remove Mandatory Login  
 
-make a backup of every files you edit !
+Make a backup of every files you edit!
+
+But if you forget to make a backup, you may copy the original from app-3.20.1.57-orig.js
 
 # Easy copy/paste fix :  
 
