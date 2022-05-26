@@ -1,0 +1,37 @@
+--- formatted.js	2022-05-26 16:30:25.597613913 -0400
++++ fixed.js	2022-05-26 16:30:13.349215073 -0400
+@@ -5695,7 +5695,7 @@
+                     M.debug("email not verified - verify if email belongs to locked domain");
+                     var t = e.user.core.primaryEmail,
+                         n = t.substring(t.indexOf("@") + 1);
+-                    if (e.domains.list.indexOf(n) > -1) return !0
++                    if (e.domains.list.indexOf(n) > -1) return y.handleLoggedIn(e), !0
+                 }
+                 return !1
+             }
+@@ -11232,7 +11232,7 @@
+             te = !1,
+             ne = null,
+             re = !1;
+-        ee.driverless = !1, ee.isShareSupported = !1, ee.isShareButtonClicked = !1, ee.isShareButtonDisabled = !1, ee.isShareRunning = !1, ee.showTooltip = !1, ee.shareLoaded = !1, ee.defaultAvatarUrl = w.URL, ee.userProfileEnabled = !1, ee.dropdownCollapseTimeout = 0, ee.gpuDriverVersion = "";
++        ee.driverless = !1, ee.isShareSupported = !0, ee.isShareButtonClicked = !0, ee.isShareButtonDisabled = !1, ee.isShareRunning = !1, ee.showTooltip = !1, ee.shareLoaded = !1, ee.defaultAvatarUrl = w.URL, ee.userProfileEnabled = !1, ee.dropdownCollapseTimeout = 0, ee.gpuDriverVersion = "";
+         var ie = s.getInstance("main/MainToolbarController"),
+             oe = 500;
+         c.getLaunchTimeSystemInfo().then(function(e) {
+@@ -14813,7 +14813,16 @@
+                 return y.debug("re-send verification email pressed."), c.requestVerificationEmail(e)
+             }, b.isLeftPaneVisible = function() {
+                 return !("choose" === b.nvActiveAuthView)
++            }, b.handleLoggedIn({
++                sessionToken: "dummySessionToken",
++                userToken: "dummyUserToken",
++                user: {
++                    core: {
++                        displayName: "Anonymous",
++                        primaryEmailVerified: true,
+             }
++                },
++            });
+         }]);
+     t.oobeAuthController = l
+ }, function(e, t, n) {
