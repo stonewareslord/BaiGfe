@@ -1,5 +1,5 @@
---- formatted.js	2022-05-26 16:30:25.597613913 -0400
-+++ fixed.js	2022-05-26 16:30:13.349215073 -0400
+--- app-orig-formatted.js	2022-05-26 16:30:25.597613913 -0400
++++ app.js	2022-05-26 16:30:13.349215073 -0400
 @@ -5695,7 +5695,7 @@
                      M.debug("email not verified - verify if email belongs to locked domain");
                      var t = e.user.core.primaryEmail,
